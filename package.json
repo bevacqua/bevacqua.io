@@ -1,0 +1,21 @@
+{
+  "name": "ng-bevacqua",
+  "description": "Technical concept-proofing web application",
+  "homepage": "https://github.com/bevacqua/io",
+  "author": {
+    "name": "Nicolas Bevacqua",
+    "email": "ng@bevacqua.io",
+    "url": "http://bevacqua.io"
+  },
+  "version": "0.0.1",
+  "repository": "git@github.com:bevacqua/io.git",
+  "engines": {
+    "node": "0.10.6",
+    "npm": "1.2.x"
+  },
+  "dependencies": {
+    "express": "~3.3.5",
+    "winston": "~0.7.2",
+    "moment": "~2.1.0"
+  }
+}
