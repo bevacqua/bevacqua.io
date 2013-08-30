@@ -17,5 +17,5 @@ Controller.prototype.renderView = function(res, view){
 };
 
 module.exports = function(name){
-    return new Controller(name);
+    return new (Function.prototype.bind.apply(Controller, name));
 };

@@ -9,6 +9,7 @@ module.exports = function(grunt){
 
     grunt.initConfig({
         clean: {
+            all: 'bin',
             views: 'bin/views',
             js: 'bin/public/js',
             css: 'bin/public/css',
