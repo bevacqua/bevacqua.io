@@ -12,10 +12,10 @@ module.exports = function(grunt){
         },
         jshint: {
             client: {
-
+                files: ['src/client/js', '!src/client/js/vendor']
             },
             server: {
-
+                files: ['src/server', 'app.js', 'Gruntfile.js']
             }
         },
         stylus: {
