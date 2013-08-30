@@ -1,6 +1,6 @@
 'use strict';
 
-var logger = require('./lib/logger');
+var logger = require('./src/lib/logger');
 var cfg = require('./build/cfg');
 
 module.exports = function(grunt){
@@ -48,6 +48,4 @@ module.exports = function(grunt){
             }
         }
     });
-
-    grunt.registerTask('build', 'Compiles the application', ['jade:release']);
 };

@@ -1,15 +1,17 @@
 'use strict';
 
 module.exports = function(release){
+    var views = 'src/client/views';
+    
     return {
         expand: true,
-        cwd: 'src/client/views',
+        cwd: views,
         src: '**/*.jade',
         dest: 'bin/views',
         ext: '.html',
         options: {
             pretty: !release,
-            basedir: 'src/client/views'
+            basedir: views
         }
     };
 };
