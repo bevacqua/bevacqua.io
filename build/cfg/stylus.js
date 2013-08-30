@@ -3,10 +3,10 @@
 module.exports = function(release){
     return {
         expand: true,
-        cwd: views,
-        src: '**/*.jade',
-        dest: 'bin/views',
-        ext: '.html',
+        cwd: 'src/client/css',
+        src: '**/*.styl',
+        dest: 'bin/public/css',
+        ext: '.css',
         options: {
             compress: release
         }
