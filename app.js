@@ -1,3 +1,3 @@
 'use strict';
 
-require('./srv/express.js');
+require('./src/srv/express.js');

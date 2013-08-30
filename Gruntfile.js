@@ -9,7 +9,11 @@ module.exports = function(grunt){
 
     grunt.initConfig({
         clean: {
-            views: ['bin/views']
+            views: 'bin/views',
+            js: 'bin/public/js',
+            css: 'bin/public/css',
+            favicon: cfg.img.favicon.dest,
+            images: cfg.img.images.dest
         },
         jshint: {
             client: cfg.jshint('src/client/js', ['src/client/js', '!src/client/js/vendor']),
@@ -17,11 +21,16 @@ module.exports = function(grunt){
             support: cfg.jshint('', ['Gruntfile.js', 'build'])
         },
         stylus: {
-
+            debug: cfg.stylus(false),
+            release: cfg.stylus(true)
         },
         jade: {
             debug: cfg.jade(false),
             release: cfg.jade(true)
+        },
+        copy: {
+            favicon: cfg.img.favicon,
+            images: cfg.img.images
         },
         concat: {
             css: {
