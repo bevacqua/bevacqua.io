@@ -6,5 +6,5 @@ var express = require('express'),
     port = 3000;
 
 app.listen(port, function(){
-    logger.info("express listening on port", port);
+    logger.info('express listening on port', port);
 });
