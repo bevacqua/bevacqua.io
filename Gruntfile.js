@@ -46,6 +46,9 @@ module.exports = function(grunt){
 
             }
         },
+        rev: {
+
+        },
         watch: {
             js: {
 
