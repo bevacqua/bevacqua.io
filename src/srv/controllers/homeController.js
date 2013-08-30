@@ -1,11 +1,11 @@
 'use strict';
 
-var controller = module.exports = require('../Controller.js')();
+var controller = module.exports = require('../Controller.js')('home');
 
 controller.registerRoutes = function(app){
     app.get('/', controller.getIndex);
 };
 
 controller.getIndex = function(req,res,next){
-    res.end(200);
+    controller.renderView(res, 'index.html');
 };

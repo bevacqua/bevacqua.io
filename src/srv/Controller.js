@@ -1,7 +1,21 @@
 'use strict';
 
-function Controller(){}
+var fs = require('fs');
+var path = require('path');
+var viewBase = 'bin/views';
 
-module.exports = function(){
-    return new Controller();
+function Controller(name){
+    this.name = name;
+}
+
+Controller.prototype.renderView = function(res, view){
+    var file = path.join(viewBase, this.name, view);
+
+    fs.readFile(file, function(err, data){
+        res.end(data);
+    });
+};
+
+module.exports = function(name){
+    return new Controller(name);
 };
