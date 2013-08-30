@@ -1,6 +1,7 @@
 'use strict';
 
 var logger = require('./lib/logger');
+var cfg = require('./build/cfg');
 
 module.exports = function(grunt){
     // load all npm tasks
@@ -11,22 +12,16 @@ module.exports = function(grunt){
             views: ['bin/views']
         },
         jshint: {
-            client: {
-                files: ['src/client/js', '!src/client/js/vendor']
-            },
-            server: {
-                files: ['src/server', 'app.js', 'Gruntfile.js']
-            }
+            client: cfg.jshint('src/client/js', ['src/client/js', '!src/client/js/vendor']),
+            server: cfg.jshint('', ['src/server', 'app.js']),
+            support: cfg.jshint('', ['Gruntfile.js', 'build'])
         },
         stylus: {
 
         },
         jade: {
-            release: {
-                files: {
-                    'bin/views/home.html': 'src/client/views/home.jade'
-                }
-            }
+            debug: cfg.jade(false),
+            release: cfg.jade(true)
         },
         concat: {
             css: {
@@ -39,6 +34,17 @@ module.exports = function(grunt){
         uglify: {
             js: {
 
+            }
+        },
+        watch: {
+            js: {
+
+            },
+            html: {
+
+            },
+            css: {
+                
             }
         }
     });

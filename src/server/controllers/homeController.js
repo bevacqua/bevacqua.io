@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-    getIndex: function () {
+    getIndex: function (res) {
         
     }
 };
