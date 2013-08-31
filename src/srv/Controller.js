@@ -11,8 +11,9 @@ function Controller(name){
 
 Controller.prototype.renderView = function(res, view){
     var file = path.join(viewBase, this.name, view);
-console.log(file);
+
     fs.readFile(file, function(err, data){
+        res.set('Content-Type', 'text/html');
         res.end(data);
     });
 };
