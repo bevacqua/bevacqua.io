@@ -11,7 +11,11 @@ module.exports = function(release){
         ext: '.html',
         options: {
             pretty: !release,
-            basedir: views
+            basedir: views,
+            data: {
+                stylesheets: require('./stylesheets.js'),
+                scripts: require('./scripts.js')
+            }
         }
     };
 };

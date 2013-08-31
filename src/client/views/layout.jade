@@ -1,5 +1,4 @@
-!!!
-
+doctype
 html
     head
         meta(charset='utf-8')
@@ -10,8 +9,12 @@ html
 
         title bevacqua.io
 
-        // styles
+        each src in stylesheets
+            link(rel='stylesheet', href=src)
     body
+        include header
+        
         block content
 
-        // scripts
+        each src in scripts
+            script(src=src)

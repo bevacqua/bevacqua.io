@@ -1,0 +1,12 @@
+{
+  "name": "ng-bevacqua",
+  "version": "0.0.1",
+  "homepage": "https://github.com/bevacqua/io",
+  "authors": [
+    "Nicolas Bevacqua <nicolasbevacqua@gmail.com>"
+  ],
+  "private": true,
+  "dependencies": {
+    "normalize-css": "~2.1.3"
+  }
+}

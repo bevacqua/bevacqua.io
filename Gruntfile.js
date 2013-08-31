@@ -17,7 +17,7 @@ module.exports = function(grunt){
             images: cfg.img.images.dest
         },
         jshint: {
-            client: cfg.jshint('src/client/js', ['src/client/js', '!src/client/js/vendor']),
+            client: cfg.jshint('src/client/js', ['src/client/js']),
             server: cfg.jshint('', ['src/server', 'app.js']),
             support: cfg.jshint('', ['Gruntfile.js', 'build'])
         },
@@ -31,12 +31,12 @@ module.exports = function(grunt){
         },
         copy: {
             favicon: cfg.img.favicon,
-            images: cfg.img.images
+            images: cfg.img.images,
+            vendor_styles: cfg.bower.styles,
+            vendor_scripts: cfg.bower.scripts
         },
         concat: {
-            css: {
-
-            },
+            css: ['bin/public/css/vendor/**/*.css','bin/public/css/**/*.css'],
             js: {
 
             }
@@ -61,4 +61,7 @@ module.exports = function(grunt){
             }
         }
     });
+
+    grunt.registerTask('css:debug', ['clean:css', 'copy:vendor_styles', 'stylus:debug']);
+    grunt.registerTask('css:release', ['clean:css', 'copy:vendor_styles', 'stylus:release', 'concat:css']);
 };
