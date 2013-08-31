@@ -13,8 +13,9 @@ html
             link(rel='stylesheet', href=src)
     body
         include header
-        
-        block content
+
+        main
+            block content
 
         each src in scripts
             script(src=src)
