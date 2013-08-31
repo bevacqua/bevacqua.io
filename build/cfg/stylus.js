@@ -1,14 +1,11 @@
 'use strict';
 
-module.exports = function(release){
-    return {
-        expand: true,
-        cwd: 'src/client/css',
-        src: '**/*.styl',
-        dest: 'bin/public/css',
-        ext: '.css',
-        options: {
-            compress: release
-        }
-    };
+module.exports = {
+    options: {
+        'include css': true,
+        paths: ['bower_components']
+    },
+    files: {
+        'bin/public/css/all.css': 'src/client/css/all.styl'
+    }
 };

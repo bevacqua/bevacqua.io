@@ -22,8 +22,7 @@ module.exports = function(grunt){
             support: cfg.jshint('', ['Gruntfile.js', 'build'])
         },
         stylus: {
-            debug: cfg.stylus(false),
-            release: cfg.stylus(true)
+            css: cfg.stylus
         },
         jade: {
             debug: cfg.jade(false),
@@ -41,6 +40,7 @@ module.exports = function(grunt){
 
             }
         },
+        cssmin: cfg.cssmin,
         uglify: {
             js: {
 
@@ -62,6 +62,6 @@ module.exports = function(grunt){
         }
     });
 
-    grunt.registerTask('css:debug', ['clean:css', 'copy:vendor_styles', 'stylus:debug']);
-    grunt.registerTask('css:release', ['clean:css', 'copy:vendor_styles', 'stylus:release', 'concat:css']);
+    grunt.registerTask('css:debug', ['clean:css', 'copy:vendor_styles', 'stylus']);
+    grunt.registerTask('css:release', ['clean:css', 'copy:vendor_styles', 'stylus', 'cssmin:release']);
 };
