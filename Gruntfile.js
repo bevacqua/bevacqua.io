@@ -30,15 +30,7 @@ module.exports = function(grunt){
         },
         copy: {
             favicon: cfg.img.favicon,
-            images: cfg.img.images,
-            vendor_styles: cfg.bower.styles,
-            vendor_scripts: cfg.bower.scripts
-        },
-        concat: {
-            css: ['bin/public/css/vendor/**/*.css','bin/public/css/**/*.css'],
-            js: {
-
-            }
+            images: cfg.img.images
         },
         cssmin: cfg.cssmin,
         uglify: {
@@ -46,22 +38,22 @@ module.exports = function(grunt){
 
             }
         },
-        rev: {
-
-        },
+        rev: cfg.rev,
         watch: {
-            js: {
-
-            },
-            html: {
-
-            },
-            css: {
-                
-            }
         }
     });
 
-    grunt.registerTask('css:debug', ['clean:css', 'copy:vendor_styles', 'stylus']);
-    grunt.registerTask('css:release', ['clean:css', 'copy:vendor_styles', 'stylus', 'cssmin:release']);
+    grunt.registerTask('css:debug', ['clean:css', 'stylus']);
+    grunt.registerTask('css:release', ['clean:css', 'stylus', 'cssmin:release', 'rev:css']);
+
+    grunt.registerTask('js:debug', ['clean:js']);
+    grunt.registerTask('js:release', ['clean:js', 'rev:js']);
+
+    grunt.registerTask('img', ['clean:favicon', 'clean:images', 'copy:favicon', 'copy:images']);
+
+    grunt.registerTask('views:debug', ['clean:views', 'jade:debug']);
+    grunt.registerTask('views:release', ['clean:views', 'jade:release']);
+
+    grunt.registerTask('assets:debug', ['css:debug', 'js:debug', 'img', 'views:debug']);
+    grunt.registerTask('assets:release', ['css:release', 'js:release', 'img', 'views:release']);
 };
