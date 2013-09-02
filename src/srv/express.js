@@ -16,7 +16,7 @@ app.use(express.bodyParser());
 app.use(app.router);
 
 app.use(express.static(statics, { maxAge: 86400000 }));
-app.use(express.favicon(statics + '/favicon.ico'));
+app.use(express.favicon(statics + '/img/favicon.ico'));
 
 app.listen(port, function(){
     logger.info('express listening on port', port);

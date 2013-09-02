@@ -13,7 +13,6 @@ module.exports = function(grunt){
             views: 'bin/views',
             js: 'bin/public/js',
             css: 'bin/public/css',
-            favicon: 'bin/public/favicon.ico',
             images: 'bin/public/img',
             tmp_sprite: 'bin/.tmp/sprite'
         },
@@ -36,15 +35,23 @@ module.exports = function(grunt){
             release: cfg.jade(true)
         },
         copy: {
-            favicon: {
-                src: 'src/client/favicon.ico',
-                dest: 'bin/public/favicon.ico'
-            },
             images: {
                 expand: true,
                 cwd: 'src/client/img',
                 dest: 'bin/public/img',
-                src: ['**/*.{png,jpg,gif}', '!sprite/**/*.{png,jpg,gif}']
+                src: ['**/*.{png,jpg,gif,ico}', '!sprite/**/*.{png,jpg,gif,ico}']
+            },
+            js_debug: {
+                expand: true,
+                cwd: 'bower_components',
+                src: '**/*.js',
+                dest: 'bin/public/js/vendor'
+            },
+            js_release: {
+                expand: true,
+                cwd: 'bower_components',
+                src: ['**/*.min.js', '**/*.min.js.map'],
+                dest: 'bin/public/js/vendor'
             }
         },
         sprite: {
@@ -74,7 +81,7 @@ module.exports = function(grunt){
             jshint_client: { tasks: ['jshint:client'], files: ['src/client/js/**/*.js'] },
             jshint_server: { tasks: ['jshint:server'], files: ['src/srv/**/*.js', 'app.js'] },
             jshint_support: { tasks: ['jshint:support'], files: ['Gruntfile.js', 'build/**/*.js'] },
-            images: { tasks: ['images'], files: ['src/client/favicon.ico', 'src/client/img/**/*.{png,jpg,gif}'] },
+            images: { tasks: ['images'], files: ['src/client/img/**/*.{png,jpg,gif,ico}'] },
             css: { tasks: ['css:debug'], files: ['src/client/css/**/*.styl', 'bin/.tmp/sprite/*.css'] },
             views: { tasks: ['views:debug'], files: ['src/client/views/**/*.jade'] }
         }
@@ -82,7 +89,7 @@ module.exports = function(grunt){
 
     // todo: node (mon?) livereload, js flow, unit tests, stylus linter?
 
-    grunt.registerTask('images:debug', ['clean:favicon', 'clean:images', 'copy:favicon', 'copy:images', 'sprite']);
+    grunt.registerTask('images:debug', ['clean:images', 'copy:images', 'sprite']);
     grunt.registerTask('images:release', ['images:debug', 'smushit:all']);
 
     grunt.registerTask('css:debug', ['clean:css', 'stylus:all']);
@@ -94,8 +101,8 @@ module.exports = function(grunt){
     grunt.registerTask('views:debug', ['clean:views', 'jade:debug']);
     grunt.registerTask('views:release', ['clean:views', 'jade:release']);
 
-    grunt.registerTask('assets:debug', ['images:debug', 'css:debug', 'js:debug', 'views:debug']);
-    grunt.registerTask('assets:release', ['images:release', 'css:release', 'js:release', 'views:release']);
+    grunt.registerTask('build:debug', ['images:debug', 'css:debug', 'js:debug', 'views:debug']);
+    grunt.registerTask('build:release', ['images:release', 'css:release', 'js:release', 'views:release']);
 
-    grunt.registerTask('dev', ['jshint', 'assets:debug', 'watch']);
+    grunt.registerTask('dev', ['jshint', 'build:debug', 'watch']);
 };

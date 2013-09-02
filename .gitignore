@@ -1,3 +1,4 @@
+# node defaults
 lib-cov
 *.seed
 *.log
@@ -11,8 +12,13 @@ pids
 logs
 results
 
+# package control
+node_modules
+bower_modules
 npm-debug.log
 
+# built package files
 bin
 
+# os artifacts
 .DS_Store
