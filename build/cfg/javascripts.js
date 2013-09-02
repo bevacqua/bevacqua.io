@@ -37,7 +37,10 @@ module.exports = {
     files: function(){
         var vendor = asset.links('bin/public/js/vendor', 'bin/public/js');
         var all = asset.links('bin/public/js');
+        var distinct = _.union(vendor, all);
 
-        return _.union(vendor, all);
+        return _.filter(distinct, function(file){
+            return /\.js$/.test(file); // ignore *.map files
+        });
     }
 };

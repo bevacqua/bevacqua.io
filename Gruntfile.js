@@ -14,7 +14,8 @@ module.exports = function(grunt){
             js: 'bin/public/js',
             css: 'bin/public/css',
             images: 'bin/public/img',
-            tmp_sprite: 'bin/.tmp/sprite'
+            tmp_sprite: 'bin/.tmp/sprite',
+            after_uglify: ['bin/public/js/**/*.js', '!bin/public/js/all.js']
         },
         jshint: {
             client: cfg.js.lint('src/client/js', ['src/client/js/**/*.js', '!src/client/js/vendor/**/*.js']),
@@ -82,7 +83,7 @@ module.exports = function(grunt){
     alias('css:release', 'clean:css stylus:all cssmin:release rev:css');
 
     alias('js:debug', 'clean:js copy:js_sources copy:js_bower_debug');
-    alias('js:release', 'clean:js copy:js_sources uglify:js copy:js_bower_release rev:js');
+    alias('js:release', 'clean:js copy:js_sources uglify:js clean:after_uglify copy:js_bower_release rev:js');
 
     alias('views:debug', 'clean:views jade:debug');
     alias('views:release', 'clean:views jade:release');
