@@ -18,7 +18,7 @@ module.exports = function(grunt){
             tmp_sprite: 'bin/.tmp/sprite'
         },
         jshint: {
-            client: cfg.jshint('src/client/js', ['src/client/js']),
+            client: cfg.jshint('src/client/js', ['src/client/js/**/*.js', '!src/client/js/vendor/**/*.js']),
             server: cfg.jshint('src/srv', ['src/srv', 'app.js']),
             support: cfg.jshint('src/srv', ['Gruntfile.js', 'build'])
         },

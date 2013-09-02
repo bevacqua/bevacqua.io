@@ -14,6 +14,6 @@ module.exports = {
                 }
             },
             engine: 'gm'
-        }
+        };
     }
 };
