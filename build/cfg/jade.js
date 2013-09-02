@@ -13,9 +13,12 @@ module.exports = function(release){
             pretty: !release,
             basedir: views,
             data: function(){
+                var stylesheets = require('./stylesheets.js');
+                var scripts = require('./scripts.js');
+
                 return {
-                    stylesheets: require('./stylesheets.js')(),
-                    scripts: require('./scripts.js')
+                    stylesheets: stylesheets(),
+                    scripts: scripts
                 };
             }
         }

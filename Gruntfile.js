@@ -50,6 +50,11 @@ module.exports = function(grunt){
         sprite: {
             houses: cfg.img.sprite('houses', 'ho')
         },
+        smushit: {
+            all: {
+                src: 'bin/public/img/**/*.{png,jpg,gif}'
+            }
+        },
         cssmin: {
             release: {
                 files: { 'bin/public/css/all.css': 'bin/public/css/all.css' }
@@ -77,7 +82,8 @@ module.exports = function(grunt){
 
     // todo: node (mon?) livereload, js flow, unit tests, stylus linter?
 
-    grunt.registerTask('images', ['clean:favicon', 'clean:images', 'copy:favicon', 'copy:images', 'sprite']);
+    grunt.registerTask('images:debug', ['clean:favicon', 'clean:images', 'copy:favicon', 'copy:images', 'sprite']);
+    grunt.registerTask('images:release', ['images:debug', 'smushit:all']);
 
     grunt.registerTask('css:debug', ['clean:css', 'stylus:all']);
     grunt.registerTask('css:release', ['clean:css', 'stylus:all', 'cssmin:release', 'rev:css']);
@@ -88,8 +94,8 @@ module.exports = function(grunt){
     grunt.registerTask('views:debug', ['clean:views', 'jade:debug']);
     grunt.registerTask('views:release', ['clean:views', 'jade:release']);
 
-    grunt.registerTask('assets:debug', ['images', 'css:debug', 'js:debug', 'views:debug']);
-    grunt.registerTask('assets:release', ['images', 'css:release', 'js:release', 'views:release']);
+    grunt.registerTask('assets:debug', ['images:debug', 'css:debug', 'js:debug', 'views:debug']);
+    grunt.registerTask('assets:release', ['images:release', 'css:release', 'js:release', 'views:release']);
 
     grunt.registerTask('dev', ['jshint', 'assets:debug', 'watch']);
 };
