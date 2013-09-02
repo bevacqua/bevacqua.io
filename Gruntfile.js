@@ -22,11 +22,13 @@ module.exports = function(grunt){
             support: cfg.jshint('src/srv', ['Gruntfile.js', 'build'])
         },
         stylus: {
-            options: {
-                'include css': true,
-                paths: ['bower_components']
-            },
-            files: { 'bin/public/css/all.css': 'src/client/css/all.styl' }
+            css: {
+                options: {
+                    'include css': true,
+                    paths: ['bower_components']
+                },
+                files: { 'bin/public/css/all.css': 'src/client/css/all.styl' }
+            }
         },
         jade: {
             debug: cfg.jade(false),
@@ -82,4 +84,6 @@ module.exports = function(grunt){
 
     grunt.registerTask('assets:debug', ['css:debug', 'js:debug', 'img', 'views:debug']);
     grunt.registerTask('assets:release', ['css:release', 'js:release', 'img', 'views:release']);
+
+    grunt.registerTask('dev', ['jshint', 'assets:debug', 'watch']);
 };
