@@ -1,1 +1,5 @@
+# seriously? ignore git changes
+.git
+
+# ignore client-side js
 src/client/*
