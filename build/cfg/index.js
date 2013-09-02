@@ -2,6 +2,7 @@
 
 module.exports = {
     jade: require('./jade.js'),
-    jshint: require('./jshint.js'),
-    img: require('./img.js')
+    img: require('./img.js'),
+    css: require('./stylesheets.js'),
+    js: require('./javascripts.js')
 };

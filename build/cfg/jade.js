@@ -14,11 +14,11 @@ module.exports = function(release){
             basedir: views,
             data: function(){
                 var stylesheets = require('./stylesheets.js');
-                var scripts = require('./scripts.js');
+                var scripts = require('./javascripts.js');
 
                 return {
-                    stylesheets: stylesheets(),
-                    scripts: scripts
+                    stylesheets: stylesheets.files(),
+                    javascripts: scripts.files()
                 };
             }
         }

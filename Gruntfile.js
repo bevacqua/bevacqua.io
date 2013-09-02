@@ -17,9 +17,9 @@ module.exports = function(grunt){
             tmp_sprite: 'bin/.tmp/sprite'
         },
         jshint: {
-            client: cfg.jshint('src/client/js', ['src/client/js/**/*.js', '!src/client/js/vendor/**/*.js']),
-            server: cfg.jshint('src/srv', ['src/srv', 'app.js']),
-            support: cfg.jshint('src/srv', ['Gruntfile.js', 'build'])
+            client: cfg.js.lint('src/client/js', ['src/client/js/**/*.js', '!src/client/js/vendor/**/*.js']),
+            server: cfg.js.lint('src/srv', ['src/srv', 'app.js']),
+            support: cfg.js.lint('src/srv', ['Gruntfile.js', 'build'])
         },
         stylus: {
             all: {
@@ -41,18 +41,18 @@ module.exports = function(grunt){
                 dest: 'bin/public/img',
                 src: ['**/*.{png,jpg,gif,ico}', '!sprite/**/*.{png,jpg,gif,ico}']
             },
-            js_debug: {
+            js_debug: [{
                 expand: true,
                 cwd: 'bower_components',
                 src: '**/*.js',
                 dest: 'bin/public/js/vendor'
-            },
-            js_release: {
+            }],
+            js_release: [{
                 expand: true,
                 cwd: 'bower_components',
                 src: ['**/*.min.js', '**/*.min.js.map'],
                 dest: 'bin/public/js/vendor'
-            }
+            }]
         },
         sprite: {
             houses: cfg.img.sprite('houses', 'ho')
@@ -100,7 +100,7 @@ module.exports = function(grunt){
     alias('css:release', 'clean:css stylus:all cssmin:release rev:css');
 
     alias('js:debug', 'clean:js copy:js_debug');
-    alias('js:release', 'clean:js rev:js js_debug');
+    alias('js:release', 'clean:js copy:js_release rev:js');
 
     alias('views:debug', 'clean:views jade:debug');
     alias('views:release', 'clean:views jade:release');
