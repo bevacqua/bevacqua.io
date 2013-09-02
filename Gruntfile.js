@@ -22,7 +22,7 @@ module.exports = function(grunt){
             support: cfg.jshint('src/srv', ['Gruntfile.js', 'build'])
         },
         stylus: {
-            css: {
+            all: {
                 options: {
                     'include css': true,
                     paths: ['bower_components']
@@ -44,6 +44,16 @@ module.exports = function(grunt){
                 dest: 'bin/public/img'
             }
         },
+        imagemin: {
+            all: {
+                files: [{
+                    expand: true,
+                    cwd: 'bin/public/img',
+                    dest: 'bin/public/img',
+                    src: '**/*.{png,jpg,gif}'
+                }]
+            }
+        },
         cssmin: {
             release: {
                 files: { 'bin/public/css/all.css': 'bin/public/css/all.css' }
@@ -63,7 +73,7 @@ module.exports = function(grunt){
             jshint_client: { tasks: ['jshint:client'], files: ['src/client/js/**/*.js'] },
             jshint_server: { tasks: ['jshint:server'], files: ['src/srv/**/*.js', 'app.js'] },
             jshint_support: { tasks: ['jshint:support'], files: ['Gruntfile.js', 'build/**/*.js'] },
-            img: { tasks: ['img'], files: ['src/client/favicon.ico', 'src/client/img/**/*.{png,jpg,gif}'] },
+            img: { tasks: ['images'], files: ['src/client/favicon.ico', 'src/client/img/**/*.{png,jpg,gif}'] },
             css: { tasks: ['css:debug'], files: ['src/client/css/**/*.styl'] },
             views: { tasks: ['views:debug'], files: ['src/client/views/**/*.jade'] }
         }
@@ -71,19 +81,19 @@ module.exports = function(grunt){
 
     // todo: node (mon?) livereload, js flow, sprites, unit tests, stylus linter?
 
-    grunt.registerTask('css:debug', ['clean:css', 'stylus']);
-    grunt.registerTask('css:release', ['clean:css', 'stylus', 'cssmin:release', 'rev:css']);
+    grunt.registerTask('css:debug', ['clean:css', 'stylus:all']);
+    grunt.registerTask('css:release', ['clean:css', 'stylus:all', 'cssmin:release', 'rev:css']);
 
     grunt.registerTask('js:debug', ['clean:js']);
     grunt.registerTask('js:release', ['clean:js', 'rev:js']);
 
-    grunt.registerTask('img', ['clean:favicon', 'clean:images', 'copy:favicon', 'copy:images']);
+    grunt.registerTask('images', ['clean:favicon', 'clean:images', 'copy:favicon', 'copy:images', 'imagemin:all']);
 
     grunt.registerTask('views:debug', ['clean:views', 'jade:debug']);
     grunt.registerTask('views:release', ['clean:views', 'jade:release']);
 
-    grunt.registerTask('assets:debug', ['css:debug', 'js:debug', 'img', 'views:debug']);
-    grunt.registerTask('assets:release', ['css:release', 'js:release', 'img', 'views:release']);
+    grunt.registerTask('assets:debug', ['css:debug', 'js:debug', 'images', 'views:debug']);
+    grunt.registerTask('assets:release', ['css:release', 'js:release', 'images', 'views:release']);
 
     grunt.registerTask('dev', ['jshint', 'assets:debug', 'watch']);
 };
