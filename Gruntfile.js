@@ -1,6 +1,6 @@
 'use strict';
 
-var logger = require('./src/lib/logger');
+var _ = require('lodash');
 var cfg = require('./build/cfg');
 
 module.exports = function(grunt){
@@ -27,33 +27,14 @@ module.exports = function(grunt){
                     'include css': true,
                     paths: ['bower_components']
                 },
-                files: { 'bin/public/css/all.css': ['bin/.tmp/sprite/*.css', 'src/client/css/all.styl'] }
+                files: { 'bin/public/css/all.css': ['src/client/css/all.styl', 'bin/.tmp/sprite/*.css'] }
             }
         },
         jade: {
             debug: cfg.jade(false),
             release: cfg.jade(true)
         },
-        copy: {
-            images: {
-                expand: true,
-                cwd: 'src/client/img',
-                dest: 'bin/public/img',
-                src: ['**/*.{png,jpg,gif,ico}', '!sprite/**/*.{png,jpg,gif,ico}']
-            },
-            js_debug: [{
-                expand: true,
-                cwd: 'bower_components',
-                src: '**/*.js',
-                dest: 'bin/public/js/vendor'
-            }],
-            js_release: [{
-                expand: true,
-                cwd: 'bower_components',
-                src: ['**/*.min.js', '**/*.min.js.map'],
-                dest: 'bin/public/js/vendor'
-            }]
-        },
+        copy: _.assign(cfg.img.copy, cfg.js.copy),
         sprite: {
             houses: cfg.img.sprite('houses', 'ho')
         },
@@ -69,25 +50,26 @@ module.exports = function(grunt){
         },
         uglify: {
             js: {
-
+                files: { 'bin/public/js/all.js': 'bin/public/js/**/*.js' }
             }
         },
         rev: {
-            css: {
-                files: { src: 'bin/public/css/all.css' }
-            }
+            css: { files: { src: 'bin/public/css/all.css' } },
+            js: {  files: { src: 'bin/public/js/**/*.js' } }
         },
         watch: {
+            rebuild: { tasks: 'build:debug', files: ['Gruntfile.js', 'build/**/*.js'] },
             jshint_client: { tasks: ['jshint:client'], files: ['src/client/js/**/*.js'] },
             jshint_server: { tasks: ['jshint:server'], files: ['src/srv/**/*.js', 'app.js'] },
             jshint_support: { tasks: ['jshint:support'], files: ['Gruntfile.js', 'build/**/*.js'] },
             images: { tasks: ['images'], files: ['src/client/img/**/*.{png,jpg,gif,ico}'] },
-            css: { tasks: ['css:debug'], files: ['src/client/css/**/*.styl', 'bin/.tmp/sprite/*.css'] },
+            css: { tasks: ['css:debug'], files: ['src/client/css/**/*.styl', 'bin/.tmp/sprite/*.css', 'bower_components/**/*.css'] },
+            js: { tasks: ['js:debug'], files: ['src/client/js/**/*.js', 'bower_components/**/*.js'] },
             views: { tasks: ['views:debug'], files: ['src/client/views/**/*.jade'] }
         }
     });
 
-    // todo: node (mon?) livereload, js flow, unit tests, stylus linter?
+    // todo: node (mon?) livereload, unit tests, screen shot integration test diffs, stylus linter?
 
     function alias (name, tasks) {
         grunt.registerTask(name, tasks.split(' '));
@@ -99,8 +81,8 @@ module.exports = function(grunt){
     alias('css:debug', 'clean:css stylus:all');
     alias('css:release', 'clean:css stylus:all cssmin:release rev:css');
 
-    alias('js:debug', 'clean:js copy:js_debug');
-    alias('js:release', 'clean:js copy:js_release rev:js');
+    alias('js:debug', 'clean:js copy:js_sources copy:js_bower_debug');
+    alias('js:release', 'clean:js copy:js_sources uglify:js copy:js_bower_release rev:js');
 
     alias('views:debug', 'clean:views jade:debug');
     alias('views:release', 'clean:views jade:release');

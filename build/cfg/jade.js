@@ -2,7 +2,7 @@
 
 module.exports = function(release){
     var views = 'src/client/views';
-    
+
     return {
         expand: true,
         cwd: views,

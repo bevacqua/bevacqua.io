@@ -1,6 +1,14 @@
 'use strict';
 
 module.exports = {
+    copy: {
+        images: {
+            expand: true,
+            cwd: 'src/client/img',
+            dest: 'bin/public/img',
+            src: ['**/*.{png,jpg,gif,ico}', '!sprite/**/*.{png,jpg,gif,ico}']
+        },
+    },
     sprite: function(type, short){
         return {
             src: 'src/client/img/sprite/' + type + '/**/*.{png,jpg,gif}',

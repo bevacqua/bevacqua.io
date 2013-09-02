@@ -1,14 +1,9 @@
 'use strict';
 
-var fs = require('fs');
-var path = require('path');
+var asset = require('./util/asset.js');
 
 module.exports = {
     files: function(){
-        var folder = 'bin/public/css';
-        
-        return fs.readdirSync(folder).map(function(file){
-            return path.join(folder, file);
-        });
+        return asset.links('bin/public/css');
     }
 };
