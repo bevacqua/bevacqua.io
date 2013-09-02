@@ -3,11 +3,18 @@
   "eqeqeq": true,
   "newcap": true,
   "noarg": true,
+  "noempty": true,
+  "nonew": true,
   "sub": true,
   "undef": true,
+  "unused": true,
+  "trailing": true,
   "boss": true,
   "eqnull": true,
   "strict": true,
-  "node": true,
-  "immed": true
+  "immed": true,
+  "latedef": "nofunc",
+  "quotmark": "single",
+  "indent": 4,
+  "node": true
 }

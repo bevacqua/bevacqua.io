@@ -3,13 +3,19 @@
 var logger = module.exports = require('winston');
 var moment = require('moment');
 
-function getTime(){
-    return moment().format('Do HH:mm:ss');
-}
-
 logger.remove(logger.transports.Console);
 logger.add(logger.transports.Console, {
-    timestamp: getTime,
-    colorize: true,
-    level: "debug"
+    timestamp: function(){
+        return moment().format('Do HH:mm:ss');
+    },
+    colorize: true
 });
+
+module.exports.stream = function(level){
+    return {
+        write: function(data, encoding){
+            var message = data.replace(/\n+$/, ''); // remove trailing breaks
+            logger[level](message);
+        }
+    };
+};
