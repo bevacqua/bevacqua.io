@@ -13,8 +13,8 @@ module.exports = function(grunt){
             views: 'bin/views',
             js: 'bin/public/js',
             css: 'bin/public/css',
-            favicon: cfg.img.favicon.dest,
-            images: cfg.img.images.dest
+            favicon: 'bin/public/favicon.ico',
+            images: 'bin/public/img'
         },
         jshint: {
             client: cfg.jshint('src/client/js', ['src/client/js']),
@@ -22,23 +22,41 @@ module.exports = function(grunt){
             support: cfg.jshint('src/srv', ['Gruntfile.js', 'build'])
         },
         stylus: {
-            css: cfg.stylus
+            options: {
+                'include css': true,
+                paths: ['bower_components']
+            },
+            files: { 'bin/public/css/all.css': 'src/client/css/all.styl' }
         },
         jade: {
             debug: cfg.jade(false),
             release: cfg.jade(true)
         },
         copy: {
-            favicon: cfg.img.favicon,
-            images: cfg.img.images
+            favicon: {
+                src: 'src/client/favicon.ico',
+                dest: 'bin/public/favicon.ico'
+            },
+            images: {
+                src: 'src/client/img',
+                dest: 'bin/public/img'
+            }
         },
-        cssmin: cfg.cssmin,
+        cssmin: {
+            release: {
+                files: { 'bin/public/css/all.css': 'bin/public/css/all.css' }
+            }
+        },
         uglify: {
             js: {
 
             }
         },
-        rev: cfg.rev,
+        rev: {
+            css: {
+                files: { src: 'bin/public/css/all.css' }
+            }
+        },
         watch: {
             jshint_client: { tasks: ['jshint:client'], files: ['src/client/js/**/*.js'] },
             jshint_server: { tasks: ['jshint:server'], files: ['src/srv/**/*.js', 'app.js'] },
@@ -48,6 +66,8 @@ module.exports = function(grunt){
             views: { tasks: ['views:debug'], files: ['src/client/views/**/*.jade'] }
         }
     });
+
+    // todo: node (mon?) livereload, js flow, sprites, unit tests, stylus linter?
 
     grunt.registerTask('css:debug', ['clean:css', 'stylus']);
     grunt.registerTask('css:release', ['clean:css', 'stylus', 'cssmin:release', 'rev:css']);
