@@ -18,8 +18,8 @@ module.exports = function(grunt){
         },
         jshint: {
             client: cfg.jshint('src/client/js', ['src/client/js']),
-            server: cfg.jshint('', ['src/server', 'app.js']),
-            support: cfg.jshint('', ['Gruntfile.js', 'build'])
+            server: cfg.jshint('src/srv', ['src/srv', 'app.js']),
+            support: cfg.jshint('src/srv', ['Gruntfile.js', 'build'])
         },
         stylus: {
             css: cfg.stylus
@@ -40,6 +40,12 @@ module.exports = function(grunt){
         },
         rev: cfg.rev,
         watch: {
+            jshint_client: { tasks: ['jshint:client'], files: ['src/client/js/**/*.js'] },
+            jshint_server: { tasks: ['jshint:server'], files: ['src/srv/**/*.js', 'app.js'] },
+            jshint_support: { tasks: ['jshint:support'], files: ['Gruntfile.js', 'build/**/*.js'] },
+            img: { tasks: ['img'], files: ['src/client/favicon.ico', 'src/client/img/**/*.{png,jpg,gif}'] },
+            css: { tasks: ['css:debug'], files: ['src/client/css/**/*.styl'] },
+            views: { tasks: ['views:debug'], files: ['src/client/views/**/*.jade'] }
         }
     });
 

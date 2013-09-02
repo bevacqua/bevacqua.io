@@ -20,5 +20,5 @@ Controller.prototype.renderView = function(res, view){
 
 module.exports = function(){
     var args = _.toArray(arguments);
-    return new (Function.prototype.bind.apply(Controller, [null].concat(args)));
+    return new (Function.prototype.bind.apply(Controller, [null].concat(args)))();
 };
