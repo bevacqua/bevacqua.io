@@ -89,20 +89,24 @@ module.exports = function(grunt){
 
     // todo: node (mon?) livereload, js flow, unit tests, stylus linter?
 
-    grunt.registerTask('images:debug', ['clean:images', 'copy:images', 'sprite']);
-    grunt.registerTask('images:release', ['images:debug', 'smushit:all']);
+    function alias (name, tasks) {
+        grunt.registerTask(name, tasks.split(' '));
+    }
 
-    grunt.registerTask('css:debug', ['clean:css', 'stylus:all']);
-    grunt.registerTask('css:release', ['clean:css', 'stylus:all', 'cssmin:release', 'rev:css']);
+    alias('images:debug', 'clean:images copy:images sprite');
+    alias('images:release', 'images:debug smushit:all');
 
-    grunt.registerTask('js:debug', ['clean:js']);
-    grunt.registerTask('js:release', ['clean:js', 'rev:js']);
+    alias('css:debug', 'clean:css stylus:all');
+    alias('css:release', 'clean:css stylus:all cssmin:release rev:css');
 
-    grunt.registerTask('views:debug', ['clean:views', 'jade:debug']);
-    grunt.registerTask('views:release', ['clean:views', 'jade:release']);
+    alias('js:debug', 'clean:js copy:js_debug');
+    alias('js:release', 'clean:js rev:js js_debug');
 
-    grunt.registerTask('build:debug', ['images:debug', 'css:debug', 'js:debug', 'views:debug']);
-    grunt.registerTask('build:release', ['images:release', 'css:release', 'js:release', 'views:release']);
+    alias('views:debug', 'clean:views jade:debug');
+    alias('views:release', 'clean:views jade:release');
 
-    grunt.registerTask('dev', ['jshint', 'build:debug', 'watch']);
+    alias('build:debug', 'images:debug css:debug js:debug views:debug');
+    alias('build:release', 'images:release css:release js:release views:release');
+
+    alias('dev', 'jshint build:debug watch');
 };
