@@ -14,10 +14,10 @@ results
 
 # package control
 node_modules
-bower_modules
+bower_components
 npm-debug.log
 
-# built package files
+# build artifacts
 bin
 
 # os artifacts
