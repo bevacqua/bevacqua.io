@@ -62,7 +62,7 @@ module.exports = function(grunt){
         },
         rev: {
             css: { files: { src: 'bin/public/css/all.css' } },
-            js: {  files: { src: 'bin/public/js/**/*.js' } }
+            js: { files: { src: 'bin/public/js/**/*.js' } }
         },
         watch: {
             rebuild: { tasks: 'build:debug', files: ['Gruntfile.js', 'build/**/*.js'] },
@@ -73,6 +73,21 @@ module.exports = function(grunt){
             css: { tasks: ['css:debug'], files: ['src/client/css/**/*.styl', 'bin/.tmp/sprite/*.css', 'bower_components/**/*.css'] },
             js: { tasks: ['js:debug'], files: ['src/client/js/**/*.js', 'bower_components/**/*.js'] },
             views: { tasks: ['views:debug'], files: ['src/client/views/**/*.jade'] }
+        },
+        nodemon: {
+            dev: {
+                options: {
+                    file: 'app.js'
+                }
+            }
+        },
+        concurrent: {
+            dev: {
+                tasks: ['nodemon:dev', 'watch'],
+                options: {
+                    logConcurrentOutput: true
+                }
+            }
         }
     });
 
@@ -97,5 +112,5 @@ module.exports = function(grunt){
     alias('build:debug', 'images:debug css:debug js:debug views:debug');
     alias('build:release', 'images:release css:release js:release views:release');
 
-    alias('dev', 'jshint build:debug watch');
+    alias('dev', 'jshint build:debug concurrent:dev');
 };
