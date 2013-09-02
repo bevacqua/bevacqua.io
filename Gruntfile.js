@@ -46,12 +46,18 @@ module.exports = function(grunt){
         },
         cssmin: {
             release: {
-                files: { 'bin/public/css/all.css': 'bin/public/css/all.css' }
+                files: { 'bin/public/css/all.css': 'bin/public/css/all.css' },
+                options: {
+                    keepSpecialComments: 0
+                }
             }
         },
         uglify: {
             js: {
-                files: { 'bin/public/js/all.js': 'bin/public/js/**/*.js' }
+                files: { 'bin/public/js/all.js': 'bin/public/js/**/*.js' },
+                options: {
+                    preserveComments: false
+                }
             }
         },
         rev: {
