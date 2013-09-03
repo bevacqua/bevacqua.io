@@ -71,7 +71,8 @@ module.exports = function(grunt){
             jshint_support: { tasks: ['jshint:support'], files: ['Gruntfile.js', 'build/**/*.js'] },
             images: { tasks: ['images'], files: ['src/client/img/**/*.{png,jpg,gif,ico}'] },
             css: { tasks: ['css:debug'], files: ['src/client/css/**/*.styl', 'bin/.tmp/sprite/*.css', 'bower_components/**/*.css'] },
-            js: { tasks: ['js:debug'], files: ['src/client/js/**/*.js', 'bower_components/**/*.js'] },
+            js_sources: { tasks: ['copy:js_sources'], files: ['src/client/js/**/*.js'] },
+            js_bower: { tasks: ['copy:js_bower_debug'], files: ['bower_components/**/*.js'] },
             views: { tasks: ['views:debug'], files: ['src/client/views/**/*.jade'] },
             livereload: { options: { livereload: true }, files: ['bin/public/**/*.{css,js}'] }
         },

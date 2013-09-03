@@ -3,10 +3,13 @@
 var port = 3000;
 var debug = true;
 
+var _ = require('lodash');
 var express = require('express');
 var logger = require('../lib/logger');
 var app = express();
 var statics = process.cwd() + '/bin/public';
+
+logger.info('running: node app', _.rest(process.argv, 2));
 
 require('./controllers')(app);
 
