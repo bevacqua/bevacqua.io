@@ -1,10 +1,17 @@
 # seriously? ignore git changes
 .git
+*.markdown
 
-# libraries, libraries, libraries
+# package control
 node_modules
 bower_components
+npm-debug.log
+
+# build artifacts
 bin
+
+# os artifacts
+.DS_Store
 
 # ignore client-side js
 src/client/*
