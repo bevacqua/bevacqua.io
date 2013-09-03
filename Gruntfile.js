@@ -93,7 +93,7 @@ module.exports = function(grunt){
         }
     });
 
-    // todo: node (mon?) livereload, unit tests, screen shot integration test diffs, stylus linter?
+    // todo: unit tests, screen shot integration test diffs, lint css?
 
     function alias (name, tasks) {
         grunt.registerTask(name, tasks.split(' '));
