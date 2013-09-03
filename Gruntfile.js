@@ -94,7 +94,7 @@ module.exports = function(grunt){
     });
 
     // todo: unit tests, screen shot integration test diffs, lint css?
-    // deploy task to auto-deploy to production servers.
+    // deploy task to auto-deploy to production servers, create grunt task grunt-pushover
 
     function alias (name, tasks) {
         grunt.registerTask(name, tasks.split(' '));
