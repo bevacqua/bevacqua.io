@@ -72,7 +72,8 @@ module.exports = function(grunt){
             images: { tasks: ['images'], files: ['src/client/img/**/*.{png,jpg,gif,ico}'] },
             css: { tasks: ['css:debug'], files: ['src/client/css/**/*.styl', 'bin/.tmp/sprite/*.css', 'bower_components/**/*.css'] },
             js: { tasks: ['js:debug'], files: ['src/client/js/**/*.js', 'bower_components/**/*.js'] },
-            views: { tasks: ['views:debug'], files: ['src/client/views/**/*.jade'] }
+            views: { tasks: ['views:debug'], files: ['src/client/views/**/*.jade'] },
+            livereload: { options: { livereload: true }, files: ['bin/public/**/*.{css,js}'] }
         },
         nodemon: {
             dev: {
@@ -83,7 +84,7 @@ module.exports = function(grunt){
         },
         concurrent: {
             dev: {
-                tasks: ['nodemon:dev', 'watch'],
+                tasks: ['watch', 'nodemon:dev'],
                 options: {
                     logConcurrentOutput: true
                 }
