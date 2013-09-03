@@ -8,7 +8,8 @@ logger.add(logger.transports.Console, {
     timestamp: function(){
         return moment().format('Do HH:mm:ss');
     },
-    colorize: true
+    colorize: true,
+    level: 'debug'
 });
 
 module.exports.stream = function(level){

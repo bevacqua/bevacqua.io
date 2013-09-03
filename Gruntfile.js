@@ -74,7 +74,7 @@ module.exports = function(grunt){
             js_sources: { tasks: ['copy:js_sources'], files: ['src/client/js/**/*.js'] },
             js_bower: { tasks: ['copy:js_bower_debug'], files: ['bower_components/**/*.js'] },
             views: { tasks: ['views:debug'], files: ['src/client/views/**/*.jade'] },
-            livereload: { options: { livereload: true }, files: ['bin/public/**/*.{css,js}'] }
+            livereload: { options: { livereload: true }, files: ['bin/public/**/*.{css,js}','bin/views/**/*.html'] }
         },
         nodemon: {
             dev: {
@@ -94,6 +94,7 @@ module.exports = function(grunt){
     });
 
     // todo: unit tests, screen shot integration test diffs, lint css?
+    // deploy task to auto-deploy to production servers.
 
     function alias (name, tasks) {
         grunt.registerTask(name, tasks.split(' '));

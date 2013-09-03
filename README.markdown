@@ -6,4 +6,4 @@ _(oh, and my personal website)_
 
 # Flow
 
-In local development you can use `grunt dev` to configure and build the 
+In local development you can use `grunt dev` to configure and build everything. As you make changes, the `watch` task will re-compile any assets as needed, and its `livereload` target will load changes in the browser, making for continuous development.
