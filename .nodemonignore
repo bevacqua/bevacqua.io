@@ -1,5 +1,10 @@
 # seriously? ignore git changes
 .git
 
+# libraries, libraries, libraries
+node_modules
+bower_components
+bin
+
 # ignore client-side js
 src/client/*
