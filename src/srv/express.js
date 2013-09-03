@@ -29,7 +29,7 @@ app.use(app.router);
 var statics = process.cwd() + '/bin/public';
 
 app.use(express.favicon(statics + '/img/favicon.ico'));
-app.use(express.static(statics, { maxAge: 86400000 }));
+app.use(express.static(statics, debug ? {} : { maxAge: 86400000 }));
 
 app.listen(port, function(){
     logger.info('express listening on port', port);
