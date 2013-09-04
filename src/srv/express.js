@@ -14,12 +14,12 @@ require('./controllers')(app);
 
 app.locals.settings['x-powered-by'] = false;
 
-if (debug) {
+app.configure('development', function(){
     app.use(express.logger({
         format: ':method :url :status',
         stream: logger.stream('debug')
     }));
-}
+});
 
 app.use(express.compress());
 app.use(express.bodyParser());
