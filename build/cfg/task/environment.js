@@ -5,13 +5,13 @@ var cwd = process.cwd();
 var pemkey = path.join(cwd, 'env/.private.pem');
 
 module.exports = {
-    pemcrypt_gen: {
+    pem_gen: {
         key: { pem: pemkey }
     },
-    pemcrypt_encrypt: {
+    pem_encrypt: {
         dev: { pem: pemkey, store: 'env/dev_sensitive' }
     },
-    pemcrypt_decrypt: {
+    pem_decrypt: {
         dev: { pem: pemkey, store: 'env/dev_sensitive' }
     }
 };
