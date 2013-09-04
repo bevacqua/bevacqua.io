@@ -6,7 +6,7 @@ module.exports = {
         jshint_client: { tasks: ['jshint:client', 'play:success'], files: ['src/client/js/**/*.js'] },
         jshint_server: { tasks: ['jshint:server', 'play:success'], files: ['src/srv/**/*.js', 'app.js'] },
         jshint_support: { tasks: ['jshint:support', 'play:success'], files: ['Gruntfile.js', 'build/**/*.js'] },
-        images: { tasks: ['images', 'play:success'], files: ['src/client/img/**/*.{png,jpg,gif,ico}'] },
+        images: { tasks: ['images:debug', 'play:success'], files: ['src/client/img/**/*.{png,jpg,gif,ico}'] },
         css: { tasks: ['css:debug', 'play:success'], files: ['src/client/css/**/*.styl', 'bin/.tmp/sprite/*.css', 'bower_components/**/*.css'] },
         js_sources: { tasks: ['copy:js_sources', 'play:success'], files: ['src/client/js/**/*.js'] },
         js_bower: { tasks: ['copy:js_bower_debug', 'play:success'], files: ['bower_components/**/*.js'] },
