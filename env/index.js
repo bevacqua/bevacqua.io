@@ -7,4 +7,4 @@ var defaults = path.join(__dirname, 'defaults.json');
 
 nconf.argv().env().file(dev).file(defaults);
 
-module.exports = nconf.get.bind(nconf);
+global.conf = module.exports = nconf.get.bind(nconf);

@@ -33,5 +33,5 @@ module.exports = function(grunt){
     alias('build:release', 'images:release css:release js:release views:release');
 
     alias('dev', 'jshint build:rebuild concurrent:dev');
-    alias('dev_setup', 'pem_decrypt:dev')
+    alias('dev_setup', 'pem_decrypt:dev');
 };

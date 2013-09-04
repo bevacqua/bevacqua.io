@@ -1,7 +1,7 @@
 'use strict';
 
-var port = 3000;
-var debug = true;
+var port = conf('PORT');
+var dev = conf('NODE_ENV') === 'development';
 
 var _ = require('lodash');
 var express = require('express');
@@ -29,7 +29,7 @@ app.use(app.router);
 var statics = process.cwd() + '/bin/public';
 
 app.use(express.favicon(statics + '/img/favicon.ico'));
-app.use(express.static(statics, debug ? {} : { maxAge: 86400000 }));
+app.use(express.static(statics, dev ? {} : { maxAge: 86400000 }));
 
 app.listen(port, function(){
     logger.info('express listening on port', port);
