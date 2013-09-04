@@ -34,7 +34,7 @@
     "grunt-contrib-stylus": "0.8.0",
     "grunt-contrib-watch": "0.5.3",
     "grunt-nodemon": "0.1.0",
-    "grunt-pemcrypt": "0.0.2",
+    "grunt-pemcrypt": "0.1.0",
     "grunt-play": "0.1.0",
     "grunt-rev": "0.1.0",
     "grunt-smushit": "1.1.2",

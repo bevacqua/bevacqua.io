@@ -9,6 +9,5 @@ bin
 # os artifacts
 .DS_Store
 
-# sensitive pals
-*_sensitive.json
-env/.private.pem
+# sensitive defaults
+env/private
