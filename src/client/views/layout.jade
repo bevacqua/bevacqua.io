@@ -6,18 +6,17 @@ html
         meta(name='viewport', content='width=device-width, initial-scale=1')
 
         title bevacqua.io
-        
+
         link(rel='shortcut icon', href='/favicon.ico')
         link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Roboto:300,900')
 
         each src in stylesheets
             link(rel='stylesheet', href=src)
 
-    body.io-font.io-tiles
+    body.io-body.io-font.io-tiles
         include header
 
-        main
-            block content
+        block content
 
         each src in javascripts
             script(src=src)

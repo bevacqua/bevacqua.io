@@ -1,25 +1,28 @@
 extends /layout
 
 block content
-    header.bf-teaser
-        h1.bf-title Write clean JavaScript applications that deploy with the push of a button
-        section
-            | You already know JavaScript, and are looking to design an architecture?
-            | Learn how to craft a workflow that increases your development productivity and reduces issues during deployments.
-            | At the same time, learn how to make your code cleaner, more robust, and scalable.
+    main.bf-main
+        img.bf-cover(src='http://placekitten.com/200/300')
+        header.bf-teaser-wrapper.ty-clearfix
+            div.bf-teaser
+                h1.bf-teaser-title Write clean JavaScript applications that deploy with the push of a button
+                h3.bf-teaser-text
+                    | You already know JavaScript, and are looking to design an architecture?
+                    | Learn how to craft a workflow that increases your development productivity and reduces issues during deployments.
+                    | At the same time, learn how to make your code cleaner, more robust, and scalable.
 
-    article.io-section
-        section
-            header
-                span='What is '
-                b Build First
-                span='?'
-            ul
-                li An innovative approach to JavaScript application building
-                li 
+        article.io-section
+            section
+                header
+                    span='What is '
+                    b Build First
+                    span='?'
+                ul
+                    li An innovative approach to JavaScript application building
+                    li 
 
-        section
-            header What will you learn from the book?
-            ul
-                li How to approach any application (not just JavaScript ones) adopting a Build First mentality
-                li How to develop maintainable JavaScript architectures?
+            section
+                header What will you learn from the book?
+                ul
+                    li How to approach any application (not just JavaScript ones) adopting a Build First mentality
+                    li How to develop maintainable JavaScript architectures?
