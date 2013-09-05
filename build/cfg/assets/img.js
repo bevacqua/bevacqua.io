@@ -18,7 +18,7 @@ module.exports = {
             cssOpts: {
                 cssClass: function (item) {
                     var prefix = short ? short + '-' : '';
-                    return '.' + prefix + item.name;
+                    return '.' + prefix + item.name + ':before';
                 }
             },
             engine: 'gm'
