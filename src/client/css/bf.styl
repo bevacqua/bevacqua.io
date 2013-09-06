@@ -1,27 +1,78 @@
-.bf-main
-    position relative
+.bf-tiles
+    background:
+        radial-gradient(c_midnight 15%, transparent 16%) 0 0,
+        radial-gradient(c_midnight 15%, transparent 16%) 8px 8px,
+        radial-gradient(rgba(#fff, 0.1) 15%, transparent 20%) 0 1px,
+        radial-gradient(rgba(#fff, 0.1) 15%, transparent 20%) 8px 9px
+    background-color c_asphalt
+    background-size 16px 16px
 
-.bf-cover
-    position absolute
-    left 40px
-    top 40px
-
-.bf-teaser-wrapper
-    background-image url('/img/house/blurred.jpg')
+.bf-header
+    background-image url('/img/beer/beer-1200.jpg')
     background-repeat no-repeat
-    background-size 100%
+    background-position center top
+    background-size cover
 
-.bf-teaser
-    float right
-    max-width 550px
-    margin 20px 60px
-    text-shadow 0px 1px 3px rgba(0, 0, 0, 0.5)
+.bf-book
+    min-height 650px
+    padding 35px 20px
+    text-align center
 
-.bf-teaser-title
+.bf-book-cover
+    box-shadow 0px 0px 8px 2px rgba(#fff, 0.2)
+
+.bf-book-title
     color #fff
     font-size 48px
+    font-weight 900
+    text-shadow 0 1px 3px rgba(#000, 0.8)
 
-.bf-teaser-text
-    color #ddd
+    selection-background #fff
+    selection-color c_yellow
+    selection-shadow 0 1px 3px rgba(#000, 0.2)
+
+.bf-book-pitch
+    padding 15px
+    text-align justify
+    border-left 10px rgba(#fff, 0.5) solid
+    background-color rgba(lighten(c_yellow, 25%), 0.9)
+    color #444
     font-size 22px
     font-weight 300
+    text-shadow 0 1px 3px rgba(#fff, 0.2)
+    box-shadow 0px 0px 8px 2px rgba(#fff, 0.5)
+
+    selection-background #fff
+    selection-color #000
+    selection-shadow 0 1px 3px rgba(#000, 0.2)
+
+    &:hover
+        background-color rgba(c_yellow, 1)
+
+@media only screen and (min-width: 768px)
+    .bf-book-cover, .bf-book-description
+        display inline-block
+        vertical-align top
+
+    .bf-book-cover
+        margin-right 20px
+
+    .bf-book-description
+        display inline-block
+        max-width 400px
+
+@media only screen and (min-width: 1224px)
+    .bf-book-cover
+        margin-right 40px
+
+    .bf-book-description
+        max-width 650px
+
+.bf-section
+    margin 20px
+    padding 15px
+    background #fff
+    box-shadow 1px 1px 1px 3px rgba(0, 0, 0, 0.5)
+
+.bf-section
+    display none

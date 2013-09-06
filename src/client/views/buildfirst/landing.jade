@@ -1,17 +1,20 @@
 extends /layout
 
 block content
-    main.bf-main
-        img.bf-cover(src='http://placekitten.com/200/300')
-        header.bf-teaser-wrapper.ty-clearfix
-            div.bf-teaser
-                h1.bf-teaser-title Write clean JavaScript applications that deploy with the push of a button
-                h3.bf-teaser-text
-                    | You already know JavaScript, and are looking to design an architecture?
-                    | Learn how to craft a workflow that increases your development productivity and reduces issues during deployments.
-                    | At the same time, learn how to make your code cleaner, more robust, and scalable.
+    main.bf-main.bf-tiles
+        header.bf-header
+            include /header-nav
 
-        article.io-section
+            section.bf-book
+                img.bf-book-cover(src='/img/buildfirst/cover.jpg')
+                div.bf-book-description
+                    h1.bf-book-title Write clean JavaScript applications that deploy with the push of a button
+                    h3.bf-book-pitch
+                        | You already know JavaScript, and are looking to design an architecture?
+                        | Learn how to craft a workflow that increases your development productivity and reduces issues during deployments.
+                        | At the same time, learn how to make your code cleaner, more robust, and scalable.
+
+        article.bf-section
             section
                 header
                     span='What is '

@@ -8,14 +8,12 @@ html
         title bevacqua.io
 
         link(rel='shortcut icon', href='/favicon.ico')
-        link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Roboto:300,900')
+        link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900')
 
         each src in stylesheets
             link(rel='stylesheet', href=src)
 
-    body.io-body.io-font.io-tiles
-        include header
-
+    body.io-body.io-font
         block content
 
         each src in javascripts
