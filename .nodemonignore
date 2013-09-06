@@ -1,15 +1,14 @@
 # seriously? ignore git changes
-.git
+.git/*
 *.markdown
 
 # package control
-node_modules
-bower_components
+node_modules/*
+bower_components/*
 npm-debug.log
 
 # build artifacts
-bin/.tmp/*
-bin/public/*
+bin/*
 
 # os artifacts
 .DS_Store
