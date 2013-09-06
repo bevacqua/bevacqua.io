@@ -1,5 +1,7 @@
 # seriously? ignore git changes
 .git/*
+
+# documentation
 *.markdown
 
 # package control
