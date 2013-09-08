@@ -17,7 +17,7 @@ module.exports = function(grunt){
     }
 
     alias('images:debug', 'clean:images copy:images sprite');
-    alias('images:release', 'images:debug smushit:all');
+    alias('images:release', 'images:debug imagemin:all');
 
     alias('css:debug', 'clean:css stylus:all');
     alias('css:release', 'clean:css stylus:all cssmin:release rev:css');

@@ -42,9 +42,16 @@ module.exports = {
         houses: assets.img.sprite('houses', 'ho'),
         icons: assets.img.sprite('icons', 'ic')
     },
-    smushit: {
+    imagemin: {
         all: {
-            src: 'bin/public/img/**/*.{png,jpg,gif}'
+            files: [{
+                expand: true,
+                src: 'bin/public/img/**/*.{png,jpg,gif}'
+            }],
+            options: {
+                progressive: true,
+                interlaced: true
+            }
         }
     },
     cssmin: {
