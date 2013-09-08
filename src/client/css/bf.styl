@@ -1,13 +1,7 @@
-.bf-tiles
-    background:
-        radial-gradient(c_midnight 15%, transparent 16%) 0 0,
-        radial-gradient(c_midnight 15%, transparent 16%) 8px 8px,
-        radial-gradient(rgba(#fff, 0.1) 15%, transparent 20%) 0 1px,
-        radial-gradient(rgba(#fff, 0.1) 15%, transparent 20%) 8px 9px
-    background-color c_asphalt
-    background-size 16px 16px
+c_dark_yellow = darken(c_yellow, 15%)
 
 .bf-header
+    background c_blue
     background-image url('/img/beer/beer-1200.jpg')
     background-repeat no-repeat
     background-position center top
@@ -40,7 +34,7 @@
     padding 15px
     text-align justify
     border-left 10px rgba(#fff, 0.5) solid
-    background-color rgba(darken(c_yellow, 15%), 0.9)
+    background-color rgba(c_dark_yellow, 0.8)
     color #444
     font-size 22px
     font-weight 300
@@ -90,5 +84,10 @@
     background #fff
     box-shadow 1px 1px 1px 3px rgba(0, 0, 0, 0.5)
 
-.bf-section
-    display none
+
+
+
+
+
+
+
