@@ -1,7 +1,8 @@
 c_dark_yellow = darken(c_yellow, 15%)
+c_dark_red = #8e2000 // taken from beer background color palette
 
 .bf-header
-    background c_blue
+    background c_dark_red
     background-image url('/img/beer/beer-1200.jpg')
     background-repeat no-repeat
     background-position center top
@@ -74,6 +75,9 @@ c_dark_yellow = darken(c_yellow, 15%)
 @media only screen and (min-width: 1224px)
     .bf-book-cover
         margin-right 60px
+
+    .bf-book-title
+        max-width 600px
 
     .bf-book-description
         max-width 650px
