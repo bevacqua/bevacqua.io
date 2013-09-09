@@ -24,23 +24,20 @@
     font-weight 900
     text-shadow 0 1px 3px rgba(#000, 0.8)
 
-    selection-background #fff
-    selection-color c_yellow
-    selection-shadow 0 1px 3px rgba(#000, 0.2)
+    selection-background-foreground-shadow(#fff, c_yellow, 0 1px 3px rgba(#000, 0.2))
 
 .bf-book-pitch
     padding 15px
     text-align justify
-    border-left 10px rgba(#fff, 0.5) solid
+    border-left 10px lighten(c_yellow, 25%) solid
+    background-color c_dark_yellow
     background-color rgba(c_dark_yellow, 0.8)
     color #444
     font-size 22px
     font-weight 300
     text-shadow 0 1px 3px rgba(#fff, 0.2)
 
-    selection-background #fff
-    selection-color #111
-    selection-shadow 0 1px 3px rgba(#fff, 0.1)
+    selection-background-foreground-shadow(#fff, #111, 0 1px 3px rgba(#fff, 0.1))
 
 @media only screen and (min-width: 768px)
     .bf-book-title

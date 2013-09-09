@@ -18,13 +18,24 @@ module.exports = {
         server: assets.js.lint('src/srv', ['src/srv', 'app.js']),
         support: assets.js.lint('src/srv', ['Gruntfile.js', 'build'])
     },
+    csslint: {
+        client: {
+            options: {
+                csslintrc: 'src/client/css/.csslintrc',
+            },
+            src: ['bin/.tmp/csslint/*.css']
+        }
+    },
     stylus: {
         all: {
             options: {
                 'include css': true,
                 paths: ['bower_components']
             },
-            files: { 'bin/public/css/all.css': ['src/client/css/all.styl', 'bin/.tmp/sprite/*.css'] }
+            files: {
+                'bin/public/css/all.css': ['src/client/css/vendor.styl', 'src/client/css/all.styl', 'bin/.tmp/sprite/*.css'],
+                'bin/.tmp/csslint/compiled.css': ['src/client/css/all.styl']
+            }
         }
     },
     jade: {

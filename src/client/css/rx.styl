@@ -3,24 +3,29 @@ box-sizing()
     -moz-box-sizing arguments
     box-sizing arguments
 
-selection-color()
+selection-properties(background,foreground,shadow)
+    background-color background
+    color foreground
+    text-shadow shadow
+
+selection-background-foreground-shadow(background,foreground,shadow)
     &::-webkit-selection
-        color arguments
+        selection-properties(background,foreground,shadow)
 
     &::-moz-selection
-        color arguments
+        selection-properties(background,foreground,shadow)
 
     &::selection
-        color arguments
+        selection-properties(background,foreground,shadow)
 
     ::-webkit-selection
-        color arguments
+        selection-properties(background,foreground,shadow)
 
     ::-moz-selection
-        color arguments
+        selection-properties(background,foreground,shadow)
 
     ::selection
-        color arguments
+        selection-properties(background,foreground,shadow)
 
 selection-background()
     &::-webkit-selection
@@ -31,31 +36,3 @@ selection-background()
 
     &::selection
         background arguments
-
-    ::-webkit-selection
-        background arguments
-
-    ::-moz-selection
-        background arguments
-
-    ::selection
-        background arguments
-
-selection-shadow()
-    &::-webkit-selection
-        text-shadow arguments
-
-    &::-moz-selection
-        text-shadow arguments
-
-    &::selection
-        text-shadow arguments
-
-    ::-webkit-selection
-        text-shadow arguments
-
-    ::-moz-selection
-        text-shadow arguments
-
-    ::selection
-        text-shadow arguments
