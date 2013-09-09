@@ -10,7 +10,7 @@ module.exports = function(grunt){
     grunt.initConfig(_.assign(cfg.build, cfg.dev, cfg.env));
 
     // todo: cluster, unit tests, screen shot diffs, integration tests?
-    // grunt-release to trigger deploys
+    // (travis) ci, grunt-release to trigger full deploys
     // deploy task to auto-deploy to production servers
 
     function alias (name, tasks) {
