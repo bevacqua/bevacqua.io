@@ -1,16 +1,21 @@
 .rs-list
     margin 0
+    padding 20px 0
+    text-align center
     list-style-type none
     background-color c_yellow
 
 .rs-item
-    margin 0
-    padding 10px 0
+    margin 20px
+    padding 0
+    text-align left
 
 .rs-link
-    color c_greensea
     font-size 22px
     font-weight 300
+
+.rs-link, .rs-description a
+    color c_greensea
 
     selection-background-foreground-shadow(#000, #ddd, 0 1px 3px rgba(#000, 0.2))
 
@@ -23,3 +28,18 @@
     color #444
 
     selection-background-foreground-shadow(#000, #ddd, 0 1px 3px rgba(#000, 0.2))
+
+    a
+        font-weight bold
+        text-decoration none
+
+@media only screen and (max-width: 767px)
+    .rs-item:not(:first-child)
+        padding-top 20px
+        border-top 1px solid c_greensea
+
+@media only screen and (min-width: 768px)
+    .rs-item
+        max-width 350px
+        display inline-block
+        vertical-align top
