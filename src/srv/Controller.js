@@ -18,6 +18,14 @@ Controller.prototype.renderView = function(res, view){
     });
 };
 
+Controller.prototype.getView = function(view){
+    var controller = this;
+
+    return function (req, res) {
+        controller.renderView(res, view + '.html');
+    };
+};
+
 module.exports = function(){
     var args = _.toArray(arguments);
     return new (Function.prototype.bind.apply(Controller, [null].concat(args)))();
