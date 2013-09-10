@@ -1,5 +1,9 @@
 'use strict';
 
+var jadeContextService = require('../service/jadeContextService.js');
+
+require('./util/initJadeContext.js');
+
 module.exports = function(release){
     var views = 'src/client/views';
 
@@ -12,15 +16,7 @@ module.exports = function(release){
         options: {
             pretty: !release,
             basedir: views,
-            data: function(){
-                var stylesheets = require('./stylesheets.js');
-                var scripts = require('./javascripts.js');
-
-                return {
-                    stylesheets: stylesheets.files(),
-                    javascripts: scripts.files()
-                };
-            }
+            data: jadeContextService.getContext
         }
     };
 };
