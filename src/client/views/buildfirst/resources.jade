@@ -11,3 +11,9 @@ block content
             section.bf-resources-description
                 h1.bf-header-title.bf-resources-title Access reference links, get the code
                 h3.bf-header-pitch.bf-resources-pitch For your convenience, all the resources mentioned in the book can be found below, in case you're too busy to type them into your browser by hand. You'll find the complete companion code for the book here as well.
+
+        ul.rs-list
+            each resource in buildfirst.links
+                li.rs-item
+                    a.rs-link(href='/bf/' + resource.key, target='_blank')=resource.title
+                    div.rs-description!=resource.description

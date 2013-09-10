@@ -1,7 +1,14 @@
 {
     "code": {
+        "key": "code",
         "url": "https://github.com/bevacqua/buildfirst",
         "title": "Code Samples and Snippets",
-        "description": "Every single code sample and snippet that is discussed in the book, and then a few more, which didn't make it into the book."
+        "description": "Every single code sample and snippet that is discussed in the book, and then _a few more_, which didn't make it into the book."
+    },
+    "speed-matters": {
+        "key": "speed-matters",
+        "url": "http://www.codinghorror.com/blog/2006/11/speed-still-matters.html",
+        "title": "Speed Still Matters",
+        "description": "In this blog post, renowned Jeff Atwood, of [Stack Overflow](http://stackoverflow.com \"Stack Overflow Q&A Site\") fame goes over anecdotes about how Google and Amazon tested their sites' perceived speed, and their interesting conclusions."
     }
 }

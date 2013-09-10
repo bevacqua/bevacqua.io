@@ -11,7 +11,7 @@ module.exports = {
         var data = providers.map(function(provider){
             return provider();
         });
-
+        console.log(_.assign.apply(_, [{}].concat(data)));
         return _.assign.apply(_, [{}].concat(data));
     },
     registerProvider: function(provider){
