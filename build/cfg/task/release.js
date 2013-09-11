@@ -11,7 +11,7 @@ module.exports = {
         options: {
             files: ['package.json', 'bower.json'],
             commitFiles: ['package.json', 'bower.json', 'CHANGELOG.md'],
-            commitMessage: 'Release v%VERSION% ' + emoji.random()
+            commitMessage: 'Release v%VERSION% ' + emoji.random(),
             pushTo: 'origin'
         }
     },
