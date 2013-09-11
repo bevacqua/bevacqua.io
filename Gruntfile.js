@@ -7,7 +7,7 @@ module.exports = function(grunt){
 
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-    grunt.initConfig(_.assign(_.values(cfg)));
+    grunt.initConfig(_.merge(_.values(cfg)));
 
     // todo: cluster, unit tests, screen shot diffs, integration tests?
     // (travis) ci, grunt-release to trigger full deploys
