@@ -1,5 +1,7 @@
 'use strict';
 
+var emoji = require('emoji-random');
+
 module.exports = {
     rev: {
         css: { files: { src: 'bin/public/css/all.css' } },
@@ -9,6 +11,7 @@ module.exports = {
         options: {
             files: ['package.json', 'bower.json'],
             commitFiles: ['package.json', 'bower.json', 'CHANGELOG.md'],
+            commitMessage: 'Release v%VERSION% ' + emoji.random()
             pushTo: 'origin'
         }
     },
