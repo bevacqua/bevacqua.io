@@ -10,27 +10,29 @@ var app = express();
 
 logger.info('running: node app', _.rest(process.argv, 2));
 
-require('./controllers')(app);
+var controllers = require('./controllers');
 
-app.locals.settings['x-powered-by'] = false;
+controllers.load(app, function(){
+    app.locals.settings['x-powered-by'] = false;
 
-app.configure('development', function(){
-    app.use(express.logger({
-        format: ':method :url :status',
-        stream: logger.stream('debug')
-    }));
-});
+    app.configure('development', function(){
+        app.use(express.logger({
+            format: ':method :url :status',
+            stream: logger.stream('debug')
+        }));
+    });
 
-app.use(express.compress());
-app.use(express.bodyParser());
+    app.use(express.compress());
+    app.use(express.bodyParser());
 
-app.use(app.router);
+    app.use(app.router);
 
-var statics = process.cwd() + '/bin/public';
+    var statics = process.cwd() + '/bin/public';
 
-app.use(express.favicon(statics + '/img/favicon.ico'));
-app.use(express.static(statics, dev ? {} : { maxAge: 86400000 }));
+    app.use(express.favicon(statics + '/img/favicon.ico'));
+    app.use(express.static(statics, dev ? {} : { maxAge: 86400000 }));
 
-app.listen(port, function(){
-    logger.info('express listening on port', port);
+    app.listen(port, function(){
+        logger.info('express listening on port', port);
+    });
 });
