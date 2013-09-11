@@ -6,40 +6,50 @@
     background-color c_yellow
 
 .rs-item
-    margin 20px
-    padding 0
+    margin 0 20px
+    padding 10px
     text-align left
-
-.rs-link
-    font-size 22px
-    font-weight 300
-
-    &:before
-        margin-right 8px
-
-.rs-link, .rs-description a
-    color c_greensea
 
     selection-background-foreground-shadow(#000, #ddd, 0 1px 3px rgba(#000, 0.2))
 
     &:hover
-        color c_emerald
+        background-color #ccc
+        background-color rgba(#fff, 0.1)
+
+.rs-link
+    display block
+    font-size 22px
+    font-weight 300
+    padding 8px
+    transition all 0.2s ease-in-out
+    color c_greensea
+
+    &:before
+        margin-right 8px
+
+    &:hover
+        color #444
+        background-color c_emerald
 
 .rs-description
     font-size 18px
     font-weight 300
     color #444
 
-    selection-background-foreground-shadow(#000, #ddd, 0 1px 3px rgba(#000, 0.2))
-
     a
         font-weight bold
         text-decoration none
+        color c_greensea
+
+        &:hover
+            color c_emerald
 
 @media only screen and (max-width: 767px)
     .rs-item:not(:first-child)
-        padding-top 20px
         border-top 1px solid c_greensea
+
+    .rs-link
+        text-align center
 
 @media only screen and (min-width: 768px)
     .rs-item
