@@ -9,6 +9,6 @@
         "key": "speed-matters",
         "url": "http://www.codinghorror.com/blog/2006/11/speed-still-matters.html",
         "title": "Speed Still Matters",
-        "description": "In this blog post, renowned Jeff Atwood, of [Stack Overflow](http://stackoverflow.com \"Stack Overflow Q&A Site\") fame goes over anecdotes about how Google and Amazon tested their sites' perceived speed, and their interesting conclusions."
+        "description": "In this blog post, renowned Jeff Atwood, of [Stack Overflow](http://stackoverflow.com \"Stack Overflow Q&A Site\") fame, goes over anecdotes about how Google and Amazon tested their sites' perceived speed, and the interesting conclusions they arrived at."
     }
 }
