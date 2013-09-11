@@ -10,8 +10,8 @@ module.exports = function(grunt){
     grunt.initConfig(_.merge.apply({}, _.values(cfg)));
 
     // todo: cluster, unit tests, screen shot diffs, integration tests?
-    // (travis) ci, grunt-release to trigger full deploys
-    // deploy task to auto-deploy to production servers
+    // todo: register to (travis) ci
+    // todo: deploy task actually deploying to staging/production servers
 
     function alias (name, tasks) {
         grunt.registerTask(name, tasks.split(' '));
@@ -33,9 +33,13 @@ module.exports = function(grunt){
     alias('build:rebuild', 'build:debug play:success');
     alias('build:release', 'images:release css:release js:release views:release bump:patch');
 
+    alias('test', 'jshint csslint');
+
     alias('dev', 'clean build:rebuild concurrent:dev');
     alias('dev_setup', 'clean pem_decrypt:dev dev');
 
+    alias('ci', 'clean build:release test');
+    alias('deploy', 'clean build:release test' /* and actually deploy it */);
+
     alias('default', 'dev');
-    alias('ci', 'clean build:release jshint csslint');
 };
