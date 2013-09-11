@@ -33,7 +33,7 @@ module.exports = function(grunt){
 
     alias('build:debug', 'images:debug css:debug js:debug views:debug bump-only:build');
     alias('build:rebuild', 'build:debug play:success');
-    alias('build:release', 'images:release css:release js:release views:release bump:patch');
+    alias('build:release', 'images:release css:release js:release views:release bump-only:build');
 
     alias('test', 'jshint csslint');
 
@@ -41,7 +41,7 @@ module.exports = function(grunt){
     alias('dev_setup', 'clean pem_decrypt:dev dev');
 
     alias('ci', 'clean build:release test');
-    alias('deploy', 'clean build:release test' /* and actually deploy it */);
+    alias('deploy', 'clean build:release test bump:patch' /* and actually deploy it */);
 
     alias('default', 'dev');
 };

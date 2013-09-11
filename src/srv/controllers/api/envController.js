@@ -1,6 +1,5 @@
 'use strict';
 
-var path = require('path');
 var controller = module.exports = require('../ApiController.js')();
 
 controller.registerRoutes = function(app){

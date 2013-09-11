@@ -24,7 +24,7 @@ function timestamps(){
 
 module.exports.stream = function(level){
     return {
-        write: function(data, encoding){
+        write: function(data){
             var message = data.replace(/\n+$/, ''); // remove trailing breaks
             logger[level](message);
         }

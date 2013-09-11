@@ -1,6 +1,5 @@
 'use strict';
 
-var fs = require('fs');
 var path = require('path');
 var walk = require('walk');
 var logger = require('../../lib/logger.js');

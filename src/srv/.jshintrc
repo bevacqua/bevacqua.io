@@ -18,6 +18,7 @@
   "indent": 4,
   "node": true,
   "globals": {
-    "conf": true
+    "conf": true,
+    "require_cwd": true
   }
 }
