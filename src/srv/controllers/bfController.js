@@ -4,7 +4,12 @@ var controller = module.exports = require('../Controller.js')('bf');
 var links = require('../../../dat/buildfirst/links.json');
 
 controller.registerRoutes = function(app){
+    app.get('/bf', controller.redirectToBuildFirst);
     app.get('/bf/:key', controller.expandShortLink);
+};
+
+controller.redirectToBuildFirst = function(req, res){
+    res.redirect('/buildfirst', 301);
 };
 
 controller.expandShortLink = function(req, res, next){
