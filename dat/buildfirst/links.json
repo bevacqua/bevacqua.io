@@ -10,5 +10,17 @@
         "url": "http://www.codinghorror.com/blog/2006/11/speed-still-matters.html",
         "title": "Speed Still Matters",
         "description": "In this blog post, renowned Jeff Atwood, of [Stack Overflow](http://stackoverflow.com \"Stack Overflow Q&A Site\") fame, goes over anecdotes about how Google and Amazon tested their sites' perceived speed, and the interesting conclusions they arrived at."
+    },
+    "grunt": {
+        "key": "grunt",
+        "url": "http://gruntjs.com",
+        "title": "Grunt Task Runner",
+        "description": "Grunt is a task runner that helps us automate our build process. It is thoroughly discussed in the book."
+    },
+    "db-tasks": {
+        "key": "db-tasks",
+        "url": "https://github.com/bevacqua/buildfirst/tree/master/ch02/09_mysql-tasks",
+        "title": "Case Study: Database Tasks",
+        "description": "In this particular code sample, we'll create a series of database-related tasks for our build process. These will help us bootstrap environments, as well as reduce the complexity in database schema updates and rollbacks."
     }
 }
