@@ -29,12 +29,13 @@ module.exports = function(grunt){
     alias('views:debug', 'clean:views jade:debug');
     alias('views:release', 'clean:views jade:release');
 
-    alias('build:debug', 'images:debug css:debug js:debug views:debug');
+    alias('build:debug', 'images:debug css:debug js:debug views:debug bump-only:build');
     alias('build:rebuild', 'build:debug play:success');
-    alias('build:release', 'images:release css:release js:release views:release');
+    alias('build:release', 'images:release css:release js:release views:release bump-only:patch');
 
     alias('dev', 'clean build:rebuild concurrent:dev');
     alias('dev_setup', 'clean pem_decrypt:dev dev');
 
+    alias('default', 'dev');
     alias('ci', 'clean build:release jshint csslint');
 };
