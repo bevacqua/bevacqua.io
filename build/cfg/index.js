@@ -19,5 +19,6 @@ jadeContextService.registerProvider(function(){
 module.exports = {
     dev: require('./task/development.js'),
     env: require('./task/environment.js'),
-    build: require('./task/build.js')
+    build: require('./task/build.js'),
+    release: require('./task/release.js'),
 };
