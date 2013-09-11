@@ -7,7 +7,7 @@ module.exports = {
     },
     bump: {
         options: {
-            files: ['package.json', 'bower.json']
+            files: ['package.json', 'bower.json'],
             commitFiles: ['package.json', 'bower.json'],
             pushTo: 'origin'
         }
