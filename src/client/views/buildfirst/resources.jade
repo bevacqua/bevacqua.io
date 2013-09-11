@@ -15,5 +15,5 @@ block content
         ul.rs-list
             each resource in buildfirst.links
                 li.rs-item
-                    a.rs-link(href='/bf/' + resource.key, target='_blank')=resource.title
+                    a.ty-icon.ic-link.rs-link(href='/bf/' + resource.key, target='_blank')=resource.title
                     div.rs-description!=resource.description
