@@ -7,9 +7,7 @@ var pushover = require('winston-pushover').Pushover;
 
 logger.remove(logger.transports.Console);
 logger.add(logger.transports.Console, {
-    timestamp: function(){
-        return moment().format('Do HH:mm:ss');
-    },
+    timestamp: timestamps,
     colorize: true,
     level: conf('LOG_LEVEL')
 });
@@ -19,6 +17,10 @@ logger.add(pushover, {
     userKey: conf('PUSHOVER_USER_KEY'),
     token: conf('PUSHOVER_API_TOKEN')
 });
+
+function timestamps(){
+    return moment().format('Do HH:mm:ss');
+}
 
 module.exports.stream = function(level){
     return {

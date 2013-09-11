@@ -1,5 +1,6 @@
 {
     "NODE_ENV": "development",
+    "BUILD_DISTRIBUTION": "debug",
     "PORT": 3000,
     "LOG_LEVEL": "debug"
 }

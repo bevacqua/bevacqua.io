@@ -19,3 +19,7 @@ global.require_cwd = function(file, dirname){
     var relative = path.resolve(dirname, cwd, file);
     return require(relative);
 };
+
+var pkg = require_cwd('package.json', __dirname);
+
+nconf.set('BUILD_VERSION', pkg.version);
