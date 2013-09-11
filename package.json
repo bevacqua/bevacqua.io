@@ -7,7 +7,7 @@
     "email": "ng@bevacqua.io",
     "url": "http://bevacqua.io"
   },
-  "version": "0.0.6-0",
+  "version": "0.0.6-1",
   "repository": "git@github.com:bevacqua/io.git",
   "private": true,
   "engines": {
