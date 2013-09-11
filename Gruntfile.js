@@ -3,6 +3,8 @@
 var _ = require('lodash');
 var cfg = require('./build/cfg');
 
+require('./env'); // load globals
+
 module.exports = function(grunt){
 
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);

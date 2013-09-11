@@ -1,6 +1,6 @@
 'use strict';
 
-var controller = module.exports = require('../Controller.js')('buildfirst');
+var controller = module.exports = require('../ViewController.js')('buildfirst');
 
 controller.registerRoutes = function(app){
     app.get('/buildfirst', controller.getView('landing'));
