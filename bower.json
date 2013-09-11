@@ -1,10 +1,14 @@
 {
   "name": "ng-bevacqua",
-  "version": "0.0.1",
+  "description": "Personal website and technical concept-proofing Node module architecture",
   "homepage": "https://github.com/bevacqua/io",
-  "authors": [
-    "Nicolas Bevacqua <nicolasbevacqua@gmail.com>"
-  ],
+  "author": {
+    "name": "Nicolas Bevacqua",
+    "email": "ng@bevacqua.io",
+    "url": "http://bevacqua.io"
+  },
+  "version": "0.0.2-0",
+  "repository": "git@github.com:bevacqua/io.git",
   "private": true,
   "dependencies": {
     "normalize-css": "2.1.3",

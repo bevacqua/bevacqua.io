@@ -87,7 +87,7 @@ module.exports = {
     },
     bump: {
         options: {
-            files: ['package.json']
+            files: ['package.json', 'bower.json']
         }
     }
 };
