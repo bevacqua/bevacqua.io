@@ -41,7 +41,7 @@ module.exports = function(grunt){
     alias('dev_setup', 'clean pem_decrypt:dev dev');
 
     alias('ci', 'clean build:release test');
-    alias('deploy', 'clean build:release test bump:patch' /* and actually deploy it */);
+    alias('deploy', 'clean build:release test changelog bump:patch' /* then actually deploy it */);
 
     alias('default', 'dev');
 };

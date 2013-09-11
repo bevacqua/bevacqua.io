@@ -11,5 +11,10 @@ module.exports = {
             commitFiles: ['package.json', 'bower.json'],
             pushTo: 'origin'
         }
+    },
+    changelog: {
+        options: {
+            editor: 'sublime -w'
+        }
     }
 };
