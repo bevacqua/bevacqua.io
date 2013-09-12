@@ -16,7 +16,13 @@ var api = module.exports = {
 };
 
 var levels = ['debug', 'info', 'warn', 'error'];
-var me = cluster.isWorker ? 'wkr-' + cluster.worker.id : 'master';
+var me;
+
+if (cluster.isWorker) {
+    me = 'wkr-' + cluster.worker.id;
+} else {
+    me = 'master';
+}
 
 _.each(levels, function(level){
     api[level] = logger[level].bind(logger, me);
