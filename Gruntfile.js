@@ -8,6 +8,7 @@ require('./env'); // load globals
 module.exports = function(grunt){
 
     require('load-grunt-tasks')(grunt);
+    require('time-grunt')(grunt);
 
     grunt.initConfig(_.merge.apply({}, _.values(cfg)));
 
