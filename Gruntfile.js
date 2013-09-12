@@ -11,7 +11,7 @@ module.exports = function(grunt){
 
     grunt.initConfig(_.merge.apply({}, _.values(cfg)));
 
-    // todo: cluster, unit tests, screen shot diffs, integration tests?
+    // todo: unit tests, screen shot diffs, integration tests?
     // todo: register to (travis) ci
     // todo: deploy task actually deploying to staging/production servers
 

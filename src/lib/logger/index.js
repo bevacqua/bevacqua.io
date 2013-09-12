@@ -4,7 +4,6 @@ var _ = require('lodash');
 var logger = require('winston');
 var cluster = require('cluster');
 
-
 var api = module.exports = {
     stream: function(level){
         return {
