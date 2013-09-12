@@ -44,7 +44,7 @@
     "grunt-play": "0.1.0",
     "grunt-rev": "0.1.0",
     "grunt-spritesmith": "1.7.0",
-    "matchdep": "0.1.2",
+    "load-grunt-tasks": "0.1.0",
     "play": "0.5.0",
     "ultramarked": "0.5.4"
   }
