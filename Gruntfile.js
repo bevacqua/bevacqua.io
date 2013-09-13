@@ -38,11 +38,14 @@ module.exports = function(grunt){
 
     alias('test', 'jshint csslint');
 
+    alias('dev_setup', 'clean pem_decrypt:dev');
     alias('dev', 'clean build:rebuild concurrent:dev');
-    alias('dev_setup', 'clean pem_decrypt:dev dev');
 
     alias('ci', 'clean build:release test');
-    alias('deploy', 'clean build:release test changelog bump:patch' /* then actually deploy it */);
+
+    alias('deploy_setup', 'shell:deploy_setup');
+    alias('deploy_shrinkwrap', 'clean build:release test changelog bump:patch');
+    alias('deploy', 'deploy_shrinkwrap' /* then actually deploy it */);
 
     alias('default', 'dev');
 };

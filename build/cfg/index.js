@@ -21,4 +21,5 @@ module.exports = {
     env: require('./task/environment.js'),
     build: require('./task/build.js'),
     release: require('./task/release.js'),
+    deploy: require('./task/deploy.js')
 };
