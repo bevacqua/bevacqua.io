@@ -18,7 +18,7 @@ Now you're all set to start working in the development environment. Just issue t
 grunt dev // can run with just `grunt`, too
 ```
 
-That will configure everything required to run the development environment from scratch. Note that you'll need to be provided with the `env/.private.pem` key in order to be able to decrypt the `dev_sensitive.pemjson` file.
+That will configure everything required to run the development environment from scratch. Note that you'll need to be provided with the `env/private/dev.pem` key in order to be able to decrypt `env/secure/dev.pemjson`.
 
 # Flow
 
