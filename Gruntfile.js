@@ -10,6 +10,8 @@ module.exports = function(grunt){
     require('load-grunt-tasks')(grunt);
     require('time-grunt')(grunt);
 
+    grunt.loadTasks('./build/tasks');
+    grunt.loadTasks('./deploy/tasks');
     grunt.initConfig(_.merge.apply({}, _.values(cfg)));
 
     // todo: unit tests, screen shot diffs, integration tests?
@@ -43,7 +45,7 @@ module.exports = function(grunt){
 
     alias('ci', 'clean build:release test');
 
-    alias('deploy_setup', 'pem_decrypt:dpy shell:deploy_setup');
+    alias('deploy_setup', 'pem_decrypt:aws shell:deploy_setup');
     alias('ec2_instance', '' /*creates a new ec2 instance, names it, straps it*/);
     alias('ec2_publish', '' /*publishes a deploy to target ec2 instance*/);
     alias('deploy', 'clean build:release test changelog bump:patch' /*publish to target ec2 instance*/);
