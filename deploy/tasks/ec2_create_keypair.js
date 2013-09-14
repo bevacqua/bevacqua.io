@@ -40,8 +40,8 @@ module.exports = function(grunt){
                 grunt.log.warn(output);
             }
 
-            var name = output.KeyName;
-            var privateKey = output.KeyPair.KeyMaterial;
+            var name = json.KeyName;
+            var privateKey = json.KeyPair.KeyMaterial;
             var file = path.join(cwd, 'deploy/private', name + '.pem');
 
             fs.writeFile(file, privateKey, 'ascii', function(err){
