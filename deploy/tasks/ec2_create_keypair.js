@@ -41,7 +41,7 @@ module.exports = function(grunt){
             }
 
             var name = json.KeyName;
-            var privateKey = json.KeyPair.KeyMaterial;
+            var privateKey = json.KeyMaterial;
             var file = path.join(cwd, 'deploy/private', name + '.pem');
 
             fs.writeFile(file, privateKey, 'ascii', function(err){
