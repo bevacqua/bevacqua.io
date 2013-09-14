@@ -16,7 +16,7 @@ module.exports = {
     jshint: {
         client: assets.js.lint('src/client/js', ['src/client/js/**/*.js', '!src/client/js/vendor/**/*.js']),
         server: assets.js.lint('src/srv', ['src/srv', 'src/lib', 'app.js']),
-        support: assets.js.lint('src/srv', ['Gruntfile.js', 'build'])
+        support: assets.js.lint('src/srv', ['Gruntfile.js', 'build', 'deploy'])
     },
     csslint: {
         client: {
