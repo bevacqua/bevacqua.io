@@ -2,6 +2,7 @@
 
 var fs = require('fs');
 var path = require('path');
+var mkdirp = require('mkdirp');
 var chalk = require('chalk');
 var pty = require('pty.js');
 var cwd = process.cwd();
@@ -43,7 +44,9 @@ module.exports = function(grunt){
             var name = json.KeyName;
             var privateKey = json.KeyMaterial;
             var file = path.join(cwd, 'deploy/private', name + '.pem');
+            var dir = path.dirname(file);
 
+            mkdirp.sync(dir);
             fs.writeFile(file, privateKey, 'ascii', function(err){
                 if (err) { grunt.fatal(err); }
 
