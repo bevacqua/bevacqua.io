@@ -37,7 +37,7 @@ module.exports = function(grunt){
         cli.on('end', function(){
             var json;
             try {
-                json = JSON.parse(output);
+                json = JSON.parse(output.join(''));
             } catch (e) {
                 grunt.fatal(output);
             }

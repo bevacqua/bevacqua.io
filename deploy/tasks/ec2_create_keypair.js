@@ -17,7 +17,7 @@ module.exports = function(grunt){
             ].join('\n'));
         }
 
-        var output = '';
+        var output = [];
         var done = this.async();
         var cli = pty.spawn('aws', [
             'ec2', 'create-key-pair', '--key-name', name
@@ -26,7 +26,7 @@ module.exports = function(grunt){
         grunt.log.writeln('Creating EC2 Key Pair named %s...', chalk.cyan(name));
 
         cli.on('data', function(data){
-            output += data;
+            output.push(data);
         });
 
         cli.on('error', function(err){
@@ -36,7 +36,7 @@ module.exports = function(grunt){
         cli.on('end', function(){
             var json;
             try {
-                json = JSON.parse(output);
+                json = JSON.parse(output.join());
             } catch (e) {
                 grunt.fatal(output);
             }
