@@ -20,8 +20,7 @@ module.exports = function(grunt){
             '--instance-type', conf('AWS_INSTANCE_TYPE'),
             '--count', '1',
             '--key-name', name,
-            '--security-groups', conf('AWS_SECURITY_GROUP_NAME'),
-            '--dry-run'
+            '--security-groups', conf('AWS_SECURITY_GROUP_NAME')
         ], { env: conf() });
 
         grunt.log.writeln('Launching EC2 %s instance', chalk.cyan(conf('AWS_INSTANCE_TYPE')));
