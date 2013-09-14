@@ -4,7 +4,7 @@ module.exports = function(grunt){
     var chalk = require('chalk');
     var pty = require('pty.js');
 
-    grunt.registerTask('ec2_run', function(){
+    grunt.registerTask('ec2_launch', function(){
         var done = this.async();
         var cli = pty.spawn('aws', [
             'ec2', 'run-instances',
@@ -28,7 +28,7 @@ module.exports = function(grunt){
         cli.on('end', done);
     });
 
-    grunt.registerTask('ec2_kill', function(){
+    grunt.registerTask('ec2_shutdown', function(){
 
     });
 
@@ -48,4 +48,7 @@ module.exports = function(grunt){
 
         cli.on('end', done);
     });
+
+    // TODO: wrap in a fn that just takes the command as a string (and task name), and creates the tasks.
+    //ec2_create_keypair, ec2_create_group
 };
