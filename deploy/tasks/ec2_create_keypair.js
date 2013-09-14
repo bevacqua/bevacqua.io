@@ -38,7 +38,7 @@ module.exports = function(grunt){
             try {
                 json = JSON.parse(output);
             } catch (e) {
-                grunt.log.warn(output);
+                grunt.fatal(output);
             }
 
             var name = json.KeyName;

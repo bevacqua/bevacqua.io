@@ -13,6 +13,7 @@ module.exports = function(grunt){
             ].join('\n'));
         }
 
+        var output = [];
         var done = this.async();
         var cli = pty.spawn('aws', [
             'ec2', 'run-instances',
@@ -26,13 +27,26 @@ module.exports = function(grunt){
         grunt.log.writeln('Launching EC2 %s instance', chalk.cyan(conf('AWS_INSTANCE_TYPE')));
 
         cli.on('data', function(data){
-            grunt.log.writeln(data);
+            output.push(data);
         });
 
         cli.on('error', function(err){
             grunt.fatal(err);
         });
 
-        cli.on('end', done);
+        cli.on('end', function(){
+            var json;
+            try {
+                json = JSON.parse(output);
+            } catch (e) {
+                grunt.fatal(output);
+            }
+
+            var id = json.Instances[0].InstanceId;
+            var tag = util.format('ec2_create_tag:%s:%s', id, name);
+
+            grunt.task.run(tag);
+            done();
+        });
     });
 };
