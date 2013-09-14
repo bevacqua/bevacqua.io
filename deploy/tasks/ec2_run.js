@@ -1,5 +1,6 @@
 'use strict';
 
+var util = require('util');
 var chalk = require('chalk');
 var pty = require('pty.js');
 

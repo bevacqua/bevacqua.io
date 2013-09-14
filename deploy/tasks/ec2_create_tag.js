@@ -16,8 +16,8 @@ module.exports = function(grunt){
         var done = this.async();
         var cli = pty.spawn('aws', [
             'ec2', 'create-tags',
-            id,
-            '--tag', 'name=' + name
+            '--resources', id,
+            '--tags', 'Key=Name,Value=' + name
         ], { env: conf() });
 
         grunt.log.writeln('Naming EC2 instance %s as %s', chalk.cyan(id), chalk.cyan(name));
