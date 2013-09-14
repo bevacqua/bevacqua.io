@@ -9,5 +9,6 @@ bin
 # os artifacts
 .DS_Store
 
-# sensitive defaults
+# sensitive data
 env/private
+deploy/private

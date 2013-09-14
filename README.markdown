@@ -4,7 +4,7 @@ Technical concept-proofing Node module architecture
 
 _(oh, and my personal website)_
 
-# First Timer
+# Setup
 
 For a first time developer environment setup, you'll want to run the following:
 
@@ -20,16 +20,8 @@ grunt dev // can run with just `grunt`, too
 
 That will configure everything required to run the development environment from scratch. Note that you'll need to be provided with the `env/private/dev.pem` key in order to be able to decrypt `env/secure/dev.pemjson`.
 
-# Flow
+# Development Flow
 
 In local development you can use `grunt` to configure and build everything. As you make changes, the `watch` task will re-compile any assets as needed, and its `livereload` target will load changes in the browser, making for continuous development.
 
 In order to enable `livereload`, you'll need to install the [browser extension](http://feedback.livereload.com/knowledgebase/articles/86242).
-
-# Deploying
-
-The first time around, you'll [**need to get**](http://www.pip-installer.org/en/latest/installing.html) `pip` to be able to deploy. This will install the `awscli` command-line tools for AWS:
-
-```shell
-grunt deploy_setup
-```
