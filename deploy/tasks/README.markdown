@@ -14,8 +14,10 @@ The `ec2_launch` command will create a key pair, launch a new EC2 instance, and 
 grunt ec2_launch:voodoo
 ```
 
-To terminate the `voodoo` instance, you'll need to look up its `InstanceId`, and then run the following:
+To terminate the `voodoo` instance, you can run the following:
 
 ```shell
-grunt ec2_terminate:id
+grunt ec2_shutdown:voodoo
 ```
+
+Note that this command will look for all instances described with a tag Name whose value is `voodoo`. The key-pair registered for this instance will also be removed.
