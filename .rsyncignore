@@ -1,7 +1,14 @@
+# vcs files
 .git/*
+
+# sensitive data
+deploy/private/*
+
+# will npm install on the server
+node_modules/*
+
+# already translated into bin
 src/client/*
-.editorconfig
-.gitattributes
-.gitignore
-.nodemonignore
-.rsyncignore
+
+# already copied to bin
+bower_components/*
