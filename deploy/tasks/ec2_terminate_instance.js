@@ -5,11 +5,11 @@ var pty = require('pty.js');
 
 module.exports = function(grunt){
 
-    grunt.registerTask('ec2_terminate', function(id){
+    grunt.registerTask('ec2_terminate_instance', function(id){
         if (arguments.length === 0) {
             grunt.fatal([
                 'You should provide an instance id.',
-                'e.g: ' + chalk.yellow('grunt ec2_launch:name')
+                'e.g: ' + chalk.yellow('grunt ec2_terminate_instance:id')
             ].join('\n'));
         }
 

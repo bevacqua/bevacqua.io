@@ -6,7 +6,10 @@ module.exports = function(grunt){
 
     grunt.registerTask('ec2_list', function(){
         var done = this.async();
-        var cli = pty.spawn('aws', ['ec2', 'describe-instances'], { env: conf() });
+        var cli = pty.spawn('aws', [
+            'ec2', 'describe-instances',
+            '--filters', 'Name=instance-state-name,Values=' + name
+        ], { env: conf() });
 
         grunt.log.writeln('Getting EC2 instance list...');
 

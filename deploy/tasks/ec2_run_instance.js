@@ -6,11 +6,11 @@ var pty = require('pty.js');
 
 module.exports = function(grunt){
 
-    grunt.registerTask('ec2_run', function(name){
+    grunt.registerTask('ec2_run_instance', function(name){
         if (arguments.length === 0) {
             grunt.fatal([
                 'You should provide a name for the instance.',
-                'e.g: ' + chalk.yellow('grunt ec2_launch:name')
+                'e.g: ' + chalk.yellow('grunt ec2_run_instance:name')
             ].join('\n'));
         }
 
