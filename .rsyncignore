@@ -1,0 +1,7 @@
+.git/*
+src/client/*
+.editorconfig
+.gitattributes
+.gitignore
+.nodemonignore
+.rsyncignore
