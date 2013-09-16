@@ -3,7 +3,9 @@
 
 # sensitive data
 env/private/*
-deploy/private/*
+
+# unneeded on deployed applications
+deploy/*
 
 # will npm install on the server
 node_modules/*

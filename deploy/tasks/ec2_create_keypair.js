@@ -9,6 +9,7 @@ var cwd = process.cwd();
 module.exports = function(grunt){
 
     grunt.registerTask('ec2_create_keypair', function(name){
+
         if (arguments.length === 0) {
             grunt.fatal([
                 'You should provide a key-pair name.',

@@ -6,6 +6,7 @@ var exec = require('./lib/exec.js');
 module.exports = function(grunt){
 
     grunt.registerTask('ec2_terminate_instance', function(id){
+
         if (arguments.length === 0) {
             grunt.fatal([
                 'You should provide an instance id.',

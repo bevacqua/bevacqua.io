@@ -8,6 +8,7 @@ var lookup = require('./lib/lookupEC2.js');
 module.exports = function(grunt){
 
     grunt.registerTask('ssh_cmd', function(name){
+
         if (arguments.length === 0) {
             grunt.fatal([
                 'You should provide an instance name.',

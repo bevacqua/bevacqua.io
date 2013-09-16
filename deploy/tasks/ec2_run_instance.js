@@ -7,6 +7,7 @@ var exec = require('./lib/exec.js');
 module.exports = function(grunt){
 
     grunt.registerTask('ec2_run_instance', function(name){
+
         if (arguments.length === 0) {
             grunt.fatal([
                 'You should provide a name for the instance.',

@@ -6,6 +6,7 @@ var exec = require('./lib/exec.js');
 module.exports = function(grunt){
 
     grunt.registerTask('ec2_create_tag', function(id, name){
+
         if (arguments.length < 2) {
             grunt.fatal([
                 'You should provide an id, and the name you want to give to the instance.',
