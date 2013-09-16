@@ -20,4 +20,4 @@ To terminate the `voodoo` instance, you can run the following:
 grunt ec2_shutdown:voodoo
 ```
 
-Note that this command will look for all instances described with a tag Name whose value is `voodoo`. The key-pair registered for this instance will also be removed.
+Note that this command will look for all instances described with a tag Name whose value is `voodoo`. The key pair registered for this instance will also be removed.

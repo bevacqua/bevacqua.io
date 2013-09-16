@@ -12,7 +12,7 @@ module.exports = function(grunt){
 
         if (arguments.length === 0) {
             grunt.fatal([
-                'You should provide a key-pair name.',
+                'You should provide a key pair name.',
                 'e.g: ' + chalk.yellow('grunt ec2_delete_keypair:name')
             ].join('\n'));
         }

@@ -12,7 +12,7 @@ module.exports = function(grunt){
 
         if (arguments.length === 0) {
             grunt.fatal([
-                'You should provide a key-pair name.',
+                'You should provide a key pair name.',
                 'e.g: ' + chalk.yellow('grunt ec2_create_keypair:name')
             ].join('\n'));
         }
@@ -24,13 +24,13 @@ module.exports = function(grunt){
 
         mkdirp.sync(dir);
 
-        grunt.log.writeln('Generating Key Pair named %s...', chalk.cyan(name));
+        grunt.log.writeln('Generating key pair named %s...', chalk.cyan(name));
 
         exec('ssh-keygen -t rsa -N "" -C %s -f %s', [name, file], upload);
 
         function upload () {
 
-            grunt.log.writeln('Uploading Key Pair %s to EC2...', chalk.cyan(pubKey));
+            grunt.log.writeln('Uploading public key %s to EC2...', chalk.cyan(pubKey));
 
             exec('aws ec2 import-key-pair --public-key-material %s --key-name %s', [
                 'file://' + pubKey, name
