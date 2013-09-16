@@ -19,7 +19,7 @@ module.exports = function(grunt){
 
         var dir = path.join(cwd, 'deploy/private');
         var file = path.join(dir, name + '.pem');
-        var relativePub = path.relative(cwd, file + '.pub');
+        var pubKey = path.relative(cwd, file + '.pub');
         var done = this.async();
 
         mkdirp.sync(dir);
@@ -43,13 +43,13 @@ module.exports = function(grunt){
 
         cli.on('end', function(){
 
-            grunt.log.writeln('Uploading Key Pair %s to EC2...', chalk.cyan(relativePub));
+            grunt.log.writeln('Uploading Key Pair %s to EC2...', chalk.cyan(pubKey));
 
             var output = [];
 
             cli = pty.spawn('aws', [
                 'ec2', 'import-key-pair',
-                '--public-key-material', 'file://' + relativePub,
+                '--public-key-material', 'file://' + pubKey,
                 '--key-name', name
             ], { env: conf() });
 
