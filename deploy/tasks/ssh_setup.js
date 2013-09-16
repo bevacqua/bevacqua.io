@@ -11,5 +11,9 @@ module.exports = function(grunt){
             ].join('\n'));
         }
         // installs node, nginx, users, /srv/apps/io/rsync
+
+        var commands = [
+            'sudo mkdir -p /srv/apps/io/rsync'
+        ];
     });
 };
