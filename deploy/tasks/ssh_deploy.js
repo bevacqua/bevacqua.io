@@ -27,8 +27,8 @@ module.exports = function(grunt){
 
             grunt.log.writeln('Deploying to %s using rsync...', instance.InstanceId);
 
-            exec('rsync -larve "ssh -i %s" %s ec2-user@%s:%s --stats --progress --delete --exclude-from "%s"', [
-                pem, local, dns, remote, exclude
+            exec('rsync -larve "ssh -i %s" %s %s@%s:%s --stats --progress --delete --exclude-from "%s"', [
+                pem, local, conf('AWS_SSH_USER'), dns, remote, exclude
             ], done);
         });
 

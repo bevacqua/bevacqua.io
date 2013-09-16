@@ -20,7 +20,7 @@ module.exports = function(grunt){
 
         lookup(name, function (instance) {
             var dns = instance.PublicDnsName;
-            var command = util.format('ssh -i deploy/private/%s.pem ec2-user@%s', name, dns);
+            var command = util.format('ssh -i deploy/private/%s.pem %s@%s', name, conf('AWS_SSH_USER'), dns);
             var colored = chalk.magenta(command);
 
             grunt.log.writeln('Connect to the %s instance using:', chalk.cyan(instance.InstanceId));
