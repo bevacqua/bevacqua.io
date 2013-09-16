@@ -45,9 +45,13 @@ module.exports = function(grunt){
             var privateKey = json.KeyMaterial;
             var dir = path.join(cwd, 'deploy/private');
             var file = path.join(dir, name + '.pem');
+            var options = {
+                mode: 384, // 0600 in octal
+                encoding: 'ascii'
+            };
 
             mkdirp.sync(dir);
-            fs.writeFile(file, privateKey, 'ascii', function(err){
+            fs.writeFile(file, privateKey, options, function(err){
                 if (err) { grunt.fatal(err); }
 
                 var relative = path.relative(cwd, file);
