@@ -2,7 +2,7 @@
 
 var util = require('util');
 var chalk = require('chalk');
-var pty = require('pty.js');
+var exec = require('./lib/exec.js');
 
 module.exports = function(grunt){
 
@@ -14,40 +14,21 @@ module.exports = function(grunt){
             ].join('\n'));
         }
 
-        var output = [];
-        var done = this.async();
-        var cli = pty.spawn('aws', [
-            'ec2', 'run-instances',
-            '--image-id', conf('AWS_IMAGE_ID'),
-            '--instance-type', conf('AWS_INSTANCE_TYPE'),
-            '--count', '1',
-            '--key-name', name,
-            '--security-groups', conf('AWS_SECURITY_GROUP_NAME')
-        ], { env: conf() });
-
         grunt.log.writeln('Launching EC2 %s instance', chalk.cyan(conf('AWS_INSTANCE_TYPE')));
 
-        cli.on('data', function(data){
-            output.push(data);
-        });
+        var done = this.async();
 
-        cli.on('error', function(err){
-            grunt.fatal(err);
-        });
+        exec('aws ec2 run-instances --image-id %s --instance-type %s --count %s --key-name %s --security-groups %s', [
+            conf('AWS_IMAGE_ID'), conf('AWS_INSTANCE_TYPE'), 1, name, conf('AWS_SECURITY_GROUP_NAME')
+        ], createTag, false);
 
-        cli.on('end', function(){
-            var json;
-            try {
-                json = JSON.parse(output.join(''));
-            } catch (e) {
-                grunt.fatal(output);
-            }
+        function createTag (stdout) {
+            var result = JSON.parse(stdout);
+            var id = result.Instances[0].InstanceId;
+            var task = util.format('ec2_create_tag:%s:%s', id, name);
 
-            var id = json.Instances[0].InstanceId;
-            var tag = util.format('ec2_create_tag:%s:%s', id, name);
-
-            grunt.task.run(tag);
+            grunt.task.run(task);
             done();
-        });
+        }
     });
 };

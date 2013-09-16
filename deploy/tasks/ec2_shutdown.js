@@ -2,7 +2,7 @@
 
 var _ = require('lodash');
 var chalk = require('chalk');
-var pty = require('pty.js');
+var exec = require('./lib/exec.js');
 
 module.exports = function(grunt){
 
@@ -14,33 +14,16 @@ module.exports = function(grunt){
             ].join('\n'));
         }
 
-        var done = this.async();
-        var output = [];
-        var cli = pty.spawn('aws', [
-            'ec2', 'describe-instances',
-            '--filters', 'Name=tag:Name,Values=' + name
-        ], { env: conf() });
-
         grunt.log.writeln('Looking up EC2 instances named %s...', chalk.red(name));
 
-        cli.on('data', function(data){
-            output.push(data);
-        });
+        var done = this.async();
 
-        cli.on('error', function(err){
-            grunt.fatal(err);
-        });
+        exec('aws ec2 describe-instances --filters Name=tag:Name,Values=%s', [name], terminate, false);
 
-        cli.on('end', function(){
+        function terminate(stdout){
             var tasks = [];
-            var json;
-            try {
-                json = JSON.parse(output.join(''));
-            } catch (e) {
-                grunt.fatal(output);
-            }
-
-            var instances = _.pluck(json.Reservations, 'Instances');
+            var result = JSON.parse(stdout);
+            var instances = _.pluck(result.Reservations, 'Instances');
             var flat = _.flatten(instances);
 
             _.each(flat, function(instance){
@@ -53,7 +36,7 @@ module.exports = function(grunt){
 
             grunt.task.run(tasks);
             done();
-        });
+        }
 
     });
 };

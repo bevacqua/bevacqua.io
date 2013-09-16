@@ -1,7 +1,7 @@
 'use strict';
 
 var chalk = require('chalk');
-var pty = require('pty.js');
+var exec = require('./lib/exec.js');
 
 module.exports = function(grunt){
 
@@ -13,22 +13,10 @@ module.exports = function(grunt){
             ].join('\n'));
         }
 
-        var done = this.async();
-        var cli = pty.spawn('aws', [
-            'ec2', 'terminate-instances',
-            '--instance-ids', id
-        ], { env: conf() });
-
         grunt.log.writeln('Shutting down EC2 instance %s...', chalk.red(id));
 
-        cli.on('data', function(data){
-            grunt.log.writeln(data);
-        });
+        var done = this.async();
 
-        cli.on('error', function(err){
-            grunt.fatal(err);
-        });
-
-        cli.on('end', done);
+        exec('aws ec2 terminate-instances --instance-ids %s', [id], done);
     });
 };

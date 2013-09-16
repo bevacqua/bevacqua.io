@@ -1,7 +1,7 @@
 'use strict';
 
 var chalk = require('chalk');
-var pty = require('pty.js');
+var exec = require('./lib/exec.js');
 
 module.exports = function(grunt){
 
@@ -13,23 +13,10 @@ module.exports = function(grunt){
             ].join('\n'));
         }
 
-        var done = this.async();
-        var cli = pty.spawn('aws', [
-            'ec2', 'create-tags',
-            '--resources', id,
-            '--tags', 'Key=Name,Value=' + name
-        ], { env: conf() });
-
         grunt.log.writeln('Naming EC2 instance %s as %s', chalk.cyan(id), chalk.cyan(name));
 
-        cli.on('data', function(data){
-            grunt.log.writeln(data);
-        });
+        var done = this.async();
 
-        cli.on('error', function(err){
-            grunt.fatal(err);
-        });
-
-        cli.on('end', done);
+        exec('aws ec2 create-tags --resources %s --tags Key=Name,Value=%s', [id, name], done);
     });
 };

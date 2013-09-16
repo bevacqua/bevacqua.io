@@ -1,26 +1,17 @@
 'use strict';
 
-var pty = require('pty.js');
+var chalk = require('chalk');
+var exec = require('./lib/exec.js');
 
 module.exports = function(grunt){
 
     grunt.registerTask('ec2_list', function(state){
+        var defaultState = 'running';
+        var selectedState = state || defaultState;
         var done = this.async();
-        var cli = pty.spawn('aws', [
-            'ec2', 'describe-instances',
-            '--filters', 'Name=instance-state-name,Values=' + ( state || 'running')
-        ], { env: conf() });
 
-        grunt.log.writeln('Getting EC2 instance list...');
+        grunt.log.writeln('Getting EC2 instances filtered by %s state...', chalk.cyan(selectedState));
 
-        cli.on('data', function(data){
-            grunt.log.writeln(data);
-        });
-
-        cli.on('error', function(err){
-            grunt.fatal(err);
-        });
-
-        cli.on('end', done);
+        exec('aws ec2 describe-instances --filters Name=instance-state-name,Values=%s', [selectedState], done);
     });
 };

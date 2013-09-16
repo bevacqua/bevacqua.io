@@ -2,9 +2,8 @@
 
 var fs = require('fs-extra');
 var path = require('path');
-var mkdirp = require('mkdirp');
 var chalk = require('chalk');
-var pty = require('pty.js');
+var exec = require('./lib/exec.js');
 var cwd = process.cwd();
 
 module.exports = function(grunt){
@@ -17,42 +16,31 @@ module.exports = function(grunt){
             ].join('\n'));
         }
 
-        var output = '';
-        var done = this.async();
-        var cli = pty.spawn('aws', [
-            'ec2', 'delete-key-pair', '--key-name', name
-        ], { env: conf() });
-
         grunt.log.writeln('Deleting EC2 Key Pair named %s...', chalk.red(name));
 
-        cli.on('data', function(data){
-            output += data;
-        });
+        var done = this.async();
 
-        cli.on('error', function(err){
-            grunt.fatal(err);
-        });
+        exec('aws ec2 delete-key-pair --key-name %s', [name], removeFromDisk);
 
-        cli.on('end', function(){
+        function removeFromDisk () {
             var dir = path.join(cwd, 'deploy/private');
             var file = path.join(dir, name + '.pem');
-
-            grunt.log.writeln('Deleted EC2 entry');
 
             removeFile(file, function(){
                 removeFile(file + '.pub', done);
             });
 
-            function removeFile (file, next) {
-                fs.remove(file, function(err){
-                    if (err) { grunt.fatal(err); }
+        }
 
-                    var relative = path.relative(cwd, file);
+        function removeFile (file, next) {
+            fs.remove(file, function(err){
+                if (err) { grunt.warn(err); }
 
-                    grunt.log.writeln('Deleted ' + chalk.red(relative));
-                    next();
-                });
-            }
-        });
+                var relative = path.relative(cwd, file);
+
+                grunt.log.writeln('Deleted ' + chalk.red(relative));
+                next();
+            });
+        }
     });
 };
