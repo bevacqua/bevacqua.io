@@ -37,14 +37,22 @@ module.exports = function(grunt){
             var dir = path.join(cwd, 'deploy/private');
             var file = path.join(dir, name + '.pem');
 
-            fs.remove(file, function(err){
-                if (err) { grunt.fatal(err); }
+            grunt.log.writeln('Deleted EC2 entry');
 
-                var relative = path.relative(cwd, file);
-
-                grunt.log.writeln('Private .pem file deleted from ' + chalk.red(relative));
-                done();
+            removeFile(file, function(){
+                removeFile(file + '.pub', done);
             });
+
+            function removeFile (file, next) {
+                fs.remove(file, function(err){
+                    if (err) { grunt.fatal(err); }
+
+                    var relative = path.relative(cwd, file);
+
+                    grunt.log.writeln('Deleted ' + chalk.red(relative));
+                    next();
+                });
+            }
         });
     });
 };

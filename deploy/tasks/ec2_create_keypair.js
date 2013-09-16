@@ -17,16 +17,24 @@ module.exports = function(grunt){
             ].join('\n'));
         }
 
-        var output = [];
+        var dir = path.join(cwd, 'deploy/private');
+        var file = path.join(dir, name + '.pem');
+        var relativePub = path.relative(cwd, file + '.pub');
         var done = this.async();
-        var cli = pty.spawn('aws', [
-            'ec2', 'create-key-pair', '--key-name', name
+
+        mkdirp.sync(dir);
+
+        var cli = pty.spawn('ssh-keygen', [
+            '-t', 'rsa',
+            '-N', '',
+            '-C', name,
+            '-f', file
         ], { env: conf() });
 
-        grunt.log.writeln('Creating EC2 Key Pair named %s...', chalk.cyan(name));
+        grunt.log.writeln('Generating Key Pair named %s...', chalk.cyan(name));
 
         cli.on('data', function(data){
-            output.push(data);
+            grunt.log.writeln(data);
         });
 
         cli.on('error', function(err){
@@ -34,29 +42,37 @@ module.exports = function(grunt){
         });
 
         cli.on('end', function(){
-            var json;
-            try {
-                json = JSON.parse(output.join());
-            } catch (e) {
-                grunt.fatal(output);
-            }
 
-            var name = json.KeyName;
-            var privateKey = json.KeyMaterial;
-            var dir = path.join(cwd, 'deploy/private');
-            var file = path.join(dir, name + '.pem');
-            var options = {
-                mode: 384, // 0600 in octal
-                encoding: 'ascii'
-            };
+            grunt.log.writeln('Uploading Key Pair %s to EC2...', chalk.cyan(relativePub));
 
-            mkdirp.sync(dir);
-            fs.writeFile(file, privateKey, options, function(err){
-                if (err) { grunt.fatal(err); }
+            var output = [];
 
-                var relative = path.relative(cwd, file);
+            cli = pty.spawn('aws', [
+                'ec2', 'import-key-pair',
+                '--public-key-material', 'file://' + relativePub,
+                '--key-name', name
+            ], { env: conf() });
 
-                grunt.log.writeln('EC2 Key Pair dumped to disk, at ' + chalk.cyan(relative));
+            cli.on('data', function(data){
+                output.push(data);
+            });
+
+            cli.on('error', function(err){
+                grunt.fatal(err);
+            });
+
+            cli.on('end', function(){
+
+                var json;
+                try {
+                    json = JSON.parse(output.join());
+                } catch (e) {
+                    grunt.fatal(output);
+                }
+
+                grunt.log.writeln(JSON.stringify(json, null, 3));
+
+                console.log('Key Pair imported into EC2 successfully.');
                 done();
             });
         });
