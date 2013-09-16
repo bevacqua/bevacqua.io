@@ -2,6 +2,7 @@
 .git/*
 
 # sensitive data
+env/private/*
 deploy/private/*
 
 # will npm install on the server
