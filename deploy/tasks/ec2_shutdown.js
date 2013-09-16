@@ -22,7 +22,7 @@ module.exports = function(grunt){
             var id = instance.InstanceId;
 
             grunt.log.writeln('Queuing termination task for instance %s...', chalk.red(id));
-            grunt.tasks.run([
+            grunt.task.run([
                 'ec2_terminate_instance:' + id,
                 'ec2_delete_keypair:' + name
             ]);
