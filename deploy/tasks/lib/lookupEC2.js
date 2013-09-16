@@ -16,7 +16,7 @@ module.exports = function(name, done){
         var instances = _.pluck(result.Reservations, 'Instances');
         var flat = _.flatten(instances);
         if (flat.length > 1) {
-            grunt.fatal('Found more than one instance tagged ' + chalk.orange(name));
+            grunt.fatal('Found more than one instance tagged ' + chalk.magenta(name));
         }
 
         done(flat[0]);
