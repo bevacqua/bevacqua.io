@@ -2,26 +2,45 @@
 
 var grunt = require('grunt');
 var util = require('util');
-var exec = require('child_process').exec;
+var spawn = require('child_process').spawn;
+var separator = /"[^"]*"|'[^']*'|\S+/g;
 
-module.exports = function(command, args, done, print){
-    args.unshift(command);
+module.exports = function(format, values, done, print){
+    values.unshift(format);
 
-    var cmd = util.format.apply(util, args);
+    var formatted = util.format.apply(util, values);
 
-    grunt.verbose.writeln(cmd);
+    grunt.verbose.writeln(formatted);
 
-    exec(cmd, { env: conf() }, callback);
+    var args = formatted.match(separator);
+    var cmd = args.shift();
+    var stdout = [];
 
-    function callback (err, stdout, stderr) {
-        if (err) { grunt.fatal(err); }
-        if (stderr) { grunt.fatal(stderr); }
+    var stream = spawn(cmd, args, {
+        env: conf()
+    });
+
+    stream.stdout.on('data', function (data) {
+        if (print !== false) {
+            grunt.log.write(data);
+        }
+
+        stdout.push(data);
+    });
+
+    stream.stderr.on('data', function (data) {
+        grunt.log.write(chalk.yellow(data));
+    });
+
+    stream.on('close', function (code) {
+        if (code !== 0) {
+            grunt.fatal('Exit code ' + code);
+        }
 
         if (print !== false) {
-            grunt.log.writeln(stdout);
             done();
         } else {
-            done(stdout);
+            done(stdout.join(''));
         }
-    }
+    });
 };
