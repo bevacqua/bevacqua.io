@@ -1,6 +1,5 @@
 'use strict';
 
-var path = require('path');
 var chalk = require('chalk');
 var exec = require('./lib/exec.js');
 var sshCredentials = require('./lib/sshCredentials.js');
