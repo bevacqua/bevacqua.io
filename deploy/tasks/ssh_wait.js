@@ -9,8 +9,8 @@ function now () {
     return chalk.cyan(moment().format());
 }
 
-function w3 (fn) {
-    setTimeout(fn, 3000);
+function wait (fn, duration) {
+    setTimeout(fn, (duration || 3) * 1000);
 }
 
 module.exports = function(grunt){
@@ -30,12 +30,12 @@ module.exports = function(grunt){
 
             sshCredentials(name, function (c) {
                 if (!c) {
-                    grunt.log.warn('%s Waiting for DNS to warm up, retrying in 3s...', now());
-                    w3(waitForDNS);
+                    grunt.log.writeln('%s Waiting for DNS to warm up, retrying in 3s...', now());
+                    wait(waitForDNS);
                     return;
                 }
 
-                grunt.log.writeln('%s The instance is accessible through host: %s', now(), chalk.cyan(c.host));
+                grunt.log.ok('The instance is accessible through host: %s', chalk.cyan(c.host));
 
                 waitForSSH();
             });
@@ -49,12 +49,12 @@ module.exports = function(grunt){
 
             connection.on('error', function () {
                 grunt.log.writeln('%s Connection refused, retrying in 3s...', now());
-                w3(waitForSSH);
+                wait(waitForSSH);
             });
 
             connection.on('ready', function () {
-                grunt.log.writeln('%s Success, proceeding.', now());
-                done();
+                grunt.log.ok('Success, proceeding in 10s for good measure.');
+                wait(done, 10);
             });
         }
 

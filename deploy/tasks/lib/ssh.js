@@ -28,7 +28,7 @@ module.exports = function(commands, name, done, fatal){
     function next () {
 
         if (commands.length === 0) {
-            c.end();
+            done();
         } else {
             var command = commands.shift();
 
@@ -41,9 +41,9 @@ module.exports = function(commands, name, done, fatal){
                     var out = String(data);
 
                     if (extended === 'stderr') {
-                        grunt.log.warn(out);
+                        grunt.log.write(chalk.yellow(out));
                     } else {
-                        grunt.log.writeln(out);
+                        grunt.log.write(out);
                     }
                 });
 
