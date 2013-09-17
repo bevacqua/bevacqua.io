@@ -1,21 +1,25 @@
 'use strict';
 
 var Connection = require('ssh2');
+var util = require('util');
 var grunt = require('grunt');
 var chalk = require('chalk');
 var sshCredentials = require('./sshCredentials.js');
 
-module.exports = function(commands, name, done){
+module.exports = function(commands, name, done, fatal){
     var c = new Connection();
 
     c.on('ready', next);
-    c.on('error', grunt.fatal);
     c.on('close', done);
+
+    if (fatal !== false) {
+        c.on('error', grunt.fatal);
+    }
 
     sshCredentials(name, function(credentials) {
 
         if (!credentials) {
-            grunt.fatal('The %s instance is refusing SSH connections for now', chalk.yellow(name));
+            grunt.fatal('This instance is refusing SSH connections for now');
         }
 
         c.connect(credentials);
@@ -55,4 +59,6 @@ module.exports = function(commands, name, done){
             });
         }
     }
+
+    return c;
 };

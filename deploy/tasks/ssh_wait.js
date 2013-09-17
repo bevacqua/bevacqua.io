@@ -1,7 +1,9 @@
 'use strict';
 
 var chalk = require('chalk');
+var moment = require('moment');
 var sshCredentials = require('./lib/sshCredentials.js');
+var ssh = require('./lib/ssh.js');
 
 module.exports = function(grunt){
 
@@ -18,13 +20,27 @@ module.exports = function(grunt){
 
         sshCredentials(name, function (c) {
             if (!c) {
-                grunt.log.warn('This instance is refusing SSH connections for now...');
-                grunt.task.run('ssh_wait:' + name);
+                grunt.log.warn('Waiting for DNS to warm up...', moment());
+                retry();
+                done();
+                return;
             }
 
             grunt.log.writeln('The instance is accessible through host: %s', chalk.cyan(c.host));
+            grunt.log.writeln('Attempting to connect...');
 
-            done();
+            var connection = ssh([], name, done, false);
+
+            connection.once('error', function () {
+                grunt.log.writeln('Connection refused, retrying...');
+                retry();
+            });
+
+            connection.once('close', done);
         });
+
+        function retry () {
+            grunt.task.run('ssh_wait:' + name);
+        }
     });
 };

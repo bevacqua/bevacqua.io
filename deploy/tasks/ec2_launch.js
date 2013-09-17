@@ -7,6 +7,7 @@ module.exports = function(grunt){
         grunt.task.run([
             'ec2_create_keypair:' + name,
             'ec2_run_instance:' + name,
+            'ssh_wait:' + name,
             'ssh_setup:' + name
         ]);
     });
