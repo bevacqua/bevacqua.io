@@ -5,6 +5,14 @@ var moment = require('moment');
 var sshCredentials = require('./lib/sshCredentials.js');
 var ssh = require('./lib/ssh.js');
 
+function now () {
+    return chalk.cyan(moment().format());
+}
+
+function w3 (fn) {
+    setTimeout(fn, 3000);
+}
+
 module.exports = function(grunt){
 
     grunt.registerTask('ssh_wait', function(name){
@@ -22,12 +30,12 @@ module.exports = function(grunt){
 
             sshCredentials(name, function (c) {
                 if (!c) {
-                    grunt.log.warn('%s Waiting for DNS to warm up...', chalk.cyan(moment().format()));
-                    waitForDNS();
+                    grunt.log.warn('%s Waiting for DNS to warm up, retrying in 3s...', now());
+                    w3(waitForDNS);
                     return;
                 }
 
-                grunt.log.writeln('The instance is accessible through host: %s', chalk.cyan(c.host));
+                grunt.log.writeln('%s The instance is accessible through host: %s', now(), chalk.cyan(c.host));
 
                 waitForSSH();
             });
@@ -35,17 +43,17 @@ module.exports = function(grunt){
 
         function waitForSSH () {
 
-            grunt.log.writeln('%s Attempting to connect...', chalk.cyan(moment().format()));
+            grunt.log.writeln('%s Attempting to connect...', now());
 
             var connection = ssh([], name, function(){}, false);
 
             connection.on('error', function () {
-                grunt.log.writeln('Connection refused, retrying...');
-                waitForSSH();
+                grunt.log.writeln('%s Connection refused, retrying in 3s...', now());
+                w3(waitForSSH);
             });
 
             connection.on('ready', function () {
-                grunt.log.writeln('Success, proceeding.');
+                grunt.log.writeln('%s Success, proceeding.', now());
                 done();
             });
         }
