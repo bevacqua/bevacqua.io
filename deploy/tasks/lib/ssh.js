@@ -12,7 +12,14 @@ module.exports = function(commands, name, done){
     c.on('error', grunt.fatal);
     c.on('close', done);
 
-    sshCredentials(name, c.connect);
+    sshCredentials(name, function(credentials) {
+
+        if (!credentials) {
+            grunt.fatal('The %s instance is refusing SSH connections for now', chalk.yellow(name));
+        }
+
+        c.connect(credentials);
+    });
 
     function next () {
 

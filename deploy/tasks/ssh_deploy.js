@@ -18,6 +18,11 @@ module.exports = function(grunt){
         var done = this.async();
 
         sshCredentials(name, function (c) {
+
+            if (!c) {
+                grunt.fatal('The %s instance is refusing SSH connections for now', chalk.yellow(name));
+            }
+
             var local = process.cwd();
             var remote = '/srv/rsync/';
             var exclude ='.rsyncignore';

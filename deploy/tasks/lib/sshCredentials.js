@@ -17,7 +17,7 @@ module.exports = function (name, done) {
         var keyFile = path.join('deploy/private', name + '.pem');
         var keyFileLong = path.join(process.cwd(), keyFile);
 
-        cache[name] = {
+        var result = cache[name] = {
             id: instance.InstanceId,
             host: instance.PublicDnsName,
             port: 22,
@@ -26,7 +26,10 @@ module.exports = function (name, done) {
             privateKey: fs.readFileSync(keyFileLong)
         };
 
-        done(cache[name]);
+        if (!result.host) {
+            delete cache[name];
+        }
 
+        done(cache[name]);
     });
 };
