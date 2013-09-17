@@ -3,8 +3,10 @@
 var logger = require('winston');
 var moment = require('moment');
 var pushover = require('winston-pushover').Pushover;
+var papertrail = require('winston-papertrail').Papertrail;
 
 logger.remove(logger.transports.Console);
+
 logger.add(logger.transports.Console, {
     timestamp: timestamps,
     colorize: true,
@@ -17,6 +19,12 @@ logger.add(pushover, {
     token: conf('PUSHOVER_API_TOKEN')
 });
 
+logger.add(papertrail, {
+    host: conf('PAPERTRAIL_HOST'),
+    port: conf('PAPERTRAIL_PORT'),
+    level: conf('PAPERTRAIL_LEVEL')
+});
+
 function timestamps(){
-    return moment().format('Do HH:mm:ss');
+    return moment().format();
 }

@@ -2,6 +2,7 @@
 
 var nconf = require('nconf');
 var path = require('path');
+var moment = require('moment');
 var user = path.join(__dirname, 'private/user.json');
 var aws = path.join(__dirname, 'private/aws.json');
 var dev = path.join(__dirname, 'private/dev.json');
@@ -25,3 +26,5 @@ global.require_cwd = function(file, dirname){
 var pkg = require_cwd('package.json', __dirname);
 
 nconf.set('BUILD_VERSION', pkg.version);
+
+moment.defaultFormat = 'Do HH:mm:ss';

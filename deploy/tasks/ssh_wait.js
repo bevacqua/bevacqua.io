@@ -20,23 +20,26 @@ module.exports = function(grunt){
 
         sshCredentials(name, function (c) {
             if (!c) {
-                grunt.log.warn('Waiting for DNS to warm up...', moment());
+                grunt.log.warn('%s Waiting for DNS to warm up...', chalk.cyan(moment().format()));
                 retry();
                 done();
                 return;
             }
 
             grunt.log.writeln('The instance is accessible through host: %s', chalk.cyan(c.host));
-            grunt.log.writeln('Attempting to connect...');
+            grunt.log.writeln('%s Attempting to connect...', chalk.cyan(moment().format()));
 
-            var connection = ssh([], name, done, false);
+            var connection = ssh([], name, function(){}, false);
 
-            connection.once('error', function () {
+            connection.on('error', function () {
                 grunt.log.writeln('Connection refused, retrying...');
                 retry();
             });
 
-            connection.once('close', done);
+            connection.on('close', function () {
+                grunt.log.writeln('Success, proceeding.');
+                done();
+            });
         });
 
         function retry () {
