@@ -1,17 +1,18 @@
 # vcs files
-.git/*
+.git
 
 # sensitive data
-env/private/*
+env/private
 
 # unneeded on deployed applications
-deploy/*
+build
+deploy
 
 # will npm install on the server
-node_modules/*
-
-# already translated into bin
-src/client/*
+node_modules
 
 # already copied to bin
-bower_components/*
+bower_components
+
+# already translated into bin
+src/client

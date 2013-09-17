@@ -19,17 +19,23 @@ module.exports = function(grunt){
         var done = this.async();
 
         sshCredentials(name, function (c) {
-            var local = '.';
-            var remote = '/srv/apps/io/rsync/';
+            var local = process.cwd();
+            var remote = '/srv/rsync/';
             var exclude ='.rsyncignore';
+            var user = conf('AWS_RSYNC_USER');
 
             grunt.log.writeln('Deploying to %s using rsync...', chalk.cyan(c.id));
 
             exec('rsync -ravz --chmod=ugo=rwX --stats --progress --delete --exclude-from "%s" -e "ssh -i %s" %s %s@%s:%s', [
-                exclude, c.privateKeyFile, local, c.username, c.host, remote
+                exclude, c.privateKeyFile, local, user, c.host, remote
             ], done);
 
-            // then ssh in and restart according to version, etc.
+            // then ssh:
+            // sudo mv /srv/rsync/io /srv/apps/io/{v}
+            // cd /srv/apps/io/{v}
+            // npm install --production
+
+            // set up forever or upstart or something. figure out way to reload on deploys.
         });
 
     });
