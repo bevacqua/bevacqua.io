@@ -26,7 +26,7 @@ module.exports = function(grunt){
             grunt.log.writeln('Deploying to %s using rsync...', c.id);
 
             exec('rsync -larve "ssh -i %s" %s %s@%s:%s --stats --progress --delete --exclude-from "%s"', [
-                c.keyFile, local, conf('AWS_SSH_USER'), c.host, remote, exclude
+                c.keyFile, local, c.username, c.host, remote, exclude
             ], done);
 
             // then deploy according to version, etc.
