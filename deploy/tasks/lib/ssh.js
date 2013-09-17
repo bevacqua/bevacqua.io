@@ -21,7 +21,7 @@ module.exports = function(commands, name, done){
         } else {
             var command = commands.shift();
 
-            grunt.log.writeln(chalk.green(command));
+            grunt.verbose.writeln(command);
 
             c.exec(command, function (err, stream) {
                 if (err) { grunt.fatal(err); }

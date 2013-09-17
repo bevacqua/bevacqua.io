@@ -23,10 +23,10 @@ module.exports = function(grunt){
             var remote = '/srv/apps/io/rsync';
             var exclude ='.rsyncignore';
 
-            grunt.log.writeln('Deploying to %s using rsync...', c.id);
+            grunt.log.writeln('Deploying to %s using rsync...', chalk.cyan(c.id));
 
             exec('rsync -larve "ssh -i %s" %s %s@%s:%s --stats --progress --delete --exclude-from "%s"', [
-                c.keyFile, local, c.username, c.host, remote, exclude
+                c.privateKeyFile, local, c.username, c.host, remote, exclude
             ], done);
 
             // then deploy according to version, etc.

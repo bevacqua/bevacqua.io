@@ -9,6 +9,8 @@ module.exports = function(command, args, done, print){
 
     var cmd = util.format.apply(util, args);
 
+    grunt.verbose.writeln(cmd);
+
     exec(cmd, { env: conf() }, callback);
 
     function callback (err, stdout, stderr) {
