@@ -30,6 +30,8 @@ module.exports = function(grunt){
             exec('rsync -larve "ssh -i %s" %s %s@%s:%s --stats --progress --delete --exclude-from "%s"', [
                 pem, local, conf('AWS_SSH_USER'), dns, remote, exclude
             ], done);
+
+            // then deploy according to version, etc.
         });
 
     });

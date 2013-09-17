@@ -1,8 +1,6 @@
 'use strict';
 
-var _ = require('lodash');
 var chalk = require('chalk');
-var exec = require('./lib/exec.js');
 var lookup = require('./lib/lookupEC2.js');
 
 module.exports = function(grunt){

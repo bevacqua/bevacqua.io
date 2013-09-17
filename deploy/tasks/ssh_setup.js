@@ -1,5 +1,9 @@
 'use strict';
 
+var _ = require('lodash');
+var chalk = require('chalk');
+var ssh = require('./lib/ssh.js');
+
 module.exports = function(grunt){
 
     grunt.registerTask('ssh_setup', function(name){
@@ -10,10 +14,21 @@ module.exports = function(grunt){
                 'e.g: ' + chalk.yellow('grunt ssh_deploy:name')
             ].join('\n'));
         }
-        // installs node, nginx, users, /srv/apps/io/rsync
+        // TODO nginx, users
 
-        var commands = [
+        var done = this.async();
+        var tasks = [[
+            // setup directory structure
             'sudo mkdir -p /srv/apps/io/rsync'
-        ];
+        ], [
+            // install Node.js
+            'sudo apt-get install python-software-properties',
+            'sudo add-apt-repository ppa:chris-lea/node.js -y',
+            'sudo apt-get update',
+            'sudo apt-get install nodejs -y'
+        ]];
+
+        var commands = _.flatten(tasks);
+        ssh(commands, name, done);
     });
 };

@@ -2,8 +2,7 @@
 
 var util = require('util');
 var chalk = require('chalk');
-var exec = require('./lib/exec.js');
-var lookup = require('./lib/lookupEC2.js');
+var sshCredentials = require('./lib/sshCredentials.js');
 
 module.exports = function(grunt){
 
@@ -18,13 +17,11 @@ module.exports = function(grunt){
 
         var done = this.async();
 
-        lookup(name, function (instance) {
-            var dns = instance.PublicDnsName;
-            var command = util.format('ssh -i deploy/private/%s.pem %s@%s', name, conf('AWS_SSH_USER'), dns);
-            var colored = chalk.magenta(command);
+        sshCredentials(name, function (c) {
+            var command = util.format('ssh -i %s %s@%s', name, c.privateKeyFile, c.username, c.host);
 
-            grunt.log.writeln('Connect to the %s instance using:', chalk.cyan(instance.InstanceId));
-            grunt.log.writeln(colored);
+            grunt.log.writeln('Connect to the %s instance using:', chalk.cyan(c.id));
+            grunt.log.writeln(chalk.magenta(command));
 
             done();
         });
