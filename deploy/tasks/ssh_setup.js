@@ -18,7 +18,7 @@ module.exports = function(grunt){
 
         var done = this.async();
         var tasks = [[
-            // setup directory structure
+            // setup rsync deployments
             'sudo mkdir -p /srv/apps/io/rsync'
         ], [
             // install Node.js
