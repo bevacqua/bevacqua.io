@@ -32,7 +32,7 @@ module.exports = function(commands, name, done, fatal){
         } else {
             var command = commands.shift();
 
-            grunt.verbose.writeln(command);
+            grunt.log.writeln(chalk.magenta(command));
 
             c.exec(command, function (err, stream) {
                 if (err) { grunt.fatal(err); }
@@ -41,7 +41,7 @@ module.exports = function(commands, name, done, fatal){
                     var out = String(data);
 
                     if (extended === 'stderr') {
-                        grunt.fatal(out);
+                        grunt.log.warn(out);
                     } else {
                         grunt.log.writeln(out);
                     }
