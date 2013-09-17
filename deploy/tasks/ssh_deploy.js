@@ -3,7 +3,7 @@
 var path = require('path');
 var chalk = require('chalk');
 var exec = require('./lib/exec.js');
-var lookup = require('./lib/lookupEC2.js');
+var sshCredentials = require('./lib/sshCredentials.js');
 
 module.exports = function(grunt){
 
@@ -18,17 +18,15 @@ module.exports = function(grunt){
 
         var done = this.async();
 
-        lookup(name, function (instance) {
-            var pem = path.join('deploy/private', name + '.pem');
-            var dns = instance.PublicDnsName;
+        sshCredentials(name, function (c) {
             var local = '.';
             var remote = '/srv/apps/io/rsync';
             var exclude ='.rsyncignore';
 
-            grunt.log.writeln('Deploying to %s using rsync...', instance.InstanceId);
+            grunt.log.writeln('Deploying to %s using rsync...', c.id);
 
             exec('rsync -larve "ssh -i %s" %s %s@%s:%s --stats --progress --delete --exclude-from "%s"', [
-                pem, local, conf('AWS_SSH_USER'), dns, remote, exclude
+                c.keyFile, local, conf('AWS_SSH_USER'), c.host, remote, exclude
             ], done);
 
             // then deploy according to version, etc.
