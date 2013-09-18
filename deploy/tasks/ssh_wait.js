@@ -54,7 +54,7 @@ module.exports = function(grunt){
 
             connection.on('ready', function () {
                 grunt.log.ok('Success, proceeding in 10s for good measure.');
-                wait(done, 10);
+                wait(done, 10); // apt-get failed if we didn't wait a bit.
             });
         }
 

@@ -21,7 +21,7 @@ module.exports = function(grunt){
 
         exec('aws ec2 run-instances --image-id %s --instance-type %s --count %s --key-name %s --security-groups %s', [
             conf('AWS_IMAGE_ID'), conf('AWS_INSTANCE_TYPE'), 1, name, conf('AWS_SECURITY_GROUP_NAME')
-        ], createTag, false);
+        ], createTag, true);
 
         function createTag (stdout) {
             var result = JSON.parse(stdout);

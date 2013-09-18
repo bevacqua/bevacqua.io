@@ -1,46 +1,36 @@
 'use strict';
 
 var grunt = require('grunt');
+var chalk = require('chalk');
 var util = require('util');
-var spawn = require('child_process').spawn;
-var separator = /"[^"]*"|'[^']*'|\S+/g;
+var exec = require('child_process').exec;
 
-module.exports = function(format, values, done, print){
-    values.unshift(format);
+module.exports = function(command, args, done, suppress){
+    args.unshift(command);
 
-    var formatted = util.format.apply(util, values);
+    var cmd = util.format.apply(util, args);
 
-    grunt.verbose.writeln(formatted);
+    grunt.log.writeln(chalk.magenta(cmd));
 
-    var args = formatted.match(separator);
-    var cmd = args.shift();
-    var stdout = [];
+    var proc = exec(cmd, { env: conf() }, callback);
 
-    var stream = spawn(cmd, args, {
-        env: conf()
-    });
-
-    stream.stdout.on('data', function (data) {
-        if (print !== false) {
-            grunt.log.write(data);
+    proc.stdout.on('data', function (data) {
+        if (suppress !== true) {
+            grunt.log.writeln(data);
         }
-
-        stdout.push(data);
     });
 
-    stream.stderr.on('data', function (data) {
-        grunt.log.write(chalk.yellow(data));
+    proc.stderr.on('data', function (data) {
+        grunt.log.writeln(chalk.yellow(data));
     });
 
-    stream.on('close', function (code) {
-        if (code !== 0) {
-            grunt.fatal('Exit code ' + code);
-        }
+    function callback (err, stdout, stderr) {
+        if (err) { grunt.fatal(err); }
 
-        if (print !== false) {
+        if (suppress !== true) {
             done();
         } else {
-            done(stdout.join(''));
+            done(stdout);
         }
-    });
+    }
 };
