@@ -39,7 +39,7 @@ module.exports = function(grunt){
             // cd /srv/apps/io/{v}
             // npm install --production
 
-            // set up forever or upstart or something. figure out way to reload on deploys.
+            // set up pm2, reload on deploys with `pm2 reload all`, only after symlink gets updated.
         });
 
     });
