@@ -21,6 +21,7 @@ module.exports = function(grunt){
         grunt.registerTask(name, tasks.split(' '));
     }
 
+    // build tasks
     alias('images:debug', 'clean:images copy:images sprite');
     alias('images:release', 'images:debug imagemin:all');
 
@@ -39,14 +40,17 @@ module.exports = function(grunt){
 
     alias('test', 'jshint csslint');
 
+    // development and debugging tasks
     alias('dev_setup', 'pem_decrypt:dev');
     alias('dev', 'clean build:rebuild concurrent:dev');
 
+    // continuous integration and deployment tasks
     alias('ci', 'clean build:release test');
 
-    alias('ec2_publish', '' /*publishes a deploy to target ec2 instance*/);
     alias('deploy_setup', 'pem_decrypt:aws shell:deploy_setup');
-    alias('deploy', 'clean build:release test changelog bump:patch' /*publish to target ec2 instance*/);
+    alias('deploy_prepare', 'clean build:release test changelog bump:patch');
+    alias('deploy', 'deploy_prepare ssh_deploy:staging');
+    alias('deploy_production', 'deploy_prepare ssh_deploy:production');
 
     alias('default', 'dev');
 };
