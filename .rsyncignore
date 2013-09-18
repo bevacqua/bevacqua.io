@@ -11,7 +11,7 @@ deploy
 # misc junk
 bin/.tmp
 
-# will npm install on the server
+# will `npm install --production` on the server
 node_modules
 
 # already copied to bin

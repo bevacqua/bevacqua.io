@@ -49,7 +49,8 @@ module.exports = function(grunt){
                     util.format('sudo cp -r %s %s', remoteSync, dest),
                     util.format('sudo npm --prefix %s install --production', dest),
                     util.format('sudo ln -sfn %s %s', dest, target),
-                    // 'pm2 reload all' // TODO: configure pm2 and upstart
+                    util.format('sudo pm2 start %s/pm2.json', target), // only 1st deploy
+                    'sudo pm2 reload all'
                 ];
                 ssh(commands, name, done);
             }

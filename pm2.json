@@ -1,0 +1,7 @@
+{
+  "script": "app.js",
+  "name":"BEVA-IO",
+  "instances": "max",
+  "fileError": "pm2-err.log",
+  "fileOutput": "pm2-out.log"
+}

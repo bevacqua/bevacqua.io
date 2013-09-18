@@ -13,17 +13,21 @@ logger.add(logger.transports.Console, {
     level: conf('LOG_LEVEL')
 });
 
-logger.add(pushover, {
+add(pushover, conf('PUSHOVER_ENABLED'), {
     level: conf('PUSHOVER_LEVEL'),
     userKey: conf('PUSHOVER_USER_KEY'),
     token: conf('PUSHOVER_API_TOKEN')
 });
 
-logger.add(papertrail, {
+add(papertrail, conf('PAPERTRAIL_ENABLED'), {
     host: conf('PAPERTRAIL_HOST'),
     port: conf('PAPERTRAIL_PORT'),
     level: conf('PAPERTRAIL_LEVEL')
 });
+
+function add (transport, enabled, options) {
+    if (enabled) { logger.add(transport, options); }
+}
 
 function timestamps(){
     return moment().format();

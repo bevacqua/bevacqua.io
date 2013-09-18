@@ -14,20 +14,21 @@ module.exports = function(grunt){
                 'e.g: ' + chalk.yellow('grunt ssh_deploy:name')
             ].join('\n'));
         }
+
         // TODO nginx, users
         var done = this.async();
-        var tasks = [[
-            // setup rsync deployments
+        var tasks = [[ // setup rsync deployments
             'sudo mkdir -p /srv/rsync/io/latest',
             'sudo mkdir -p /srv/apps/io/v',
             'sudo chown ubuntu /srv/rsync/io/latest' // TODO: create an rsync user, chown with him. AWS_RSYNC_USER
-        ], [
-            // install Node.js
-            // TODO use node through a new user, too.
+        ], [ // node.js
             'sudo apt-get install python-software-properties',
             'sudo add-apt-repository ppa:chris-lea/node.js -y',
             'sudo apt-get update',
-            'sudo apt-get install nodejs -y'
+            'sudo apt-get install nodejs -y',
+        ], [ // pm2
+            'sudo npm install -g pm2',
+            'sudo pm2 startup'
         ]];
 
         var commands = _.flatten(tasks);

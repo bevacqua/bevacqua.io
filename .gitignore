@@ -1,6 +1,10 @@
 # package control
 node_modules
 bower_components
+
+# logs
+pm2-out.log
+pm2-err.log
 npm-debug.log
 
 # build artifacts
