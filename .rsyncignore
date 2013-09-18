@@ -8,6 +8,9 @@ env/private
 build
 deploy
 
+# misc junk
+bin/.tmp
+
 # will npm install on the server
 node_modules
 
