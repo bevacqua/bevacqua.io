@@ -1,19 +1,21 @@
 # seriously? ignore git changes
-.git/*
-
-# documentation
-*.markdown
+./.git/*
 
 # package control
-node_modules/*
-bower_components/*
-npm-debug.log
+./node_modules/*
+./bower_components/*
+
+# logs
+./npm_debug.log
 
 # build artifacts
-bin/*
+./bin/*
+
+# deployment artifacts
+./deploy/*
 
 # os artifacts
 .DS_Store
 
 # ignore client-side js
-src/client/*
+./src/client/*

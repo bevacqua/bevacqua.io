@@ -10,5 +10,8 @@ module.exports = {
                 failOnError: true
             }
         }
+    },
+    ec2: {
+        RSYNC_IGNORE: '.rsyncignore'
     }
 };
