@@ -27,7 +27,7 @@ module.exports = function(grunt){
             'sudo apt-get update',
             'sudo apt-get install nodejs -y'
         ], [ // pm2
-            'sudo apt-get install make -y',
+            'sudo apt-get install make g++ -y',
             'sudo npm install -g pm2',
             'sudo pm2 startup'
         ]];
