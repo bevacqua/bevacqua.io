@@ -15,7 +15,7 @@ module.exports = function(grunt){
             ].join('\n'));
         }
         // TODO nginx, users
-
+        // TODO ssh-add the key in ec2_create_keypair so that rsync doesn't cough
         var done = this.async();
         var tasks = [[
             // setup rsync deployments
