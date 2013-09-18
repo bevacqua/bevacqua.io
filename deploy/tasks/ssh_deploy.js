@@ -47,7 +47,7 @@ module.exports = function(grunt){
                 var target = '/srv/apps/io/current';
                 var commands = [
                     util.format('sudo cp -r %s %s', remoteSync, dest),
-                    util.format('npm --prefix %s install --production', dest),
+                    util.format('sudo npm --prefix %s install --production', dest),
                     util.format('sudo ln -sfn %s %s', dest, target),
                     // 'pm2 reload all' // TODO: configure pm2 and upstart
                 ];

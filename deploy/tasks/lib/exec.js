@@ -24,7 +24,7 @@ module.exports = function(command, args, done, suppress){
         grunt.log.writeln(chalk.yellow(data));
     });
 
-    function callback (err, stdout, stderr) {
+    function callback (err, stdout) {
         if (err) { grunt.fatal(err); }
 
         if (suppress !== true) {

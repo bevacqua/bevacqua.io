@@ -1,7 +1,6 @@
 'use strict';
 
 var Connection = require('ssh2');
-var util = require('util');
 var grunt = require('grunt');
 var chalk = require('chalk');
 var sshCredentials = require('./sshCredentials.js');
