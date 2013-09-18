@@ -18,8 +18,9 @@ module.exports = function(grunt){
         var done = this.async();
         var tasks = [[
             // setup rsync deployments
-            'sudo mkdir -p /srv/rsync',
-            'sudo chown ubuntu /srv/rsync' // TODO: create an rsync user, chown with him. AWS_RSYNC_USER
+            'sudo mkdir -p /srv/rsync/io/latest',
+            'sudo mkdir -p /srv/apps/io/v',
+            'sudo chown ubuntu /srv/rsync/io/latest' // TODO: create an rsync user, chown with him. AWS_RSYNC_USER
         ], [
             // install Node.js
             // TODO use node through a new user, too.

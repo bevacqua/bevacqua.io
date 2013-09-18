@@ -16,7 +16,6 @@ module.exports = function(grunt){
 
     // todo: unit tests, screen shot diffs, integration tests?
     // todo: register to (travis) ci
-    // todo: deploy task actually deploying to staging/production servers
 
     function alias (name, tasks) {
         grunt.registerTask(name, tasks.split(' '));

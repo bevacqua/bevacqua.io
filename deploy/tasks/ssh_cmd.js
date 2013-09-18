@@ -25,7 +25,7 @@ module.exports = function(grunt){
             var command = util.format('ssh -i %s %s@%s', c.privateKeyFile, c.username, c.host);
 
             grunt.log.writeln('Connect to the %s instance using:', chalk.cyan(c.id));
-            grunt.log.writeln(chalk.magenta(command));
+            grunt.log.writeln(chalk.blue(command));
 
             done();
         });
