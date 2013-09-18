@@ -30,7 +30,7 @@ module.exports = function(grunt){
 
             grunt.log.writeln('Deploying to %s using rsync...', chalk.cyan(c.id));
 
-            exec('rsync -ravz --chmod=ugo=rwX --stats --progress --delete --exclude-from "%s" -e "ssh -i %s" %s %s@%s:%s', [
+            exec('rsync -ravz --chmod=ugo=rwX --stats --progress --delete --exclude-from "%s" -e "ssh -o StrictHostKeyChecking=no -i %s" %s %s@%s:%s', [
                 exclude, c.privateKeyFile, local, user, c.host, remote
             ], done);
 

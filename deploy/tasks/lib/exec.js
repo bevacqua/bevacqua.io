@@ -14,11 +14,11 @@ module.exports = function(command, args, done, suppress){
 
     var proc = exec(cmd, { env: conf() }, callback);
 
-    proc.stdout.on('data', function (data) {
-        if (suppress !== true) {
+    if (suppress !== true) {
+        proc.stdout.on('data', function (data) {
             grunt.log.writeln(data);
-        }
-    });
+        });
+    }
 
     proc.stderr.on('data', function (data) {
         grunt.log.writeln(chalk.yellow(data));
@@ -33,4 +33,6 @@ module.exports = function(command, args, done, suppress){
             done(stdout);
         }
     }
+
+    return proc;
 };
