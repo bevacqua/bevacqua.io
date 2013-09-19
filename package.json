@@ -1,5 +1,5 @@
 {
-  "name": "ng-bevacqua",
+  "name": "beva.io",
   "description": "Personal website and technical concept-proofing Node module architecture",
   "homepage": "https://github.com/bevacqua/io",
   "author": {
@@ -40,7 +40,7 @@
     "grunt-contrib-uglify": "0.2.2",
     "grunt-contrib-watch": "0.5.3",
     "grunt-conventional-changelog": "1.0.0",
-    "grunt-ec2": "0.2.1",
+    "grunt-ec2": "0.2.4",
     "grunt-nodemon": "0.1.0",
     "grunt-pemcrypt": "0.1.0",
     "grunt-play": "0.1.0",

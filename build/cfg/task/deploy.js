@@ -1,5 +1,7 @@
 'use strict';
 
+var grunt = require('grunt');
+
 module.exports = {
     shell: {
         deploy_setup: {
@@ -11,7 +13,5 @@ module.exports = {
             }
         }
     },
-    ec2: {
-        RSYNC_IGNORE: '.rsyncignore'
-    }
+    ec2: grunt.file.readJSON('env/private/aws.json')
 };

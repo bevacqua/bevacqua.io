@@ -11,7 +11,6 @@ module.exports = function(grunt){
     require('time-grunt')(grunt);
 
     grunt.loadTasks('./build/tasks');
-    grunt.loadTasks('./deploy/tasks');
     grunt.initConfig(_.merge.apply({}, _.values(cfg)));
 
     // todo: unit tests, screen shot diffs, integration tests?
