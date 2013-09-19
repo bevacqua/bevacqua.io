@@ -13,5 +13,5 @@ module.exports = {
             }
         }
     },
-    ec2: grunt.file.readJSON('env/private/aws.json')
+    ec2: 'env/private/aws2.json'
 };

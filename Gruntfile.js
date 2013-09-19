@@ -48,8 +48,8 @@ module.exports = function(grunt){
 
     alias('deploy_setup', 'pem_decrypt:aws shell:deploy_setup');
     alias('deploy_prepare', 'clean build:release test changelog bump:patch');
-    alias('deploy', 'deploy_prepare ssh_deploy:staging');
-    alias('deploy_production', 'deploy_prepare ssh_deploy:production');
+    alias('deploy', 'deploy_prepare ec2_deploy:staging');
+    alias('deploy_production', 'deploy_prepare ec2_deploy:production');
 
     alias('default', 'dev');
 };
