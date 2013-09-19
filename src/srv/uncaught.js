@@ -1,6 +1,5 @@
 'use strict';
 
-var cluster = require('cluster');
 var logger = require('../lib/logger');
 
 process.on('uncaughtException', function(err){

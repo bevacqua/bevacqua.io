@@ -1,7 +1,5 @@
 'use strict';
 
-var grunt = require('grunt');
-
 module.exports = {
     shell: {
         deploy_setup: {
@@ -13,5 +11,5 @@ module.exports = {
             }
         }
     },
-    ec2: 'env/private/aws2.json'
+    ec2: 'env/private/aws.json'
 };
