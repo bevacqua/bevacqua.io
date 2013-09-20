@@ -18,8 +18,17 @@ module.exports = {
         }
     },
     karma: {
-        unit: {
+        unit_once: {
             singleRun: true,
+            reporters: ['progress'],
+            frameworks: ['mocha'],
+            browsers: ['PhantomJS'],
+            options: {
+                files: ['test/client/unit/**/*.js']
+            }
+        },
+        unit_background: {
+            background: true,
             reporters: ['progress'],
             frameworks: ['mocha'],
             browsers: ['PhantomJS'],
@@ -30,8 +39,8 @@ module.exports = {
     },
     watch: {
         rebuild: { tasks: ['build:rebuild'], files: ['Gruntfile.js', 'build/**/*.js'] },
-        test_client: { tasks: ['test:js_client', 'play:success'], files: ['src/client/js/**/*.js', 'test/client/**/*.js'] },
-        test_server: { tasks: ['test:js_server', 'play:success'], files: ['src/srv/**/*.js', 'app.js', 'test/server/**/*.js'] },
+        test_client: { tasks: ['jshint:client', 'karma:unit_background:run', 'play:success'], files: ['src/client/js/**/*.js', 'test/client/**/*.js'] },
+        test_server: { tasks: ['jshint:server', 'mochaTest:unit', 'play:success'], files: ['src/srv/**/*.js', 'app.js', 'test/server/**/*.js'] },
         jshint_client_support: { tasks: ['jshint:client_support', 'play:success'], files: ['test/client/**/*.js'] },
         jshint_server_support: { tasks: ['jshint:server_support', 'play:success'], files: ['Gruntfile.js', 'build/**/*.js', 'deploy/**/*.js', 'test/server/**/*.js'] },
         images: { tasks: ['images:debug', 'play:success'], files: ['src/client/img/**/*.{png,jpg,gif,ico}'] },

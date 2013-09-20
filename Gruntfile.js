@@ -27,7 +27,7 @@ module.exports = function(grunt){
     alias('css:debug', 'clean:css stylus:all csslint');
     alias('css:release', 'clean:css stylus:all cssmin:release rev:css');
 
-    alias('js:debug', 'clean:js copy:js_sources copy:js_bower_debug test:js');
+    alias('js:debug', 'clean:js copy:js_sources copy:js_bower_debug jshint');
     alias('js:release', 'clean:js copy:js_sources uglify:js clean:after_uglify copy:js_bower_release rev:js');
 
     alias('views:debug', 'clean:views jade:debug');
@@ -38,15 +38,11 @@ module.exports = function(grunt){
     alias('build:release', 'images:release css:release js:release views:release bump-only:build');
 
     // testing tasks
-    alias('test:js_client', 'jshint:client karma:unit');
-    alias('test:js_server', 'jshint:server mochaTest:unit');
-    alias('test:js', 'test:js_client test:js_server');
-
-    alias('test', 'jshint karma:unit_ci mochaTest:unit csslint');
+    alias('test', 'jshint csslint mochaTest:unit karma:unit_once');
 
     // development and debugging tasks
     alias('dev_setup', 'pem_decrypt:dev');
-    alias('dev', 'clean build:rebuild concurrent:dev');
+    alias('dev', 'clean build:rebuild karma:unit_background concurrent:dev');
 
     // continuous integration and deployment tasks
     alias('ci', 'clean build:release test');
