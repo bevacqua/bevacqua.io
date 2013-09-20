@@ -5,8 +5,9 @@ var assets = require('../assets');
 module.exports = {
     jshint: {
         client: assets.js.lint('src/client/js', ['src/client/js/**/*.js', '!src/client/js/vendor/**/*.js']),
+        client_support: assets.js.lint('src/client/js', ['test/client']),
         server: assets.js.lint('src/srv', ['src/srv', 'src/lib', 'app.js']),
-        support: assets.js.lint('src/srv', ['Gruntfile.js', 'build', 'deploy'])
+        server_support: assets.js.lint('src/srv', ['Gruntfile.js', 'build', 'deploy', 'test/server'])
     },
     mochaTest: {
         options: {
@@ -27,9 +28,10 @@ module.exports = {
     },
     watch: {
         rebuild: { tasks: ['build:rebuild'], files: ['Gruntfile.js', 'build/**/*.js'] },
-        test_client: { tasks: ['test:js_client', 'play:success'], files: ['src/client/js/**/*.js'] },
-        test_server: { tasks: ['test:js_server', 'play:success'], files: ['src/srv/**/*.js', 'app.js'] },
-        test_support: { tasks: ['test:js_support', 'play:success'], files: ['Gruntfile.js', 'build/**/*.js', 'deploy/**/*.js'] },
+        test_client: { tasks: ['test:js_client', 'play:success'], files: ['src/client/js/**/*.js', 'test/client/**/*.js'] },
+        test_server: { tasks: ['test:js_server', 'play:success'], files: ['src/srv/**/*.js', 'app.js', 'test/server/**/*.js'] },
+        jshint_client_support: { tasks: ['jshint:client_support', 'play:success'], files: ['test/client/**/*.js'] },
+        jshint_server_support: { tasks: ['jshint:server_support', 'play:success'], files: ['Gruntfile.js', 'build/**/*.js', 'deploy/**/*.js', 'test/server/**/*.js'] },
         images: { tasks: ['images:debug', 'play:success'], files: ['src/client/img/**/*.{png,jpg,gif,ico}'] },
         css: { tasks: ['css:debug', 'play:success'], files: ['src/client/css/**/*.styl', 'bin/.tmp/sprite/*.css', 'bower_components/**/*.css'] },
         js_sources: { tasks: ['copy:js_sources', 'play:success'], files: ['src/client/js/**/*.js'] },

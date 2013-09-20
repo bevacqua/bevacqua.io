@@ -37,10 +37,10 @@ module.exports = function(grunt){
     alias('build:rebuild', 'build:debug play:success');
     alias('build:release', 'images:release css:release js:release views:release bump-only:build');
 
+    // testing tasks
     alias('test:js_client', 'jshint:client karma:unit');
     alias('test:js_server', 'jshint:server mochaTest:unit');
-    alias('test:js_support', 'jshint:support mochaTest:unit');
-    alias('test:js', 'test:js_client test:js_server test:js_support');
+    alias('test:js', 'test:js_client test:js_server');
     alias('test:css', 'csslint');
     alias('test', 'test:js test:css');
 
