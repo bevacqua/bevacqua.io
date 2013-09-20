@@ -13,11 +13,6 @@ module.exports = {
         tmp_sprite: 'bin/.tmp/sprite',
         after_uglify: ['bin/public/js/**/*.js', '!bin/public/js/all.js']
     },
-    jshint: {
-        client: assets.js.lint('src/client/js', ['src/client/js/**/*.js', '!src/client/js/vendor/**/*.js']),
-        server: assets.js.lint('src/srv', ['src/srv', 'src/lib', 'app.js']),
-        support: assets.js.lint('src/srv', ['Gruntfile.js', 'build', 'deploy'])
-    },
     csslint: {
         client: {
             options: {

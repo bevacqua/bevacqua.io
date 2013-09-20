@@ -13,7 +13,7 @@ module.exports = function(grunt){
     grunt.loadTasks('./build/tasks');
     grunt.initConfig(_.merge.apply({}, _.values(cfg)));
 
-    // todo: unit tests, screen shot diffs, integration tests?
+    // todo: screen shot diffs, integration/e2e tests
     // todo: register to (travis) ci
 
     function alias (name, tasks) {
@@ -24,10 +24,10 @@ module.exports = function(grunt){
     alias('images:debug', 'clean:images copy:images sprite');
     alias('images:release', 'images:debug imagemin:all');
 
-    alias('css:debug', 'clean:css stylus:all csslint');
+    alias('css:debug', 'clean:css stylus:all test:css');
     alias('css:release', 'clean:css stylus:all cssmin:release rev:css');
 
-    alias('js:debug', 'clean:js copy:js_sources copy:js_bower_debug jshint');
+    alias('js:debug', 'clean:js copy:js_sources copy:js_bower_debug test:js');
     alias('js:release', 'clean:js copy:js_sources uglify:js clean:after_uglify copy:js_bower_release rev:js');
 
     alias('views:debug', 'clean:views jade:debug');
@@ -37,7 +37,12 @@ module.exports = function(grunt){
     alias('build:rebuild', 'build:debug play:success');
     alias('build:release', 'images:release css:release js:release views:release bump-only:build');
 
-    alias('test', 'jshint csslint');
+    alias('test:js_client', 'jshint:client karma:unit');
+    alias('test:js_server', 'jshint:server mochaTest:unit');
+    alias('test:js_support', 'jshint:support mochaTest:unit');
+    alias('test:js', 'test:js_client test:js_server test:js_support');
+    alias('test:css', 'csslint');
+    alias('test', 'test:js test:css');
 
     // development and debugging tasks
     alias('dev_setup', 'pem_decrypt:dev');
