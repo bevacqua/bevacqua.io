@@ -1,5 +1,8 @@
 'use strict';
 
+var util = require('util');
+var chalk = require('chalk');
+var moment = require('moment');
 var assets = require('../assets');
 
 module.exports = {
@@ -38,16 +41,24 @@ module.exports = {
         }
     },
     watch: {
+        options: {
+            // spawn: false,
+            dateFormat: function () {
+                grunt.task.run('play:success');
+
+                return util.format('\n%s Waiting for changes...', moment().format());
+            }
+        },
         rebuild: { tasks: ['build:rebuild'], files: ['Gruntfile.js', 'build/**/*.js'] },
-        test_client: { tasks: ['jshint:client', 'karma:unit_background:run', 'play:success'], files: ['src/client/js/**/*.js', 'test/client/**/*.js'] },
-        test_server: { tasks: ['jshint:server', 'mochaTest:unit', 'play:success'], files: ['src/srv/**/*.js', 'app.js', 'test/server/**/*.js'] },
-        jshint_client_support: { tasks: ['jshint:client_support', 'play:success'], files: ['test/client/**/*.js'] },
-        jshint_server_support: { tasks: ['jshint:server_support', 'play:success'], files: ['Gruntfile.js', 'build/**/*.js', 'deploy/**/*.js', 'test/server/**/*.js'] },
-        images: { tasks: ['images:debug', 'play:success'], files: ['src/client/img/**/*.{png,jpg,gif,ico}'] },
-        css: { tasks: ['css:debug', 'play:success'], files: ['src/client/css/**/*.styl', 'bin/.tmp/sprite/*.css', 'bower_components/**/*.css'] },
-        js_sources: { tasks: ['copy:js_sources', 'play:success'], files: ['src/client/js/**/*.js'] },
-        js_bower: { tasks: ['copy:js_bower_debug', 'play:success'], files: ['bower_components/**/*.js'] },
-        views: { tasks: ['views:debug', 'play:success'], files: ['src/client/views/**/*.jade'] },
+        test_client: { tasks: ['jshint:client', 'karma:unit_background:run'], files: ['src/client/js/**/*.js', 'test/client/**/*.js'] },
+        test_server: { tasks: ['jshint:server', 'mochaTest:unit'], files: ['src/srv/**/*.js', 'app.js', 'test/server/**/*.js'] },
+        jshint_client_support: { tasks: ['jshint:client_support'], files: ['test/client/**/*.js'] },
+        jshint_server_support: { tasks: ['jshint:server_support'], files: ['Gruntfile.js', 'build/**/*.js', 'deploy/**/*.js', 'test/server/**/*.js'] },
+        images: { tasks: ['images:debug'], files: ['src/client/img/**/*.{png,jpg,gif,ico}'] },
+        css: { tasks: ['css:debug'], files: ['src/client/css/**/*.styl', 'bin/.tmp/sprite/*.css', 'bower_components/**/*.css'] },
+        js_sources: { tasks: ['copy:js_sources'], files: ['src/client/js/**/*.js'] },
+        js_bower: { tasks: ['copy:js_bower_debug'], files: ['bower_components/**/*.js'] },
+        views: { tasks: ['views:debug'], files: ['src/client/views/**/*.jade'] },
         livereload: { options: { livereload: true }, files: ['bin/public/**/*.{css,js}','bin/views/**/*.html'] }
     },
     nodemon: {
@@ -59,10 +70,10 @@ module.exports = {
     },
     concurrent: {
         dev: {
-            tasks: ['watch', 'nodemon:dev'],
             options: {
                 logConcurrentOutput: true
-            }
+            },
+            tasks: ['watch', 'nodemon:dev']
         }
     },
     play: {
