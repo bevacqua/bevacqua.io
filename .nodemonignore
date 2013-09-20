@@ -19,3 +19,6 @@
 
 # ignore client-side js
 ./src/client/*
+
+# ignore tests
+./test/*
