@@ -1,6 +1,7 @@
 'use strict';
 
 var util = require('util');
+var grunt = require('grunt');
 var chalk = require('chalk');
 var moment = require('moment');
 var assets = require('../assets');
@@ -8,10 +9,10 @@ var assets = require('../assets');
 module.exports = {
     jshint: {
         client: assets.js.lint('src/client/js', ['src/client/js/**/*.js', '!src/client/js/vendor/**/*.js']),
-        client_tests: assets.js.lint('src/client/js', ['test/client']),
+        client_tests: assets.js.lint('test', ['test/client']),
         server: assets.js.lint('src/srv', ['src/srv', 'src/lib', 'app.js']),
         server_support: assets.js.lint('src/srv', ['Gruntfile.js', 'build', 'deploy']),
-        server_tests: assets.js.lint('src/srv', ['test/server'])
+        server_tests: assets.js.lint('test', ['test/server'])
     },
     mochaTest: {
         options: {
@@ -42,15 +43,6 @@ module.exports = {
         }
     },
     watch: {
-        options: {
-            spawn: false,
-            dateFormat: function () {
-
-                grunt.task.run('play:success');
-
-                return util.format('\n%s Waiting for changes...', moment().format());
-            }
-        },
         rebuild: { tasks: ['build:rebuild'], files: ['Gruntfile.js', 'build/**/*.js'] },
         jshint_client: { tasks: ['jshint:client'], files: ['src/client/js/**/*.js'] },
         jshint_client_tests: { tasks: ['jshint:client_tests'], files: ['test/client/**/*.js'] },

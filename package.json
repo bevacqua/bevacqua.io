@@ -7,7 +7,7 @@
     "email": "ng@bevacqua.io",
     "url": "http://bevacqua.io"
   },
-  "version": "0.0.8-4",
+  "version": "0.0.8-7",
   "private": true,
   "engines": {
     "node": "0.10.18",
@@ -24,6 +24,7 @@
     "winston-pushover": "0.1.5"
   },
   "devDependencies": {
+    "chalk": "0.2.1",
     "emoji-random": "0.1.0",
     "findit": "0.1.2",
     "grunt": "0.4.1",
