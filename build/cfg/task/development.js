@@ -20,6 +20,8 @@ module.exports = {
     karma: {
         unit: {
             singleRun: true,
+            reporters: ['progress'],
+            frameworks: ['mocha'],
             browsers: ['PhantomJS'],
             options: {
                 files: ['test/client/unit/**/*.js']

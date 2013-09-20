@@ -24,7 +24,7 @@ module.exports = function(grunt){
     alias('images:debug', 'clean:images copy:images sprite');
     alias('images:release', 'images:debug imagemin:all');
 
-    alias('css:debug', 'clean:css stylus:all test:css');
+    alias('css:debug', 'clean:css stylus:all csslint');
     alias('css:release', 'clean:css stylus:all cssmin:release rev:css');
 
     alias('js:debug', 'clean:js copy:js_sources copy:js_bower_debug test:js');
@@ -41,8 +41,8 @@ module.exports = function(grunt){
     alias('test:js_client', 'jshint:client karma:unit');
     alias('test:js_server', 'jshint:server mochaTest:unit');
     alias('test:js', 'test:js_client test:js_server');
-    alias('test:css', 'csslint');
-    alias('test', 'test:js test:css');
+
+    alias('test', 'jshint karma:unit_ci mochaTest:unit csslint');
 
     // development and debugging tasks
     alias('dev_setup', 'pem_decrypt:dev');
