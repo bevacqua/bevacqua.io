@@ -10,7 +10,8 @@ var logger = require('../lib/logger');
 var port = conf('PORT');
 var debug = conf('BUILD_DISTRIBUTION') === 'debug';
 
-logger.info('running: node app', _.rest(process.argv, 2));
+logger.info('executing:', process.argv.join(' '));
+logger.info('environment: %s, distribution: %s', conf('NODE_ENV'), conf('BUILD_DISTRIBUTION'));
 
 controllers.load(app, function(){
     app.locals.settings['x-powered-by'] = false;
@@ -27,7 +28,7 @@ controllers.load(app, function(){
 
     app.use(app.router);
 
-    var statics = path.join(process.cwd(), '/bin/public');
+    var statics = path.join(process.cwd(), 'bin/public');
 
     app.use(express.favicon(path.join(statics, '/img/favicon.ico')));
     app.use(express.static(statics, debug ? {} : { maxAge: 86400000 }));
