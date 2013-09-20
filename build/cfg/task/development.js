@@ -8,9 +8,10 @@ var assets = require('../assets');
 module.exports = {
     jshint: {
         client: assets.js.lint('src/client/js', ['src/client/js/**/*.js', '!src/client/js/vendor/**/*.js']),
-        client_support: assets.js.lint('src/client/js', ['test/client']),
+        client_tests: assets.js.lint('src/client/js', ['test/client']),
         server: assets.js.lint('src/srv', ['src/srv', 'src/lib', 'app.js']),
-        server_support: assets.js.lint('src/srv', ['Gruntfile.js', 'build', 'deploy', 'test/server'])
+        server_support: assets.js.lint('src/srv', ['Gruntfile.js', 'build', 'deploy']),
+        server_tests: assets.js.lint('src/srv', ['test/server'])
     },
     mochaTest: {
         options: {
@@ -42,18 +43,22 @@ module.exports = {
     },
     watch: {
         options: {
-            // spawn: false,
+            spawn: false,
             dateFormat: function () {
+
                 grunt.task.run('play:success');
 
                 return util.format('\n%s Waiting for changes...', moment().format());
             }
         },
         rebuild: { tasks: ['build:rebuild'], files: ['Gruntfile.js', 'build/**/*.js'] },
-        test_client: { tasks: ['jshint:client', 'karma:unit_background:run'], files: ['src/client/js/**/*.js', 'test/client/**/*.js'] },
-        test_server: { tasks: ['jshint:server', 'mochaTest:unit'], files: ['src/srv/**/*.js', 'app.js', 'test/server/**/*.js'] },
-        jshint_client_support: { tasks: ['jshint:client_support'], files: ['test/client/**/*.js'] },
-        jshint_server_support: { tasks: ['jshint:server_support'], files: ['Gruntfile.js', 'build/**/*.js', 'deploy/**/*.js', 'test/server/**/*.js'] },
+        jshint_client: { tasks: ['jshint:client'], files: ['src/client/js/**/*.js'] },
+        jshint_client_tests: { tasks: ['jshint:client_tests'], files: ['test/client/**/*.js'] },
+        jshint_server: { tasks: ['jshint:server'], files: ['src/srv/**/*.js', 'app.js'] },
+        jshint_server_tests: { tasks: ['jshint:server_tests'], files: ['test/server/**/*.js'] },
+        jshint_server_support: { tasks: ['jshint:server_support'], files: ['Gruntfile.js', 'build/**/*.js', 'deploy/**/*.js'] },
+        test_client: { tasks: ['karma:unit_background:run'], files: ['src/client/js/**/*.js', 'test/client/**/*.js'] },
+        test_server: { tasks: ['mochaTest:unit'], files: ['src/srv/**/*.js', 'app.js', 'test/server/**/*.js'] },
         images: { tasks: ['images:debug'], files: ['src/client/img/**/*.{png,jpg,gif,ico}'] },
         css: { tasks: ['css:debug'], files: ['src/client/css/**/*.styl', 'bin/.tmp/sprite/*.css', 'bower_components/**/*.css'] },
         js_sources: { tasks: ['copy:js_sources'], files: ['src/client/js/**/*.js'] },
