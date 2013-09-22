@@ -1,9 +1,5 @@
 'use strict';
 
-var util = require('util');
-var grunt = require('grunt');
-var chalk = require('chalk');
-var moment = require('moment');
 var assets = require('../assets');
 
 module.exports = {
