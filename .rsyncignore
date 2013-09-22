@@ -7,6 +7,7 @@ env/private
 # unneeded on deployed applications
 build
 deploy
+test
 
 # misc junk
 bin/.tmp
