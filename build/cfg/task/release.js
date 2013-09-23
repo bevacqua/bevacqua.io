@@ -10,7 +10,7 @@ module.exports = {
     bump: {
         options: {
             files: ['package.json', 'bower.json'],
-            commitFiles: ['package.json', 'bower.json', 'CHANGELOG.md'],
+            commitFiles: ['package.json', 'bower.json', 'CHANGELOG.markdown'],
             commitMessage: 'Release v%VERSION% ' + emoji.random(),
             pushTo: 'origin'
         }
