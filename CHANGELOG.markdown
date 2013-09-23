@@ -1,7 +1,8 @@
-<a name="v0.0.9-0"></a>
-### v0.0.9-0 Sesame Street
+<a name="v0.0.10-5"></a>
+### v0.0.10-5 Sesame Street
 
 - Streamlined deployment tasks
+- Fixed configuration issues, now environment-based
 
 #### Features
 
