@@ -1,3 +1,14 @@
+<a name="v0.0.9-0"></a>
+### v0.0.9-0 Sesame Street
+
+- Streamlined deployment tasks
+
+#### Features
+
+* mocha test tasks ([add0224e](https://github.com/bevacqua/io/commit/add0224ec63196e5b4998ee0da6120704e6d9be7))
+* pem-protect deploying to ec2 ([4da841f5](https://github.com/bevacqua/io/commit/4da841f5d4eef8fa69102441dae3716d5af4056b))
+* added time-grunt to measure task duration ([c1bc3b5e](https://github.com/bevacqua/io/commit/c1bc3b5ebcdfd10b69330333ae89640d323aae33))
+
 <a name="v0.0.7-2"></a>
 ### v0.0.7-2 (2013-09-11)
 
