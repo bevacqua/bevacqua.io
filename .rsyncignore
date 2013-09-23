@@ -3,8 +3,9 @@
 
 # sensitive data
 env/private
+*.pem
 
-# unneeded on deployed applications
+# unnecessary on deployed applications
 build
 deploy
 test

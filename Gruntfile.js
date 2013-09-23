@@ -3,7 +3,9 @@
 var _ = require('lodash');
 var cfg = require('./build/cfg');
 
-require('./env'); // load globals
+process.env.NODE_ENV = 'grunt';
+
+require('./env'); // globals and environment variables
 
 module.exports = function(grunt){
 
