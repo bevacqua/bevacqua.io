@@ -7,7 +7,7 @@
     "email": "ng@bevacqua.io",
     "url": "http://bevacqua.io"
   },
-  "version": "0.0.12-2",
+  "version": "0.0.12-3",
   "private": true,
   "dependencies": {
     "normalize-css": "2.1.3",
