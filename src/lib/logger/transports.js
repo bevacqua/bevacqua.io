@@ -4,13 +4,14 @@ var logger = require('winston');
 var moment = require('moment');
 var pushover = require('winston-pushover').Pushover;
 var papertrail = require('winston-papertrail').Papertrail;
+var console = logger.transports.Console;
 
-logger.remove(logger.transports.Console);
+logger.remove(console);
 
-logger.add(logger.transports.Console, {
+add(console, conf('CONSOLE_ENABLED'), {
     timestamp: timestamps,
     colorize: true,
-    level: conf('LOG_LEVEL')
+    level: conf('CONSOLE_LEVEL')
 });
 
 add(pushover, conf('PUSHOVER_ENABLED'), {
