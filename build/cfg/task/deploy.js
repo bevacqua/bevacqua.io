@@ -11,5 +11,5 @@ module.exports = {
             }
         }
     },
-    ec2: 'env/private/deployment.json'
+    ec2: 'env/private/grunt.json'
 };
