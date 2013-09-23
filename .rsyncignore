@@ -2,7 +2,6 @@
 .git
 
 # sensitive data
-env/private
 *.pem
 
 # unnecessary on deployed applications
