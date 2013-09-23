@@ -24,7 +24,7 @@ function add (keyName) {
 
 add('grunt');
 add('development');
-add('staging');
+add('edge');
 add('production');
 
 module.exports = settings;
