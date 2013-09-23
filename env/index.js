@@ -4,7 +4,6 @@ require('./globals.js');
 
 var path = require('path');
 var util = require('util');
-var chalk = require('chalk');
 var nconf = require('nconf');
 var moment = require('moment');
 var defaults = require('./defaults.json');
@@ -15,7 +14,7 @@ nconf.env();
 nconf.defaults(defaults);
 
 var env = nconf.get('NODE_ENV');
-var loading = util.format('%s - Loading configuration for %s...', moment().format(), chalk.magenta(env));
+var loading = util.format('%s - Loading configuration for %s...', moment().format(), env);
 
 process.stdout.write(loading);
 
