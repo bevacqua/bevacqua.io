@@ -11,3 +11,7 @@ jadeContextService.registerProvider(function(){
 jadeContextService.registerProvider(function(){
     return { javascripts: javascripts.files() };
 });
+
+jadeContextService.registerProvider(function(){
+    return { pkg: require_cwd('package.json') };
+});
