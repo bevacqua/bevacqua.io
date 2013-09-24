@@ -23,7 +23,7 @@ module.exports = function(grunt){
     }
 
     // build tasks
-    alias('images:debug', 'clean:images copy:images sprite');
+    alias('images:debug', 'clean:images copy:images copy:favicon sprite');
     alias('images:release', 'images:debug imagemin:all');
 
     alias('css:debug', 'clean:css stylus:all csslint');
