@@ -1,3 +1,8 @@
+<a name="v0.0.12-9"></a>
+### v0.0.12-9 (2013-09-24)
+
+- Got nginx in front of node
+
 <a name="v0.0.11-1"></a>
 ### v0.0.11-1 Sesame Street
 
