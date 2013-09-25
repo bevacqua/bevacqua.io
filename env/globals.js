@@ -7,8 +7,8 @@ var cwd = process.cwd();
 
 global.conf = module.exports = nconf.get.bind(nconf);
 
-global.require_cwd = function(file, dirname){
-    var relative = path.resolve(dirname, cwd, file);
+global.require_cwd = function(file){
+    var relative = path.join(cwd, file);
     return require(relative);
 };
 

@@ -1,7 +1,7 @@
 'use strict';
 
 var controller = module.exports = require('../ViewController.js')('bf');
-var links = require_cwd('dat/buildfirst/links.json', __dirname);
+var links = require_cwd('dat/buildfirst/links.json');
 
 controller.registerRoutes = function(app){
     app.get('/bf', controller.redirectToBuildFirst);

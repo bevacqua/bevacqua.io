@@ -6,7 +6,7 @@ var path = require('path');
 var util = require('util');
 var nconf = require('nconf');
 var moment = require('moment');
-var pkg = require_cwd('package.json', __dirname);
+var pkg = require_cwd('package.json');
 var loading = util.format('%s - Loading configuration', moment().format());
 
 process.stdout.write(loading);
