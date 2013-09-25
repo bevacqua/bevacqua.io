@@ -1,16 +1,20 @@
 'use strict';
 
 var _ = require('lodash');
+var moment = require('moment');
 var cfg = require('./build/cfg');
 
-process.env.NODE_ENV = 'grunt';
-
+require('./env/grunt.js');
 require('./env'); // globals and environment variables
 
 module.exports = function(grunt){
 
+    grunt.log.write('%s - Loading external tasks...', moment().format());
+
     require('load-grunt-tasks')(grunt);
     require('time-grunt')(grunt);
+
+    grunt.log.writeln('done');
 
     grunt.loadTasks('./build/tasks');
     grunt.initConfig(_.merge.apply({}, _.values(cfg)));

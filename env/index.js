@@ -7,20 +7,23 @@ var util = require('util');
 var nconf = require('nconf');
 var moment = require('moment');
 var pkg = require_cwd('package.json', __dirname);
-
-nconf.argv();
-nconf.env();
-
-var env = nconf.get('NODE_ENV') || 'development';
-var loading = util.format('%s - Loading configuration for %s...', moment().format(), env);
+var loading = util.format('%s - Loading configuration', moment().format());
 
 process.stdout.write(loading);
+
+nconf.use('memory');
+nconf.argv();
+nconf.env();
+nconf.set('BUILD_VERSION', pkg.version);
+
+var env = nconf.get('NODE_ENV') || 'development';
+var envText = util.format(' for %s...', env);
+
+process.stdout.write(envText);
 
 file('user');
 file(env);
 file('defaults', false);
-
-nconf.set('BUILD_VERSION', pkg.version);
 
 console.log('done');
 

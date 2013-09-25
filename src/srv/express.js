@@ -13,7 +13,9 @@ var statics = path.join(process.cwd(), 'bin/public');
 var favicon = path.join(statics, 'favicon.ico');
 
 logger.info('executing:', process.argv.join(' '));
-logger.info('environment: %s, distribution: %s', conf('NODE_ENV'), conf('BUILD_DISTRIBUTION'));
+logger.info('environment: %s, distribution: %s, build: %s',
+    conf('NODE_ENV'), conf('BUILD_DISTRIBUTION'), conf('BUILD_VERSION')
+);
 
 controllers.load(app, function(){
     app.locals.settings['x-powered-by'] = false;
