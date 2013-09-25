@@ -21,7 +21,7 @@
     },
     "secure-config": {
         "url": "https://github.com/bevacqua/buildfirst/tree/master/ch03/02_rsa-config-encryption",
-        "title": "RSA Encrypted Configuration",
+        "title": "RSA Secure Configuration",
         "description": "Chapter 3 is all about environments in general and the development environment in particular. In this example, we'll learn how to keep our configuration safe by encrypting it with an RSA key. Full details are available following the link."
     }
 }
