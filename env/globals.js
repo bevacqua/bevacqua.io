@@ -5,7 +5,7 @@ var nconf = require('nconf');
 var moment = require('moment');
 var cwd = process.cwd();
 
-global.conf = module.exports = nconf.get.bind(nconf);
+global.conf = nconf.get.bind(nconf);
 
 global.require_cwd = function(file){
     var absolute = path.join(cwd, file);
