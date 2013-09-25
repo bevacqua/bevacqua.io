@@ -1,3 +1,11 @@
+<a name="v0.0.17-0"></a>
+### v0.0.17-0 (2013-09-25)
+
+
+#### Bug Fixes
+
+* wordsmith encrypted to secure ([3c195b20](https://github.com/bevacqua/io/commit/3c195b20857f9f38e2ae671e9154a027e6f1bf51))
+
 <a name="v0.0.16-0"></a>
 ### v0.0.16-0 (2013-09-25)
 
