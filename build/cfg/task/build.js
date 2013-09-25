@@ -37,7 +37,7 @@ module.exports = {
         debug: assets.jade(false),
         release: assets.jade(true)
     },
-    copy: _.assign(assets.img.copy, assets.js.copy),
+    copy: _.assign(assets.img.copy, assets.js.copy, assets.other.copy),
     json2css: {
         all: {
             src: 'bin/.tmp/sprite/*.json',

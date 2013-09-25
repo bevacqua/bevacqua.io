@@ -9,7 +9,7 @@ build
 deploy
 test
 
-# misc junk
+# junk
 bin/.tmp
 
 # will `npm install --production` on the server

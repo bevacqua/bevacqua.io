@@ -23,7 +23,7 @@ module.exports = function(grunt){
     }
 
     // build tasks
-    alias('images:debug', 'clean:images copy:images copy:favicon sprite');
+    alias('images:debug', 'clean:images copy:images sprite');
     alias('images:release', 'images:debug imagemin:all');
 
     alias('css:debug', 'clean:css stylus:all csslint');
@@ -35,22 +35,22 @@ module.exports = function(grunt){
     alias('views:debug', 'clean:views jade:debug');
     alias('views:release', 'clean:views jade:release');
 
-    alias('build:debug', 'images:debug css:debug js:debug views:debug bump-only:build');
+    alias('build:debug', 'clean copy:other images:debug css:debug js:debug views:debug bump-only:build');
     alias('build:rebuild', 'build:debug play:success');
-    alias('build:release', 'images:release css:release js:release views:release bump-only:build');
+    alias('build:release', 'clean copy:other images:release css:release js:release views:release bump-only:build');
 
     // testing tasks
     alias('test', 'jshint csslint mochaTest:unit karma:unit_once');
 
     // development and debugging tasks
     alias('dev_setup', 'pem_decrypt:dev');
-    alias('dev', 'clean build:rebuild karma:unit_background concurrent:dev');
+    alias('dev', 'build:rebuild karma:unit_background concurrent:dev');
 
     // continuous integration and deployment tasks
-    alias('ci', 'clean build:release test');
+    alias('ci', 'build:release test');
 
     alias('deploy_setup', 'pem_decrypt:aws shell:deploy_setup');
-    alias('deploy_prepare', 'clean build:release test bump-only:patch changelog bump-commit');
+    alias('deploy_prepare', 'build:release test bump-only:patch changelog bump-commit');
     alias('deploy', 'deploy_prepare ec2_deploy:edge');
     alias('deploy_production', 'deploy_prepare ec2_deploy:production');
 

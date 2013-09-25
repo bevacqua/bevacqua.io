@@ -7,10 +7,6 @@ module.exports = {
             cwd: 'src/client/img',
             dest: 'bin/public/img',
             src: ['**/*.{png,jpg,gif}', '!sprite/**/*.{png,jpg,gif}']
-        },
-        favicon: {
-            src: 'src/client/img/favicon.ico',
-            dest: 'bin/public/favicon.ico'
         }
     },
     sprite: function(type, short){
