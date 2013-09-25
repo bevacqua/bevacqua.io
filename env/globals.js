@@ -8,8 +8,8 @@ var cwd = process.cwd();
 global.conf = module.exports = nconf.get.bind(nconf);
 
 global.require_cwd = function(file){
-    var relative = path.join(cwd, file);
-    return require(relative);
+    var absolute = path.join(cwd, file);
+    return require(absolute);
 };
 
 moment.defaultFormat = 'Do HH:mm:ss';
