@@ -6,5 +6,5 @@
     From: Buenos Aires, Argentina
 
 /* SITE */
-    Tools: Sublime Text, iTerm, git, love
+    Tools: Sublime Text, iTerm, git, JavaScript, love
     Source: https://github.com/bevacqua/io
