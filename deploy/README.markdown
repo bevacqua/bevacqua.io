@@ -6,4 +6,4 @@ For deployments, I wrote [grunt-ec2](https://github.com/bevacqua/grunt-ec2). Thi
 
 The first time around, you'll want to execute the `deploy_setup` task, installing necessary dependencies. Note that you _will need the decryption key for deployment configuration_.
 
-To perform deployments, simply use `grunt deploy` to deploy to `staging`, and `grunt deploy_production` to deploy to `production`.
+To perform deployments, simply use `grunt deploy` to deploy to `edge` (staging), and `grunt deploy_production` to deploy to `production`.
