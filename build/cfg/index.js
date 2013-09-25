@@ -9,7 +9,8 @@ var jadeContextService = require('./service/jadeContextService.js');
 jadeContextService.registerProvider(function(){
     return {
         buildfirst: {
-            links: _.map(links, function(link){
+            links: _.map(links, function(link, key){
+                link.key = key;
                 link.description = ultramarked(link.description);
                 return link;
             })
