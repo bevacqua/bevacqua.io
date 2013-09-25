@@ -23,5 +23,15 @@
         "url": "https://github.com/bevacqua/buildfirst/tree/master/ch03/02_rsa-config-encryption",
         "title": "RSA Secure Configuration",
         "description": "Chapter 3 is all about environments in general and the development environment in particular. In this example, we'll learn how to keep our configuration safe by encrypting it with an RSA key. Full details are available following the link."
+    },
+    "12factor": {
+        "url": "http://12factor.net",
+        "title": "The Twelve-Factor App",
+        "description": "One of Heroku's co-founders wrote this extensive document detailing their approach to application architecture, configuration, scaling, and deployment. This is a read I could not recommend more often."
+    },
+    "heroku-cli": {
+        "url": "https://devcenter.heroku.com/articles/config-vars",
+        "title": "Heroku CLI",
+        "description": "Heroku is a cloud hosting [**PaaS**](http://en.wikipedia.org/wiki/Platform_as_a_service) (platform-as-a-service) provider that allows us to easily deploy applications directly through `git`. In this article, you'll find details on how to configure your hosted environment directly from the command-line."
     }
 }
