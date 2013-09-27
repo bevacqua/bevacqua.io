@@ -33,5 +33,10 @@
         "url": "https://devcenter.heroku.com/articles/config-vars",
         "title": "Heroku CLI",
         "description": "Heroku is a cloud hosting [**PaaS**](http://en.wikipedia.org/wiki/Platform_as_a_service) (platform-as-a-service) provider that allows us to easily deploy applications directly through `git`. In this article, you'll find details on how to configure your hosted environment directly from the command-line."
+    },
+    "watch-out": {
+        "url": "https://github.com/bevacqua/buildfirst/tree/master/ch03/05_better-watch-closely",
+        "title": "Watch out!",
+        "description": "After learning about Grunt, and the kind of tasks you can automate with it, we'll examine **continuous development**. The first step in that direction is using a Grunt `watch`, to monitor file changes and have tasks re-executed automatically for us. This is the sample code for the `watch` task."
     }
 }
