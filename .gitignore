@@ -12,5 +12,6 @@ bin
 .DS_Store
 
 # sensitive data
+env/cert
 env/private
 deploy/private
