@@ -3,9 +3,10 @@
 
 # sensitive data
 env/cert
-env/private
+env/private/*
 
 # unnecessary on deployed applications
+env/secure
 build
 deploy
 test
