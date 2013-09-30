@@ -1,6 +1,5 @@
 'use strict';
 
-var _ = require('lodash');
 var fs = require('fs');
 var path = require('path');
 var util = require('util');
@@ -8,7 +7,7 @@ var viewBase = 'bin/views';
 var Controller = require('./Controller.js');
 
 function ViewController(name){
-    Controller.apply(this, arguments);
+    Controller.call(this);
 
     this.name = name;
 }
@@ -32,7 +31,4 @@ ViewController.prototype.getView = function(view){
     };
 };
 
-module.exports = function(){
-    var args = _.toArray(arguments);
-    return new (Function.prototype.bind.apply(ViewController, [null].concat(args)))();
-};
+module.exports = ViewController;

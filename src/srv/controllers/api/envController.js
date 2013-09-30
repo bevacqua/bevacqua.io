@@ -1,6 +1,6 @@
 'use strict';
 
-var controller = module.exports = require('../ApiController.js')();
+var controller = module.exports = new (require('../ApiController.js'))();
 
 controller.registerRoutes = function(app){
     app.get(controller.v + '/env', controller.getEnv);

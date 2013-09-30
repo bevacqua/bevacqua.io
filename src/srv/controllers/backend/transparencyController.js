@@ -1,6 +1,6 @@
 'use strict';
 
-var controller = module.exports = require('../Controller.js')();
+var controller = module.exports = new (require('../Controller.js'))();
 
 controller.registerRoutes = function(app){
     app.get('/blog', controller.redirect('http://blog.ponyfoo.com'));

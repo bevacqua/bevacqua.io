@@ -1,7 +1,5 @@
 'use strict';
 
-var _ = require('lodash');
-
 function Controller(){
 }
 
@@ -13,7 +11,4 @@ Controller.prototype.redirect = function (to, code) {
     };
 };
 
-module.exports = function(){
-    var args = _.toArray(arguments);
-    return new (Function.prototype.bind.apply(Controller, [null].concat(args)))();
-};
+module.exports = Controller;
