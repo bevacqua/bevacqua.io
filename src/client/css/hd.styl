@@ -10,19 +10,10 @@
     display inline-block
     vertical-align middle
 
-// on smaller screens, display sub-sections in new lines
-.hd-item ~ .hd-small-item
-    display block
-
-    a
-        display inline-block
-
+// on larger screens, collapse sub-sections to parent line
 @media only screen and (min-width: 768px)
-    .hd-item ~ .hd-small-item
-        display inline-block
-
-        a
-            display block
+    .hd-item-separator
+        display none
 
 .hd-small-item
     vertical-align sub

@@ -3,14 +3,9 @@
 var controller = module.exports = require('../Controller.js')();
 
 controller.registerRoutes = function(app){
-    app.get('/code', controller.getCode);
-    app.get('/source', controller.getSource);
-};
-
-controller.getCode = function(req, res){
-    res.redirect('https://github.com/bevacqua');
-};
-
-controller.getSource = function(req, res){
-    res.redirect('https://github.com/bevacqua/io');
+    app.get('/blog', controller.redirect('http://blog.ponyfoo.com'));
+    app.get('/career', controller.redirect('http://careers.stackoverflow.com/bevacqua'));
+    app.get('/code', controller.redirect('https://github.com/bevacqua'));
+    app.get('/source', controller.redirect('https://github.com/bevacqua/io'));
+    app.get('/twitter', controller.redirect('https://twitter.com/nzgb'));
 };
