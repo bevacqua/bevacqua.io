@@ -38,12 +38,6 @@ module.exports = {
         release: assets.jade(true)
     },
     copy: _.assign(assets.img.copy, assets.js.copy, assets.other.copy),
-    json2css: {
-        all: {
-            src: 'bin/.tmp/sprite/*.json',
-            format: 'pseudo_class_css'
-        }
-    },
     sprite: {
         houses: assets.img.sprite('houses', 'ho'),
         icons: assets.img.sprite('icons', 'ic')
