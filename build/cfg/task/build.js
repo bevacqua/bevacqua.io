@@ -9,7 +9,8 @@ module.exports = {
         views: 'bin/views',
         js: 'bin/public/js',
         css: 'bin/public/css',
-        images: ['bin/public/img', 'bin/public/favicon.ico'],
+        images: ['bin/public/img'],
+        other: ['bin/public/*.{txt,ico}'],
         tmp_sprite: 'bin/.tmp/sprite',
         after_uglify: ['bin/public/js/**/*.js', '!bin/public/js/all.js']
     },

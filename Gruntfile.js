@@ -48,7 +48,7 @@ module.exports = function(grunt){
 
     // development and debugging tasks
     alias('dev_setup', 'pem_decrypt:dev');
-    alias('dev', 'build:debug karma:unit_background concurrent:dev');
+    alias('dev', 'build:debug karma:unit_background watch');
 
     // continuous integration and deployment tasks
     alias('ci', 'build:release test');
