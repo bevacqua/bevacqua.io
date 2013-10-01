@@ -7,7 +7,7 @@
     "email": "ng@bevacqua.io",
     "url": "https://bevacqua.io"
   },
-  "version": "0.0.17-22",
+  "version": "0.0.17-23",
   "private": true,
   "engines": {
     "node": "0.10.18",
