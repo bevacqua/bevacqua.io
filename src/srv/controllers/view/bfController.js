@@ -4,7 +4,6 @@ var controller = module.exports = new (require('../ViewController.js'))('bf');
 var links = require_cwd('dat/buildfirst/links.json');
 
 controller.registerRoutes = function(app){
-    console.log(controller.prototype);
     app.get('/bf', controller.redirect('/buildfirst', 301));
     app.get('/bf/:key', controller.expandShortLink);
 };
