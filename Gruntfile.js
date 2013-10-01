@@ -1,11 +1,11 @@
 'use strict';
 
+require('./env/grunt.js');
+require('./env'); // globals and environment variables
+
 var _ = require('lodash');
 var moment = require('moment');
 var cfg = require('./build/cfg');
-
-require('./env/grunt.js');
-require('./env'); // globals and environment variables
 
 module.exports = function(grunt){
 
