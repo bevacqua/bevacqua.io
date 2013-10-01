@@ -1,5 +1,21 @@
 extends /layout
 
+block title
+    title oops! &middot; bevacqua.io
+
 block content
-    main
-        h1 Oh no! We're going down!
+    main.er-main
+        :markdown
+            # Oh no! Something went tremendously wrong
+
+            Why don't you [read my blog](http://blog.ponyfoo.com "My blog on Pony Foo") while I fix these issues?
+
+            If you are _bored enough_ you could send me a tweet, letting me know you saw this error page.
+
+        p Tweet at me so I can fix this, thanks!
+
+        iframe(
+            allowtransparency, frameborder='0', scrolling='no',
+            src='https://platform.twitter.com/widgets/tweet_button.html?dnt=true&count=none&text=%40nzgb+https%3A%2F%2Fbevacqua.io%2F+is+throwing+502+errors%2C+care+to+take+a+look%3F+Thanks%2C+I%5C%27ll+be+reading+your+blog%21'
+            style='width:130px; height:20px;'
+        )
