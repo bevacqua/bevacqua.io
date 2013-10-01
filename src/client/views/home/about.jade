@@ -13,10 +13,10 @@ block content
         article.am-article
             section.am-section
                 :markdown
-                    Hi there! I'm [Nicolas Bevacqua](/about "About me"), a full-stack developer who loves his job. You can find me blogging on **Pony Foo**, just _click on the rainbows_ below. I _mostly_ write about JavaScript and the open web.
+                    Hi there! I'm [Nicolas Bevacqua](/about#bio "About me"), a full-stack developer who loves his job. You can find me blogging on **Pony Foo**, just _click on the rainbows_ below. I _mostly_ write about JavaScript and the open web.
 
             p.am-center
-                a.am-image-link(href='http://blog.ponyfoo.com/', title='My blog at Pony Foo')
+                a.am-image-link(href='/blog', title='My blog at Pony Foo')
                     img.am-image-ponyfoo(src='/img/ponyfoo.png', alt='')
 
         article.am-article.am-hub
@@ -32,5 +32,23 @@ block content
                     You can click on the image below to find my **GitHub** account and all the projects I'm working on.
 
             p.am-center
-                a.am-image-link(href='https://github.com/bevacqua', title='My account on GitHub')
+                a.am-image-link(href='/code', title='My account on GitHub')
                     img.am-image-hub(src='/img/hub.png', alt='')
+
+        article.am-article.am-bio
+            a(name='bio')
+            section.am-section
+                :markdown
+                    I live in [Buenos Aires, Argentina](http://goo.gl/maps/beVu1 "Google Maps"). I started programming in [Pascal](http://en.wikipedia.org/wiki/Pascal_(programming_language)) in the late 90’s.
+
+                    [BASIC](http://en.wikipedia.org/wiki/BASIC "BASIC Programming Language") came shortly afterwards on the [TI-74](http://i.imgur.com/CLLvJqN.jpg "Texas Instruments 74 BASICALC") my dad gave me, and, with it came [VB6](https://en.wikipedia.org/wiki/Visual_Basic "Visual Basic"). Soon after that I discovered an [open-source C# game server](http://www.runuo.com/ "RunUO MMORPG server"), and I was **stoked**.
+
+                    I started building all kinds of web applications using **C#**, and developed a great interest in **JavaScript**, UX and, well, _front-end in general_. I’ve now shifted my focus towards [Node](http://nodejs.org "NodeJS platform"). Late in 2012, I [started](http://blog.ponyfoo.com/2012/12/25/pony-foo-begins "Pony Foo Begins") coding this blogging platform, where I maintain [my own blog](/blog "Browse My Blog").
+
+                    I also [read](http://blog.ponyfoo.com/2013/05/21/recommended-reading "My Recommended Reading"). _A lot_.
+
+                    Below is a link to _detailed information about my career_, gently hosted by Stack Overflow, [where I also have an account](/stackoverflow).
+
+            p.am-center
+                a.am-image-link(href='/career', title='My career on Stack Overflow')
+                    img.am-image-hub(src='/img/me.jpg', alt='')
