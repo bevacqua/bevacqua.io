@@ -9,7 +9,7 @@ var logger = require('../lib/logger');
 var port = conf('PORT');
 var debug = conf('BUILD_DISTRIBUTION') === 'debug';
 
-var statics = path.join(process.cwd(), 'bin/public');
+var statics = path.join(conf.cwd, 'bin/public');
 var favicon = path.join(statics, 'favicon.ico');
 
 logger.info('executing:', process.argv.join(' '));

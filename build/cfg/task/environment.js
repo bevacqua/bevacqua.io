@@ -2,7 +2,6 @@
 
 var path = require('path');
 var util = require('util');
-var cwd = process.cwd();
 
 var settings = {
     pem_gen: {},
@@ -12,7 +11,7 @@ var settings = {
 
 function add (keyName) {
     var keyFile = util.format('env/private/%s.pem', keyName);
-    var pem = path.join(cwd, keyFile);
+    var pem = path.join(conf.cwd, keyFile);
 
     settings.pem_gen[keyName] = { pem: pem };
     settings.pem_encrypt[keyName] = settings.pem_decrypt[keyName] = {
