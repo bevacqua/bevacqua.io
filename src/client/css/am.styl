@@ -12,6 +12,8 @@
     text-align center
     color #fafafa
 
+    selection-background-foreground-shadow(#fafafa, c_midnight, 0 1px 3px rgba(#000, 0.2))
+
 .am-article
     margin 0 auto 30px
     max-width 600px
@@ -24,9 +26,11 @@
         font-weight 700
         text-decoration none
         transition all 1s ease-in-out
-        background-color c_pomegranate
+        background-color #434343
         background-color rgba(0,0,0,0.3)
         color c_yellow
+
+        selection-background-foreground-shadow(c_clouds, #434343)
 
         &:hover
             background-color transparent
@@ -44,17 +48,23 @@
 .am-blog
     background-color c_alizarin
 
+    selection-background-foreground-shadow(c_clouds, c_pomegranate, 0 1px 3px rgba(#000, 0.2))
+
 .am-blog, .am-image-blog
     border 10px solid c_pomegranate
 
 .am-hub
     background-color c_emerald
 
+    selection-background-foreground-shadow(c_clouds, c_greensea, 0 1px 3px rgba(#000, 0.2))
+
 .am-hub, .am-image-hub
     border 10px solid c_greensea
 
 .am-bio
     background-color c_amethyst
+
+    selection-background-foreground-shadow(c_clouds, c_wisteria, 0 1px 3px rgba(#000, 0.2))
 
 .am-bio-anchor
     margin-top -20px
