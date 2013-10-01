@@ -1,3 +1,18 @@
+<a name="v0.0.18-0"></a>
+### v0.0.18-0 (2013-10-01)
+
+* Improved `/about` page
+
+#### Bug Fixes
+
+* require_cwd doesn't need __dirname ([acd5f6c6](https://github.com/bevacqua/io/commit/acd5f6c6f1a47c1567ec7c4234c539caf969044c))
+* nconf in-memory, better grunt env setting ([1b6caf62](https://github.com/bevacqua/io/commit/1b6caf626920f3619db22c22cb76b8cdeaa73f90))
+
+
+#### Features
+
+* /code points to hub/bevacqua ([d0d7e72b](https://github.com/bevacqua/io/commit/d0d7e72b6440e21fc37e88871e771f0f09fb6886))
+
 <a name="v0.0.17-0"></a>
 ### v0.0.17-0 (2013-09-25)
 
