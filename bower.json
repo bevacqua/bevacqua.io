@@ -5,9 +5,9 @@
   "author": {
     "name": "Nicolas Bevacqua",
     "email": "ng@bevacqua.io",
-    "url": "https://bevacqua.io"
+    "url": "http://bevacqua.io"
   },
-  "version": "0.0.17-23",
+  "version": "0.0.17-24",
   "private": true,
   "dependencies": {
     "normalize-css": "2.1.3",

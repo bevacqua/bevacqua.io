@@ -7,4 +7,4 @@
 
 /* SITE */
     Tools: Sublime Text, iTerm, git, JavaScript, love
-    Source: https://bevacqua.io/source
+    Source: http://bevacqua.io/source
