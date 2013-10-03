@@ -43,5 +43,10 @@
         "url": "https://github.com/bevacqua/buildfirst/tree/master/ch03/07_livereload",
         "title": "Using LiveReload",
         "description": "This technology enables our browser to refresh itself whenever a file changes. If the browser doesn't really need to perform a full page reload, then it will only get what changed (through [Web Sockets](http://www.html5rocks.com/en/tutorials/websockets/basics/)) and then apply that to your page, making it even faster. This example shows how to get it up and running."
+    },
+    "semver": {
+        "url": "http://semver.org/",
+        "title": "Semantic Versioning",
+        "description": "Semantic versioning is a popular solution to the _dependency hell_ problem, championed by [Tom Preston-Werner](http://tom.preston-werner.com/), co-founder of GitHub. `semver` is used in `npm`, the Node.js package manager, and in the book we'll discover how to use it to our benefit when preparing for new deployments of our applications."
     }
 }
