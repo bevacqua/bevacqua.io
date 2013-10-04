@@ -50,13 +50,17 @@
         "description": "Semantic versioning is a popular solution to the _dependency hell_ problem, championed by [Tom Preston-Werner](http://tom.preston-werner.com/), co-founder of GitHub. `semver` is used in `npm`, the Node.js package manager, and in the book we'll discover how to use it to our benefit when preparing for new deployments of our applications."
     },
     "heroku": {
-        "url": "https://github.com/bevacqua/buildfirst/tree/master/ch04/05_deploying-to-heroku",
-        "title": "Heroku Quick Start",
+        "url": "https://github.com/bevacqua/buildfirst/tree/master/ch04/05_heroku-deployments",
+        "title": "Deploying to Heroku",
         "description": "At this point in the book, we'll be ready to start talking about deployment, and I've picked Heroku as the platform we'll deploy to, because of its ease of use. In this sample you'll find everything you need in order to deploy your first application to Heroku."
+    },
+    "aws": {
+        "url": "https://github.com/bevacqua/buildfirst/tree/master/ch04/06_aws-deployments",
+        "title": "Deploying to Amazon Web Services",
+        "description": "An alternative to deploying to Heroku might be deploying to AWS. In this sample, we'll discusss something that didn't make it in the book due to the added complexity of dealing with Amazon Web Services (AWS), and the Elastic Cloud Compute (EC2) solution in particular. The sample details how to create and deploy to AWS EC2 instances in a safe manner that's easy to integrate with our builds."
     },
     "integration": {
         "url": "http://www.martinfowler.com/articles/continuousIntegration.html",
         "title": "Continuous Integration",
         "description": "In this paper authored in 2006, Martin Fowler defines and describes Continuous Integration (CI). After learning about CI, and the importance of testing our builds in an environment that resembles production as closely as possible, we'll discuss approaches for tackling CI, and then take a sample CI flow for a spin."
-    }
-}
+    },
