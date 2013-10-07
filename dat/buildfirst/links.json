@@ -65,6 +65,12 @@
         "title": "Semantic Versioning",
         "description": "Semantic versioning is a popular solution to the _dependency hell_ problem, championed by [Tom Preston-Werner](http://tom.preston-werner.com/), co-founder of GitHub. `semver` is used in `npm`, the Node.js package manager, and in the book we'll discover how to use it to our benefit when preparing for new deployments of our applications."
     },
+    "markdown": {
+        "type": "link",
+        "url": "http://daringfireball.net/projects/markdown/",
+        "title": "Markdown",
+        "description": "The original Markdown specification. Markdown is a powerful almost-plain-text language to write HTML that is immediately readable without the need for an HTML parser. Markdown can be compiled to HTML, and has become the most widespread language of choice when it comes to writing blog posts, specifications, and HTML in general."
+    },
     "heroku": {
         "type": "code",
         "url": "https://github.com/bevacqua/buildfirst/tree/master/ch04/05_heroku-deployments",
