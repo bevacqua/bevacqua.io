@@ -17,15 +17,19 @@
         background-color rgba(#fff, 0.1)
 
 .rs-link
+    position relative
     display block
     font-size 1.4em
     font-weight 300
-    padding 8px
+    padding 8px 8px 8px 48px
     transition all 0.2s ease-in-out
     color c_greensea
 
     &:before
-        margin-right 8px
+        position absolute
+        top 50%
+        margin-top -16px
+        margin-left -40px
 
     &:hover
         color #444

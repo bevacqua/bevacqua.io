@@ -1,71 +1,86 @@
 {
     "code": {
+        "type": "code",
         "url": "https://github.com/bevacqua/buildfirst",
         "title": "Code Samples and Snippets",
         "description": "Every single code sample and snippet that is discussed in the book, and then _a few more_, which didn't make it into the book."
     },
     "speed-matters": {
+        "type": "link",
         "url": "http://www.codinghorror.com/blog/2006/11/speed-still-matters.html",
         "title": "Speed Still Matters",
         "description": "In this blog post, renowned Jeff Atwood, of [Stack Overflow](http://stackoverflow.com \"Stack Overflow Q&A Site\") fame, goes over anecdotes about how Google and Amazon tested their sites' perceived speed, and the interesting conclusions they arrived at."
     },
     "grunt": {
+        "type": "link",
         "url": "http://gruntjs.com",
         "title": "Grunt Task Runner",
         "description": "Grunt is a task runner that helps us automate our build process. It is thoroughly discussed in the book."
     },
     "db-tasks": {
+        "type": "code",
         "url": "https://github.com/bevacqua/buildfirst/tree/master/ch02/09_mysql-tasks",
         "title": "Case Study: Database Tasks",
         "description": "In this particular code sample, we'll create a series of database-related tasks for our build process. These will help us bootstrap environments, as well as reduce the complexity in database schema updates and rollbacks."
     },
     "secure-config": {
+        "type": "code",
         "url": "https://github.com/bevacqua/buildfirst/tree/master/ch03/02_rsa-config-encryption",
         "title": "RSA Secure Configuration",
         "description": "Chapter 3 is all about environments in general and the development environment in particular. In this example, we'll learn how to keep our configuration safe by encrypting it with an RSA key. Full details are available following the link."
     },
     "12factor": {
+        "type": "link",
         "url": "http://12factor.net",
         "title": "The Twelve-Factor App",
         "description": "One of Heroku's co-founders wrote this extensive document detailing their approach to application architecture, configuration, scaling, and deployment. This is a read I could not recommend more often."
     },
     "heroku-cli": {
+        "type": "link",
         "url": "https://devcenter.heroku.com/articles/config-vars",
         "title": "Heroku CLI",
         "description": "Heroku is a cloud hosting [**PaaS**](http://en.wikipedia.org/wiki/Platform_as_a_service) (platform-as-a-service) provider that allows us to easily deploy applications directly through `git`. In this article, you'll find details on how to configure your hosted environment directly from the command-line."
     },
     "watch-out": {
+        "type": "code",
         "url": "https://github.com/bevacqua/buildfirst/tree/master/ch03/05_better-watch-closely",
         "title": "Watch out!",
         "description": "After learning about Grunt, and the kind of tasks you can automate with it, we'll examine **continuous development**. The first step in that direction is using a Grunt `watch`, to monitor file changes and have tasks re-executed automatically for us. This is the sample code for the `watch` task."
     },
     "livereload": {
+        "type": "code",
         "url": "https://github.com/bevacqua/buildfirst/tree/master/ch03/07_livereload",
         "title": "Using LiveReload",
         "description": "This technology enables our browser to refresh itself whenever a file changes. If the browser doesn't really need to perform a full page reload, then it will only get what changed (through [Web Sockets](http://www.html5rocks.com/en/tutorials/websockets/basics/)) and then apply that to your page, making it even faster. This example shows how to get it up and running."
     },
     "interlacing": {
+        "type": "link",
         "url": "http://www.codinghorror.com/blog/2005/12/progressive-image-rendering.html",
         "title": "Progressive Image Rendering",
         "description": "In this blog post, Jeff Atwood takes us through the key selling points of progressive images. In the book, we'll go through the motions of setting up an automated workflow to enable progressive rendering for our images."
     },
     "semver": {
+        "type": "link",
         "url": "http://semver.org/",
         "title": "Semantic Versioning",
         "description": "Semantic versioning is a popular solution to the _dependency hell_ problem, championed by [Tom Preston-Werner](http://tom.preston-werner.com/), co-founder of GitHub. `semver` is used in `npm`, the Node.js package manager, and in the book we'll discover how to use it to our benefit when preparing for new deployments of our applications."
     },
     "heroku": {
+        "type": "code",
         "url": "https://github.com/bevacqua/buildfirst/tree/master/ch04/05_heroku-deployments",
         "title": "Deploying to Heroku",
         "description": "At this point in the book, we'll be ready to start talking about deployment, and I've picked Heroku as the platform we'll deploy to, because of its ease of use. In this sample you'll find everything you need in order to deploy your first application to Heroku."
     },
     "aws": {
+        "type": "code",
         "url": "https://github.com/bevacqua/buildfirst/tree/master/ch04/06_aws-deployments",
         "title": "Deploying to Amazon Web Services",
         "description": "An alternative to deploying to Heroku might be deploying to AWS. In this sample, we'll discusss something that didn't make it in the book due to the added complexity of dealing with Amazon Web Services (AWS), and the Elastic Cloud Compute (EC2) solution in particular. The sample details how to create and deploy to AWS EC2 instances in a safe manner that's easy to integrate with our builds."
     },
     "integration": {
+        "type": "link",
         "url": "http://www.martinfowler.com/articles/continuousIntegration.html",
         "title": "Continuous Integration",
         "description": "In this paper authored in 2006, Martin Fowler defines and describes Continuous Integration (CI). After learning about CI, and the importance of testing our builds in an environment that resembles production as closely as possible, we'll discuss approaches for tackling CI, and then take a sample CI flow for a spin."
-    },
+    }
+}
