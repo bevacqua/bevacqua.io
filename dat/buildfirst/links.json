@@ -44,6 +44,11 @@
         "title": "Using LiveReload",
         "description": "This technology enables our browser to refresh itself whenever a file changes. If the browser doesn't really need to perform a full page reload, then it will only get what changed (through [Web Sockets](http://www.html5rocks.com/en/tutorials/websockets/basics/)) and then apply that to your page, making it even faster. This example shows how to get it up and running."
     },
+    "interlacing": {
+        "url": "http://www.codinghorror.com/blog/2005/12/progressive-image-rendering.html",
+        "title": "Progressive Image Rendering",
+        "description": "In this blog post, Jeff Atwood takes us through the key selling points of progressive images. In the book, we'll go through the motions of setting up an automated workflow to enable progressive rendering for our images."
+    },
     "semver": {
         "url": "http://semver.org/",
         "title": "Semantic Versioning",
