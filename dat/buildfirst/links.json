@@ -15,7 +15,7 @@
         "type": "link",
         "url": "http://gruntjs.com",
         "title": "Grunt Task Runner",
-        "description": "Grunt is a task runner that helps us automate our build process. It is thoroughly discussed in the book."
+        "description": "Grunt is a task runner that helps us automate our build process. It is thoroughly discussed in the book. Code related to build processes uses Grunt packages to illustrate points, however, the **concepts taught in the book go beyond simply using Grunt**, which is _just a tool_."
     },
     "db-tasks": {
         "type": "code",
