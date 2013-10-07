@@ -7,7 +7,7 @@
     "email": "ng@bevacqua.io",
     "url": "http://bevacqua.io"
   },
-  "version": "0.0.18-7",
+  "version": "0.0.18-9",
   "private": true,
   "engines": {
     "node": "0.10.18",
@@ -50,6 +50,7 @@
     "grunt-rev": "0.1.0",
     "grunt-shell": "0.3.1",
     "grunt-spritesmith": "1.7.0",
+    "grunt-usemin": "0.1.12",
     "karma": "0.10.2",
     "karma-mocha": "0.1.0",
     "karma-phantomjs-launcher": "0.1.0",
