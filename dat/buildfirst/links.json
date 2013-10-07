@@ -33,7 +33,7 @@
         "type": "link",
         "url": "http://12factor.net",
         "title": "The Twelve-Factor App",
-        "description": "One of Heroku's co-founders wrote this extensive document detailing their approach to application architecture, configuration, scaling, and deployment. This is a read I could not recommend more often."
+        "description": "One of Heroku's co-founders (**Adam Wiggins**) wrote this extensive document detailing their approach to application architecture, configuration, scaling, and deployment. This is a read I could not recommend more often."
     },
     "heroku-cli": {
         "type": "link",
@@ -57,7 +57,7 @@
         "type": "link",
         "url": "http://www.codinghorror.com/blog/2005/12/progressive-image-rendering.html",
         "title": "Progressive Image Rendering",
-        "description": "In this blog post, Jeff Atwood takes us through the key selling points of progressive images. In the book, we'll go through the motions of setting up an automated workflow to enable progressive rendering for our images."
+        "description": "In this blog post, **Jeff Atwood** takes us through the key selling points of progressive images. In the book, we'll go through the motions of setting up an automated workflow to enable progressive rendering for our images."
     },
     "semver": {
         "type": "link",
@@ -81,12 +81,12 @@
         "type": "code",
         "url": "https://github.com/bevacqua/buildfirst/tree/master/ch04/06_aws-deployments",
         "title": "Deploying to Amazon Web Services",
-        "description": "An alternative to deploying to Heroku might be deploying to AWS. In this sample, we'll discusss something that didn't make it in the book due to the added complexity of dealing with Amazon Web Services (AWS), and the Elastic Cloud Compute (EC2) solution in particular. The sample details how to create and deploy to AWS EC2 instances in a safe manner that's easy to integrate with our builds."
+        "description": "An alternative to deploying to Heroku might be deploying to AWS. In this sample, we'll discusss something that didn't make it in the book due to the added complexity of dealing with Amazon Web Services _(AWS)_, and the Elastic Cloud Compute _(EC2)_ solution in particular. The sample details how to create and deploy to AWS EC2 instances in a safe manner that's easy to integrate with our builds."
     },
     "integration": {
         "type": "link",
         "url": "http://www.martinfowler.com/articles/continuousIntegration.html",
         "title": "Continuous Integration",
-        "description": "In this paper authored in 2006, Martin Fowler defines and describes Continuous Integration (CI). After learning about CI, and the importance of testing our builds in an environment that resembles production as closely as possible, we'll discuss approaches for tackling CI, and then take a sample CI flow for a spin."
+        "description": "In this paper, _authored in 2006_, **Martin Fowler** defines and describes Continuous Integration _(CI)_. After learning about CI, and the importance of testing our builds in an environment that resembles production as closely as possible, we'll discuss approaches for tackling CI, and then take a sample CI flow for a spin."
     }
 }
