@@ -12,7 +12,7 @@ module.exports = {
         html: 'bin/{public,views}/**/*.html',
         css: 'bin/public/**/*.css',
         options: {
-            dirs: 'bin'
+            dirs: ['bin']
         }
     },
     bump: {
