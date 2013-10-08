@@ -2,7 +2,6 @@
 .git
 
 # sensitive data
-env/cert
 env/private/*
 
 # unnecessary on deployed applications
