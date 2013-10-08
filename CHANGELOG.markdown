@@ -1,3 +1,8 @@
+<a name="v0.0.19-0"></a>
+### v0.0.19-0 (2013-10-08)
+
+* More improvements to /about page
+
 <a name="v0.0.18-0"></a>
 ### v0.0.18-0 (2013-10-01)
 
