@@ -11,5 +11,10 @@ module.exports = {
             }
         }
     },
-    ec2: 'env/private/grunt.json'
+    ec2: 'env/private/grunt.json',
+    pagespeed: {
+        options: {
+            key: conf('PAGESPEED_API_KEY')
+        }
+    }
 };
