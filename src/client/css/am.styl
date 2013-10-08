@@ -19,6 +19,7 @@
     max-width 600px
     font-weight 100
     color c_clouds
+    border 10px solid transparent
 
 .am-section
     a
@@ -30,7 +31,7 @@
         background-color rgba(0,0,0,0.3)
         color c_yellow
 
-        selection-background-foreground-shadow(c_clouds, #434343)
+        selection-background-foreground(c_clouds, #434343)
 
         &:hover
             background-color transparent
@@ -45,35 +46,43 @@
 .am-image-link
     display inline-block
 
+.am-image
+    border 10px solid transparent
+    transition all 0.5s ease-in-out
+
+    &:hover
+        opacity 0.7
+        border-color rgba(0,0,0,0.4)
+
+.am-blog, .am-image-blog
+    border-color c_pomegranate
+
+.am-hub, .am-image-hub
+    border-color c_greensea
+
+.am-bio, .am-image-bio
+    border-color c_wisteria
+
 .am-blog
     background-color c_alizarin
 
-    selection-background-foreground-shadow(c_clouds, c_pomegranate, 0 1px 3px rgba(#000, 0.2))
-
-.am-blog, .am-image-blog
-    border 10px solid c_pomegranate
+    selection-background-foreground(c_clouds, c_pomegranate)
 
 .am-hub
     font-weight 300 // hard to read due to background color, otherwise
     background-color c_emerald
     color c_midnight
 
-    selection-background-foreground-shadow(c_clouds, c_greensea, 0 1px 3px rgba(#000, 0.2))
-
-.am-hub, .am-image-hub
-    border 10px solid c_greensea
+    selection-background-foreground(c_clouds, c_greensea)
 
 .am-bio
     background-color c_amethyst
 
-    selection-background-foreground-shadow(c_clouds, c_wisteria, 0 1px 3px rgba(#000, 0.2))
+    selection-background-foreground(c_clouds, c_wisteria)
 
 .am-bio-anchor
     margin-top -20px
     position absolute
-
-.am-bio, .am-image-bio
-    border 10px solid c_wisteria
 
 .am-image-bio
     max-width 100%
