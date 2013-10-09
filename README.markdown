@@ -1,4 +1,4 @@
-# [**io**](http://bevacqua.io)
+# [**bevacqua.io**](http://bevacqua.io)
 
 Technical concept-proofing Node module architecture
 
