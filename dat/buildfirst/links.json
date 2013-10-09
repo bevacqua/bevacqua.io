@@ -94,5 +94,11 @@
         "url": "https://github.com/buildfirst/ci-by-example",
         "title": "CI by Example",
         "description": "Here, I'll take the reader through a simple series of steps to follow in order to set up any application in the [Travis-CI](https://travis-ci.org) platform. The concept and benefits to CI are detailed in the book."
+    },
+    "travis-heroku": {
+        "type": "link",
+        "url": "http://about.travis-ci.org/docs/user/deployment/heroku/",
+        "title": "Continuous Deployment with Travis and Heroku",
+        "description": "Travis CI can automatically deploy your Heroku application after a successful build. This document shows exactly how to prepare your Travis-enabled, Heroku-using application to do just that: enabling true continuous deployments. Look ma, no `grunt deploy`!"
     }
 }
