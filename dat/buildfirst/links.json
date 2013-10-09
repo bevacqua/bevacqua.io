@@ -88,5 +88,11 @@
         "url": "http://www.martinfowler.com/articles/continuousIntegration.html",
         "title": "Continuous Integration",
         "description": "In this paper, _authored in 2006_, **Martin Fowler** defines and describes Continuous Integration _(CI)_. After learning about CI, and the importance of testing our builds in an environment that resembles production as closely as possible, we'll discuss approaches for tackling CI, and then take a sample CI flow for a spin."
+    },
+    "travis": {
+        "type": "code",
+        "url": "https://github.com/buildfirst/ci-by-example",
+        "title": "CI by Example",
+        "description": "Here, I'll take the reader through a simple series of steps to follow in order to set up any application in the [Travis-CI](https://travis-ci.org) platform. The concept and benefits to CI are detailed in the book."
     }
 }
