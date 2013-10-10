@@ -46,17 +46,17 @@ module.exports = function(grunt){
     // testing tasks
     alias('test', 'jshint csslint mochaTest:unit karma:unit_once');
 
-    // development and debugging tasks
-    alias('dev_setup', 'pem_decrypt:dev');
-    alias('dev', 'build:debug karma:unit_background watch');
+    // first time setup
+    alias('start', 'dev_setup');
 
-    // slower alternative
-    // alias('dev', 'build:debug karma:unit_background concurrent:dev');
+    // development and debugging tasks
+    alias('dev_setup', 'pem_decrypt:development');
+    alias('dev', 'build:debug karma:unit_background watch');
 
     // continuous integration and deployment tasks
     alias('ci', 'build:release test');
 
-    alias('deploy_setup', 'pem_decrypt:aws shell:deploy_setup');
+    alias('deploy_setup', 'pem_decrypt:grunt shell:deploy_setup');
     alias('deploy_prepare', 'build:release test bump-only:patch changelog bump-commit');
     alias('deploy', 'deploy_prepare ec2_deploy:edge');
     alias('deploy:production', 'deploy_prepare ec2_deploy:production');
