@@ -4,7 +4,6 @@ var path = require('path');
 var express = require('express');
 var app = express();
 var controllers = require('./controllers');
-var logger = require('../lib/logger');
 
 var port = conf('PORT');
 var debug = conf('BUILD_DISTRIBUTION') === 'debug';

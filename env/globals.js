@@ -14,3 +14,5 @@ global.require_cwd = function(file){
 };
 
 moment.defaultFormat = 'Do HH:mm:ss';
+
+global.logger = require('../src/lib/logger');
