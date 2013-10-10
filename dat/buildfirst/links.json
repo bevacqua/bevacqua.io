@@ -106,5 +106,11 @@
         "url": "http://about.travis-ci.org/docs/user/deployment/heroku/",
         "title": "Continuous Deployment with Travis and Heroku",
         "description": "Travis CI can automatically deploy your Heroku application after a successful build. This document shows exactly how to prepare your Travis-enabled, Heroku-using application to do just that: enabling true continuous deployments. Look ma, no `grunt deploy`!"
+    },
+    "netflix": {
+        "type": "link",
+        "url": "http://techblog.netflix.com/2010/12/5-lessons-weve-learned-using-aws.html",
+        "title": "Netflix and the Chaos Monkey",
+        "description": "When discussing the importance of live application server monitoring, what better reference than **Netflix** and their Chaos Monkey theory? In their own words:\n\n> One of the first systems our engineers built in AWS is called the Chaos Monkey. The Chaos Monkey’s job is to randomly kill instances and services within our architecture. If we aren’t constantly testing our ability to succeed despite failure, then it isn’t likely to work when it matters most – in the event of an unexpected outage."
     }
 }
