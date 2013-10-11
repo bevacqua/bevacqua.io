@@ -1,3 +1,10 @@
+<a name="v0.0.20-0"></a>
+### v0.0.20-0 (2013-10-11)
+
+- Introduced `nodetime`
+- Support for Express' `next(err)`
+- More links for _Build First_ book
+
 <a name="v0.0.19-0"></a>
 ### v0.0.19-0 (2013-10-08)
 
