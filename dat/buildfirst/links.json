@@ -3,7 +3,7 @@
         "type": "code",
         "url": "https://github.com/bevacqua/buildfirst",
         "title": "Code Samples and Snippets",
-        "description": "Every single code sample and snippet that is discussed in the book, and then _a few more_, which didn't make it into the book."
+        "description": "Every single code sample and snippet that is discussed in the book, and then _a few more_, which didn't make it into the book.\nThere are _over 50 different code samples_ in the repository, all of which come **fully documented**, are ready to use, and present interesting scenarios and strategies when laying out a build process or an application architecture."
     },
     "grunt": {
         "type": "link",
@@ -15,7 +15,7 @@
         "type": "link",
         "url": "http://gruntjs.com/configuring-tasks#globbing-patterns",
         "title": "Globbing Patterns",
-        "description": "Grunt supports filename expansion (also know as _globbing_) via built-in [node-glob](https://github.com/isaacs/node-glob) and [minimatch](https://github.com/isaacs/minimatch libraries. In the book we examine different globbing patterns and how to use them to describe sets of files for our tasks."
+        "description": "Grunt supports filename expansion (also know as _globbing_) via built-in [node-glob](https://github.com/isaacs/node-glob) and [minimatch](https://github.com/isaacs/minimatch) libraries. In the book we examine different globbing patterns and how to use them to describe sets of files for our tasks."
     },
     "speed-matters": {
         "type": "link",
