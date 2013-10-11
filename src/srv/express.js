@@ -4,6 +4,7 @@ var path = require('path');
 var express = require('express');
 var app = express();
 var controllers = require('./controllers');
+var errorHandler = require('./expressErrorHandler.js');
 
 var port = conf('PORT');
 var debug = conf('BUILD_DISTRIBUTION') === 'debug';
@@ -30,6 +31,8 @@ controllers.load(app, function(){
     app.use(express.bodyParser());
 
     app.use(app.router);
+
+    errorHandler.setup(app);
 
     if (debug) {
         app.use(express.favicon(favicon));

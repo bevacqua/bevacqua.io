@@ -7,6 +7,8 @@ var moment = require('moment');
 var pkg;
 var env;
 
+moment.defaultFormat = 'Do HH:mm:ss';
+
 nconf.use('memory');
 nconf.argv();
 nconf.env();

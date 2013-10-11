@@ -1,12 +1,12 @@
 'use strict';
 
-var logger = require('winston');
+var winston = require('winston');
 var moment = require('moment');
 var pushover = require('winston-pushover').Pushover;
 var papertrail = require('winston-papertrail').Papertrail;
-var stdout = logger.transports.Console;
+var stdout = winston.transports.Console;
 
-logger.remove(stdout);
+winston.remove(stdout);
 
 add(stdout, 'CONSOLE_ENABLED', {
     timestamp: timestamps,
@@ -28,7 +28,7 @@ add(papertrail, 'PAPERTRAIL_ENABLED', {
 
 function add (transport, enabled, options) {
     var on = conf(enabled);
-    if (on) { logger.add(transport, options); }
+    if (on) { winston.add(transport, options); }
 
     var name = enabled.split('_')[0].toLowerCase();
 

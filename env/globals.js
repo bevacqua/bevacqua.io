@@ -14,5 +14,3 @@ global.require_cwd = function(file){
     var absolute = path.join(cwd, file);
     return require(absolute);
 };
-
-moment.defaultFormat = 'Do HH:mm:ss';
