@@ -6,3 +6,14 @@ clearfix()
         content " "
         clear both
         height 0
+
+links(active=c_hot_pink, visited=c_dim_pink)
+    a
+        color active
+        text-decoration none
+
+        &:hover
+            text-decoration underline
+
+        &:visited
+            color visited
