@@ -1,3 +1,4 @@
 {
-    "known-properties": false
+    "known-properties": false,
+    "fallback-colors": false
 }
