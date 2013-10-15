@@ -83,6 +83,18 @@
         "title": "Deploying to Heroku",
         "description": "At this point in the book, we'll be ready to start talking about deployment, and I've picked Heroku as the platform we'll deploy to, because of its ease of use. In this sample you'll find everything you need in order to deploy your first application to Heroku."
     },
+    "heroku-register": {
+        "url": "https://id.heroku.com/signup/devcenter",
+        "web": false
+    },
+    "heroku-toolbelt": {
+        "url": "https://toolbelt.heroku.com",
+        "web": false
+    },
+    "heroku-environments": {
+        "url": "https://devcenter.heroku.com/articles/multiple-environments",
+        "web": false
+    },
     "aws": {
         "type": "code",
         "url": "https://github.com/bevacqua/buildfirst/tree/master/ch04/06_aws-deployments",
@@ -112,5 +124,19 @@
         "url": "http://techblog.netflix.com/2012/07/chaos-monkey-released-into-wild.html",
         "title": "Netflix and the Chaos Monkey",
         "description": "When discussing the importance of live application server monitoring, what better reference than **Netflix** and their Chaos Monkey theory? In their own words:\n\n> One of the first systems our engineers built in AWS is called the Chaos Monkey. The Chaos Monkey’s job is to randomly kill instances and services within our architecture. If we aren’t constantly testing our ability to succeed despite failure, then it isn’t likely to work when it matters most – in the event of an unexpected outage."
+    },
+    "node-inspector": {
+        "type": "code",
+        "url": "https://github.com/node-inspector/node-inspector#getting-started",
+        "title": "node-inspector",
+        "description": "This tool enables us to debug Node applications straight from _Chrome DevTools_, as explained during Chapter 4 in the book, while discussing debugging during development, logging solutions, and hosted application monitoring."
+    },
+    "node-debugger": {
+        "url": "http://nodejs.org/api/debugger.html",
+        "web": false
+    },
+    "nodetime-register": {
+        "url": "http://nodetime.com/signup",
+        "web": false
     }
 }
