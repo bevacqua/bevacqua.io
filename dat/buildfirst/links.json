@@ -125,7 +125,7 @@
     "node-inspector": {
         "type": "code",
         "url": "https://github.com/node-inspector/node-inspector#getting-started",
-        "title": "node-inspector",
+        "title": "Debugging with node-inspector",
         "description": "This tool enables us to debug Node applications straight from _Chrome DevTools_, as explained during Chapter 4 in the book, while discussing debugging during development, logging solutions, and hosted application monitoring."
     },
     "node-debugger": {
