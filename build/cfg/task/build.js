@@ -41,7 +41,8 @@ module.exports = {
     copy: _.assign(assets.img.copy, assets.js.copy, assets.other.copy),
     sprite: {
         houses: assets.img.sprite('houses', 'ho'),
-        icons: assets.img.sprite('icons', 'ic')
+        icons: assets.img.sprite('icons', 'ic'),
+        buildfirst_resources: assets.img.sprite('buildfirst-resources', 'bfr')
     },
     imagemin: {
         sprite: {

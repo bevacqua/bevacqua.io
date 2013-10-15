@@ -16,5 +16,6 @@ block content
             each resource in buildfirst.links
                 if resource.title
                     li.rs-item
+                        span(class='bfr-icon bfr-' + resource.key)
                         a(href='/bf/' + resource.key, target='_blank', class='ty-icon rs-link ic-' + resource.type)=resource.title
                         div.rs-description!=resource.description
