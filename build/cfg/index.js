@@ -1,22 +1,6 @@
 'use strict';
 
-var _ = require('lodash');
 var grunt = require('grunt');
-var ultramarked = require('ultramarked');
-var links = require('../../dat/buildfirst/links.json');
-var jadeContextService = require('./service/jadeContextService.js');
-
-jadeContextService.registerProvider(function(){
-    return {
-        buildfirst: {
-            links: _.map(links, function(link, key){
-                link.key = key;
-                link.description = ultramarked(link.description || '');
-                return link;
-            })
-        }
-    };
-});
 
 module.exports = {
     package: {
