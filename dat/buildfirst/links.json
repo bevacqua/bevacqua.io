@@ -120,7 +120,7 @@
         "type": "link",
         "url": "http://techblog.netflix.com/2012/07/chaos-monkey-released-into-wild.html",
         "title": "Netflix and the Chaos Monkey",
-        "description": "When discussing the importance of live application server monitoring, what better reference than **Netflix** and their Chaos Monkey theory? In their own words:\n\n> One of the first systems our engineers built in AWS is called the Chaos Monkey. The Chaos Monkey’s job is to randomly kill instances and services within our architecture. If we aren’t constantly testing our ability to succeed despite failure, then it isn’t likely to work when it matters most – in the event of an unexpected outage."
+        "description": "When discussing the importance of live application server monitoring, what better reference than **Netflix** and their Chaos Monkey theory? In their own words:\n\n> One of the first systems our engineers built in AWS is called the Chaos Monkey. The Chaos Monkey's job is to randomly kill instances and services within our architecture. If we aren't constantly testing our ability to succeed despite failure, then it isn't likely to work when it matters most – in the event of an unexpected outage."
     },
     "node-inspector": {
         "type": "code",
