@@ -11,10 +11,14 @@ module.exports = function(grunt){
 
     grunt.log.write('%s - Loading external tasks...', moment().format());
 
+    var t = process.hrtime();
+
     require('load-grunt-tasks')(grunt);
     require('time-grunt')(grunt);
 
-    grunt.log.writeln('done');
+    t = process.hrtime(t);
+
+    grunt.log.writeln('done in %s.%ss', t[0], t[1]);
 
     grunt.loadTasks('./build/tasks');
     grunt.initConfig(_.merge.apply({}, _.values(cfg)));

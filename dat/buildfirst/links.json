@@ -84,16 +84,13 @@
         "description": "At this point in the book, we'll be ready to start talking about deployment, and I've picked Heroku as the platform we'll deploy to, because of its ease of use. In this sample you'll find everything you need in order to deploy your first application to Heroku."
     },
     "heroku-register": {
-        "url": "https://id.heroku.com/signup/devcenter",
-        "web": false
+        "url": "https://id.heroku.com/signup/devcenter"
     },
     "heroku-toolbelt": {
-        "url": "https://toolbelt.heroku.com",
-        "web": false
+        "url": "https://toolbelt.heroku.com"
     },
     "heroku-environments": {
-        "url": "https://devcenter.heroku.com/articles/multiple-environments",
-        "web": false
+        "url": "https://devcenter.heroku.com/articles/multiple-environments"
     },
     "aws": {
         "type": "code",
@@ -132,11 +129,9 @@
         "description": "This tool enables us to debug Node applications straight from _Chrome DevTools_, as explained during Chapter 4 in the book, while discussing debugging during development, logging solutions, and hosted application monitoring."
     },
     "node-debugger": {
-        "url": "http://nodejs.org/api/debugger.html",
-        "web": false
+        "url": "http://nodejs.org/api/debugger.html"
     },
     "nodetime-register": {
-        "url": "http://nodetime.com/signup",
-        "web": false
+        "url": "http://nodetime.com/signup"
     }
 }
