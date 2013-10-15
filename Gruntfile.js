@@ -32,7 +32,7 @@ module.exports = function(grunt){
 
     // build tasks
     alias('images:debug', 'clean:images copy:images sprite');
-    alias('images:release', 'images:debug imagemin:all rev:images');
+    alias('images:release', 'images:debug imagemin rev:images');
 
     alias('css:debug', 'clean:css stylus:all csslint');
     alias('css:release', 'clean:css stylus:all cssmin:release rev:css');

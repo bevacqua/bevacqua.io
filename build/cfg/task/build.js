@@ -44,10 +44,19 @@ module.exports = {
         icons: assets.img.sprite('icons', 'ic')
     },
     imagemin: {
-        all: {
+        sprite: {
             files: [{
                 expand: true,
-                src: 'bin/public/img/**/*.{png,jpg,gif}'
+                src: 'bin/public/img/sprite/**/*.{png,jpg,gif}'
+            }]
+        },
+        other: {
+            files: [{
+                expand: true,
+                src: [
+                    'bin/public/img/**/*.{png,jpg,gif}',
+                    '!bin/public/img/sprite/**/*.{png,jpg,gif}'
+                ]
             }],
             options: {
                 progressive: true,

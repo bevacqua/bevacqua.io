@@ -1,4 +1,5 @@
 {
     "known-properties": false,
-    "fallback-colors": false
+    "fallback-colors": false,
+    "font-sizes": false
 }

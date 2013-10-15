@@ -10,6 +10,7 @@ bin
 
 # os artifacts
 .DS_Store
+Thumbs.db
 
 # sensitive data
 env/cert
