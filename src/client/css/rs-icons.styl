@@ -5,13 +5,15 @@
     box-sizing content-box
     overflow hidden // hide overflow from sprite
     width 128px // same as the icon in :before
-    border 10px solid rgba(0, 0, 0, 0.1)
+    border 10px solid rgba(#000, 0.1)
     border-radius 500px
-    box-shadow 1px 1px 6px rgba(0, 0, 0, 0.3)
+    box-shadow 1px 1px 6px rgba(#000, 0.3)
+    background-color lighten(c_yellow, 3%)
 
 // background-color fix for some icons
 .bfr-12factor
     background-color #000
+    border-color c_heroku
 .bfr-watch-out
     background-color #25af61
 .bfr-interlacing
@@ -19,7 +21,7 @@
 .bfr-markdown
     background-color #4b525a
 .bfr-heroku
-    background-color #5f5d84
+    background-color c_heroku
 .bfr-travis
     background-color #c91214
 .bfr-netflix

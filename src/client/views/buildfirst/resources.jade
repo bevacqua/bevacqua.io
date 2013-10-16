@@ -17,5 +17,5 @@ block content
                 if resource.title
                     li.rs-item
                         span(class='bfr-icon ty-icon bfr-' + resource.key)
-                        a(href='/bf/' + resource.key, target='_blank', class='ty-icon rs-link ic-' + resource.type)=resource.title
+                        a(href='/bf/' + resource.key, target='_blank', class='ty-icon rs-link ic-' + resource.type, title=resource.url)=resource.title
                         div.rs-description!=resource.description
