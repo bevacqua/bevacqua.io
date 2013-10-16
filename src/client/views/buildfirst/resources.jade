@@ -23,5 +23,6 @@ block content
                         a(href='/bf/' + resource.key, target='_blank', class='ty-icon rs-link ic-' + resource.type, title=resource.url)=resource.title
                         div.rs-description!=resource.description
 
-        footer.sl-container
-            include sharing
+        footer.rs-footer
+            section.sl-container
+                include sharing
