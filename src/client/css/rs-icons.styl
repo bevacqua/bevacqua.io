@@ -14,10 +14,13 @@
         border-radius 500px
         box-shadow 1px 1px 6px rgba(#000, 0.3)
         background-color lighten(c_yellow, 3%)
-        transition all 1.5s ease-in-out
+        transition all 0.3s ease-in-out
 
-    .rs-item:hover .bfr-icon
-        transform rotate(360deg)
+    .rs-item:hover
+        .bfr-icon
+            transform rotate(45deg)
+        .bfr-integration, .bfr-aws
+            transform rotate(-45deg)
 
     // background-color fix for some icons
     .bfr-12factor
@@ -32,6 +35,6 @@
     .bfr-heroku
         background-color c_heroku
     .bfr-travis
-        background-color #be2221
+        background-color #c00
     .bfr-netflix
         background-color #fff
