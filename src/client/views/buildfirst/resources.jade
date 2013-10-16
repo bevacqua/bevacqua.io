@@ -12,7 +12,7 @@ block content
                 h1.bf-header-title.rs-header-title Access reference links, get the code
                 h3.bf-header-pitch.rs-header-pitch For your convenience, all the resources mentioned in the book can be found below, in case you're too busy to type them into your browser by hand. You'll find the complete companion code for the book here as well.
 
-            section.rs-header-sharing
+            section.sl-container
                 include sharing
 
         ul.rs-list
@@ -22,3 +22,6 @@ block content
                         span(class='ty-icon bfr-icon bfr-' + resource.key)
                         a(href='/bf/' + resource.key, target='_blank', class='ty-icon rs-link ic-' + resource.type, title=resource.url)=resource.title
                         div.rs-description!=resource.description
+
+        footer.sl-container
+            include sharing
