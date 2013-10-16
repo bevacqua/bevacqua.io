@@ -16,7 +16,6 @@ util.inherits(ViewController, Controller);
 ViewController.prototype.renderView = function(res, view){
     var file = path.join(viewBase, this.name, view);
 
-    res.set('Content-Type', 'text/html');
     res.sendfile(file);
 };
 
