@@ -11,19 +11,16 @@ link(rel='author', href='/humans.txt')
 meta(name='author', itemprop='creator', content='Nicolas Bevacqua &lt;ng@bevacqua.io&gt;')
 
 block meta
-  //- as many as we need
-  //- meta(property='og:image', itemprop='image', content='{{firstImage}}')
-
-  //- twitter uses the last meta image, so we need to be after og:image tags
-  //- meta(name='twitter:image:src', content='{{firstImage}}')
-
+  // as many as we need, this one should go at the bottom
   meta(property='og:image', itemprop='image', content='/img/me.jpg')
+
+  //- twitter uses the last image: repeat the first one
+  //- meta(name='twitter:image:src', content='{{firstImage}}')
 
   //- page info
   //- meta(name='twitter:title', itemprop='name', property='og:title', content='{{title}}')
   //- meta(name='description', property='og:description', itemprop='description', content='{{description}}')
   //- meta(name='twitter:description', content='{{description}}')
-  //- meta(name='keywords', content='{{keywords}}')
 
   //- static url
   //- meta(property='og:url', itemprop='url', content='{{url}}')
