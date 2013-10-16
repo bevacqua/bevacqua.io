@@ -1,0 +1,41 @@
+- var url = 'http%3A//bevacqua.io/buildfirst', tweet = '', gplus = '', fbook = '';
+- tweet += 'https://platform.twitter.com/widgets/tweet_button.html';
+- tweet += '?via=nzgb';
+- tweet += '&related=buildfirst,ponyfoo';
+- tweet += '&url=' + url;
+- tweet += '&text=Check%20out%20the%20new%20Designing%20Javascript%20Applications%3A%20A%20Build%20First%20Approach%20book%21';
+- tweet += '&hashtags=buildfirst';
+- gplus += 'https://plusone.google.com/_/+1/fastbutton?bsv&size=medium&hl=en-US';
+- gplus += '&url=' + url;
+- gplus += '&parent=' + url;
+- fbook += 'https://www.facebook.com/plugins/like.php';
+- fbook += '?href=' + url;
+- fbook += '&width=130';
+- fbook += '&height=21';
+- fbook += '&colorscheme=light';
+- fbook += '&layout=button_count';
+- fbook += '&action=recommend';
+- fbook += '&show_faces=false';
+- fbook += '&send=false';
+- fbook += '&appId=536251723135930';
+
+iframe.sl-tweet(
+    allowtransparency,
+    frameborder='0',
+    scrolling='no',
+    src=tweet
+)
+
+iframe.sl-gplus(
+    allowtransparency,
+    frameborder='0',
+    scrolling='no',
+    src=gplus
+)
+
+iframe.sl-fb(
+    allowtransparency,
+    frameborder='0',
+    scrolling='no',
+    src=fbook
+)
