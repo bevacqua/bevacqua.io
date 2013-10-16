@@ -1,38 +1,37 @@
-.bfr-icon
-    display block
-    padding 12px
-    margin 0 auto 12px
-    box-sizing content-box
-    overflow hidden // hide overflow from sprite
-    width 128px // same as the icon in :before
-    border 10px solid rgba(#000, 0.1)
-    border-radius 500px
-    box-shadow 1px 1px 6px rgba(#000, 0.3)
-    background-color lighten(c_yellow, 3%)
-    transition all 2s ease-in-out
-
-.rs-item:hover .bfr-icon
-    transform rotate(360deg)
-
-// background-color fix for some icons
-.bfr-12factor
-    background-color #000
-    border-color c_heroku
-.bfr-watch-out
-    background-color #25af61
-.bfr-interlacing
-    background-color #fff
-.bfr-markdown
-    background-color #4b525a
-.bfr-heroku
-    background-color c_heroku
-.bfr-travis
-    background-color #c91214
-.bfr-netflix
-    background-color #fff
-
 @media only screen and (max-width: 767px)
     .bfr-icon
         display none
-        background none
-        background-image none
+
+@media only screen and (min-width: 768px)
+    .bfr-icon
+        display block
+        padding 12px
+        margin 0 auto 12px
+        box-sizing content-box
+        overflow hidden // hide overflow from sprite
+        width 128px // same as the icon in :before
+        border 10px solid rgba(#000, 0.1)
+        border-radius 500px
+        box-shadow 1px 1px 6px rgba(#000, 0.3)
+        background-color lighten(c_yellow, 3%)
+        transition all 2s ease-in-out
+
+    .rs-item:hover .bfr-icon
+        transform rotate(360deg)
+
+    // background-color fix for some icons
+    .bfr-12factor
+        background-color #000
+        border-color c_heroku
+    .bfr-watch-out
+        background-color #25af61
+    .bfr-interlacing
+        background-color #fff
+    .bfr-markdown
+        background-color #4b525a
+    .bfr-heroku
+        background-color c_heroku
+    .bfr-travis
+        background-color #c91214
+    .bfr-netflix
+        background-color #fff

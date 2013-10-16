@@ -1,9 +1,47 @@
+// text-selection mixins
+selection-properties(background,foreground,shadow)
+    background-color background
+    color foreground
+    text-shadow shadow
+
+selection-background-foreground-shadow(background,foreground,shadow='none')
+    &::-webkit-selection
+        selection-properties(background,foreground,shadow)
+
+    &::-moz-selection
+        selection-properties(background,foreground,shadow)
+
+    &::selection
+        selection-properties(background,foreground,shadow)
+
+    ::-webkit-selection
+        selection-properties(background,foreground,shadow)
+
+    ::-moz-selection
+        selection-properties(background,foreground,shadow)
+
+    ::selection
+        selection-properties(background,foreground,shadow)
+
+selection-background-foreground(background,foreground)
+    selection-background-foreground-shadow(background,foreground)
+
+selection-background()
+    &::-webkit-selection
+        background arguments
+
+    &::-moz-selection
+        background arguments
+
+    &::selection
+        background arguments
+
 clearfix()
     &:after
         visibility hidden
         display block
         font-size 0
-        content " "
+        content ' '
         clear both
         height 0
 
