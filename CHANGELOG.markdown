@@ -1,3 +1,13 @@
+<a name="v0.0.21-0"></a>
+### v0.0.21-0 (2013-10-16)
+
+- vendor prefixes
+- thumbnails for each resource link
+
+#### Bug Fixes
+
+* markdown link ([4234603e](https://github.com/bevacqua/io/commit/4234603e72743f20f28f469e7ecf19446195431f))
+
 <a name="v0.0.20-0"></a>
 ### v0.0.20-0 (2013-10-11)
 
