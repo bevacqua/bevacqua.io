@@ -1,4 +1,4 @@
-- var url = 'http%3A//bevacqua.io/buildfirst', tweet = '', gplus = '', fbook = '';
+- var url = 'http%3A//bevacqua.io/buildfirst', tweet = '', gplus = '', fbook = '', ghbtn = '';
 - tweet += 'https://platform.twitter.com/widgets/tweet_button.html';
 - tweet += '?via=nzgb';
 - tweet += '&related=buildfirst,ponyfoo';
@@ -7,7 +7,6 @@
 - tweet += '&hashtags=buildfirst';
 - gplus += 'https://plusone.google.com/_/+1/fastbutton?bsv&size=medium&hl=en-US';
 - gplus += '&url=' + url;
-- gplus += '&parent=' + url;
 - fbook += 'https://www.facebook.com/plugins/like.php';
 - fbook += '?href=' + url;
 - fbook += '&width=130';
@@ -18,6 +17,11 @@
 - fbook += '&show_faces=false';
 - fbook += '&send=false';
 - fbook += '&appId=536251723135930';
+- ghbtn += 'http://ghbtns.com/github-btn.html';
+- ghbtn += '?user=bevacqua';
+- ghbtn += '&repo=buildfirst';
+- ghbtn += '&type=star';
+- ghbtn += '&count=true';
 
 iframe.sl-tweet(
     allowtransparency,
@@ -39,3 +43,11 @@ iframe.sl-fb(
     scrolling='no',
     src=fbook
 )
+
+iframe.sl-github(
+    allowtransparency,
+    frameborder='0',
+    scrolling='no',
+    src=ghbtn
+)
+
