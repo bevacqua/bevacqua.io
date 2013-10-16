@@ -29,7 +29,7 @@ module.exports = {
                 paths: ['bower_components']
             },
             files: {
-                'bin/public/css/all.css': ['src/client/css/vendor.styl', 'src/client/css/all.styl', 'bin/.tmp/sprite/*.css'],
+                'bin/public/css/all.css': ['src/client/css/vendor.styl', 'bin/.tmp/sprite/*.css', 'src/client/css/all.styl'],
                 'bin/.tmp/csslint/compiled.css': ['src/client/css/all.styl']
             }
         }

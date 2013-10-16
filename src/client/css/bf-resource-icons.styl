@@ -1,3 +1,31 @@
+.bfr-icon
+    display block
+    padding 12px
+    margin 0 auto 12px
+    box-sizing content-box
+    width 128px // same as the icon in :before
+    border 10px solid rgba(0, 0, 0, 0.1)
+    border-radius 500px
+    overflow hidden // hide overflow from sprite
+
+// background-color fix for some icons
+.bfr-12factor
+    background-color #000
+.bfr-watch-out
+    background-color #25af61
+.bfr-interlacing
+    background-color #fff
+.bfr-markdown
+    background-color #4b525a
+.bfr-heroku
+    background-color #5f5d84
+.bfr-travis
+    background-color #c91214
+.bfr-netflix
+    background-color #fff
+
 @media only screen and (max-width: 767px)
     .bfr-icon
+        display none
+        background none
         background-image none

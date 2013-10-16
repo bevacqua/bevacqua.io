@@ -1,5 +1,7 @@
 {
     "known-properties": false,
     "fallback-colors": false,
-    "font-sizes": false
+    "font-sizes": false,
+    "box-model": false,
+    "box-sizing": false
 }
