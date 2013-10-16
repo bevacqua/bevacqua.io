@@ -1,6 +1,5 @@
 'use strict';
 
-var fs = require('fs');
 var path = require('path');
 var util = require('util');
 var viewBase = 'bin/views';
@@ -17,10 +16,8 @@ util.inherits(ViewController, Controller);
 ViewController.prototype.renderView = function(res, view){
     var file = path.join(viewBase, this.name, view);
 
-    fs.readFile(file, function(err, data){
-        res.set('Content-Type', 'text/html');
-        res.end(data);
-    });
+    res.set('Content-Type', 'text/html');
+    res.sendfile(file);
 };
 
 ViewController.prototype.getView = function(view){
