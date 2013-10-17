@@ -2,10 +2,24 @@
     background-image url('/img/popcorn/800.jpg')
     background-position -200px top
 
+.rs-header-title, .rs-header-pitch
+    selection-background-foreground-shadow(c_yellow, #ddd, 0 1px 3px rgba(c_yellow, 0.1))
+
+.rs-header-pitch
+    margin 50px auto
+    border-left 10px solid c_yellow
+    color c_yellow
+    background-color rgba(#111, 0.6)
+    text-shadow 0 1px 3px rgba(#000, 0.1)
+
 @media only screen and (min-width: 768px)
     .rs-header
         background-image url('/img/popcorn/1200.jpg')
         background-position left top
+
+    .rs-header-pitch
+        margin-top 70px
+        max-width 600px
 
 @media only screen and (min-width: 1024px)
     .rs-header
@@ -20,21 +34,8 @@
     padding-bottom 20px
     text-align center
 
-.rs-header-title, .rs-header-pitch
-    selection-background-foreground-shadow(c_yellow, #ddd, 0 1px 3px rgba(c_yellow, 0.1))
-
-.rs-header-pitch
-    margin 50px -20px
-    color c_yellow
-    background-color rgba(#111, 0.6)
-    text-shadow 0 1px 3px rgba(#000, 0.1)
-
 @media only screen and (min-width: 768px)
     .rs-header-description
         min-height 450px
         max-width 790px
         margin 0 auto
-
-    .rs-header-pitch
-        margin 70px auto
-        max-width 600px
