@@ -8,8 +8,8 @@
     "browser-errors": {
         "type": "link",
         "url": "http://www.codinghorror.com/blog/2007/04/javascript-and-html-forgiveness-by-default.html",
-        "title": "Browsers are Forgiving by Default",
-        "description": "This article is a very interesting analysis, albeit an old one _(originally published in 2007)_, regarding the sucess of the web and how it might very well be related to the platform's tendency towards ignoring issues such as _malformed HTML tags_, missing JavaScript semicolons, undeclared variables, or even syntax errors are rarely even noticed by humans."
+        "title": "Browsers Forgive Nerds",
+        "description": "This article is a very interesting analysis, albeit an old one _(originally published in 2007)_, regarding the sucess of the web and how it might very well be related to the platform's tendency towards ignoring issues such as _malformed HTML tags_.\n\nMissing JavaScript semicolons, undeclared variables, or **even syntax errors** are rarely even noticed by humans."
     },
     "grunt": {
         "type": "link",
