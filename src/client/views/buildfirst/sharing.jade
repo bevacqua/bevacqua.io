@@ -1,11 +1,21 @@
-- var url = 'http%3A//bevacqua.io/buildfirst', tweet = '', gplus = '', fbook = '', ghbtn = '';
+- var url='http%3A//bevacqua.io/buildfirst', tweet='', gplus='', fbook='', buffr='', lnkdn='';
+- var txt = 'Check%20out%20the%20new%20Designing%20Javascript%20Applications%3A%20A%20Build%20First%20Approach%20book%21';
+- var txt_short = 'Check%20out%20the%20new%20Designing%20Javascript%20Applications%20book%21';
+- var pic = 'http%3A//bevacqua.io/img/buildfirst/cover.jpg';
+- var via = 'nzgb';
+- var related = 'buildfirst,ponyfoo';
+- var fbapp = '536251723135930';
+- var tags = 'buildfirst';
 - tweet += 'https://platform.twitter.com/widgets/tweet_button.html';
-- tweet += '?via=nzgb';
-- tweet += '&related=buildfirst,ponyfoo';
+- tweet += '?via=' + via;
+- tweet += '&related=' + related;
 - tweet += '&url=' + url;
-- tweet += '&text=Check%20out%20the%20new%20Designing%20Javascript%20Applications%3A%20A%20Build%20First%20Approach%20book%21';
-- tweet += '&hashtags=buildfirst';
-- gplus += 'https://plusone.google.com/_/+1/fastbutton?bsv&size=medium&hl=en-US';
+- tweet += '&text=' + txt;
+- tweet += '&hashtags=' + tags;
+- gplus += 'https://plusone.google.com/_/+1/fastbutton';
+- gplus += '?bsv';
+- gplus += '&size=medium';
+- gplus += '&hl=en-US';
 - gplus += '&url=' + url;
 - fbook += 'https://www.facebook.com/plugins/like.php';
 - fbook += '?href=' + url;
@@ -16,12 +26,18 @@
 - fbook += '&action=recommend';
 - fbook += '&show_faces=false';
 - fbook += '&send=false';
-- fbook += '&appId=536251723135930';
-- ghbtn += 'http://ghbtns.com/github-btn.html';
-- ghbtn += '?user=bevacqua';
-- ghbtn += '&repo=buildfirst';
-- ghbtn += '&type=star';
-- ghbtn += '&count=true';
+- fbook += '&appId=' + fbapp;
+- buffr += 'http://widgets.bufferapp.com/button/';
+- buffr += '?url=' + url;
+- buffr += '&text=' + txt_short;
+- buffr += '&picture=' + pic;
+- buffr += '&via=' + via;
+- buffr += '&count=horizontal';
+- buffr += '&placement=button';
+- lnkdn += 'http://www.linkedin.com/shareArticle';
+- lnkdn += '?mini=true';
+- lnkdn += '&url=' + url;
+- lnkdn += '&title=' + txt;
 
 iframe.sl-tweet(
     allowtransparency,
@@ -44,10 +60,16 @@ iframe.sl-fb(
     src=fbook
 )
 
-//- iframe.sl-github(
-//-     allowtransparency,
-//-     frameborder='0',
-//-     scrolling='no',
-//-     src=ghbtn
-//- )
+iframe.sl-buffer(
+    allowtransparency,
+    frameborder='0',
+    scrolling='no',
+    src=buffr
+)
 
+a.sl-lnkdn(href=lnkdn, target='_blank')
+    img.sl-lnkdn-btn(
+        src='http://static03.linkedin.com/img/pic/pic_logo_119x32.png',
+        alt='',
+        title='Share on LinkedIn'
+    )
