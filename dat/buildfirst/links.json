@@ -21,7 +21,7 @@
         "type": "book",
         "url": "http://www.amazon.com/The-Lean-Startup-Entrepreneurs-Continuous/dp/0307887898",
         "title": "The Lean Startup",
-        "description": "**Eric Ries** presents us with an approach to application design based on _iterative, validated learning_. Rather than building an application and hoping for the best, Eric prompts us to collect feedback from our humans, using the [Build-Measure-Feedback](http://blog.ponyfoo.com/2013/07/29/lean-development-principles \"Lean Development Principles article on Pony Foo\") loop, and then decide which features are best _for them_. In my book, we'll examine the **Build** part of the lean feedback loop."
+        "description": "**Eric Ries** presents us with an approach to application design based on _iterative, validated learning_. Rather than building an application and then _hoping_ for the best, Eric prompts us to collect feedback from our humans, using the [Build-Measure-Learn](http://blog.ponyfoo.com/2013/07/29/lean-development-principles \"Lean Development Principles article on Pony Foo\") feedback loop, and then decide which features are best _for them_. In my book, we'll examine the **Build** part of this lean model."
     },
     "grunt": {
         "type": "link",
