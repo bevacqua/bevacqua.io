@@ -27,7 +27,7 @@
         "type": "book",
         "url": "http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X",
         "title": "The Pragmatic Programmer",
-        "description": "In this book, **Andy Hunt** and **Dave Thomas** take us on a programming journey where we'll learn principles, stories, and collect lots of advice on how to improve our approach to software development. Simply put, they help you to **think about your work**. Below is an editorial review taken from Amazon.\n\n> They advise readers to learn one text editor, for example, and use it for everything. They also recommend the use of version-tracking software for even the smallest projects, and promote the merits of learning regular expression syntax and a text-manipulation language. Other (perhaps more valuable) advice is more light-hearted. In the debugging section, it is noted that, \"if you see hoof prints think horses, not zebras.\" That is, suspect everything, but start looking for problems in the most obvious places."
+        "description": "In this book, **Andy Hunt** and **Dave Thomas** take us on a programming journey where we'll learn principles, stories, and collect lots of advice on how to improve our approach to software development. Simply put, they help you to **think about your work**. Below is an excerpt of an editorial review taken from Amazon.\n\n> In the debugging section, it is noted that, \"if you see hoof prints think horses, not zebras.\" That is, suspect everything, but start looking for problems in the most obvious places."
     },
     "grunt": {
         "type": "link",
