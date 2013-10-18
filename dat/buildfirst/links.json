@@ -17,6 +17,12 @@
         "title": "Browsers Forgive Nerds",
         "description": "This article is a very interesting analysis, albeit an old one _(originally published in 2007)_, regarding the sucess of the web and how it might very well be related to the platform's tendency towards ignoring issues such as _malformed HTML tags_.\n\nMissing JavaScript semicolons, undeclared variables, or **even syntax errors** are rarely even noticed by humans."
     },
+    "lean": {
+        "type": "book",
+        "url": "http://www.amazon.com/The-Lean-Startup-Entrepreneurs-Continuous/dp/0307887898",
+        "title": "The Lean Startup",
+        "description": "**Eric Ries** presents us with an approach to application design based on _iterative, validated learning_. Rather than building an application and hoping for the best, Eric prompts us to collect feedback from our humans, using the [Build-Measure-Feedback](http://blog.ponyfoo.com/2013/07/29/lean-development-principles \"Lean Development Principles article on Pony Foo\") loop, and then decide which features are best _for them_. In my book, we'll examine the **Build** part of the lean feedback loop."
+    },
     "grunt": {
         "type": "link",
         "url": "http://gruntjs.com",
