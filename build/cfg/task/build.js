@@ -42,42 +42,5 @@ module.exports = {
     sprite: {
         icons: assets.img.sprite('icons', 'ic'),
         buildfirst_resources: assets.img.sprite('buildfirst-resources', 'bfr')
-    },
-    imagemin: {
-        sprite: {
-            files: [{
-                expand: true,
-                src: 'bin/public/img/sprite/**/*.{png,jpg,gif}'
-            }]
-        },
-        other: {
-            files: [{
-                expand: true,
-                src: [
-                    'bin/public/img/**/*.{png,jpg,gif}',
-                    '!bin/public/img/sprite/**/*.{png,jpg,gif}'
-                ]
-            }],
-            options: {
-                progressive: true,
-                interlaced: true
-            }
-        }
-    },
-    cssmin: {
-        release: {
-            files: { 'bin/public/css/all.css': 'bin/public/css/all.css' },
-            options: {
-                keepSpecialComments: 0
-            }
-        }
-    },
-    uglify: {
-        js: {
-            files: { 'bin/public/js/all.js': 'bin/public/js/**/*.js' },
-            options: {
-                preserveComments: false
-            }
-        }
     }
 };
