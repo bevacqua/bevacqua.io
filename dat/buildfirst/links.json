@@ -23,6 +23,12 @@
         "title": "The Lean Startup",
         "description": "**Eric Ries** presents us with an approach to application design based on _iterative, validated learning_. Rather than building an application and then _hoping_ for the best, Eric prompts us to collect feedback from our humans, using the [Build-Measure-Learn](http://blog.ponyfoo.com/2013/07/29/lean-development-principles \"Lean Development Principles article on Pony Foo\") feedback loop, and then decide which features are best _for them_. In my book, we'll examine the **Build** part of this lean model."
     },
+    "pragmatic": {
+        "type": "book",
+        "url": "http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X",
+        "title": "The Pragmatic Programmer",
+        "description": "In this book, **Andy Hunt** and **Dave Thomas** take us on a programming journey where we'll learn principles, stories, and collect lots of advice on how to improve our approach to software development. Simply put, they help you to **think about your work**. Below is an editorial review taken from Amazon.\n\n> They advise readers to learn one text editor, for example, and use it for everything. They also recommend the use of version-tracking software for even the smallest projects, and promote the merits of learning regular expression syntax and a text-manipulation language. Other (perhaps more valuable) advice is more light-hearted. In the debugging section, it is noted that, \"if you see hoof prints think horses, not zebras.\" That is, suspect everything, but start looking for problems in the most obvious places."
+    },
     "grunt": {
         "type": "link",
         "url": "http://gruntjs.com",
