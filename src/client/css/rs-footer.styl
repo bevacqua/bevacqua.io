@@ -1,3 +1,25 @@
 .rs-footer
-    padding-top 40px
-    background-color c_yellow
+    display none
+
+.rs-broken-note
+    margin-right 4px
+
+@media only screen and (min-width: 768px)
+    .rs-footer
+        display block
+        padding-top 40px
+
+    .rs-broken-links
+        padding 8px 8px 0px
+        text-align center
+        background-color rgba(#000, 0.1)
+        color c_brown
+        font-weight 300
+
+        &:after
+            content ''
+            display block
+            padding-top 8px
+            margin 0 auto
+            width 300px
+            border-bottom 1px dashed rgba(#000, 0.1)
