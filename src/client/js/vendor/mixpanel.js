@@ -48,7 +48,7 @@
             }
             mp._i.push([token, config, name]);
         };
-        mp.__SV = 1.2
+        mp.__SV = 1.2;
     }
 })(document, window.mixpanel || []);
 
