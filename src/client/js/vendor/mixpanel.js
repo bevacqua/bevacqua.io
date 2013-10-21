@@ -1,40 +1,55 @@
-(function (e, b) {
-    if (!b.__SV) {
-        var a, f, i, g;
-        window.mixpanel = b;
-        a = e.createElement('script');
-        a.type = 'text/javascript';
-        a.async = !0;
-        a.src = ('https:' === e.location.protocol ? 'https:' : 'http:') + '//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';
-        f = e.getElementsByTagName('script')[0];
-        f.parentNode.insertBefore(a, f);
-        b._i = [];
-        b.init = function (a, e, d) {
-            function f(b, h) {
-                var a = h.split('.');
-                2 == a.length && (b = b[a[0]], h = a[1]);
-                b[h] = function () {
-                    b.push([h].concat(Array.prototype.slice.call(arguments, 0)));
+(function (document, mp) {
+    if (!mp.__SV) {
+        var elem, first;
+        window.mixpanel = mp;
+        elem = document.createElement('script');
+        elem.async = true;
+        elem.type = 'text/javascript';
+        elem.src = 'https://cdn.mxpnl.com/libs/mixpanel-2.2.min.js';
+        first = document.getElementsByTagName('script')[0];
+        first.parentNode.insertBefore(elem, first);
+        mp._i = [];
+        mp.init = function (token, config, name) {
+            function register(target, method) {
+                var method_tree = method.split('.');
+                if (method_tree.length === 2) {
+                    method = method_tree[1];
+                    target = target[method_tree[0]];
                 }
+                target[method] = function () {
+                    target.push([method].concat(Array.prototype.slice.call(arguments, 0)));
+                };
             }
-            var c = b;
-            'undefined' !==
-                typeof d ? c = b[d] = [] : d = 'mixpanel';
-            c.people = c.people || [];
-            c.toString = function (b) {
-                var a = 'mixpanel';
-                'mixpanel' !== d && (a += '.' + d);
-                b || (a += ' (stub)');
-                return a;
+            var current = mp, methods = 'disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user'.split(' '), i;
+
+            if (name === void 0) {
+                name = 'mixpanel';
+            } else {
+                current = mp[name] = [];
+            }
+
+            current.people = current.people || [];
+            current.toString = function (b) {
+                var result = 'mixpanel';
+                if (name !== 'mixpanel') {
+                    result += '.' + name;
+                }
+                if (!b) {
+                    result += ' (stub)';
+                }
+                return result;
             };
-            c.people.toString = function () {
-                return c.toString(1) + '.people (stub)';
+            current.people.toString = function () {
+                return current.toString(1) + '.people (stub)';
             };
-            i = 'disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user'.split(' ');
-            for (g = 0; g < i.length; g++) f(c, i[g]);
-            b._i.push([a, e, d])
+
+            for (i = 0; i < methods.length; i++) {
+                register(current, methods[i]);
+            }
+            mp._i.push([token, config, name]);
         };
-        b.__SV = 1.2
+        mp.__SV = 1.2
     }
 })(document, window.mixpanel || []);
+
 mixpanel.init('cba6fbc4672c2d977844d44ef7d429e1');
