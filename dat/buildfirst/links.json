@@ -5,6 +5,12 @@
         "title": "Code Samples and Snippets",
         "description": "Every single code sample and snippet that is examined in the book, and then _a few more_, which didn't make it into the book.\n\nThere are _over 50 different code samples_ in the repository, all of which come **fully documented**, are ready to use, and present interesting scenarios and strategies when laying out a build process or an application architecture."
     },
+    "knight": {
+        "type": "link",
+        "url": "http://pythonsweetness.tumblr.com/post/64740079543/how-to-lose-172-222-a-second-for-45-minutes",
+        "title": "Knight Capital's Downfall",
+        "description": "This article recounts the steps that lead to [Knight Capital](http://en.wikipedia.org/wiki/Knight_Capital_Group \"Knight Capital Group on Wikipedia\")'s downfall, and proves to be both an _insightful_ and **tremendously saddening** read. The apparently innocent mistake quoted below, ended up **costing almost half a billion** to the company.\n\n> During the deployment of the new code, however, one of Knight's technicians did not copy the new code to one of the eight SMARS computer servers.\n\nIn the book we discuss the glaring importance of automating such processes. The moral of the story is that we shouldn't ever rely on manually taking these steps:  in doing so, we might _introduce crippling oversights_ inadvertently into our systems."
+    },
     "apologists": {
         "type": "book",
         "url": "http://www.amazon.com/The-Inmates-Are-Running-Asylum/dp/0672326140",
