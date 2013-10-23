@@ -35,6 +35,12 @@
         "title": "The Pragmatic Programmer",
         "description": "In this book, **Andy Hunt** and **Dave Thomas** take us on a programming journey where we'll learn principles, stories, and collect lots of advice on how to improve our approach to software development. Simply put, they help you to **think about your work**. Below is an excerpt of an editorial review taken from Amazon.\n\n> In the debugging section, it is noted that, \"if you see hoof prints think horses, not zebras.\" That is, suspect everything, but start looking for problems in the most obvious places."
     },
+    "node-frontend": {
+        "type": "link",
+        "url": "http://www.nczonline.net/blog/2013/10/07/node-js-and-the-new-web-front-end/",
+        "title": "Node.js and the new web front-end",
+        "description": "In this insightful article, [Nicholas Zakas](http://www.nczonline.net/about/ \"About Nicholas C. Zakas\") describes what he believes to be _a game-changer_ in Node.js, and how it can change the face of front-end development by more strictly separating front-end from back-end development. A concise and informative read on _server architecture_ and disposition."
+    },
     "grunt": {
         "type": "link",
         "url": "http://gruntjs.com",
