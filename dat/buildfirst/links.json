@@ -41,17 +41,17 @@
         "title": "Node.js and the new web front-end",
         "description": "In this insightful article, [Nicholas Zakas](http://www.nczonline.net/about/ \"About Nicholas C. Zakas\") describes what he believes to be _a game-changer_ in Node.js, and how it can change the face of front-end development by more strictly separating front-end from back-end development. A concise and informative read on _server architecture_ and disposition."
     },
-    "commonjs": {
-        "type": "link",
-        "url": "http://wiki.commonjs.org/wiki/Modules/1.1",
-        "title": "CommonJS Modules Spec",
-        "description": "Node.js implements the CommonJS Modules spec, which is briefly addressed in the book.\n\n> These modules are offered privacy of their top scope, facility for importing singleton objects from other modules, and exporting their own API."
-    },
     "grunt": {
         "type": "link",
         "url": "http://gruntjs.com",
         "title": "Grunt Task Runner",
         "description": "Grunt is a task runner that helps us automate our build process. It is thoroughly discussed in the book. Code related to build processes uses Grunt packages to illustrate points, however, the **concepts taught in the book go beyond simply using Grunt**, which is _just a tool_."
+    },
+    "commonjs": {
+        "type": "link",
+        "url": "http://wiki.commonjs.org/wiki/Modules/1.1",
+        "title": "CommonJS Modules Spec",
+        "description": "Node.js implements the CommonJS Modules spec, which is briefly addressed in the book.\n\n> These modules are offered privacy of their top scope, facility for importing singleton objects from other modules, and exporting their own API."
     },
     "globbing": {
         "type": "link",
