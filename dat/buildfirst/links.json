@@ -45,7 +45,7 @@
         "type": "link",
         "url": "http://wiki.commonjs.org/wiki/Modules/1.1",
         "title": "CommonJS Modules Spec",
-        "description": "Node.js implements the CommonJS Modules spec, which is briefly addressed in the book.\n\n> This specification addresses how modules should be written in order to be interoperable among a class of module systems that can be both client and server side, secure or insecure, implemented today or supported by future systems with syntax extensions. These modules are offered privacy of their top scope, facility for importing singleton objects from other modules, and exporting their own API. By implication, this specification defines the minimum features that a module system must provide in order to support interoperable modules."
+        "description": "Node.js implements the CommonJS Modules spec, which is briefly addressed in the book.\n\n> These modules are offered privacy of their top scope, facility for importing singleton objects from other modules, and exporting their own API."
     },
     "grunt": {
         "type": "link",
