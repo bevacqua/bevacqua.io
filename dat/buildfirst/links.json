@@ -136,7 +136,7 @@
     },
     "aws": {
         "type": "code",
-        "url": "https://github.com/bevacqua/buildfirst/tree/master/ch04/06_aws-deployments",
+        "url": "https://github.com/bevacqua/buildfirst/tree/master/ch04/07_aws-deployments",
         "title": "Deploying to Amazon Web Services",
         "description": "An alternative to deploying to Heroku might be deploying to AWS. In this sample, we'll discusss something that didn't make it in the book due to the added complexity of dealing with Amazon Web Services _(AWS)_, and the Elastic Cloud Compute _(EC2)_ solution in particular. The sample details how to create and deploy to AWS EC2 instances in a safe manner that's easy to integrate with our builds."
     },
