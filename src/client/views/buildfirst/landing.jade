@@ -12,8 +12,12 @@ block content
             include header-nav
 
             section.bf-book
-                a.bf-book-cover(href='http://www.manning.com/bevacqua/', target='_blank', title='Get the book from Manning!')
-                    img(src='/img/buildfirst/cover.jpg')
+                div.bf-book-promo
+                    a.bf-book-link.js-manning-cover(href='http://www.manning.com/bevacqua/', target='_blank', title='Get the book from Manning!')
+                        img.bf-book-cover(src='/img/buildfirst/cover.jpg')
+                    a.bf-book-link.bf-sample-link.js-manning-sample(href='http://www.manning.com/bevacqua/', target='_blank', title='Get the book from Manning!')
+                        | Download sample chapters for free here!
+
                 div.bf-book-hint
                     h1.bf-header-title.bf-book-title Write clean JavaScript applications that deploy with the push of a button
                     h3.bf-header-pitch.bf-book-pitch

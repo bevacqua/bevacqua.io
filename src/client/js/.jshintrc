@@ -16,5 +16,8 @@
   "latedef": "nofunc",
   "quotmark": "single",
   "indent": 4,
-  "browser": true
+  "browser": true,
+  "globals": {
+    "mixpanel": false
+  }
 }
