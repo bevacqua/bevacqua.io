@@ -13,15 +13,15 @@ block content
 
             section.bf-book
                 div.bf-book-promo
-                    a.bf-book-link.js-manning-cover(href='http://www.manning.com/bevacqua/', target='_blank', title='Get the book from Manning!')
+                    a.bf-book-link.js-manning-cover(href='/bf/book', target='_blank', title='Get the book from Manning!')
                         img.bf-book-cover(src='/img/buildfirst/cover.jpg')
-                    a.bf-book-link.bf-sample-link.js-manning-sample(href='http://www.manning.com/bevacqua/', target='_blank', title='Get a peep for free!')
+                    a.bf-book-link.bf-sample-link.js-manning-sample(href='/bf/book', target='_blank', title='Get a peep for free!')
                         | Download sample chapters for free here!
 
                 div.bf-book-hint
                     h1.bf-header-title.bf-book-title Write clean JavaScript applications that deploy with the push of a button
                     h3.bf-header-pitch.bf-book-pitch
-                        | You already know JavaScript, but do you know how to design a scalable application? Try
+                        | You already know JavaScript, but do you know how to design a scalable application and maximize your productivity? Try
                         strong #buildfirst
                         | !
 
@@ -29,7 +29,7 @@ block content
                 include sharing
 
         article.bf-introduction
-            header.bf-introduction-title
+            header.bf-introduction-title.bf-introduction-headings
                 h1 Designing Javascript Applications
                 h2 A Build First Approach
 
@@ -48,6 +48,27 @@ block content
                     ### Learn from Practical Examples
 
                     Scattered throughout the book we will find _tons of code samples_, all carefully crafted, ready to use and mold to your needs, and **ideal to learn from**. The samples are _well-documented_ too, each having _an individual description_ which will let us understand what we're looking at, why we need to learn it, and how we might accomplish it.
+
+            h2.bf-introduction-headings Uncertain yet?
+
+            section.bf-introduction-text
+                :markdown
+                    You can get a sample chapter from **Manning**, or just buy the whole thing if you like what you're hearing. It's definitely worth it!
+
+                    Also, make sure you check out the [resources page for the book](/buildfirst/resources "Resources and References"), too. I included **tons of the links** that are referenced in the book in that page, so you can get a feel of the kind of content that's included in the book. You could also skim through [the code samples](/bf/code "Accompanying code samples and snippets"), which are religiously documented, catalogued, and reviewed. Ready for human consumption!
+
+                    Read [my blog, Pony Foo](http://blog.ponyfoo.com "Pony Foo Blog") to see what kind of writing I've done in the past!
+
+                p
+                    a.js-manning-late(href='/bf/book', target='_blank', title='Get the book from Manning!')
+                        | Purchase the book through Manning
+                p
+                    a(href='/bf/code', target='_blank', title='Check out the Code!')
+                        | Check out the code on GitHub
+
+
+            section.bf-introduction-text
+
 
         footer.bf-footer
             section.sl-container

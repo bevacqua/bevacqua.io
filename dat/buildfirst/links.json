@@ -1,4 +1,7 @@
 {
+    "book": {
+        "url": "http://www.manning.com/bevacqua/"
+    },
     "code": {
         "type": "code",
         "url": "https://github.com/bevacqua/buildfirst",
