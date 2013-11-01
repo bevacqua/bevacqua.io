@@ -6,7 +6,7 @@
     function click (selector, description, properties) {
         var element = document.querySelector(selector); // one is enough
         if (element) {
-            mixpanel(selector, description, properties);
+            mixpanel.track_links(selector, description, properties);
         }
     }
 
