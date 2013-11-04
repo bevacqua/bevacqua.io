@@ -4,5 +4,9 @@
     "PORT": 3000,
     "CONSOLE_ENABLED": true,
     "CONSOLE_LEVEL": "debug",
-    "PAPERTRAIL_HOST": "logs.papertrailapp.com"
+    "PAPERTRAIL_HOST": "logs.papertrailapp.com",
+    "GA": {
+        "PROPERTY": "UA-35043128-4",
+        "HOST": "bevacqua.io"
+    }
 }
