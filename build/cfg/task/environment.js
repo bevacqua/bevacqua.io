@@ -17,7 +17,7 @@ function addPemcrypt (task, pem, store, storeName, raw, secure) {
         pem: pem,
         pemstore: store + '/secure/' + storeName,
         rawstore: store + '/private/' + storeName,
-        private: raw,
+        raw: raw,
         secure: secure
     };
 }
