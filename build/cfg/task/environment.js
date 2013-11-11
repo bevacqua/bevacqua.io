@@ -48,7 +48,6 @@ addConfig('development');
 addConfig('edge');
 addConfig('production');
 
-addDeploy('edge');
 addDeploy('production');
 
 module.exports = settings;
