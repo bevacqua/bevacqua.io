@@ -8,8 +8,10 @@ var settings = {
     pem_decrypt: {}
 };
 
-function addGenerator (task, pem, size) {
-    settings.pem_gen[task] = { pem: pem, size: size };
+function addGenerator (task, pem) {
+    settings.pem_gen[task] = {
+        pem: pem
+    };
 }
 
 function addPemcrypt (task, pem, store, storeName, raw, secure) {
@@ -36,7 +38,7 @@ function addDeploy (keyName) {
     var keyFile = util.format('deploy/private/%s.pemkey', keyName);
     var pem = path.join(conf.cwd, keyFile);
 
-    addGenerator(taskName, pem, 16);
+    addGenerator(taskName, pem);
     addPemcrypt(taskName, pem, 'deploy', keyName, '.pem', '.pemsecure');
     addPemcrypt(taskName + '_pub', pem, 'deploy', keyName, '.pem.pub', '.pubsecure');
 }
