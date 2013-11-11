@@ -2,7 +2,7 @@
 
 var controller = module.exports = new (require('../ViewController.js'))('bf');
 var links = require_cwd('dat/buildfirst/links.json');
-var analytics = require('../services/analyticsService.js');
+var analytics = require('../../services/analyticsService.js');
 
 controller.registerRoutes = function(app){
     app.get('/bf', controller.redirect('/buildfirst', 301));
