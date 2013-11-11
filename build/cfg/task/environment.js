@@ -8,8 +8,8 @@ var settings = {
     pem_decrypt: {}
 };
 
-function addGenerator (task, pem) {
-    settings.pem_gen[task] = { pem: pem };
+function addGenerator (task, pem, size) {
+    settings.pem_gen[task] = { pem: pem, size: size };
 }
 
 function addPemcrypt (task, pem, store, storeName, raw, secure) {
