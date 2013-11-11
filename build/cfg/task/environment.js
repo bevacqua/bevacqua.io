@@ -36,7 +36,7 @@ function addDeploy (keyName) {
     var keyFile = util.format('deploy/private/%s.pemkey', keyName);
     var pem = path.join(conf.cwd, keyFile);
 
-    addGenerator(taskName, pem);
+    addGenerator(taskName, pem, 16);
     addPemcrypt(taskName, pem, 'deploy', keyName, '.pem', '.pemsecure');
     addPemcrypt(taskName + '_pub', pem, 'deploy', keyName, '.pem.pub', '.pubsecure');
 }
