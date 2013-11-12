@@ -3,7 +3,7 @@
 var grunt = require('grunt');
 
 module.exports = {
-    package: {
+    manifest: {
         pkg: grunt.file.readJSON('package.json')
     },
     dev: require('./task/development.js'),
