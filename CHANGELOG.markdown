@@ -1,4 +1,4 @@
-# 0.0.25 Blue Bird
+# 0.0.26 Blue Bird
 
 - Twitter Card support
 
