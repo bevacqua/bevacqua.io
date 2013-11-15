@@ -5,7 +5,7 @@ var jadeContextService = require('../service/jadeContextService.js');
 require('./util/initJadeContext.js');
 
 module.exports = function(release){
-    var views = 'src/client/views';
+    var views = 'bin/.tmp/views';
 
     return {
         expand: true,
@@ -19,4 +19,13 @@ module.exports = function(release){
             data: jadeContextService.getContext
         }
     };
+};
+
+module.exports.copy = {
+    jade: {
+        expand: true,
+        cwd: 'src/client/views',
+        dest: 'bin/.tmp/views',
+        src: ['**/*.jade']
+    }
 };

@@ -6,7 +6,7 @@ var assets = require('../assets');
 module.exports = {
     clean: {
         all: 'bin',
-        views: 'bin/views',
+        views: ['bin/.tmp/views', 'bin/views'],
         js: 'bin/public/js',
         css: 'bin/public/css',
         images: ['bin/public/img'],
@@ -38,7 +38,7 @@ module.exports = {
         debug: assets.jade(false),
         release: assets.jade(true)
     },
-    copy: _.assign(assets.img.copy, assets.js.copy, assets.other.copy),
+    copy: _.assign(assets.jade.copy, assets.img.copy, assets.js.copy, assets.other.copy),
     sprite: {
         icons: assets.img.sprite('icons', 'ic'),
         buildfirst_resources: assets.img.sprite('buildfirst-resources', 'bfr')

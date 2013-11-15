@@ -50,6 +50,6 @@
         };
         mp.__SV = 1.2;
     }
-})(document, window.mixpanel || []);
 
-mixpanel.init('cba6fbc4672c2d977844d44ef7d429e1');
+    mp.init('cba6fbc4672c2d977844d44ef7d429e1');
+})(document, window.mixpanel || []);

@@ -4,7 +4,7 @@ var _ = require('lodash');
 var path = require('path');
 var asset = require('./util/asset.js');
 
-function bower(release){
+function bower (release) {
     return {
         expand: true,
         cwd: 'bower_components',
@@ -34,14 +34,17 @@ module.exports = {
             dest: 'bin/public/js'
         }
     },
-    files: function(){
+    files: function () {
         var vendor = asset.links('bin/public/js/vendor', 'bin/public');
         var all = asset.links('bin/public/js', 'bin/public');
         var distinct = _.union(vendor, all);
         var JS_EXT = /\.js$/;
 
-        return _.filter(distinct, function(file){
+        var result = _.filter(distinct, function(file){
             return JS_EXT.test(file); // ignore *.map files
         });
+
+
+        return result;
     }
 };

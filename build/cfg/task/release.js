@@ -30,7 +30,12 @@ module.exports = {
     },
     uglify: {
         js: {
-            files: { 'bin/public/js/all.js': 'bin/public/js/**/*.js' },
+            files: {
+                'bin/public/js/all.js': [
+                    'bin/public/js/vendor/**/*.js',
+                    'bin/public/js/**/*.js'
+                ],
+            },
             options: {
                 preserveComments: false
             }
@@ -44,8 +49,18 @@ module.exports = {
     usemin: {
         html: 'bin/{public,views}/**/*.html',
         css: 'bin/public/**/*.css',
+        jade: 'bin/.tmp/views/**/*.jade',
         options: {
-            dirs: ['bin']
+            assetsDirs: ['bin/public'],
+            patterns: {
+                jade: [[
+                    /meta\(.*content=['"]http:\/\/bevacqua\.io([^"']+\.(png|jpg|gif))["']/gm,
+                    'Update meta tags image content'
+                ], [
+                    /encodeURIComponent\(['"]http:\/\/bevacqua\.io([^"']+\.(png|jpg|gif))["']\)/gm,
+                    'Update any images in strings to be encoded'
+                ]]
+            }
         }
     },
     bump: {

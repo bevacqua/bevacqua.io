@@ -40,8 +40,8 @@ module.exports = function(grunt){
     alias('js:debug', 'clean:js copy:js_sources copy:js_bower_debug jshint');
     alias('js:release', 'clean:js copy:js_sources uglify:js clean:after_uglify copy:js_bower_release rev:js');
 
-    alias('views:debug', 'clean:views jade:debug');
-    alias('views:release', 'clean:views jade:release');
+    alias('views:debug', 'clean:views copy:jade jade:debug');
+    alias('views:release', 'clean:views copy:jade usemin:jade jade:release');
 
     alias('build:debug', 'clean copy:other images:debug css:debug js:debug views:debug bump-only:build');
     alias('build:rebuild', 'build:debug play:success');
