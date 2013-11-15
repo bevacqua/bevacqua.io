@@ -1,6 +1,7 @@
-# 0.0.29 Blue Bird
+# 0.0.30 Blue Bird
 
 - Twitter Card support
+- Fixed metadata to support asset revving
 
 # 0.0.24 Scar Face
 
