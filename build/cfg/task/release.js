@@ -75,7 +75,7 @@ module.exports = {
     changelog: {
         options: {
             dest: 'CHANGELOG.markdown',
-            editor: 'subl -w'
+            editor: '$EDITOR'
         }
     }
 };

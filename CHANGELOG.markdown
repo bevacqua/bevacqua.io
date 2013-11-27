@@ -1,7 +1,4 @@
-<a name="v0.0.32-0"></a>
-### v0.0.32-0 (2013-11-27)
-
-# 0.0.31 Upheaval
+# 0.0.32 Upheaval
 
 - Updated Build First cover with MEAP version
 
