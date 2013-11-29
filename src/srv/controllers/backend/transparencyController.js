@@ -9,4 +9,5 @@ controller.registerRoutes = function(app){
     app.get('/source', controller.redirect('https://github.com/bevacqua/io'));
     app.get('/stackoverflow', controller.redirect('http://stackoverflow.com/users/389745/nico'));
     app.get('/twitter', controller.redirect('https://twitter.com/nzgb'));
+    app.get('/plus', controller.redirect('https://plus.google.com/+NicoBevacqua'));
 };
