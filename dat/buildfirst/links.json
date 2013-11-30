@@ -178,5 +178,11 @@
     },
     "nodetime-register": {
         "url": "http://nodetime.com/signup"
+    },
+    "regex": {
+        "type": "link",
+        "url": "http://blog.ponyfoo.com/2013/05/27/learn-regular-expressions",
+        "title": "Learn Regular Expressions",
+        "description": "While not as fundamental, regular expressions are **widely misunderstood**, much like JavaScript is. In this article I introduce you to regular expressions in JavaScript. Once you've read this, you'll have a basic understanding with which you should be able to write simple expressions. Think of it as **Regular Expressions 101**."
     }
 }
