@@ -184,5 +184,11 @@
         "url": "http://blog.ponyfoo.com/2013/05/27/learn-regular-expressions",
         "title": "Learn Regular Expressions",
         "description": "While not as fundamental, regular expressions are **widely misunderstood**, much like JavaScript is. In this article I introduce you to regular expressions in JavaScript. Once you've read this, you'll have a basic understanding with which you should be able to write simple expressions. Think of it as **Regular Expressions 101**."
+    },
+    "goodparts": {
+        "type": "book",
+        "url": "http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742",
+        "title": "JavaScript: The Good Parts",
+        "description": "In this timeless book, _Douglas Crockford_ walks us through JavScript, detailing some of the quirks that can be found in the language, such as the `with` keyword, hoisting, the `eval` function, and a few reasons to steer away from prototypal inheritance. A must read for any serious developer even _mildly interested_ in the JavaScript language."
     }
 }
