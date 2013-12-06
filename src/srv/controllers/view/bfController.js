@@ -7,7 +7,7 @@ var analytics = require('../../services/analyticsService.js');
 controller.registerRoutes = function(app){
     app.get('/bf', controller.redirect('/buildfirst', 301));
     app.get('/bf/resources', controller.redirect('/buildfirst/resources', 301));
-    app.get('/bf/:key', controller.expandShortLink);
+    app.get('/bf/:key', controller.expandShortLink, controller.redirect('/buildfirst/resources'));
 };
 
 controller.expandShortLink = function(req, res, next){
