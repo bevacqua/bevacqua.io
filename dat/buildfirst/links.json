@@ -195,6 +195,6 @@
         "type": "link",
         "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode",
         "title": "Strict Mode",
-        "description": "There is a way to write better JavaScript today. The `'use strict'` directive changes the way code behaves in the scope we apply it to. The _Mozilla Developer Network_ has a useful article describing strict mode semantics. In the book, you'll find a less verbose variation of what `'strict mode'` entails."
+        "description": "There is a way to write better JavaScript today. The `'use strict'` directive changes the way code behaves in the scope we apply it to. The _Mozilla Developer Network_ has a useful article describing strict mode semantics. In the book, you'll find out what `'strict mode'` entails, and how it can help you write better code."
     }
 }
