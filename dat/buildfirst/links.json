@@ -190,5 +190,11 @@
         "url": "http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742",
         "title": "JavaScript: The Good Parts",
         "description": "In this timeless book, _Douglas Crockford_ walks us through JavScript, detailing some of the quirks that can be found in the language, such as the `with` keyword, hoisting, the `eval` function, and a few reasons to steer away from prototypal inheritance. A must read for any serious developer even _mildly interested_ in the JavaScript language."
+    },
+    "strict": {
+        "type": "link",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode",
+        "title": "Strict Mode",
+        "description": "There is a way to write better JavaScript today. The `'use strict'` directive changes the way code behaves in the scope we apply it to. The _Mozilla Developer Network_ has a useful article describing strict mode semantics. In the book, you'll find a less verbose variation of what `'strict mode'` entails."
     }
 }
