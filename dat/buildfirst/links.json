@@ -201,6 +201,12 @@
         "type": "link",
         "url": "http://martinfowler.com/articles/injection.html",
         "title": "Inversion of Control",
-        "description": "Fowler describes the [Dependency Injection](http://stackoverflow.com/q/130794/389745 \"What is dependency injection?\") pattern, while also defining [Inversion of Control](http://stackoverflow.com/q/3058/389745 \"What is Inversion of Control?\").\n\nOnce I've laid a few foundations, we'll dig into what kinds of _dependency management systems_ are available in client-side JavaScript, such as [AMD](http://requirejs.org/docs/whyamd.html \"Why AMD?\"), [Common.JS](http://wiki.commonjs.org/wiki/CommonJS \"Common.JS Spec\"), and the [approach taken by the Angular.js team](http://docs.angularjs.org/guide/di \"Dependency Injection in Angular\")."
+        "description": "Fowler describes the [Dependency Injection (DI)](http://stackoverflow.com/q/130794/389745 \"What is dependency injection?\") pattern, while also defining [Inversion of Control](http://stackoverflow.com/q/3058/389745 \"What is Inversion of Control?\").\n\nOnce I've laid a few foundations, we'll dig into what kinds of _dependency management systems_ are available in client-side JavaScript, such as [AMD](http://requirejs.org/docs/whyamd.html \"Why AMD?\"), [Common.JS](http://wiki.commonjs.org/wiki/CommonJS \"Common.JS Spec\"), and the approach taken by the [Angular.js](http://angularjs.org \"Angular.js MVW Framework\") team."
+    },
+    "angular-di": {
+        "type": "link",
+        "url": "http://docs.angularjs.org/guide/di",
+        "title": "Dependency Injection (DI) in Angular",
+        "description": "Angular has a fairly complex DI solution in place. However, it is really easy to understand. I've personally used many different DI frameworks, and Angular makes it feel really natural: you don't even realize you're doing DI. Below you'll find a quote extracted from their documentation.\n\n> To manage the responsibility of dependency creation, each Angular application has an [injector](http://docs.angularjs.org/api/angular.injector \"The angular.injector service\"). The injector is a service locator that is responsible for construction and lookup of dependencies."
     }
 }
