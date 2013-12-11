@@ -196,5 +196,11 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode",
         "title": "Strict Mode",
         "description": "There is a way to write better JavaScript today. The `'use strict'` directive changes the way code behaves in the scope we apply it to. The _Mozilla Developer Network_ has a useful article describing strict mode semantics. In the book, you'll find out what `'strict mode'` entails, and how it can help you write better code."
+    },
+    "ioc": {
+        "type": "link",
+        "url": "http://martinfowler.com/articles/injection.html",
+        "title": "Inversion of Control",
+        "description": "Fowler describes the [Dependency Injection](http://stackoverflow.com/q/130794/389745 \"What is dependency injection?\") pattern, while also defining [Inversion of Control](http://stackoverflow.com/q/3058/389745 \"What is Inversion of Control?\").\n\nOnce I've laid a few foundations, we'll dig into what kinds of _dependency management systems_ are available in client-side JavaScript, such as [AMD](http://requirejs.org/docs/whyamd.html \"Why AMD?\"), [Common.JS](http://wiki.commonjs.org/wiki/CommonJS \"Common.JS Spec\"), and the [approach taken by the Angular.js team](http://docs.angularjs.org/guide/di \"Dependency Injection in Angular\")."
     }
 }
