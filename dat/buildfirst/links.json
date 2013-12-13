@@ -203,6 +203,12 @@
         "title": "Inversion of Control",
         "description": "Fowler describes the [Dependency Injection (DI)](http://stackoverflow.com/q/130794/389745 \"What is dependency injection?\") pattern, while also defining [Inversion of Control](http://stackoverflow.com/q/3058/389745 \"What is Inversion of Control?\").\n\nOnce I've laid a few foundations, we'll dig into what kinds of _dependency management systems_ are available in client-side JavaScript, such as [AMD](http://requirejs.org/docs/whyamd.html \"Why AMD?\"), [Common.JS](http://wiki.commonjs.org/wiki/CommonJS \"Common.JS Spec\"), and the approach taken by the [Angular.js](http://angularjs.org \"Angular.js MVW Framework\") team."
     },
+    "requirejs": {
+        "type": "code",
+        "url": "https://github.com/bevacqua/buildfirst/tree/master/ch05/10_requirejs-grunt",
+        "title": "Compiling RequireJS modules",
+        "description": "> RequireJS is a JavaScript file and module loader. It is optimized for in-browser use, but it can be used in other JavaScript environments\n\nHere we will learn how to compile [RequireJS](http://requirejs.org \"Require.JS Asynchronous Module Loader\") modules using a Grunt task. You'll also learn how to set it up so that it creates [a source map](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/ \"Introduction to JavaScript Source Maps\") which you can use during debugging sessions."
+    },
     "angular-di": {
         "type": "link",
         "url": "http://docs.angularjs.org/guide/di",
