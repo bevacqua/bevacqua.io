@@ -219,6 +219,6 @@
         "type": "link",
         "url": "http://tjholowaychuk.com/post/27984551477/components",
         "title": "Components",
-        "description": "Component is a tool which is all about small components which do _one thing only, but do it well_. Rather than using a big library for all your needs, [TJ Holowaychuk](https://twitter.com/tjholowaychuk \"TJ Holowaychuk on Twitter\"), prolific open-source author, advocates using multiple small blocks to build exactly what you need, in a modular way, and without any added bloat.\n\nIn this blog post, he explains his thought process and design decisions behind the making of Component."
+        "description": "[Component](http://component.io/) is a tool which is all about small components which do _one thing only, but do it well_. Rather than using a big library for all your needs, [TJ Holowaychuk](https://twitter.com/tjholowaychuk \"TJ Holowaychuk on Twitter\"), prolific open-source author, advocates using multiple small blocks to build exactly what you need, in a modular way, and without any added bloat.\n\nIn this blog post, he explains his thought process and design decisions behind the making of [Component](http://component.io/)."
     }
 }
