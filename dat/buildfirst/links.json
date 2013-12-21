@@ -214,5 +214,11 @@
         "url": "http://docs.angularjs.org/guide/di",
         "title": "Dependency Injection (DI) in Angular",
         "description": "Angular has a fairly complex DI solution in place. However, it is really easy to understand. I've personally used many different DI frameworks, and Angular makes it feel really natural: you don't even realize you're doing DI. Below you'll find a quote extracted from their documentation.\n\n> To manage the responsibility of dependency creation, each Angular application has an [injector](http://docs.angularjs.org/api/angular.injector \"The angular.injector service\"). The injector is a service locator that is responsible for construction and lookup of dependencies."
+    },
+    "component": {
+        "type": "link",
+        "url": "http://tjholowaychuk.com/post/27984551477/components",
+        "title": "Components",
+        "description": "Component is a tool which is all about small components which do _one thing only, but do it well_. Rather than using a big library for all your needs, [TJ Holowaychuk](https://twitter.com/tjholowaychuk \"TJ Holowaychuk on Twitter\"), prolific open-source author, advocates using multiple small blocks to build exactly what you need, in a modular way, and without any added bloat.\n\nIn this blog post, he explains his thought process and design decisions behind the making of Component."
     }
 }
