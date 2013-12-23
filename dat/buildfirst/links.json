@@ -220,5 +220,11 @@
         "url": "http://tjholowaychuk.com/post/27984551477/components",
         "title": "Components",
         "description": "[Component](http://component.io/) is a tool which is all about small components which do _one thing only, but do it well_. Rather than using a big library for all your needs, [TJ Holowaychuk](https://twitter.com/tjholowaychuk \"TJ Holowaychuk on Twitter\"), prolific open-source author, advocates using multiple small blocks to build exactly what you need, in a modular way, and without any added bloat.\n\nIn this blog post, he explains his thought process and design decisions behind the making of [Component](http://component.io/)."
+    },
+    "es6-modules": {
+        "type": "link",
+        "url": "http://blog.ponyfoo.com/2013/12/23/architecture-of-ecmascript-6-modules",
+        "title": "Architecture of ECMAScript 6 Modules",
+        "description": "> This document reflects the state of the modules proposal as presented to TC39 in the March meeting. It is expected to change somewhat in the months ahead, most notably to add support for anonymous exports.\n\nIn this document, [wycats](https://github.com/wycats \"wycats on GitHub\") exposes the latest and greatest about the module system coming to ECMAScript 6, ES.next, or Harmony, however you prefer to call it. He provides detail on various use cases, and helps us fathom how the module ecosystem will start looking like once ES6 hits the ground running."
     }
 }
