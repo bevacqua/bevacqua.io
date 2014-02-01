@@ -1,3 +1,7 @@
+# 0.0.35
+
+- Fixed link to TJ Holowaychuk's Components article
+
 # 0.0.33 Tidyup
 
 - Actually call the book by its name
