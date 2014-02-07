@@ -1,4 +1,4 @@
-# 0.0.36
+# 0.0.37
 
 - Fixed link to [`#buildfirst`](http://bevacqua.io/bf) Chapter 2 sample that was moved
 
