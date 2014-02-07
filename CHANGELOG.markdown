@@ -1,4 +1,8 @@
-# 0.0.35
+# 0.0.36
+
+- Fixed link to [`#buildfirst`](http://bevacqua.io/bf) Chapter 2 sample that was moved
+
+# 0.0.35 Broker
 
 - Fixed link to TJ Holowaychuk's Components article
 
