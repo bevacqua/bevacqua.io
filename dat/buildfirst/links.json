@@ -70,7 +70,7 @@
     },
     "db-tasks": {
         "type": "code",
-        "url": "https://github.com/bevacqua/buildfirst/tree/master/ch02/09_mysql-tasks",
+        "url": "https://github.com/bevacqua/buildfirst/tree/master/ch02/10_mysql-tasks",
         "title": "Case Study: Database Tasks",
         "description": "In this particular code sample, we'll create a series of database-related tasks for our build process. These will help us bootstrap environments, as well as reduce the complexity in database schema updates and rollbacks."
     },
