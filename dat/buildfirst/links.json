@@ -226,5 +226,11 @@
         "url": "http://blog.ponyfoo.com/2013/12/23/architecture-of-ecmascript-6-modules",
         "title": "Architecture of ECMAScript 6 Modules",
         "description": "> This document reflects the state of the modules proposal as presented to TC39 in the March meeting. It is expected to change somewhat in the months ahead, most notably to add support for anonymous exports.\n\nIn this document, [wycats](https://github.com/wycats \"wycats on GitHub\") exposes the latest and greatest about the module system coming to ECMAScript 6, ES.next, or Harmony, however you prefer to call it. He provides detail on various use cases, and helps us fathom how the module ecosystem will start looking like once ES6 hits the ground running."
+    },
+    "promises": {
+        "type": "link",
+        "url": "https://github.com/jakearchibald/es6-promise",
+        "title": "ES6 Promises",
+        "description": "Here is a polyfill to enable ES6 [Promises](http://www.html5rocks.com/en/tutorials/es6/promises/ \"JavaScript Promises: There and back again\") in the browser or Node, today, before ES6 comes out. Promises are a new JavaScript technology, which deals with asynchronous code, turning it into contracts that can be fulfilled or end up being rejected.\n\nThe book explains promises in detail, and you'll be able to find quite a few examples in the [accompanying code samples for Chapter 6](https://github.com/bevacqua/buildfirst/tree/master/ch06)."
     }
 }
