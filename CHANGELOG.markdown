@@ -1,4 +1,8 @@
-# 0.0.37
+# 0.0.38 Back Track
+
+- Added link to Promises polyfill.
+
+# 0.0.37 Foot Anchor
 
 - Fixed link to [`#buildfirst`](http://bevacqua.io/bf) Chapter 2 sample that was moved
 
