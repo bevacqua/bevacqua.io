@@ -232,5 +232,8 @@
         "url": "https://github.com/jakearchibald/es6-promise",
         "title": "ES6 Promises",
         "description": "Here is a polyfill to enable ES6 [Promises](http://www.html5rocks.com/en/tutorials/es6/promises/ \"JavaScript Promises: There and back again\") in the browser or Node, today, before ES6 comes out. Promises are a new JavaScript technology, which deals with asynchronous code, turning it into contracts that can be fulfilled or end up being rejected.\n\nThe book explains promises in detail, and you'll be able to find quite a few examples in the [accompanying code samples for Chapter 6](https://github.com/bevacqua/buildfirst/tree/master/ch06)."
+    },
+    "tooling": {
+        "url": "http://blog.ponyfoo.com/2014/01/09/gulp-grunt-whatever"
     }
 }
