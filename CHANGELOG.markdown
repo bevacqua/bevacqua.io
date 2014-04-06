@@ -1,3 +1,7 @@
+# 0.0.41 Some Testing
+
+- Added tests to the site.
+
 # 0.0.40 Fix Link
 
 - Fixed link to the book on Manning website.
