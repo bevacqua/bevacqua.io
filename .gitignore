@@ -13,6 +13,5 @@ bin
 Thumbs.db
 
 # sensitive data
-env/cert
 env/private
 deploy/private
