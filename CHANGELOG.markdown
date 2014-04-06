@@ -1,3 +1,7 @@
+# 0.0.40 Fix Link
+
+- Fixed link to the book on Manning website.
+
 # 0.0.39 Link Thing
 
 - Link to Gulp, Grunt, Whatever article.
