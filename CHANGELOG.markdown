@@ -1,4 +1,4 @@
-# 0.0.44 Color Blind
+# 0.0.45 Color Blind
 
 - Book cover now sporting JavaScript yellow!
 
