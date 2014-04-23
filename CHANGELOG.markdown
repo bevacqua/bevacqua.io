@@ -1,3 +1,7 @@
+# 0.0.44 Color Blind
+
+- Book cover now sporting JavaScript yellow!
+
 # 0.0.43 Yay Mode
 
 - Testing it out for the presentation!
