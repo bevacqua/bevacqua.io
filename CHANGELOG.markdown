@@ -1,3 +1,7 @@
+# 0.0.48 Three Muffins
+
+- Affiliate link
+
 # 0.0.47 Color Blind
 
 - Book cover now sporting JavaScript yellow!
