@@ -1,3 +1,7 @@
+# 0.0.49-0 Turtle Spirit
+
+- Fixed affiliate link
+
 # 0.0.48 Three Muffins
 
 - Affiliate link
