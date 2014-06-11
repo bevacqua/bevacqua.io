@@ -60,10 +60,10 @@ module.exports = function(grunt){
     // continuous integration and deployment tasks
     alias('ci', 'build:release test');
 
-    alias('deploy_setup', 'pem_decrypt:grunt shell:deploy_setup');
-    alias('deploy_prepare', 'build:release test bump-only:patch changelog bump-commit');
-    alias('deploy', 'deploy_prepare ec2_deploy:edge');
-    alias('deploy:live', 'deploy_prepare ec2_deploy:production');
+    alias('deploy-setup', 'pem_decrypt:grunt shell:deploy_setup');
+    alias('deploy-prepare', 'build:release test bump-only:patch changelog bump-commit');
+    alias('deploy', 'deploy-prepare ec2-deploy:edge');
+    alias('deploy:live', 'deploy-prepare ec2-deploy:production');
 
     alias('default', 'dev');
 };

@@ -43,7 +43,7 @@
     "grunt-contrib-uglify": "0.2.2",
     "grunt-contrib-watch": "0.5.3",
     "grunt-conventional-changelog": "1.0.0",
-    "grunt-ec2": "0.8.0",
+    "grunt-ec2": "^0.9.0",
     "grunt-karma": "^0.8.2",
     "grunt-mocha-test": "0.6.3",
     "grunt-nodemon": "0.1.0",

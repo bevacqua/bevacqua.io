@@ -1,0 +1,18 @@
+extends /layout
+
+block title
+    title Talks &middot; bevacqua.io
+
+block meta
+    include ../home/meta/about
+
+block content
+    main.tk-container
+        header
+            include ../home/header-nav
+
+        section.am-header Talks
+
+        ol.tk-talks
+            li.tk-talk
+                a.tk-link(href='/talks/frontend-ops') Front End Ops Tooling
