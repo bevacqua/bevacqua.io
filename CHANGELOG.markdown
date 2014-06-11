@@ -1,3 +1,7 @@
+# 0.0.50-0 Talking Turtle
+
+- Added 'Talks' section
+
 # 0.0.49-0 Turtle Spirit
 
 - Fixed affiliate link
