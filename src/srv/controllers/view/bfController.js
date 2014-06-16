@@ -8,6 +8,7 @@ controller.registerRoutes = function(app){
     app.get('/bf', controller.redirect('/buildfirst', 301));
     app.get('/bf/resources', controller.redirect('/buildfirst/resources', 301));
     app.get('/bf/:key', controller.expandShortLink, controller.redirect('/buildfirst/resources'));
+    app.get('/knight', controller.redirect('/bf/knight', 301)); // slides for a talk pointed to wrong url
 };
 
 controller.expandShortLink = function(req, res, next){
