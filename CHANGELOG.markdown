@@ -1,3 +1,7 @@
+# 0.0.52 Talking Tinkerer
+
+Fixed a link with a redirect
+
 # 0.0.51 Turtle Neck
 
 - Re-ordered header navigation items
