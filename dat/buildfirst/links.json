@@ -235,5 +235,11 @@
     },
     "tooling": {
         "url": "http://blog.ponyfoo.com/2014/01/09/gulp-grunt-whatever"
+    },
+    "rest": {
+        "type": "link",
+        "url": "http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm",
+        "title": "Representational State Transfer (REST)",
+        "description": "REST is a set of architectural constraints that can drive your API design process. In the book we take a deep look at the concept and how you could apply these constraints to get a **more cohesive, coherent, and consistent API experience** for both your front-end and customer-facing API services. REST is discussed in chapter 9."
     }
 }
