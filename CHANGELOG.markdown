@@ -1,3 +1,7 @@
+# 0.0.54 Fixie
+
+- Fix image dimensions
+
 # 0.0.53 Dissert
 
 - Added link to REST dissertation
