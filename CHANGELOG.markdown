@@ -1,6 +1,10 @@
+# 0.0.53 Dissert
+
+- Added link to REST dissertation
+
 # 0.0.52 Talking Tinkerer
 
-Fixed a link with a redirect
+- Fixed a link, using a redirect
 
 # 0.0.51 Turtle Neck
 
