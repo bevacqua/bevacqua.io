@@ -1,6 +1,7 @@
-# 0.0.54 Fixie
+# 0.0.55 Fixie
 
 - Fix image dimensions
+- Fix resource background color
 
 # 0.0.53 Dissert
 
