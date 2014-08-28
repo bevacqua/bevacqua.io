@@ -1,3 +1,7 @@
+# 0.0.56
+
+- Added Browserify talk slides
+
 # 0.0.55 Fixie
 
 - Fix image dimensions
