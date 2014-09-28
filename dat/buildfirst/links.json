@@ -1,245 +1,320 @@
 {
-    "book": {
-        "url": "http://www.manning.com/bevacqua/?a_aid=go&a_bid=e6de0d9d"
-    },
-    "code": {
-        "type": "code",
-        "url": "https://github.com/bevacqua/buildfirst",
-        "title": "Code Samples and Snippets",
-        "description": "Every single code sample and snippet that is examined in the book, and then _a few more_, which didn't make it into the book.\n\nThere are _over 50 different code samples_ in the repository, all of which come **fully documented**, are ready to use, and present interesting scenarios and strategies when laying out a build process or an application architecture."
-    },
-    "knight": {
-        "type": "link",
-        "url": "http://pythonsweetness.tumblr.com/post/64740079543/how-to-lose-172-222-a-second-for-45-minutes",
-        "title": "Knight Capital's Downfall",
-        "description": "This article recounts the steps that lead to [Knight Capital](http://en.wikipedia.org/wiki/Knight_Capital_Group \"Knight Capital Group on Wikipedia\")'s downfall, and proves to be both an _insightful_ and **tremendously saddening** read. The apparently innocent mistake quoted below, ended up **costing almost half a billion** to the company.\n\n> During the deployment of the new code, however, one of Knight's technicians did not copy the new code to one of the eight SMARS computer servers.\n\nThe moral of the story is that we shouldn't ever rely on manually taking these steps:  in doing so, we might _introduce crippling oversights_ inadvertently into our systems."
-    },
-    "apologists": {
-        "type": "book",
-        "url": "http://www.amazon.com/The-Inmates-Are-Running-Asylum/dp/0672326140",
-        "title": "The Inmates Are Running The Asylum",
-        "description": "In this timeless classic, **Alan Cooper** describes how software engineers have the upper hand when it comes to end-user interaction design, and how their _(our)_ bias towards favoring technologists plays a detrimental role in the experience delivered to end-users. This reference is briefly mentioned during the introductory chapter of the book."
-    },
-    "browser-errors": {
-        "type": "link",
-        "url": "http://www.codinghorror.com/blog/2007/04/javascript-and-html-forgiveness-by-default.html",
-        "title": "Browsers Forgive Nerds",
-        "description": "This article is a very interesting analysis, albeit an old one _(originally published in 2007)_, regarding the sucess of the web and how it might very well be related to the platform's tendency towards ignoring issues such as _malformed HTML tags_.\n\nMissing JavaScript semicolons, undeclared variables, or **even syntax errors** are rarely even noticed by humans."
-    },
-    "lean": {
-        "type": "book",
-        "url": "http://www.amazon.com/The-Lean-Startup-Entrepreneurs-Continuous/dp/0307887898",
-        "title": "The Lean Startup",
-        "description": "**Eric Ries** presents us with an approach to application design based on _iterative, validated learning_. Rather than building an application and then _hoping_ for the best, Eric prompts us to collect feedback from our humans, using the [Build-Measure-Learn](http://blog.ponyfoo.com/2013/07/29/lean-development-principles \"Lean Development Principles article on Pony Foo\") feedback loop, and then decide which features are best _for them_. In my book, we'll examine the **Build** part of this lean model."
-    },
-    "pragmatic": {
-        "type": "book",
-        "url": "http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X",
-        "title": "The Pragmatic Programmer",
-        "description": "In this book, **Andy Hunt** and **Dave Thomas** take us on a programming journey where we'll learn principles, stories, and collect lots of advice on how to improve our approach to software development. Simply put, they help you to **think about your work**. Below is an excerpt of an editorial review taken from Amazon.\n\n> In the debugging section, it is noted that, \"if you see hoof prints think horses, not zebras.\" That is, suspect everything, but start looking for problems in the most obvious places."
-    },
-    "node-frontend": {
-        "type": "link",
-        "url": "http://www.nczonline.net/blog/2013/10/07/node-js-and-the-new-web-front-end/",
-        "title": "Node.js and the new web front-end",
-        "description": "In this insightful article, [Nicholas Zakas](http://www.nczonline.net/about/ \"About Nicholas C. Zakas\") describes what he believes to be _a game-changer_ in Node.js, and how it can change the face of front-end development by more strictly separating front-end from back-end development. A concise and informative read on _server architecture_ and disposition."
-    },
-    "grunt": {
-        "type": "link",
-        "url": "http://gruntjs.com",
-        "title": "Grunt Task Runner",
-        "description": "Grunt is a task runner that helps us automate our build process. It is thoroughly discussed in the book. Code related to build processes uses Grunt packages to illustrate points, however, the **concepts taught in the book go beyond simply using Grunt**, which is _just a tool_."
-    },
-    "commonjs": {
-        "type": "link",
-        "url": "http://wiki.commonjs.org/wiki/Modules/1.1",
-        "title": "CommonJS Modules Spec",
-        "description": "Node.js implements the CommonJS Modules spec, which is briefly addressed in the book.\n\n> These modules are offered privacy of their top scope, facility for importing singleton objects from other modules, and exporting their own API."
-    },
-    "globbing": {
-        "type": "link",
-        "url": "http://gruntjs.com/configuring-tasks#globbing-patterns",
-        "title": "Globbing Patterns",
-        "description": "Grunt supports filename expansion (also know as _globbing_) via built-in [node-glob](https://github.com/isaacs/node-glob) and [minimatch](https://github.com/isaacs/minimatch) libraries. In the book we analyze different globbing patterns and how to use them to describe sets of files for our tasks."
-    },
-    "speed-matters": {
-        "type": "link",
-        "url": "http://www.codinghorror.com/blog/2006/11/speed-still-matters.html",
-        "title": "Speed Still Matters",
-        "description": "In this blog post, renowned Jeff Atwood, of [Stack Overflow](http://stackoverflow.com \"Stack Overflow Q&A Site\") fame, goes over anecdotes about how Google and Amazon tested their sites' perceived speed, and the interesting conclusions they arrived at."
-    },
-    "db-tasks": {
-        "type": "code",
-        "url": "https://github.com/bevacqua/buildfirst/tree/master/ch02/10_mysql-tasks",
-        "title": "Case Study: Database Tasks",
-        "description": "In this particular code sample, we'll create a series of database-related tasks for our build process. These will help us bootstrap environments, as well as reduce the complexity in database schema updates and rollbacks."
-    },
-    "secure-config": {
-        "type": "code",
-        "url": "https://github.com/bevacqua/buildfirst/tree/master/ch03/02_rsa-config-encryption",
-        "title": "RSA Secure Configuration",
-        "description": "Chapter 3 is all about environments in general and the development environment in particular. In this example, we'll learn how to keep our configuration safe by encrypting it with an RSA key. Full details are available following the link."
-    },
-    "12factor": {
-        "type": "link",
-        "url": "http://12factor.net",
-        "title": "The Twelve-Factor App",
-        "description": "One of Heroku's co-founders (**Adam Wiggins**) wrote this extensive document detailing their approach to application architecture, configuration, scaling, and deployment. This is a read I could not recommend more often."
-    },
-    "heroku-cli": {
-        "type": "link",
-        "url": "https://devcenter.heroku.com/articles/config-vars",
-        "title": "Heroku CLI",
-        "description": "Heroku is a cloud hosting [**PaaS**](http://en.wikipedia.org/wiki/Platform_as_a_service) (platform-as-a-service) provider that allows us to easily deploy applications directly through `git`. In this article, you'll find details on how to configure your hosted environment directly from the command-line."
-    },
-    "watch-out": {
-        "type": "code",
-        "url": "https://github.com/bevacqua/buildfirst/tree/master/ch03/05_better-watch-closely",
-        "title": "Watch out!",
-        "description": "After learning about Grunt, and the kind of tasks you can automate with it, we'll examine **continuous development**. The first step in that direction is using a Grunt `watch`, to monitor file changes and have tasks re-executed automatically for us. This is the sample code for the `watch` task."
-    },
-    "livereload": {
-        "type": "code",
-        "url": "https://github.com/bevacqua/buildfirst/tree/master/ch03/07_livereload",
-        "title": "Using LiveReload",
-        "description": "This technology enables our browser to refresh itself whenever a file changes. If the browser doesn't really need to perform a full page reload, then it will only get what changed (through [Web Sockets](http://www.html5rocks.com/en/tutorials/websockets/basics/)) and then apply that to your page, making it even faster. This example shows how to get it up and running."
-    },
-    "interlacing": {
-        "type": "link",
-        "url": "http://www.codinghorror.com/blog/2005/12/progressive-image-rendering.html",
-        "title": "Progressive Image Rendering",
-        "description": "In this blog post, **Jeff Atwood** takes us through the key selling points of progressive images. In the book, we'll go through the motions of setting up an automated workflow to enable progressive rendering for our images."
-    },
-    "semver": {
-        "type": "link",
-        "url": "http://semver.org/",
-        "title": "Semantic Versioning",
-        "description": "Semantic versioning is a popular solution to the _dependency hell_ problem, championed by [Tom Preston-Werner](http://tom.preston-werner.com/), co-founder of GitHub. `semver` is used in `npm`, the Node.js package manager, and in the book we'll discover how to use it to our benefit when preparing for new deployments of our applications."
-    },
-    "markdown": {
-        "type": "link",
-        "url": "http://daringfireball.net/projects/markdown/",
-        "title": "Markdown",
-        "description": "The original Markdown specification. Markdown is a powerful almost-plain-text language to write HTML that is immediately readable without the need for an HTML parser. Markdown can be compiled to HTML, and has become the most widespread language of choice when it comes to writing blog posts, specifications, and HTML in general."
-    },
-    "heroku": {
-        "type": "code",
-        "url": "https://github.com/bevacqua/buildfirst/tree/master/ch04/05_heroku-deployments",
-        "title": "Deploying to Heroku",
-        "description": "At this point in the book, we'll be ready to start talking about deployment, and I've picked Heroku as the platform we'll deploy to, because of its ease of use. In this sample you'll find everything you need in order to deploy your first application to Heroku."
-    },
-    "heroku-register": {
-        "url": "https://id.heroku.com/signup/devcenter"
-    },
-    "heroku-toolbelt": {
-        "url": "https://toolbelt.heroku.com"
-    },
-    "heroku-environments": {
-        "url": "https://devcenter.heroku.com/articles/multiple-environments"
-    },
-    "aws": {
-        "type": "code",
-        "url": "https://github.com/bevacqua/buildfirst/tree/master/ch04/07_aws-deployments",
-        "title": "Deploying to Amazon Web Services",
-        "description": "An alternative to deploying to Heroku might be deploying to AWS. In this sample, we'll discusss something that didn't make it in the book due to the added complexity of dealing with Amazon Web Services _(AWS)_, and the Elastic Cloud Compute _(EC2)_ solution in particular. The sample details how to create and deploy to AWS EC2 instances in a safe manner that's easy to integrate with our builds."
-    },
-    "integration": {
-        "type": "link",
-        "url": "http://www.martinfowler.com/articles/continuousIntegration.html",
-        "title": "Continuous Integration",
-        "description": "In this paper, _authored in 2006_, **Martin Fowler** defines and describes Continuous Integration _(CI)_. After learning about CI, and the importance of testing our builds in an environment that resembles production as closely as possible, we'll discuss approaches for tackling CI, and then take a sample CI flow for a spin."
-    },
-    "travis": {
-        "type": "code",
-        "url": "https://github.com/buildfirst/ci-by-example",
-        "title": "CI by Example",
-        "description": "Here, I'll take the reader through a simple series of steps to follow in order to set up any application in the [Travis-CI](https://travis-ci.org) platform. The concept and benefits to CI are detailed in the book."
-    },
-    "travis-heroku": {
-        "type": "link",
-        "url": "http://about.travis-ci.org/docs/user/deployment/heroku/",
-        "title": "Continuous Deployment with Travis and Heroku",
-        "description": "Travis CI can automatically deploy your Heroku application after a successful build. This document shows exactly how to prepare your Travis-enabled, Heroku-using application to do just that: enabling true continuous deployments. Look ma, no `grunt deploy`!"
-    },
-    "netflix": {
-        "type": "link",
-        "url": "http://techblog.netflix.com/2012/07/chaos-monkey-released-into-wild.html",
-        "title": "Netflix and the Chaos Monkey",
-        "description": "When discussing the importance of live application server monitoring, what better reference than **Netflix** and their Chaos Monkey theory? In their own words:\n\n> One of the first systems our engineers built in AWS is called the Chaos Monkey. The Chaos Monkey's job is to randomly kill instances and services within our architecture. If we aren't constantly testing our ability to succeed despite failure, then it isn't likely to work when it matters most – in the event of an unexpected outage."
-    },
-    "node-inspector": {
-        "type": "code",
-        "url": "https://github.com/node-inspector/node-inspector#getting-started",
-        "title": "Debugging with node-inspector",
-        "description": "This tool enables us to debug Node applications straight from _Chrome DevTools_, as explained during Chapter 4 in the book, while addressing debugging during development, logging solutions, and hosted application monitoring."
-    },
-    "node-debugger": {
-        "url": "http://nodejs.org/api/debugger.html"
-    },
-    "nodetime-register": {
-        "url": "http://nodetime.com/signup"
-    },
-    "regex": {
-        "type": "link",
-        "url": "http://blog.ponyfoo.com/2013/05/27/learn-regular-expressions",
-        "title": "Learn Regular Expressions",
-        "description": "While not as fundamental, regular expressions are **widely misunderstood**, much like JavaScript is. In this article I introduce you to regular expressions in JavaScript. Once you've read this, you'll have a basic understanding with which you should be able to write simple expressions. Think of it as **Regular Expressions 101**."
-    },
-    "goodparts": {
-        "type": "book",
-        "url": "http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742",
-        "title": "JavaScript: The Good Parts",
-        "description": "In this timeless book, _Douglas Crockford_ walks us through JavScript, detailing some of the quirks that can be found in the language, such as the `with` keyword, hoisting, the `eval` function, and a few reasons to steer away from prototypal inheritance. A must read for any serious developer even _mildly interested_ in the JavaScript language."
-    },
-    "strict": {
-        "type": "link",
-        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode",
-        "title": "Strict Mode",
-        "description": "There is a way to write better JavaScript today. The `'use strict'` directive changes the way code behaves in the scope we apply it to. The _Mozilla Developer Network_ has a useful article describing strict mode semantics. In the book, you'll find out what `'strict mode'` entails, and how it can help you write better code."
-    },
-    "ioc": {
-        "type": "link",
-        "url": "http://martinfowler.com/articles/injection.html",
-        "title": "Inversion of Control",
-        "description": "Fowler describes the [Dependency Injection (DI)](http://stackoverflow.com/q/130794/389745 \"What is dependency injection?\") pattern, while also defining [Inversion of Control](http://stackoverflow.com/q/3058/389745 \"What is Inversion of Control?\").\n\nOnce I've laid a few foundations, we'll dig into what kinds of _dependency management systems_ are available in client-side JavaScript, such as [AMD](http://requirejs.org/docs/whyamd.html \"Why AMD?\"), [Common.JS](http://wiki.commonjs.org/wiki/CommonJS \"Common.JS Spec\"), and the approach taken by the [Angular.js](http://angularjs.org \"Angular.js MVW Framework\") team."
-    },
-    "requirejs": {
-        "type": "code",
-        "url": "https://github.com/bevacqua/buildfirst/tree/master/ch05/10_requirejs-grunt",
-        "title": "Compiling RequireJS modules",
-        "description": "> RequireJS is a JavaScript file and module loader. It is optimized for in-browser use, but it can be used in other JavaScript environments\n\nHere we will learn how to compile [RequireJS](http://requirejs.org \"Require.JS Asynchronous Module Loader\") modules using a Grunt task. You'll also learn how to set it up so that it creates [a source map](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/ \"Introduction to JavaScript Source Maps\") which you can use during debugging sessions."
-    },
-    "angular-di": {
-        "type": "link",
-        "url": "http://docs.angularjs.org/guide/di",
-        "title": "Dependency Injection (DI) in Angular",
-        "description": "Angular has a fairly complex DI solution in place. However, it is really easy to understand. I've personally used many different DI frameworks, and Angular makes it feel really natural: you don't even realize you're doing DI. Below you'll find a quote extracted from their documentation.\n\n> To manage the responsibility of dependency creation, each Angular application has an [injector](http://docs.angularjs.org/api/angular.injector \"The angular.injector service\"). The injector is a service locator that is responsible for construction and lookup of dependencies."
-    },
-    "component": {
-        "type": "link",
-        "url": "http://tjholowaychuk.tumblr.com/post/27984551477/components",
-        "title": "Components",
-        "description": "In this blog post, [TJ Holowaychuk](https://twitter.com/tjholowaychuk \"TJ Holowaychuk on Twitter\"), prolific open-source author, explains his thought process and design decisions behind the making of [Component](http://component.io/).\n\n[Component](http://component.io/) is a tool which is all about small components which do _one thing only, but do it well_. Rather than using a big library for all your needs, TJ advocates using multiple small blocks to build exactly what you need, in a modular way, and without any added bloat."
-    },
-    "es6-modules": {
-        "type": "link",
-        "url": "http://blog.ponyfoo.com/2013/12/23/architecture-of-ecmascript-6-modules",
-        "title": "Architecture of ECMAScript 6 Modules",
-        "description": "> This document reflects the state of the modules proposal as presented to TC39 in the March meeting. It is expected to change somewhat in the months ahead, most notably to add support for anonymous exports.\n\nIn this document, [wycats](https://github.com/wycats \"wycats on GitHub\") exposes the latest and greatest about the module system coming to ECMAScript 6, ES.next, or Harmony, however you prefer to call it. He provides detail on various use cases, and helps us fathom how the module ecosystem will start looking like once ES6 hits the ground running."
-    },
-    "promises": {
-        "type": "link",
-        "url": "https://github.com/jakearchibald/es6-promise",
-        "title": "ES6 Promises",
-        "description": "Here is a polyfill to enable ES6 [Promises](http://www.html5rocks.com/en/tutorials/es6/promises/ \"JavaScript Promises: There and back again\") in the browser or Node, today, before ES6 comes out. Promises are a new JavaScript technology, which deals with asynchronous code, turning it into contracts that can be fulfilled or end up being rejected.\n\nThe book explains promises in detail, and you'll be able to find quite a few examples in the [accompanying code samples for Chapter 6](https://github.com/bevacqua/buildfirst/tree/master/ch06)."
-    },
-    "tooling": {
-        "url": "http://blog.ponyfoo.com/2014/01/09/gulp-grunt-whatever"
-    },
-    "rest": {
-        "type": "link",
-        "url": "http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm",
-        "title": "Representational State Transfer (REST)",
-        "description": "REST is a set of architectural constraints that can drive your API design process. In the book we take a deep look at the concept and how you could apply these constraints to get a **more cohesive, coherent, and consistent API experience** for both your front-end and customer-facing API services. REST is discussed in chapter 9."
-    }
+  "book": {
+    "url": "http://www.manning.com/bevacqua/?a_aid=go&a_bid=e6de0d9d"
+  },
+  "code": {
+    "type": "code",
+    "url": "https://github.com/bevacqua/buildfirst",
+    "title": "Code Samples and Snippets",
+    "description": "Every single code sample and snippet that is examined in the book, and then _a few more_, which didn't make it into the book.\n\nThere are _over 50 different code samples_ in the repository, all of which come **fully documented**, are ready to use, and present interesting scenarios and strategies when laying out a build process or an application architecture."
+  },
+  "knight": {
+    "type": "link",
+    "url": "http://pythonsweetness.tumblr.com/post/64740079543/how-to-lose-172-222-a-second-for-45-minutes",
+    "title": "Knight Capital's Downfall",
+    "description": "This article recounts the steps that lead to [Knight Capital](http://en.wikipedia.org/wiki/Knight_Capital_Group \"Knight Capital Group on Wikipedia\")'s downfall, and proves to be both an _insightful_ and **tremendously saddening** read. The apparently innocent mistake quoted below, ended up **costing almost half a billion** to the company.\n\n> During the deployment of the new code, however, one of Knight's technicians did not copy the new code to one of the eight SMARS computer servers.\n\nThe moral of the story is that we shouldn't ever rely on manually taking these steps:  in doing so, we might _introduce crippling oversights_ inadvertently into our systems."
+  },
+  "apologists": {
+    "type": "book",
+    "url": "http://www.amazon.com/The-Inmates-Are-Running-Asylum/dp/0672326140",
+    "title": "The Inmates Are Running The Asylum",
+    "description": "In this timeless classic, **Alan Cooper** describes how software engineers have the upper hand when it comes to end-user interaction design, and how their _(our)_ bias towards favoring technologists plays a detrimental role in the experience delivered to end-users. This reference is briefly mentioned during the introductory chapter of the book."
+  },
+  "browser-errors": {
+    "type": "link",
+    "url": "http://www.codinghorror.com/blog/2007/04/javascript-and-html-forgiveness-by-default.html",
+    "title": "Browsers Forgive Nerds",
+    "description": "This article is a very interesting analysis, albeit an old one _(originally published in 2007)_, regarding the sucess of the web and how it might very well be related to the platform's tendency towards ignoring issues such as _malformed HTML tags_.\n\nMissing JavaScript semicolons, undeclared variables, or **even syntax errors** are rarely even noticed by humans."
+  },
+  "lean": {
+    "type": "book",
+    "url": "http://www.amazon.com/The-Lean-Startup-Entrepreneurs-Continuous/dp/0307887898",
+    "title": "The Lean Startup",
+    "description": "**Eric Ries** presents us with an approach to application design based on _iterative, validated learning_. Rather than building an application and then _hoping_ for the best, Eric prompts us to collect feedback from our humans, using the [Build-Measure-Learn](http://blog.ponyfoo.com/2013/07/29/lean-development-principles \"Lean Development Principles article on Pony Foo\") feedback loop, and then decide which features are best _for them_. In my book, we'll examine the **Build** part of this lean model."
+  },
+  "pragmatic": {
+    "type": "book",
+    "url": "http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X",
+    "title": "The Pragmatic Programmer",
+    "description": "In this book, **Andy Hunt** and **Dave Thomas** take us on a programming journey where we'll learn principles, stories, and collect lots of advice on how to improve our approach to software development. Simply put, they help you to **think about your work**. Below is an excerpt of an editorial review taken from Amazon.\n\n> In the debugging section, it is noted that, \"if you see hoof prints think horses, not zebras.\" That is, suspect everything, but start looking for problems in the most obvious places."
+  },
+  "node-frontend": {
+    "type": "link",
+    "url": "http://www.nczonline.net/blog/2013/10/07/node-js-and-the-new-web-front-end/",
+    "title": "Node.js and the new web front-end",
+    "description": "In this insightful article, [Nicholas Zakas](http://www.nczonline.net/about/ \"About Nicholas C. Zakas\") describes what he believes to be _a game-changer_ in Node.js, and how it can change the face of front-end development by more strictly separating front-end from back-end development. A concise and informative read on _server architecture_ and disposition."
+  },
+  "grunt": {
+    "type": "link",
+    "url": "http://gruntjs.com",
+    "title": "Grunt Task Runner",
+    "description": "Grunt is a task runner that helps us automate our build process. It is thoroughly discussed in the book. Code related to build processes uses Grunt packages to illustrate points, however, the **concepts taught in the book go beyond simply using Grunt**, which is _just a tool_."
+  },
+  "commonjs": {
+    "type": "link",
+    "url": "http://wiki.commonjs.org/wiki/Modules/1.1",
+    "title": "CommonJS Modules Spec",
+    "description": "Node.js implements the CommonJS Modules spec, which is briefly addressed in the book.\n\n> These modules are offered privacy of their top scope, facility for importing singleton objects from other modules, and exporting their own API."
+  },
+  "globbing": {
+    "type": "link",
+    "url": "http://gruntjs.com/configuring-tasks#globbing-patterns",
+    "title": "Globbing Patterns",
+    "description": "Grunt supports filename expansion (also know as _globbing_) via built-in [node-glob](https://github.com/isaacs/node-glob) and [minimatch](https://github.com/isaacs/minimatch) libraries. In the book we analyze different globbing patterns and how to use them to describe sets of files for our tasks."
+  },
+  "speed-matters": {
+    "type": "link",
+    "url": "http://www.codinghorror.com/blog/2006/11/speed-still-matters.html",
+    "title": "Speed Still Matters",
+    "description": "In this blog post, renowned Jeff Atwood, of [Stack Overflow](http://stackoverflow.com \"Stack Overflow Q&A Site\") fame, goes over anecdotes about how Google and Amazon tested their sites' perceived speed, and the interesting conclusions they arrived at."
+  },
+  "db-tasks": {
+    "type": "code",
+    "url": "https://github.com/bevacqua/buildfirst/tree/master/ch02/10_mysql-tasks",
+    "title": "Case Study: Database Tasks",
+    "description": "In this particular code sample, we'll create a series of database-related tasks for our build process. These will help us bootstrap environments, as well as reduce the complexity in database schema updates and rollbacks."
+  },
+  "secure-config": {
+    "type": "code",
+    "url": "https://github.com/bevacqua/buildfirst/tree/master/ch03/02_rsa-config-encryption",
+    "title": "RSA Secure Configuration",
+    "description": "Chapter 3 is all about environments in general and the development environment in particular. In this example, we'll learn how to keep our configuration safe by encrypting it with an RSA key. Full details are available following the link."
+  },
+  "12factor": {
+    "type": "link",
+    "url": "http://12factor.net",
+    "title": "The Twelve-Factor App",
+    "description": "One of Heroku's co-founders (**Adam Wiggins**) wrote this extensive document detailing their approach to application architecture, configuration, scaling, and deployment. This is a read I could not recommend more often."
+  },
+  "heroku-cli": {
+    "type": "link",
+    "url": "https://devcenter.heroku.com/articles/config-vars",
+    "title": "Heroku CLI",
+    "description": "Heroku is a cloud hosting [**PaaS**](http://en.wikipedia.org/wiki/Platform_as_a_service) (platform-as-a-service) provider that allows us to easily deploy applications directly through `git`. In this article, you'll find details on how to configure your hosted environment directly from the command-line."
+  },
+  "watch-out": {
+    "type": "code",
+    "url": "https://github.com/bevacqua/buildfirst/tree/master/ch03/05_better-watch-closely",
+    "title": "Watch out!",
+    "description": "After learning about Grunt, and the kind of tasks you can automate with it, we'll examine **continuous development**. The first step in that direction is using a Grunt `watch`, to monitor file changes and have tasks re-executed automatically for us. This is the sample code for the `watch` task."
+  },
+  "livereload": {
+    "type": "code",
+    "url": "https://github.com/bevacqua/buildfirst/tree/master/ch03/07_livereload",
+    "title": "Using LiveReload",
+    "description": "This technology enables our browser to refresh itself whenever a file changes. If the browser doesn't really need to perform a full page reload, then it will only get what changed (through [Web Sockets](http://www.html5rocks.com/en/tutorials/websockets/basics/)) and then apply that to your page, making it even faster. This example shows how to get it up and running."
+  },
+  "interlacing": {
+    "type": "link",
+    "url": "http://www.codinghorror.com/blog/2005/12/progressive-image-rendering.html",
+    "title": "Progressive Image Rendering",
+    "description": "In this blog post, **Jeff Atwood** takes us through the key selling points of progressive images. In the book, we'll go through the motions of setting up an automated workflow to enable progressive rendering for our images."
+  },
+  "semver": {
+    "type": "link",
+    "url": "http://semver.org/",
+    "title": "Semantic Versioning",
+    "description": "Semantic versioning is a popular solution to the _dependency hell_ problem, championed by [Tom Preston-Werner](http://tom.preston-werner.com/), co-founder of GitHub. `semver` is used in `npm`, the Node.js package manager, and in the book we'll discover how to use it to our benefit when preparing for new deployments of our applications."
+  },
+  "markdown": {
+    "type": "link",
+    "url": "http://daringfireball.net/projects/markdown/",
+    "title": "Markdown",
+    "description": "The original Markdown specification. Markdown is a powerful almost-plain-text language to write HTML that is immediately readable without the need for an HTML parser. Markdown can be compiled to HTML, and has become the most widespread language of choice when it comes to writing blog posts, specifications, and HTML in general."
+  },
+  "heroku": {
+    "type": "code",
+    "url": "https://github.com/bevacqua/buildfirst/tree/master/ch04/05_heroku-deployments",
+    "title": "Deploying to Heroku",
+    "description": "At this point in the book, we'll be ready to start talking about deployment, and I've picked Heroku as the platform we'll deploy to, because of its ease of use. In this sample you'll find everything you need in order to deploy your first application to Heroku."
+  },
+  "heroku-register": {
+    "url": "https://id.heroku.com/signup/devcenter"
+  },
+  "heroku-toolbelt": {
+    "url": "https://toolbelt.heroku.com"
+  },
+  "heroku-environments": {
+    "url": "https://devcenter.heroku.com/articles/multiple-environments"
+  },
+  "aws": {
+    "type": "code",
+    "url": "https://github.com/bevacqua/buildfirst/tree/master/ch04/07_aws-deployments",
+    "title": "Deploying to Amazon Web Services",
+    "description": "An alternative to deploying to Heroku might be deploying to AWS. In this sample, we'll discusss something that didn't make it in the book due to the added complexity of dealing with Amazon Web Services _(AWS)_, and the Elastic Cloud Compute _(EC2)_ solution in particular. The sample details how to create and deploy to AWS EC2 instances in a safe manner that's easy to integrate with our builds."
+  },
+  "integration": {
+    "type": "link",
+    "url": "http://www.martinfowler.com/articles/continuousIntegration.html",
+    "title": "Continuous Integration",
+    "description": "In this paper, _authored in 2006_, **Martin Fowler** defines and describes Continuous Integration _(CI)_. After learning about CI, and the importance of testing our builds in an environment that resembles production as closely as possible, we'll discuss approaches for tackling CI, and then take a sample CI flow for a spin."
+  },
+  "travis": {
+    "type": "code",
+    "url": "https://github.com/buildfirst/ci-by-example",
+    "title": "CI by Example",
+    "description": "Here, I'll take the reader through a simple series of steps to follow in order to set up any application in the [Travis-CI](https://travis-ci.org) platform. The concept and benefits to CI are detailed in the book."
+  },
+  "travis-heroku": {
+    "type": "link",
+    "url": "http://about.travis-ci.org/docs/user/deployment/heroku/",
+    "title": "Continuous Deployment with Travis and Heroku",
+    "description": "Travis CI can automatically deploy your Heroku application after a successful build. This document shows exactly how to prepare your Travis-enabled, Heroku-using application to do just that: enabling true continuous deployments. Look ma, no `grunt deploy`!"
+  },
+  "netflix": {
+    "type": "link",
+    "url": "http://techblog.netflix.com/2012/07/chaos-monkey-released-into-wild.html",
+    "title": "Netflix and the Chaos Monkey",
+    "description": "When discussing the importance of live application server monitoring, what better reference than **Netflix** and their Chaos Monkey theory? In their own words:\n\n> One of the first systems our engineers built in AWS is called the Chaos Monkey. The Chaos Monkey's job is to randomly kill instances and services within our architecture. If we aren't constantly testing our ability to succeed despite failure, then it isn't likely to work when it matters most – in the event of an unexpected outage."
+  },
+  "node-inspector": {
+    "type": "code",
+    "url": "https://github.com/node-inspector/node-inspector#getting-started",
+    "title": "Debugging with node-inspector",
+    "description": "This tool enables us to debug Node applications straight from _Chrome DevTools_, as explained during Chapter 4 in the book, while addressing debugging during development, logging solutions, and hosted application monitoring."
+  },
+  "node-debugger": {
+    "url": "http://nodejs.org/api/debugger.html"
+  },
+  "nodetime-register": {
+    "url": "http://nodetime.com/signup"
+  },
+  "regex": {
+    "type": "link",
+    "url": "http://blog.ponyfoo.com/2013/05/27/learn-regular-expressions",
+    "title": "Learn Regular Expressions",
+    "description": "While not as fundamental, regular expressions are **widely misunderstood**, much like JavaScript is. In this article I introduce you to regular expressions in JavaScript. Once you've read this, you'll have a basic understanding with which you should be able to write simple expressions. Think of it as **Regular Expressions 101**."
+  },
+  "regexper": {
+    "url": "http://www.regexper.com/#%2F%5Cd%2B%2F"
+  },
+  "goodparts": {
+    "type": "book",
+    "url": "http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742",
+    "title": "JavaScript: The Good Parts",
+    "description": "In this timeless book, _Douglas Crockford_ walks us through JavScript, detailing some of the quirks that can be found in the language, such as the `with` keyword, hoisting, the `eval` function, and a few reasons to steer away from prototypal inheritance. A must read for any serious developer even _mildly interested_ in the JavaScript language."
+  },
+  "strict": {
+    "type": "link",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode",
+    "title": "Strict Mode",
+    "description": "There is a way to write better JavaScript today. The `'use strict'` directive changes the way code behaves in the scope we apply it to. The _Mozilla Developer Network_ has a useful article describing strict mode semantics. In the book, you'll find out what `'strict mode'` entails, and how it can help you write better code."
+  },
+  "ioc": {
+    "type": "link",
+    "url": "http://martinfowler.com/articles/injection.html",
+    "title": "Inversion of Control",
+    "description": "Fowler describes the [Dependency Injection (DI)](http://stackoverflow.com/q/130794/389745 \"What is dependency injection?\") pattern, while also defining [Inversion of Control](http://stackoverflow.com/q/3058/389745 \"What is Inversion of Control?\").\n\nOnce I've laid a few foundations, we'll dig into what kinds of _dependency management systems_ are available in client-side JavaScript, such as [AMD](http://bevacqua.io/bf/amd \"Why AMD?\"), [Common.JS](http://wiki.commonjs.org/wiki/CommonJS \"Common.JS Spec\"), and the approach taken by the [Angular.js](http://angularjs.org \"Angular.js MVW Framework\") team."
+  },
+  "amd": {
+    "url": "http://requirejs.org/docs/whyamd.html"
+  },
+  "requirejs": {
+    "type": "code",
+    "url": "https://github.com/bevacqua/buildfirst/tree/master/ch05/10_requirejs-grunt",
+    "title": "Compiling RequireJS modules",
+    "description": "> RequireJS is a JavaScript file and module loader. It is optimized for in-browser use, but it can be used in other JavaScript environments\n\nHere we will learn how to compile [RequireJS](http://requirejs.org \"Require.JS Asynchronous Module Loader\") modules using a Grunt task. You'll also learn how to set it up so that it creates [a source map](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/ \"Introduction to JavaScript Source Maps\") which you can use during debugging sessions."
+  },
+  "angular-di": {
+    "type": "link",
+    "url": "http://docs.angularjs.org/guide/di",
+    "title": "Dependency Injection (DI) in Angular",
+    "description": "Angular has a fairly complex DI solution in place. However, it is really easy to understand. I've personally used many different DI frameworks, and Angular makes it feel really natural: you don't even realize you're doing DI. Below you'll find a quote extracted from their documentation.\n\n> To manage the responsibility of dependency creation, each Angular application has an [injector](http://docs.angularjs.org/api/angular.injector \"The angular.injector service\"). The injector is a service locator that is responsible for construction and lookup of dependencies."
+  },
+  "component": {
+    "type": "link",
+    "url": "http://tjholowaychuk.tumblr.com/post/27984551477/components",
+    "title": "Components",
+    "description": "In this blog post, [TJ Holowaychuk](https://twitter.com/tjholowaychuk \"TJ Holowaychuk on Twitter\"), prolific open-source author, explains his thought process and design decisions behind the making of [Component](http://component.io/).\n\n[Component](http://component.io/) is a tool which is all about small components which do _one thing only, but do it well_. Rather than using a big library for all your needs, TJ advocates using multiple small blocks to build exactly what you need, in a modular way, and without any added bloat."
+  },
+  "es6-intro": {
+    "url": "http://eviltrout.com/2014/05/03/getting-started-with-es6.html"
+  },
+  "es6-modules": {
+    "type": "link",
+    "url": "http://blog.ponyfoo.com/2013/12/23/architecture-of-ecmascript-6-modules",
+    "title": "Architecture of ECMAScript 6 Modules",
+    "description": "> This document reflects the state of the modules proposal as presented to TC39 in the March meeting. It is expected to change somewhat in the months ahead, most notably to add support for anonymous exports.\n\nIn this document, [wycats](https://github.com/wycats \"wycats on GitHub\") exposes the latest and greatest about the module system coming to ECMAScript 6, ES.next, or Harmony, however you prefer to call it. He provides detail on various use cases, and helps us fathom how the module ecosystem will start looking like once ES6 hits the ground running."
+  },
+  "promises": {
+    "type": "link",
+    "url": "https://github.com/jakearchibald/es6-promise",
+    "title": "ES6 Promises",
+    "description": "Here is a polyfill to enable ES6 [Promises](http://www.html5rocks.com/en/tutorials/es6/promises/ \"JavaScript Promises: There and back again\") in the browser or Node, today, before ES6 comes out. Promises are a new JavaScript technology, which deals with asynchronous code, turning it into contracts that can be fulfilled or end up being rejected.\n\nThe book explains promises in detail, and you'll be able to find quite a few examples in the [accompanying code samples for Chapter 6](https://github.com/bevacqua/buildfirst/tree/master/ch06)."
+  },
+  "tooling": {
+    "url": "http://blog.ponyfoo.com/2014/01/09/gulp-grunt-whatever"
+  },
+  "rest": {
+    "type": "link",
+    "url": "http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm",
+    "title": "Representational State Transfer (REST)",
+    "description": "REST is a set of architectural constraints that can drive your API design process. In the book we take a deep look at the concept and how you could apply these constraints to get a **more cohesive, coherent, and consistent API experience** for both your front-end and customer-facing API services. REST is discussed in chapter 9."
+  },
+  "editorconfig": {
+    "url": "http://editorconfig.org"
+  },
+  "semicolons": {
+    "url": "http://benalman.com/news/2013/01/advice-javascript-semicolon-haters/"
+  },
+  "asi": {
+    "url": "http://www.2ality.com/2011/05/semicolon-insertion.html"
+  },
+  "jslint": {
+    "url": "http://www.jslint.com"
+  },
+  "jshint": {
+    "url": "https://github.com/jshint/jshint"
+  },
+  "eslint": {
+    "url": "https://github.com/eslint/eslint"
+  },
+  "util.format": {
+    "url": "http://nodejs.org/api/util.html#util_util_format_format"
+  },
+  "jade": {
+    "url": "https://github.com/visionmedia/jade"
+  },
+  "gotofail": {
+    "url": "https://www.imperialviolet.org/2014/02/22/applebug.html"
+  },
+  "equality": {
+    "url": "https://developer.mozilla.org/enUS/docs/Web/JavaScript/Reference/Operators/Comparison_Operators"
+  },
+  "jquery-ternary": {
+    "url": "https://github.com/jquery/jquery/blob/c869a1ef8a031342e817a2c063179a787ff57239/src/ajax.js#L117"
+  },
+  "fn-declaration": {
+    "url": "http://stackoverflow.com/q/336859/389745"
+  },
+  "fn-expr": {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function"
+  },
+  "hoisting": {
+    "url": "https://github.com/buildfirst/buildfirst/tree/master/ch05/04_hoisting"
+  },
+  "partial-application": {
+    "url": "http://ejohn.org/blog/partial-functions-in-javascript/"
+  },
+  "arguments": {
+    "url": "https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments"
+  },
+  "poser": {
+    "url": "https://github.com/bevacqua/poser"
+  },
+  "arrays": {
+    "url": "http://blog.ponyfoo.com/2013/11/19/fun-with-native-arrays"
+  },
+  "contra.emitter": {
+    "url": "https://github.com/bevacqua/contra.emitter"
+  },
+  "casting": {
+    "url": "http://james.padolsey.com/javascript/truthy-falsy/"
+  },
+  "polyfill": {
+    "url": "http://remysharp.com/2010/10/08/what-is-a-polyfill/"
+  },
+  "hq-modules": {
+    "url": "http://blog.ponyfoo.com/2014/08/05/building-high-quality-front-end-modules"
+  }
 }
