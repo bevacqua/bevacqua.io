@@ -1,3 +1,7 @@
+# v0.0.57
+
+- Tons more of links for Build First book
+
 # 0.0.56
 
 - Added Browserify talk slides
