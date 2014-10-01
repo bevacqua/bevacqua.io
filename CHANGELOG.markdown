@@ -1,4 +1,4 @@
-# v0.0.57
+# v0.0.58
 
 - Tons more of links for Build First book
 
