@@ -1,3 +1,7 @@
+# v0.0.59
+
+- Another Build First link
+
 # v0.0.58
 
 - Tons more of links for Build First book
