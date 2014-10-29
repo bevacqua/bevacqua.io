@@ -319,5 +319,8 @@
   },
   "gzip": {
     "url": "https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer"
+  },
+  "sourcemap": {
+    "url": "http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/"
   }
 }
