@@ -316,5 +316,8 @@
   },
   "hq-modules": {
     "url": "http://blog.ponyfoo.com/2014/08/05/building-high-quality-front-end-modules"
+  },
+  "gzip": {
+    "url": "https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer"
   }
 }
