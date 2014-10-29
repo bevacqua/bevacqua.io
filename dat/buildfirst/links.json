@@ -4,7 +4,7 @@
   },
   "code": {
     "type": "code",
-    "url": "https://github.com/bevacqua/buildfirst",
+    "url": "https://github.com/buildfirst/buildfirst",
     "title": "Code Samples and Snippets",
     "description": "Every single code sample and snippet that is examined in the book, and then _a few more_, which didn't make it into the book.\n\nThere are _over 50 different code samples_ in the repository, all of which come **fully documented**, are ready to use, and present interesting scenarios and strategies when laying out a build process or an application architecture."
   },
@@ -70,13 +70,13 @@
   },
   "db-tasks": {
     "type": "code",
-    "url": "https://github.com/bevacqua/buildfirst/tree/master/ch02/10_mysql-tasks",
+    "url": "https://github.com/buildfirst/buildfirst/tree/master/ch02/10_mysql-tasks",
     "title": "Case Study: Database Tasks",
     "description": "In this particular code sample, we'll create a series of database-related tasks for our build process. These will help us bootstrap environments, as well as reduce the complexity in database schema updates and rollbacks."
   },
   "secure-config": {
     "type": "code",
-    "url": "https://github.com/bevacqua/buildfirst/tree/master/ch03/02_rsa-config-encryption",
+    "url": "https://github.com/buildfirst/buildfirst/tree/master/ch03/02_rsa-config-encryption",
     "title": "RSA Secure Configuration",
     "description": "Chapter 3 is all about environments in general and the development environment in particular. In this example, we'll learn how to keep our configuration safe by encrypting it with an RSA key. Full details are available following the link."
   },
@@ -94,13 +94,13 @@
   },
   "watch-out": {
     "type": "code",
-    "url": "https://github.com/bevacqua/buildfirst/tree/master/ch03/05_better-watch-closely",
+    "url": "https://github.com/buildfirst/buildfirst/tree/master/ch03/05_better-watch-closely",
     "title": "Watch out!",
     "description": "After learning about Grunt, and the kind of tasks you can automate with it, we'll examine **continuous development**. The first step in that direction is using a Grunt `watch`, to monitor file changes and have tasks re-executed automatically for us. This is the sample code for the `watch` task."
   },
   "livereload": {
     "type": "code",
-    "url": "https://github.com/bevacqua/buildfirst/tree/master/ch03/07_livereload",
+    "url": "https://github.com/buildfirst/buildfirst/tree/master/ch03/07_livereload",
     "title": "Using LiveReload",
     "description": "This technology enables our browser to refresh itself whenever a file changes. If the browser doesn't really need to perform a full page reload, then it will only get what changed (through [Web Sockets](http://www.html5rocks.com/en/tutorials/websockets/basics/)) and then apply that to your page, making it even faster. This example shows how to get it up and running."
   },
@@ -124,7 +124,7 @@
   },
   "heroku": {
     "type": "code",
-    "url": "https://github.com/bevacqua/buildfirst/tree/master/ch04/05_heroku-deployments",
+    "url": "https://github.com/buildfirst/buildfirst/tree/master/ch04/05_heroku-deployments",
     "title": "Deploying to Heroku",
     "description": "At this point in the book, we'll be ready to start talking about deployment, and I've picked Heroku as the platform we'll deploy to, because of its ease of use. In this sample you'll find everything you need in order to deploy your first application to Heroku."
   },
@@ -139,7 +139,7 @@
   },
   "aws": {
     "type": "code",
-    "url": "https://github.com/bevacqua/buildfirst/tree/master/ch04/07_aws-deployments",
+    "url": "https://github.com/buildfirst/buildfirst/tree/master/ch04/07_aws-deployments",
     "title": "Deploying to Amazon Web Services",
     "description": "An alternative to deploying to Heroku might be deploying to AWS. In this sample, we'll discusss something that didn't make it in the book due to the added complexity of dealing with Amazon Web Services _(AWS)_, and the Elastic Cloud Compute _(EC2)_ solution in particular. The sample details how to create and deploy to AWS EC2 instances in a safe manner that's easy to integrate with our builds."
   },
@@ -211,7 +211,7 @@
   },
   "requirejs": {
     "type": "code",
-    "url": "https://github.com/bevacqua/buildfirst/tree/master/ch05/10_requirejs-grunt",
+    "url": "https://github.com/buildfirst/buildfirst/tree/master/ch05/10_requirejs-grunt",
     "title": "Compiling RequireJS modules",
     "description": "> RequireJS is a JavaScript file and module loader. It is optimized for in-browser use, but it can be used in other JavaScript environments\n\nHere we will learn how to compile [RequireJS](http://requirejs.org \"Require.JS Asynchronous Module Loader\") modules using a Grunt task. You'll also learn how to set it up so that it creates [a source map](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/ \"Introduction to JavaScript Source Maps\") which you can use during debugging sessions."
   },
@@ -240,7 +240,7 @@
     "type": "link",
     "url": "https://github.com/jakearchibald/es6-promise",
     "title": "ES6 Promises",
-    "description": "Here is a polyfill to enable ES6 [Promises](http://www.html5rocks.com/en/tutorials/es6/promises/ \"JavaScript Promises: There and back again\") in the browser or Node, today, before ES6 comes out. Promises are a new JavaScript technology, which deals with asynchronous code, turning it into contracts that can be fulfilled or end up being rejected.\n\nThe book explains promises in detail, and you'll be able to find quite a few examples in the [accompanying code samples for Chapter 6](https://github.com/bevacqua/buildfirst/tree/master/ch06)."
+    "description": "Here is a polyfill to enable ES6 [Promises](http://www.html5rocks.com/en/tutorials/es6/promises/ \"JavaScript Promises: There and back again\") in the browser or Node, today, before ES6 comes out. Promises are a new JavaScript technology, which deals with asynchronous code, turning it into contracts that can be fulfilled or end up being rejected.\n\nThe book explains promises in detail, and you'll be able to find quite a few examples in the [accompanying code samples for Chapter 6](https://github.com/buildfirst/buildfirst/tree/master/ch06)."
   },
   "tooling": {
     "url": "http://blog.ponyfoo.com/2014/01/09/gulp-grunt-whatever"
