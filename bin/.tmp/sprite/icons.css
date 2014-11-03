@@ -1,0 +1,24 @@
+.ic-book:before {
+  background-image: url(/img/sprite/icons.png);
+  background-position: 0px 0px;
+  width: 32px;
+  height: 32px;
+}
+.ic-code:before {
+  background-image: url(/img/sprite/icons.png);
+  background-position: 0px -32px;
+  width: 32px;
+  height: 32px;
+}
+.ic-io:before {
+  background-image: url(/img/sprite/icons.png);
+  background-position: 0px -64px;
+  width: 32px;
+  height: 32px;
+}
+.ic-link:before {
+  background-image: url(/img/sprite/icons.png);
+  background-position: 0px -96px;
+  width: 32px;
+  height: 32px;
+}

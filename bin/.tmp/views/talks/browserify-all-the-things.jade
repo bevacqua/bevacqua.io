@@ -1,0 +1,22 @@
+extends /layout
+
+block title
+    title Browserify All The Things &middot; bevacqua.io
+
+block meta
+    include meta/browserify-all-the-things
+
+block content
+    main.tk-container
+        header
+            include ../home/header-nav
+
+        section.am-header Browserify All The Things
+
+        section.tk-slides
+            script.speakerdeck-embed(
+                async,
+                src='//speakerdeck.com/assets/embed.js',
+                data-id='d74647f010a201324de17ae407783e32',
+                data-ratio='1.77777777777778'
+            )

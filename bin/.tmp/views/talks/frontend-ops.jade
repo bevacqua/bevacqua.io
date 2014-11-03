@@ -1,0 +1,22 @@
+extends /layout
+
+block title
+    title Front End Ops Tooling &middot; bevacqua.io
+
+block meta
+    include meta/frontend-ops
+
+block content
+    main.tk-container
+        header
+            include ../home/header-nav
+
+        section.am-header Front End Ops Tooling
+
+        section.tk-slides
+            script.speakerdeck-embed(
+                async,
+                src='//speakerdeck.com/assets/embed.js',
+                data-id='6de6b5e0d36b0131cd594eace499ef8a',
+                data-ratio='1.77777777777778'
+            )

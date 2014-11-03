@@ -1,0 +1,222 @@
+.bfr-12factor:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -128px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-angular-di:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -2304px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-apologists:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -256px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-aws:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -384px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-browser-errors:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -512px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-code:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -640px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-commonjs:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -768px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-component:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -896px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-db-tasks:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -1024px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-es6-modules:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -1152px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-globbing:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -1280px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-goodparts:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -1408px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-grunt:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -1536px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-heroku-cli:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -1664px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-heroku:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -1792px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-integration:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -1920px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-interlacing:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -2048px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-ioc:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -2176px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-knight:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px 0px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-lean:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -2432px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-livereload:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -2560px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-markdown:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -2688px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-netflix:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -2816px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-node-frontend:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -2944px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-node-inspector:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -3072px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-pragmatic:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -3200px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-promises:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -3328px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-regex:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -3456px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-requirejs:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -3584px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-rest:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -3712px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-secure-config:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -3840px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-semver:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -3968px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-speed-matters:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -4096px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-strict:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -4224px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-travis-heroku:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -4352px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-travis:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -4480px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-watch-out:before {
+  background-image: url(/img/sprite/buildfirst-resources.png);
+  background-position: 0px -4608px;
+  width: 128px;
+  height: 128px;
+}
