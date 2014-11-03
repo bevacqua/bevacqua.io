@@ -71,11 +71,5 @@ module.exports = {
             commitMessage: 'Release v%VERSION% ' + emoji.random(),
             pushTo: 'origin'
         }
-    },
-    changelog: {
-        options: {
-            dest: 'CHANGELOG.markdown',
-            editor: '$EDITOR'
-        }
     }
 };
