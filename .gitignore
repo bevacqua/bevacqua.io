@@ -5,6 +5,9 @@ bower_components
 # logs
 npm-debug.log
 
+# build artifacts
+bin/.tmp
+
 # os artifacts
 .DS_Store
 Thumbs.db
