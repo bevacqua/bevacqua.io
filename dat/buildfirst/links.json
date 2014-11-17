@@ -322,5 +322,8 @@
   },
   "sourcemap": {
     "url": "http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/"
+  },
+  "spider": {
+    "url": "http://thedailywtf.com/articles/The_Spider_of_Doom"
   }
 }
