@@ -325,5 +325,17 @@
   },
   "spider": {
     "url": "http://thedailywtf.com/articles/The_Spider_of_Doom"
+  },
+  "api-twitter": {
+    "url": "https://dev.twitter.com/rest/public"
+  },
+  "api-fb": {
+    "url": "https://developers.facebook.com/docs/graph-api/reference/v2.2"
+  },
+  "api-github": {
+    "url": "https://developer.github.com/v3/"
+  },
+  "api-stack": {
+    "url": "https://api.stackexchange.com/docs"
   }
 }
