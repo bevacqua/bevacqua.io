@@ -9,6 +9,5 @@ module.exports = {
     dev: require('./task/development.js'),
     env: require('./task/environment.js'),
     build: require('./task/build.js'),
-    release: require('./task/release.js'),
-    deploy: require('./task/deploy.js')
+    release: require('./task/release.js')
 };
