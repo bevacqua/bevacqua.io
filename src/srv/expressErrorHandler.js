@@ -1,14 +1,6 @@
 'use strict';
 
 function setup (app) {
-    var profiled = conf('NODETIME_ENABLED');
-    var nodetime;
-
-    if (profiled) {
-        nodetime = require('nodetime');
-        app.use(nodetime.expressErrorHandler());
-    }
-
     app.use(handler);
 }
 

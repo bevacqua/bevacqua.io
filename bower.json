@@ -1,10 +1,10 @@
 {
-  "name": "beva.io",
+  "name": "bevacqua.io",
   "description": "Personal website and technical concept-proofing Node module architecture",
-  "homepage": "https://github.com/bevacqua/io",
+  "homepage": "https://github.com/bevacqua/bevacqua.io",
   "author": {
     "name": "Nicolas Bevacqua",
-    "email": "ng@bevacqua.io",
+    "email": "hello@bevacqua.io",
     "url": "http://bevacqua.io"
   },
   "version": "0.0.61-3",
