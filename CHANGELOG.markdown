@@ -1,3 +1,9 @@
+# v0.1.0
+
+- Switched to React
+- Switched to ES6
+- Switched to `npm run` scripts
+
 # v0.0.61
 
 - More Build First links

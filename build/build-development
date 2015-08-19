@@ -1,0 +1,29 @@
+#!/bin/bash
+
+: ${PORT:="3000"}
+
+npm run clean
+npm run copy-assets
+
+stylus client/css/all.styl \
+  -o .bin/public/css \
+  --include-css \
+  --include client/css \
+  --watch &
+
+watchify client/js/main.js \
+  -o .bin/public/js/all.js \
+  -p errorify \
+  -d \
+  -v &
+
+nodemon \
+  -e js,json \
+  -w dat \
+  -w services \
+  -w components \
+  -w lib \
+  -w .bin/views \
+  -w app.js \
+  --exec npm run babel-node \
+  -- app.js

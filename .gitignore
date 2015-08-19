@@ -1,17 +1,3 @@
-# package control
 node_modules
-bower_components
-
-# logs
 npm-debug.log
-
-# build artifacts
-bin/.tmp
-
-# os artifacts
 .DS_Store
-Thumbs.db
-
-# sensitive data
-env/private
-deploy/private
