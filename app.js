@@ -6,6 +6,7 @@ import express from 'express';
 import hbs from 'express-handlebars';
 import Router from 'react-router';
 import React from 'react/addons';
+import DocumentTitle from 'react-document-title';
 import routes from './routes';
 
 import winston from 'winston';
@@ -72,13 +73,18 @@ function track (req, res, next) {
 
 app.use(router);
 function router (req, res, next) {
+  var version = env('BUILD_VERSION');
   var context = {
     routes: routes, location: req.url
   };
   Router.create(context).run(ran);
   function ran (Handler, state) {
+    var html = React.renderToString(<Handler />);
+    var title = DocumentTitle.rewind();
     res.render('layout', {
-      reactHtml: React.renderToString(<Handler />)
+      version: version,
+      title: title,
+      reactHtml: html
     });
   }
 }
