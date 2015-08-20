@@ -25,7 +25,6 @@
     "node": "iojs-v3.0.0"
   },
   "dependencies": {
-    "assignment": "2.2.0",
     "body-parser": "1.13.3",
     "compression": "1.5.2",
     "express": "4.13.3",
