@@ -1,8 +1,8 @@
 'use strict';
 
-require('./vendor/ga');
-require('./vendor/mixpanel');
-require('./analytics');
+import './vendor/ga';
+import './vendor/mixpanel';
+import './analytics';
 
 import React from 'react/addons';
 import Router from 'react-router';

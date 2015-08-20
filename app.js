@@ -70,6 +70,7 @@ function track (req, res, next) {
   next();
 }
 
+app.use(router);
 function router (req, res, next) {
   var context = {
     routes: routes, location: req.url
