@@ -3,11 +3,7 @@
 import './lib/uncaught';
 
 import express from 'express';
-import hbs from 'express-handlebars';
-import Router from 'react-router';
-import React from 'react/addons';
-import DocumentTitle from 'react-document-title';
-import routes from './routes';
+import router from './router';
 
 import winston from 'winston';
 import compression from 'compression';
@@ -29,8 +25,6 @@ winston.info('environment: %s, distribution: %s, build: %s',
   env('NODE_ENV'), env('BUILD_DISTRIBUTION'), env('BUILD_VERSION')
 );
 
-app.engine('html', hbs({ extname: 'html' }));
-app.set('view engine', 'html');
 app.locals.settings['x-powered-by'] = false;
 
 if (debug) {
@@ -53,15 +47,6 @@ app.get('/plus', to('https://plus.google.com/+NicoBevacqua'));
 app.get('/bf', to('/buildfirst', 301));
 app.get('/bf/resources', to('/buildfirst/resources', 301));
 app.get('/bf/:key', expand, to('/buildfirst/resources'));
-// app.get('/buildfirst', view('buildfirst/landing'));
-// app.get('/buildfirst/resources', view('buildfirst/resources'));
-// app.get('/', view('home/landing'));
-// app.get('/about', view('home/about'));
-// app.get('/talks', view('/landing'));
-// app.get('/talks/frontend-ops', view('talks/frontend-ops'));
-// app.get('/talks/browserify-all-the-things', view('talks/browserify-all-the-things'));
-// app.get('/talks/high-performance-critical-path', view('talks/high-performance-critical-path'));
-
 app.use(router);
 app.use(errorHandler);
 app.listen(port, listening);
@@ -69,24 +54,6 @@ app.listen(port, listening);
 function track (req, res, next) {
   analytics.trackPage(req.url);
   next();
-}
-
-app.use(router);
-function router (req, res, next) {
-  var version = env('BUILD_VERSION');
-  var context = {
-    routes: routes, location: req.url
-  };
-  Router.create(context).run(ran);
-  function ran (Handler, state) {
-    var html = React.renderToString(<Handler />);
-    var title = DocumentTitle.rewind();
-    res.render('layout', {
-      version: version,
-      title: title,
-      reactHtml: html
-    });
-  }
 }
 
 function expand (req, res, next) {
