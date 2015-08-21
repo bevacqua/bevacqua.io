@@ -4,19 +4,16 @@ import DocMeta from 'react-doc-meta';
 
 export default class Layout extends React.Component {
   render () {
-    const { version, main } = this.props;
-    let title = DocumentTitle.rewind();
-    let metaTags = DocMeta.rewind();
-
+    const { main } = this.props;
     return (
       <html>
         <head>
-          <title>{title}</title>
+          <title>{DocumentTitle.rewind()}</title>
           <meta charSet='utf-8' />
           <meta httpEquiv='X-UA-Compatible' content='IE=edge,chrome=1' />
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           {
-            metaTags.map((tag, index) =>
+            DocMeta.rewind().map((tag, index) =>
               <meta key={index} {...tag} data-doc-meta='true' />
             )
           }

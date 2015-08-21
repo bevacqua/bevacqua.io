@@ -8,7 +8,7 @@ export default class App extends React.Component {
     var tags = [
       { name: 'description', content: 'hello' }
     ];
-    return <DocumentTitle title='bevacqua.io &mdash; JavaScript and Performance Consultant. Conference Speaker. Author. Blogger.'>
+    return <DocumentTitle title='Nicolas Bevacqua &mdash; JavaScript and Performance Consultant. Conference Speaker. Author. Blogger.'>
       <DocMeta tags={tags}>
         <RouteHandler />
       </DocMeta>
