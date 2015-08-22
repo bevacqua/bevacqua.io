@@ -19,9 +19,20 @@ export default class Layout extends React.Component {
           }
           <link rel='shortcut icon' href='/favicon.ico' />
           <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900' />
+          <link rel='stylesheet' href='/css/all.css' />
         </head>
-        <body className='io-body io-font'>
-          <main dangerouslySetInnerHTML={{__html: main}} />
+        <body>
+          <nav className='ly-nav'>
+            <ul className='nv-list'>
+              <li className='nv-item'><a href='/' className='nv-link nv-home'>/</a></li>
+              <li className='nv-item'><a href='/talks' className='nv-link'>Presentations</a></li>
+              <li className='nv-item'><a href='/blog' className='nv-link'>Articles</a></li>
+              <li className='nv-item'><a href='/buildfirst' className='nv-link'>JavaScript Application Design</a></li>
+              <li className='nv-item'><a href='/code' className='nv-link'>Open-Source ️️️❤️</a></li>
+              <li className='nv-item'><a href='/twitter' className='nv-link'>Tweets</a></li>
+            </ul>
+          </nav>
+          <main className='ly-main' dangerouslySetInnerHTML={{__html: main}} />
           <script src='/js/all.js'></script>
         </body>
       </html>

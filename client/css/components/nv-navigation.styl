@@ -1,0 +1,30 @@
+.nv-list
+  display block
+  list-style-type none
+  background-color lighten(c_yellow, 90%)
+  margin 0
+  padding 0
+
+.nv-link
+  display block
+  text-decoration none
+  border-bottom 2px dotted darken(c_yellow, 30%)
+  padding 10px
+  color c_turquoise
+  transition background-color 0.15s ease-in-out
+
+  &:hover
+    background-color lighten(c_yellow, 30%)
+    border-bottom-style solid
+
+.nv-home
+  background-color c_yellow
+
+@media only screen and (min-width: 680px)
+  .nv-item
+    display inline-block
+    background-color lighten(c_yellow, 60%)
+
+  .nv-link
+    display inline-block
+    vertical-align top
