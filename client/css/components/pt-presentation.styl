@@ -1,0 +1,67 @@
+.pt-speakerdeck,
+.pt-youtube
+  min-height 230px
+  margin-bottom 20px
+
+.pt-youtube-frame
+  width 100%
+  min-height 230px
+
+.pt-container
+  border-bottom 3px dotted c_yellow
+  background-color lighten(c_yellow, 80%)
+  padding 20px
+
+  &:nth-child(even)
+    background-color lighten(c_yellow, 70%)
+
+  &:last-child
+    border-bottom none
+
+.pt-title
+  margin-top 0
+
+.pt-description-text
+  margin 0
+
+.pt-resources
+  margin-top 20px
+
+.pt-resource
+  line-height 30px
+
+@media only screen and (min-width: 500px)
+  .pt-youtube-frame
+    min-height 400px
+
+@media only screen and (min-width: 800px)
+  .pt-speakerdeck,
+  .pt-youtube,
+  .pt-description,
+  .pt-resources
+    display inline-block
+    vertical-align top
+    width 48.5%
+    margin-bottom 0
+
+  .pt-youtube,
+  .pt-description
+    margin-right 3%
+
+  .pt-resources
+    margin 0
+
+  .pt-embeds
+    position relative
+    margin-bottom 20px
+
+  .pt-youtube
+    height 0
+
+  .pt-youtube-frame
+    position absolute
+    top 0
+    left 0
+    width 48.5%
+    height 100%
+    min-height 100%

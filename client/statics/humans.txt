@@ -2,9 +2,9 @@
     Chef: Nicolas Bevacqua
     Contact: hello@bevacqua.io
     Twitter: @nzgb
-    GitHub: bevacqua
+    GitHub: @bevacqua
     From: Buenos Aires, Argentina
 
 /* SITE */
     Tools: Sublime Text, iTerm, git, JavaScript, love
-    Source: http://bevacqua.io/source
+    Source: http://bevacqua.io/github

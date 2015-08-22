@@ -25,14 +25,16 @@ export default class Layout extends React.Component {
           <nav className='ly-nav'>
             <ul className='nv-list'>
               <li className='nv-item'><a href='/' className='nv-link nv-home'>/</a></li>
-              <li className='nv-item'><a href='/talks' className='nv-link'>Presentations</a></li>
-              <li className='nv-item'><a href='/blog' className='nv-link'>Articles</a></li>
+              <li className='nv-item'><a href='/talks' className='nv-link'>Conference Talks</a></li>
+              <li className='nv-item'><a href='/opensource' className='nv-link'>Open-Source ️️️<span className='c-pink'>❤️</span></a></li>
               <li className='nv-item'><a href='/buildfirst' className='nv-link'>JavaScript Application Design</a></li>
-              <li className='nv-item'><a href='/code' className='nv-link'>Open-Source ️️️❤️</a></li>
-              <li className='nv-item'><a href='/twitter' className='nv-link'>Tweets</a></li>
+              <li className='nv-item'><a href='/blog' className='nv-link' target='_blank'>Articles</a></li>
+              <li className='nv-item'><a href='/twitter' className='nv-link' target='_blank'>Tweets</a></li>
+              <li className='nv-item'><a href='/consulting' className='nv-link nv-consulting' target='_blank'>Consulting</a></li>
             </ul>
           </nav>
           <main className='ly-main' dangerouslySetInnerHTML={{__html: main}} />
+          <footer className='dn-help'><p>You can support my writing and open-source contributions through <a href='https://www.patreon.com/bevacqua' target='_blank'>Patreon</a>. You can also <a href='/consulting' target='_blank'>hire me</a> as a consultant.</p></footer>
           <script src='/js/all.js'></script>
         </body>
       </html>

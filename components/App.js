@@ -8,7 +8,7 @@ export default class App extends React.Component {
     var tags = [
       // default meta tags go here
     ];
-    return <DocumentTitle title='Nicolas Bevacqua &mdash; JavaScript and Performance Consultant. Conference Speaker. Author. Blogger.'>
+    return <DocumentTitle title='Nicolas Bevacqua &mdash; JavaScript and Web Performance Consultant. Conference Speaker. Author. Blogger. Open-Source'>
       <DocMeta tags={tags}>
         <RouteHandler />
       </DocMeta>

@@ -36,13 +36,14 @@ app.use(compression());
 app.use(serveStatic('.bin/public'));
 app.use(serveFavicon('.bin/public/favicon.ico'));
 app.use(track);
+app.get('/consulting', to('mailto:consulting@bevacqua.io'));
 app.get('/blog', to('http://ponyfoo.com'));
 app.get('/career', to('http://careers.stackoverflow.com/bevacqua'));
+app.get('/opensource', to('https://github.com/bevacqua')); // TODO: make it a view
 app.get('/code', to('https://github.com/bevacqua'));
-app.get('/source', to('https://github.com/bevacqua/bevacqua.io'));
+app.get('/github', to('https://github.com/bevacqua/bevacqua.io'));
 app.get('/stackoverflow', to('http://stackoverflow.com/users/389745/nico'));
 app.get('/twitter', to('https://twitter.com/nzgb'));
-app.get('/plus', to('https://plus.google.com/+NicoBevacqua'));
 app.get('/bf', to('/buildfirst', 301));
 app.get('/bf/resources', to('/buildfirst/resources', 301));
 app.get('/bf/:key', expand, to('/buildfirst/resources'));

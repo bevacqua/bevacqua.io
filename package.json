@@ -27,7 +27,6 @@
   "dependencies": {
     "body-parser": "1.13.3",
     "compression": "1.5.2",
-    "dominus": "5.0.5",
     "express": "4.13.3",
     "express-handlebars": "2.0.1",
     "ga": "0.0.2",
