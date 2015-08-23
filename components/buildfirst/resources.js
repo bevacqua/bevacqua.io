@@ -4,7 +4,7 @@ export default class BuildFirstResources extends React.Component {
   render () {
     var {resources} = this.props.data
 
-    return <article className='ly-content ly-section'>
+    return <article className='ly-content ly-section bfr-section'>
       <h1 className='ly-header bf-name'>JavaScript Application Design</h1>
       <h2 className='bf-tagline'>Write clean JavaScript applications that deploy with the push of a button</h2>
       <p className='bf-teaser'>Access reference links, get the code</p>
@@ -17,6 +17,10 @@ export default class BuildFirstResources extends React.Component {
           <li>Check out the <a href='/bf/code' target='_blank' title='Check out the Code!'>code samples</a> on GitHub</li>
           <li>Purchase the book through <a href='/bf/book' target='_blank' title='Get the book from Manning!'>Manning</a></li>
         </ul>
+        <div className='bfr-reference-description'>
+          <h3>Reference Links and Resources</h3>
+          <p>While these resources are discussed in the book, you're <strong>encouraged to explore them</strong> even if you haven't read the book yet. You'll find valuable insight about build automation, continuous integration, deployments, unit testing in JavaScript, modular application design, ES6, performance optimization, and more!</p>
+        </div>
       </section>
       <section className='bf-section bf-cover'>
         <a href='/bf/book' target='_blank'><img className='bf-cover-image' src='/img/buildfirst/cover.jpg' alt='JavaScript Application Design' /></a>
@@ -27,8 +31,10 @@ export default class BuildFirstResources extends React.Component {
         resources.map((r) => {
           return r.title && <li className='bfr-item' key={r.url}>
             <span className={'ic-icon bfr-icon bfr-' + r.key} />
-            <a href={'/bf/' + r.key} target='_blank' className={'ic-icon ic-' + r.type} title={r.url}>{r.title}</a>
-            <div className='bfr-description' dangerouslySetInnerHtml={{__html: r.description}} />
+            <span className={'bfr-link ic-icon ic-' + r.type}>
+              <a className='bfr-link-text' href={'/bf/' + r.key} title={r.url} target='_blank'>{r.title}</a>
+            </span>
+            <div className='bfr-description md-markdown' dangerouslySetInnerHTML={{__html: r.description}} />
           </li>
         })
       }

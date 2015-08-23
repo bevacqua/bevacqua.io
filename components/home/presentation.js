@@ -5,17 +5,19 @@ export default class Presentation extends React.Component {
     var { title, description, speakerdeck, youtube, resources } = this.props.data
     return <li className='pt-container'>
       <h2 className='pt-title'>{title}</h2>
-      <section className='pt-embeds'>
-      {
-        youtube && <section className='pt-youtube'>
-          <iframe src={youtube} className='pt-youtube-frame' frameBorder='0' allowFullScreen></iframe>
-        </section>
-      }
-      {
-        speakerdeck && <section className='pt-speakerdeck'>
-          <script data-id={speakerdeck.id} data-ratio={speakerdeck.ratio} src='//speakerdeck.com/assets/embed.js' className='speakerdeck-embed' async />
-        </section>
-      }
+      <section className='pt-embed-container'>
+        <div className='pt-embeds'>
+        {
+          youtube && <section className='pt-youtube'>
+            <iframe src={youtube} className='pt-youtube-frame' frameBorder='0' allowFullScreen></iframe>
+          </section>
+        }
+        {
+          speakerdeck && <section className='pt-speakerdeck'>
+            <script data-id={speakerdeck.id} data-ratio={speakerdeck.ratio} src='//speakerdeck.com/assets/embed.js' className='speakerdeck-embed' async />
+          </section>
+        }
+        </div>
       </section>
       <section className='pt-description'><p className='pt-description-text'>{description}</p></section>
       {
