@@ -10,7 +10,7 @@ export default class App extends React.Component {
     ];
     return <DocumentTitle title='Nicolas Bevacqua &mdash; JavaScript and Web Performance Consultant. Conference Speaker. Author. Blogger. Open-Source'>
       <DocMeta tags={tags}>
-        <RouteHandler />
+        <RouteHandler data={this.props.data} />
       </DocMeta>
     </DocumentTitle>
   }

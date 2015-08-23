@@ -19,11 +19,5 @@ watchify client/js/main.js \
 
 nodemon \
   -e js,json \
-  -w dat \
-  -w services \
-  -w components \
-  -w lib \
-  -w .bin/views \
-  -w app.js \
   --exec npm run babel-node \
   -- app.js

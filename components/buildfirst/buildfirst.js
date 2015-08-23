@@ -16,11 +16,12 @@ export default class BuildFirst extends React.Component {
         <p>Scattered throughout the book we will find <em>tons of code samples</em>, all carefully crafted, ready to use and mold to your needs, and <strong>ideal to learn from</strong>. The samples are <em>well-documented</em> too, each having <em>an individual description</em> which will let us understand what we're looking at, why we need to learn it, and how we might accomplish it.</p>
         <h2>Uncertain yet?</h2>
         <p>You can get a sample chapter from <strong>Manning</strong>, or just buy the whole thing if you like what you're hearing. It's definitely worth it!</p>
-        <p>Also, make sure you check out the <a target='_blank' href='/buildfirst/resources' title='Resources and References'>resources page</a> for the book, too. I included <strong>tons of the links</strong> that are referenced in the book in that page, so you can get a feel of the kind of content that's included in the book. You could also skim through <a target='_blank' href='/bf/code' title='Accompanying code samples and snippets'>the code samples</a>, which are religiously documented, catalogued, and reviewed. Ready for human consumption!</p>
+        <p>Also, make sure you check out the <a href='/buildfirst/resources' title='Resources and References'>resources page</a> for the book, too. I included <strong>tons of the links</strong> that are referenced in the book in that page, so you can get a feel of the kind of content that's included in the book. You could also skim through <a target='_blank' href='/bf/code' title='Accompanying code samples and snippets'>the code samples</a>, which are religiously documented, catalogued, and reviewed. Ready for human consumption!</p>
         <ul className='bf-actions'>
+          <li>The <a href='/buildfirst/resources' title='Resources and References'>resources page</a> has a ton of useful links related to the book</li>
           <li>Read <a target='_blank' href='/blog' title='Pony Foo Blog'>my blog</a> to learn more about my coding philosophy</li>
-          <li>Purchase the book through <a href='/bf/book' target='_blank' title='Get the book from Manning!'>Manning</a></li>
           <li>Check out the <a href='/bf/code' target='_blank' title='Check out the Code!'>code samples</a> on GitHub</li>
+          <li>Purchase the book through <a href='/bf/book' target='_blank' title='Get the book from Manning!'>Manning</a></li>
         </ul>
       </section>
       <section className='bf-section bf-cover'>

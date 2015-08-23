@@ -11,9 +11,10 @@ export default function router (req, res, next) {
   };
   Router.create(context).run(ran);
   function ran (Handler, state) {
+    var data = req.model || {};
     var doctype = '<!doctype html>';
-    var main = React.renderToString(<Handler />);
-    var full = React.renderToString(<Layout main={main} />);
+    var main = React.renderToString(<Handler data={data} />);
+    var full = React.renderToString(<Layout  data={data} main={main} />);
     res.writeHead(200, { 'Content-Type': 'text/html' });
     res.write(doctype + full);
     res.end();
