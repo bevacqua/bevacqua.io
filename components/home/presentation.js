@@ -21,8 +21,10 @@ export default class Presentation extends React.Component {
       {
         resources && resources.length && <ul className='pt-resources'>
         {
-          resources.map((resource) => {
-            return <li key={resource.url} className='pt-resource'><a href={resource.url} target='_blank' dangerouslySetInnerHTML={{__html: resource.title}} /></li>
+          resources.map((r) => {
+            return <li key={r.url} className='pt-resource'>
+              <a href={r.url} target='_blank' dangerouslySetInnerHTML={{__html: r.title}} />
+            </li>
           })
         }
         </ul>

@@ -22,13 +22,13 @@ export default class BuildFirstResources extends React.Component {
         <a href='/bf/book' target='_blank'><img className='bf-cover-image' src='/img/buildfirst/cover.jpg' alt='JavaScript Application Design' /></a>
         <sub>Psst! Download <a href='/bf/book' target='_blank'>free sample chapters here</a>.</sub>
       </section>
-      <ul className='rs-list'>
+      <ul className='bfr-list'>
       {
         resources.map((r) => {
-          return r.title && <li className='rs-item'>
-            <span className={'ty-icon bfr-icon bfr-' + r.key} />
-            <a href={'/bf/' + r.key} target='_blank' className={'ty-icon rs-link ic-' + r.type} title={r.url}>{r.title}</a>
-            <div className='rs-description' dangerouslySetInnerHtml={{__html: r.description}} />
+          return r.title && <li className='bfr-item' key={r.url}>
+            <span className={'ic-icon bfr-icon bfr-' + r.key} />
+            <a href={'/bf/' + r.key} target='_blank' className={'ic-icon ic-' + r.type} title={r.url}>{r.title}</a>
+            <div className='bfr-description' dangerouslySetInnerHtml={{__html: r.description}} />
           </li>
         })
       }

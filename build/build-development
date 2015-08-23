@@ -5,6 +5,8 @@
 npm run clean
 npm run copy-assets
 
+spritesmith
+
 stylus client/css/all.styl \
   -o .bin/public/css \
   --include-css \

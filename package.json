@@ -30,6 +30,7 @@
     "express": "4.13.3",
     "express-handlebars": "2.0.1",
     "ga": "0.0.2",
+    "megamark": "3.1.0",
     "moment": "2.10.6",
     "nconf": "0.7.2",
     "react": "0.13.3",
@@ -51,6 +52,7 @@
     "nib": "1.1.0",
     "nodemon": "1.4.1",
     "normalize.css": "3.0.3",
+    "spritesmith-cli": "1.1.0",
     "stylus": "0.52.0",
     "watchify": "3.3.1"
   }

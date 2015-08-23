@@ -1,0 +1,31 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<i class="icon-home"></i>
+```
+*/
+.ic-book:before {
+  background-image: url(/img/icons.png);
+  background-position: 0px 0px;
+  width: 32px;
+  height: 32px;
+}
+.ic-code:before {
+  background-image: url(/img/icons.png);
+  background-position: -34px 0px;
+  width: 32px;
+  height: 32px;
+}
+.ic-io:before {
+  background-image: url(/img/icons.png);
+  background-position: 0px -34px;
+  width: 32px;
+  height: 32px;
+}
+.ic-link:before {
+  background-image: url(/img/icons.png);
+  background-position: -34px -34px;
+  width: 32px;
+  height: 32px;
+}

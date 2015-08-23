@@ -1,0 +1,229 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<i class="icon-home"></i>
+```
+*/
+.bfr-12factor:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -130px 0px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-angular-di:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -520px -260px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-apologists:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: 0px -130px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-aws:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -130px -130px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-browser-errors:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -260px 0px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-code:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -260px -130px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-commonjs:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: 0px -260px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-component:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -130px -260px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-db-tasks:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -260px -260px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-es6-modules:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -390px 0px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-globbing:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -390px -130px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-goodparts:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -390px -260px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-grunt:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: 0px -390px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-heroku-cli:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -130px -390px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-heroku:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -260px -390px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-integration:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -390px -390px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-interlacing:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -520px 0px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-ioc:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -520px -130px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-knight:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: 0px 0px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-lean:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -520px -390px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-livereload:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: 0px -520px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-markdown:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -130px -520px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-netflix:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -260px -520px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-node-frontend:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -390px -520px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-node-inspector:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -520px -520px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-pragmatic:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -650px 0px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-promises:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -650px -130px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-regex:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -650px -260px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-requirejs:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -650px -390px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-rest:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -650px -520px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-secure-config:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: 0px -650px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-semver:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -130px -650px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-speed-matters:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -260px -650px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-strict:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -390px -650px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-travis-heroku:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -520px -650px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-travis:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -650px -650px;
+  width: 128px;
+  height: 128px;
+}
+.bfr-watch-out:before {
+  background-image: url(/img/buildfirst-resources.png);
+  background-position: -780px 0px;
+  width: 128px;
+  height: 128px;
+}
