@@ -11,6 +11,8 @@
   "private": true,
   "scripts": {
     "start": "build/build-development",
+    "build": "build/build-production",
+    "deploy": "build/deploy",
     "test": "build/test",
     "clean": "build/clean",
     "copy-assets": "build/copy-assets",
@@ -45,6 +47,8 @@
   "devDependencies": {
     "babelify": "6.1.3",
     "browserify": "11.0.1",
+    "bundle-collapser": "1.2.1",
+    "clean-css": "3.3.9",
     "errorify": "0.3.1",
     "jshint": "2.8.0",
     "jshint-stylish": "2.0.1",
@@ -53,6 +57,7 @@
     "normalize.css": "3.0.3",
     "spritesmith-cli": "1.1.0",
     "stylus": "0.52.0",
+    "uglify-js": "2.4.24",
     "watchify": "3.3.1"
   }
 }
