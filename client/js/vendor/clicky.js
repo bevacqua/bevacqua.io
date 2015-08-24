@@ -1,5 +1,5 @@
 var tag = 'script'
-var property = '100871565'
+var property = '100871570'
 
 global.clicky_site_ids = [property];
 global.clicky_custom = { timer: 0 };
