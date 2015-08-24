@@ -20,7 +20,14 @@
   },
   "browserify": {
     "transform": [
-      "babelify"
+      [
+        "babelify",
+        {
+          "stage": [
+            0
+          ]
+        }
+      ]
     ]
   },
   "engines": {
@@ -30,8 +37,10 @@
     "babel": "5.8.21",
     "body-parser": "1.13.3",
     "compression": "1.5.2",
+    "contra": "1.9.1",
     "express": "4.13.3",
     "ga": "0.0.2",
+    "local-storage": "1.4.2",
     "megamark": "3.1.0",
     "moment": "2.10.6",
     "morgan": "1.6.1",
@@ -42,7 +51,9 @@
     "react-router": "0.13.3",
     "serve-favicon": "2.3.0",
     "serve-static": "1.10.0",
-    "winston": "1.0.1"
+    "vague-time": "1.2.0",
+    "winston": "1.0.1",
+    "xhr": "2.0.4"
   },
   "devDependencies": {
     "babelify": "6.1.3",

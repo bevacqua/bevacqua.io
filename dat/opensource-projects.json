@@ -1,55 +1,55 @@
 [{
   "name": "Dragula",
   "teaser": "Drag and drop so simple it hurts",
-  "repo": "https://github.com/bevacqua/dragula",
+  "repo": "bevacqua/dragula",
   "screenshot": "https://github.com/bevacqua/dragula/raw/master/resources/logo.png",
   "description": "Most libraries that deal with drag and drop are really complicated to use. Dragula aims to fix this by exposing a **super-simple container-based API** that is still able to accomodate for the most advanced use cases as well. Dragula is implemented using pure DOM and it has a very small footprint. There are also convenient wrappers for [React](https://github.com/bevacqua/react-dragula) and [Angular](https://github.com/bevacqua/angular-dragula).\n\nIf you'd like to learn more about Dragula, I suggest you head over to the [demo page](http://bevacqua.github.io/dragula)."
 }, {
   "name": "Contra",
   "teaser": "Asynchronous flow control with a functional taste to it",
-  "repo": "https://github.com/bevacqua/contra",
+  "repo": "bevacqua/contra",
   "screenshot": "https://camo.githubusercontent.com/e0a7d6ca0c984095db72d70ccff26b9c2c48368f/68747470733a2f2f7261772e6769746875622e636f6d2f62657661637175612f636f6e7472612f6d61737465722f7265736f75726365732f636f6e7472612e706e67",
   "description": "Contra is a modular utility library that helps you reduce complexity in your asynchronous JavaScript code. Its API is modeled after [async](https://github.com/caolan/async), but Contra has the distinct goal to be small, enough to fit in the browser; modular, so that you can just take the methods you need; and more concise: most of the library is based on [a queue implementation](https://github.com/bevacqua/contra/blob/a0b7f0f19881ed33ab92df119f98862a136f1537/queue.js) that's 30 lines of code long."
 }, {
   "name": "Dominus",
   "teaser": "Lean DOM Manipulation",
-  "repo": "https://github.com/bevacqua/dominus",
+  "repo": "bevacqua/dominus",
   "screenshot": "https://github.com/bevacqua/dominus/raw/master/resources/dominus.png",
   "description": "Dominus implements most of the DOM manipulation aspects of jQuery, but it has a much smaller footprint because it doesn't include its own selector engine, AJAX, CSS \"effects\", nor promises. It uses a [tiny library](https://github.com/bevacqua/sektor) as a replacement for [Sizzle](https://github.com/jquery/sizzle) -- jQuery's selector engine.\n\nAn interesting aspect of Dominus is that it returns extended native `Array`s -- thanks to [poser](https://github.com/bevacqua/poser) below the hood -- which enables you to use methods like `.map` and `.forEach` on the DOM elements without having to cast the results returned by Dominus."
 }, {
   "name": "Perfschool",
   "teaser": "Find your way through the performance optimization maze in this NodeSchool workshopper",
-  "repo": "https://github.com/bevacqua/perfschool",
+  "repo": "bevacqua/perfschool",
   "screenshot": "https://github.com/bevacqua/perfschool/raw/master/resources/cat.png",
   "description": "[NodeSchool](http://nodeschool.io/) is a worldwide event based on open-source workshops like this one. Like most other NodeSchool workshops, `perfschool` is _self-guided_, meaning that you get a few instructions and you're good to **start experimenting on your own** and figuring out for yourself how to implement the solutions.\n\nIn `perfschool` you are presented with different situations where you'll have to face **performance issues**, and you'll have to measure, analyze, and improve performance -- _all the while looking at pictures of cats._"
 }, {
   "name": "Woofmark",
   "teaser": "Barking up the DOM tree. A modular, progressive, and beautiful Markdown and HTML editor",
-  "repo": "https://github.com/bevacqua/woofmark",
+  "repo": "bevacqua/woofmark",
   "screenshot": "https://github.com/bevacqua/woofmark/raw/master/resources/demo.png",
   "description": "Woofmark is an all-in-one Markdown, HTML, and [WYSIWYG](https://en.wikipedia.org/wiki/WYSIWYG) editor. It's not concerned with the back and forth parsing itself, leaving the implementation up to you. Of course, reasonable defaults are recommended: [megamark](https://github.com/bevacqua/megamark) for converting Markdown to HTML, and [domador](https://github.com/bevacqua/domador) to convert HTML back into Markdown.\n\nIt considers Markdown as its **single source of truth**, even when you disable the Markdown mode in the editor. This makes `woofmark` more secure and less error-prone."
 }, {
   "name": "Taunus",
   "teaser": "Micro Isomorphic MVC. Progressive Enhancement. Content-First. Single-Page Applications (that are also server-side rendered). Predictive Caching. Bring Your Own View Engine.",
-  "repo": "https://github.com/taunus/taunus",
+  "repo": "taunus/taunus",
   "screenshot": "https://camo.githubusercontent.com/5f21094351a975b0dc80111fa29ac6c719d36d1f/68747470733a2f2f7261772e6769746875622e636f6d2f7461756e75732f7461756e75732f6d61737465722f7265736f75726365732f7461756e75732e706e67",
   "description": "Taunus is an MVC framework for Node.js that brings you closer to _progressive enhancement_. It encourages the use of plain `<form>` and `<a>` tags as the main means of user interaction and navigation. It handles rendering on the server-side, and then when the client-side JavaScript is executed, clicks on `<a>` elements are hijacked -- turning your application into a **Single Page App**. Similarly, `<form>` submissions are hijacked through dynamic injection of an `<iframe>`, allowing you to build modern and highly responsive apps while still _following the fundamental founding blocks of the web._\n\nYou can even use [skyrocket](https://github.com/taunus/skyrocket) to implement realtime communication with WebSockets. All you have to do is hook it up and then you'll be able to render partial views whenever new data comes down the wire.\n\nTo get started with Taunus, you might want to look at its [documentation](http://taunus.io), at the [source code](https://github.com/ponyfoo/ponyfoo) for my blog, or at the [source](https://github.com/taunus/giffy.club) of [giffy.club](http://giffy.club) -- which is a simpler demonstration of how to use it."
 }, {
   "name": "Rome",
   "teaser": "Customizable date (and time) picker. Opt-in UI, no jQuery!",
-  "repo": "https://github.com/bevacqua/rome",
+  "repo": "bevacqua/rome",
   "screenshot": "https://cloud.githubusercontent.com/assets/934293/3803583/387125ea-1c1c-11e4-974e-467984e4d1f0.png",
   "description": "Rome is a simple date picker that's also implemented **using pure DOM** -- just like [Dragula](https://github.com/bevacqua/dragula). It has a simple API just as well, and it comes with sensible defaults. It aims to be as unobtrusive as possible, which is why you'll be able to change the date on the `<input>` element as the calendar is open, and it'll be updated instantly.\n\nIt's also highly customizable, allowing you to define valid and invalid date ranges, formats, styling, and `i18n`. You should check out the [demo](http://bevacqua.github.io/rome), to see it in action."
 }, {
   "name": "Hubby",
   "teaser": "A lowly attempt to describe public GitHub activity in natural language",
-  "repo": "https://github.com/bevacqua/hubby",
+  "repo": "bevacqua/hubby",
   "screenshot": "http://i.imgur.com/S2BQtRz.png",
   "description": "Hubby is an old project of mine that I keep [visiting](http://bevacqua.github.io/hubby/?bevacqua) whenever I want to find the most popular repos are for [somebody](http://bevacqua.github.io/hubby/?substack) who has _a ton of stars_. It also produces a list of random commits made by that user, as well as an attempt at describing their public activity using natural language.\n\nIt uses the public GitHub API to find data about their users, and it then caches the results in `localStorage`. It's **entirely implemented on the client-side**, and there's no server involved. Hubby is hosted on GitHub Pages. I hacked it together once upon a sunday, so it's not exactly the sharpest thing I ever released. It was a fun project, though."
 }, {
   "name": "Hit That",
   "teaser": "Render beautiful pixel perfect representations of websites in your terminal",
-  "repo": "https://github.com/bevacqua/hit-that",
+  "repo": "bevacqua/hit-that",
   "screenshot": "https://raw.githubusercontent.com/bevacqua/hit-that/master/resources/ponyfoo.png",
   "description": "This is one of the smallest modules I ever wrote, but it's really fun and it has some interesting use cases. You can use it to render **a pixelated representation** of a website in your terminal. You're allowed to _tweak the width and height of the viewport, as well as the amount of pixel columns of output_, which in some cases greatly improves the quality of the representation.\n\nBefore `hit-that` I also made [hget](https://github.com/bevacqua/hget), which is similar in that you can use to render websites on your terminal. The difference is that `hget` crawls the page and strips HTML tags, printing the content as colorized plain text."
 }]

@@ -4,7 +4,7 @@ import DocMeta from 'react-doc-meta';
 
 export default class Layout extends React.Component {
   render () {
-    const { main } = this.props;
+    const { main, data } = this.props;
     return (
       <html>
         <head>
@@ -30,14 +30,15 @@ export default class Layout extends React.Component {
               <li className='nv-item'><a href='/' className='nv-link nv-home'>/</a></li>
               <li className='nv-item'><a href='/consulting' className='nv-link' target='_blank'>Consulting</a></li>
               <li className='nv-item'><a href='/talks' className='nv-link'>Conference Talks</a></li>
-              <li className='nv-item'><a href='/opensource' className='nv-link'>Open-Source ️️️<span className='c-pink'>❤️</span></a></li>
+              <li className='nv-item'><a href='/opensource' className='nv-link'>Open-Source ️️️<span className='c-pink'>❤️️</span></a></li>
               <li className='nv-item'><a href='/buildfirst' className='nv-link'>JavaScript Application Design</a></li>
               <li className='nv-item'><a href='/blog' className='nv-link' target='_blank'>Articles</a></li>
               <li className='nv-item'><a href='/twitter' className='nv-link nv-last' target='_blank'>Tweets</a></li>
               <li className='nv-item nv-top'><a href='#top' className='nv-link'>Back to Top</a></li>
             </ul>
           </nav>
-          <script src='/js/all.js'></script>
+          <script dangerouslySetInnerHTML={{__html: 'var __STATE__=' + JSON.stringify(data)}}></script>
+          <script async src='/js/all.js'></script>
         </body>
       </html>
     );
