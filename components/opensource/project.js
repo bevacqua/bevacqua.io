@@ -14,7 +14,13 @@ export default class OpenSourceProject extends React.Component {
       </h3>
       {
         meta && <span className='osp-meta'>
-          <em className='osp-updated'>(last updated <span title={meta.updated.toString()}>{vagueTime.get({ to: meta.updated, units: 's' })}</span>)</em>
+          <em className='osp-updated'>
+            <span>(last updated </span>
+            <a href={'https://github.com/' + repo + '/commit/' + meta.sha} target='_blank' title={meta.updated.toString()}>
+              {vagueTime.get({ to: meta.updated, units: 's' })}
+            </a>
+            <span>)</span>
+          </em>
           <span>★ {meta.stars}</span>
         </span>
       }
@@ -61,6 +67,7 @@ export default class OpenSourceProject extends React.Component {
     var key = 'repos/' + repo
     var meta = {
       updated: new Date(result.master.commit.commit.author.date),
+      sha: result.master.commit.sha,
       stars: result.repo.stargazers_count
     }
     var cache = {
