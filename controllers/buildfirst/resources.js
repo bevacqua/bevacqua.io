@@ -1,4 +1,4 @@
-import links from '../../dat/buildfirst/links.json'
+import links from '../../dat/buildfirst-links.json'
 import megamark from 'megamark'
 
 var resources = Object.keys(links).map(key => {

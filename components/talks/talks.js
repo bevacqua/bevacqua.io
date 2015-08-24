@@ -39,7 +39,8 @@ export default class Talks extends React.Component {
     }]
     return <article className='ly-content'>
       <section className='tk-introduction'>
-        <h1 className='ly-header'>Conference Talks</h1>
+        <h1 className='ly-header tk-name'>Conference Talks</h1>
+        <h2 className='tk-role'>I like speaking about the open web</h2>
         <p>I gave my first conference talk at JSConf US 2014 in Amelia Island. I've given talks at <a href='http://lanyrd.com/profile/bevacqua/past' target='_blank'>many other</a> conferences all over the world since then. For upcoming appearances refer to my <a href='http://lanyrd.com/profile/bevacqua/' target='_blank'>Lanyrd profile</a>. If you want me at your conference, shoot me <a href='/consulting' target='_blank'>an email</a> &mdash; I'll be happy to discuss it.</p>
         <p>This page is updated with presentation slides, conference talk videos, and related materials as they become available online.</p>
       </section>

@@ -495,7 +495,7 @@ body {
   margin: 0 auto;
   text-align: center;
 }
-.ly-nav,
+.nv-nav,
 .ly-main {
   text-align: left;
 }
@@ -506,15 +506,19 @@ body {
   margin-top: 0;
 }
 body {
-  border-top: 3px solid #f3dc52;
   background-color: #fefbee;
   font-family: 'Roboto', 'Helvetica Neue', HelveticaNeue, HelveticaNeueRoman, HelveticaNeue-Roman, 'Helvetica Neue Roman', TeXGyreHeros, FreeSans, 'Nimbus Sans L', 'Liberation Sans', Helvetica Tahoma, Geneva, Arial, sans-serif;
 }
 body {
   color: #222;
 }
+ul,
+ol,
 p {
-  line-height: 24px;
+  line-height: 35px;
+}
+p {
+  margin: 35px 0;
 }
 blockquote {
   position: relative;
@@ -542,6 +546,16 @@ blockquote h5,
 blockquote h6 {
   margin-top: 0;
 }
+@media only screen and (min-width: 800px) {
+  ul,
+  ol,
+  p {
+    line-height: 26px;
+  }
+  p {
+    margin: 20px 0;
+  }
+}
 a {
   color: #1686a2;
   text-decoration: none;
@@ -566,9 +580,23 @@ a:hover {
   display: inline-block;
   content: '';
 }
+.nv-anchor {
+  border-top: 3px solid #f3dc52;
+  background-color: #faf1ba;
+}
+.nv-anchor:before {
+  content: 'Welcome!';
+  font-weight: bold;
+  margin-right: 5px;
+}
+.nv-anchor:after {
+  content: 'Tap here for navigation';
+}
 .nv-list {
+  border-top: 3px solid #f3dc52;
   display: block;
   list-style-type: none;
+  line-height: inherit;
   margin: 0;
   padding: 0;
 }
@@ -576,20 +604,20 @@ a:hover {
   display: block;
   padding: 10px;
 }
-.nv-home {
-  background-color: #f3dc52;
-}
-.nv-consulting {
+.nv-link:hover {
   color: #e92c6c;
-  border-bottom-color: #e92c6c;
-  border-right: 2px dotted #e92c6c;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  border-bottom-color: inherit;
 }
-.nv-consulting:hover {
-  border-right-style: solid;
-}
-@media only screen and (min-width: 680px) {
+@media only screen and (min-width: 800px) {
+  .nv-anchor {
+    visibility: hidden;
+  }
+  .nv-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
   .nv-item {
     display: inline-block;
     background-color: #faf1ba;
@@ -598,6 +626,28 @@ a:hover {
     display: inline-block;
     vertical-align: top;
   }
+  .nv-last {
+    border-right: 2px dotted #f1d634;
+    border-bottom-right-radius: 3px;
+  }
+  .nv-last:hover {
+    border-right-color: inherit;
+    border-right-style: solid;
+  }
+  .nv-home {
+    background-color: #f3dc52;
+  }
+  .nv-top {
+    display: none;
+  }
+}
+.tk-name {
+  margin-bottom: 10px;
+}
+.tk-role {
+  margin-top: 10px;
+  font-style: italic;
+  color: #4b525a;
 }
 .tk-introduction {
   padding: 20px;
@@ -711,6 +761,67 @@ a:hover {
 .dn-help p {
   margin: 0;
 }
+.os-name {
+  margin-bottom: 10px;
+}
+.os-role {
+  margin-top: 10px;
+  font-style: italic;
+  color: #4b525a;
+}
+.osp-container {
+  margin: 0 -20px;
+  padding: 20px;
+  background-color: #fbf5cb;
+}
+.osp-container:nth-child(even) {
+  background-color: #fdf8dc;
+}
+.osp-name {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.osp-teaser {
+  margin-top: 0;
+  font-style: italic;
+  color: #4b525a;
+}
+.osp-screenshot-container {
+  text-align: center;
+}
+.osp-screenshot-link {
+  display: inline-block;
+  border-bottom: none;
+}
+.osp-screenshot-link:hover {
+  border-bottom: none;
+  background-color: transparent;
+}
+@media only screen and (min-width: 680px) {
+  .osp-container {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    margin: 0 20px 20px -20px;
+  }
+  .osp-container:nth-child(even) {
+    margin: 0 -20px 20px 20px;
+  }
+}
+@media only screen and (min-width: 1040px) {
+  .osp-container {
+    width: 33.33333%;
+  }
+  .osp-container:nth-child(3n+1) {
+    margin: 0 10px 20px -20px;
+  }
+  .osp-container:nth-child(3n+2) {
+    margin: 0 -20px 20px 10px;
+  }
+  .osp-container:nth-child(3n+3) {
+    margin: 0 -20px 20px 40px;
+  }
+}
 .bf-name {
   margin-bottom: 10px;
 }
@@ -730,9 +841,6 @@ a:hover {
 }
 .bf-teaser-link:hover {
   color: #1686a2;
-}
-.bf-actions {
-  line-height: 30px;
 }
 .bf-cover {
   margin-top: 20px;
@@ -902,9 +1010,6 @@ a:hover {
 .md-markdown img:last-child {
   margin-bottom: 0;
 }
-.md-markdown p {
-  line-height: 20px;
-}
 .md-markdown p:first-child {
   margin-top: 0;
 }
@@ -916,7 +1021,6 @@ a:hover {
 }
 .md-markdown ul,
 .md-markdown ol {
-  line-height: 24px;
   margin-left: 5px;
 }
 .md-markdown li > ul,

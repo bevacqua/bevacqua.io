@@ -1,13 +1,17 @@
 body
-  border-top 3px solid c_yellow
   background-color lighten(c_yellow, 90%)
   font-family f_roboto
 
 body
   color c_black
 
+ul,
+ol,
 p
-  line-height 24px
+  line-height 35px
+
+p
+  margin 35px 0
 
 blockquote
   position relative
@@ -34,3 +38,12 @@ blockquote
   h5,
   h6
     margin-top 0
+
+@media only screen and (min-width: 800px)
+  ul,
+  ol,
+  p
+    line-height 26px
+
+  p
+    margin 20px 0
