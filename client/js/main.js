@@ -2,6 +2,7 @@
 
 import './vendor/ga'
 import './vendor/mixpanel'
+import './vendor/clicky'
 import './analytics'
 
 import React from 'react/addons'
