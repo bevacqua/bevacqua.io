@@ -1,4 +1,5 @@
 import React from 'react'
+import BookCoverSidebar from './bookCoverSidebar'
 
 export default class BuildFirstResources extends React.Component {
   render () {
@@ -22,10 +23,7 @@ export default class BuildFirstResources extends React.Component {
           <p>While these resources are discussed in the book, you're <strong>encouraged to explore them</strong> even if you haven't read the book yet. You'll find valuable insight about build automation, continuous integration, deployments, unit testing in JavaScript, modular application design, ES6, performance optimization, and more!</p>
         </div>
       </section>
-      <section className='bf-section bf-cover'>
-        <a href='/bf/book' target='_blank'><img className='bf-cover-image' src='/img/buildfirst/cover.jpg' alt='JavaScript Application Design' /></a>
-        <sub>Psst! Download <a href='/bf/book' target='_blank'>free sample chapters here</a>.</sub>
-      </section>
+      <BookCoverSidebar />
       <ul className='bfr-list'>
       {
         resources.map((r) => {

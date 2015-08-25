@@ -2,6 +2,9 @@
   "book": {
     "url": "http://www.manning.com/bevacqua/?a_aid=go&a_bid=e6de0d9d"
   },
+  "book/amazon": {
+    "url": "http://amzn.to/1ETGB65"
+  },
   "code": {
     "type": "code",
     "url": "https://github.com/buildfirst/buildfirst",

@@ -24,7 +24,7 @@ export default function (app) {
   app.get('/twitter', to('https://twitter.com/nzgb'))
   app.get('/bf', to('/buildfirst', 301))
   app.get('/bf/resources', to('/buildfirst/resources', 301))
-  app.get('/bf/:key', expand, to('/buildfirst/resources'))
+  app.get('/bf/:key(*)', expand, to('/buildfirst/resources'))
 
   app.get('/buildfirst/resources', require('./buildfirst/resources'))
   app.get('/opensource', require('./opensource/opensource'))

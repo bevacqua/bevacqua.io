@@ -1,4 +1,5 @@
 import React from 'react'
+import BookCoverSidebar from './bookCoverSidebar'
 
 export default class BuildFirst extends React.Component {
   render () {
@@ -25,10 +26,7 @@ export default class BuildFirst extends React.Component {
           <li>Use discount code <code>bevacqua37</code> for a <strong>37% discount!</strong></li>
         </ul>
       </section>
-      <section className='bf-section bf-cover'>
-        <a href='/bf/book' target='_blank'><img className='bf-cover-image' src='/img/buildfirst/cover.jpg' alt='JavaScript Application Design' /></a>
-        <sub>Psst! Download <a href='/bf/book' target='_blank'>free sample chapters here</a>.</sub>
-      </section>
+      <BookCoverSidebar />
     </article>
   }
 }
