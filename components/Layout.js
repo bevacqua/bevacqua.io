@@ -27,7 +27,7 @@ export default class Layout extends React.Component {
           <footer className='dn-help'><p>You can support my writing, speaking, and open-source contributions through <a href='https://www.patreon.com/bevacqua' target='_blank'>Patreon</a>. You can also <a href='/consulting' target='_blank'>hire me</a> as a consultant.</p></footer>
           <nav id='navigation' className='nv-nav'>
             <ul className='nv-list'>
-              <li className='nv-item'><a href='/' className='nv-link nv-home'>/</a></li>
+              <li className='nv-item'><a href='/' className='nv-link nv-home'>/ About</a></li>
               <li className='nv-item'><a href='/consulting' className='nv-link' target='_blank'>Consulting</a></li>
               <li className='nv-item'><a href='/talks' className='nv-link'>Conference Talks</a></li>
               <li className='nv-item'><a href='/opensource' className='nv-link'>Open-Source ️️️<span className='c-pink'>❤️️</span></a></li>
