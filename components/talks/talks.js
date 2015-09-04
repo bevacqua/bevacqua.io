@@ -8,6 +8,7 @@ export default class Talks extends React.Component {
       title: 'High Performance in the Critical Path',
       description: "This talk covers the past, present and future of web application performance when it comes to delivery optimization. I'll start by glancing over what you're already doing -- minifying your static assets, bundling them together, and using progressive enhancement techniques. Then I'll move on to what you should be doing -- optimizing TCP network delivery, inlining critical CSS, deferring font loading and CSS so that you don't block the rendering path, and of course deferring JavaScript. Afterwards we'll look at the future, and what HTTP 2.0 has in store for us, going full circle and letting us forego hacks of the past like bundling and minification.",
       speakerdeck: { id: '2ea137647c734b54b37012db8a596b28', ratio: 1.33333333333333 },
+      vimeo: 'https://player.vimeo.com/video/131634704',
       resources: [
         { title: 'Web Page Test', url: 'http://www.webpagetest.org/' },
         { title: 'High Performance Browser Networking', url: 'http://chimera.labs.oreilly.com/books/1230000000545' },
