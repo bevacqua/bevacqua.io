@@ -36,7 +36,7 @@ export default class OpenSourceProject extends React.Component {
     </section>
   }
   componentDidMount () {
-    var { repo } = this.props.data
+    var { repo, branch = 'master' } = this.props.data
     var key = 'repos/' + repo
     var cache = localStorage.get(key)
     var earlier = new Date()
@@ -48,7 +48,7 @@ export default class OpenSourceProject extends React.Component {
     }
     concurrent({
       repo: next => query('/repos/' + repo, next),
-      master: next => query('/repos/' + repo + '/branches/master', next)
+      branch: next => query('/repos/' + repo + '/branches/' + branch, next)
     }, ::this.pulledRepo)
     function query (url, next) {
       var options = {
@@ -66,8 +66,8 @@ export default class OpenSourceProject extends React.Component {
     var { repo } = this.props.data
     var key = 'repos/' + repo
     var meta = {
-      updated: new Date(result.master.commit.commit.author.date),
-      sha: result.master.commit.sha,
+      updated: new Date(result.branch.commit.commit.author.date),
+      sha: result.branch.commit.sha,
       stars: result.repo.stargazers_count
     }
     var cache = {

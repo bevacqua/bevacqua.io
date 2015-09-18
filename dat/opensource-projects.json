@@ -2,6 +2,7 @@
   "name": "Promisees",
   "teaser": "Promise visualization playground for the adventurous",
   "repo": "bevacqua/promisees",
+  "branch": "gh-pages",
   "screenshot": "http://i.imgur.com/Ou5Q0Nb.gif",
   "description": "Promises can be terribly hard to understand. Unsettled promises lead to hard-to-debug programming mistakes that can be very costly in terms of productivity. I made this visualization tool to assist novices and experts in understanding the inner workings of `Promise`.\n\nYou can play around with `Promise`, record animated gifs, and understand promises using the [demo page](http://bevacqua.github.io/promisees)."
 }, {
