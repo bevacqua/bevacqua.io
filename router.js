@@ -15,7 +15,7 @@ export default function router (req, res, next) {
     var doctype = '<!doctype html>';
     var main = React.renderToString(<Handler data={data} />);
     var full = React.renderToString(<Layout  data={data} main={main} />);
-    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
     res.write(doctype + full);
     res.end();
   }
