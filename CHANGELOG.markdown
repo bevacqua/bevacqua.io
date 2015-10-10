@@ -75,7 +75,7 @@
 
 # 0.0.37 Foot Anchor
 
-- Fixed link to [`#buildfirst`](http://bevacqua.io/bf) Chapter 2 sample that was moved
+- Fixed link to [`#buildfirst`](https://bevacqua.io/bf) Chapter 2 sample that was moved
 
 # 0.0.35 Broker
 

@@ -207,7 +207,7 @@
     "type": "link",
     "url": "http://martinfowler.com/articles/injection.html",
     "title": "Inversion of Control",
-    "description": "Fowler describes the [Dependency Injection (DI)](http://stackoverflow.com/q/130794/389745 \"What is dependency injection?\") pattern, while also defining [Inversion of Control](http://stackoverflow.com/q/3058/389745 \"What is Inversion of Control?\").\n\nOnce I've laid a few foundations, we'll dig into what kinds of _dependency management systems_ are available in client-side JavaScript, such as [AMD](http://bevacqua.io/bf/amd \"Why AMD?\"), [Common.JS](http://wiki.commonjs.org/wiki/CommonJS \"Common.JS Spec\"), and the approach taken by the [Angular.js](http://angularjs.org \"Angular.js MVW Framework\") team."
+    "description": "Fowler describes the [Dependency Injection (DI)](http://stackoverflow.com/q/130794/389745 \"What is dependency injection?\") pattern, while also defining [Inversion of Control](http://stackoverflow.com/q/3058/389745 \"What is Inversion of Control?\").\n\nOnce I've laid a few foundations, we'll dig into what kinds of _dependency management systems_ are available in client-side JavaScript, such as [AMD](https://bevacqua.io/bf/amd \"Why AMD?\"), [Common.JS](http://wiki.commonjs.org/wiki/CommonJS \"Common.JS Spec\"), and the approach taken by the [Angular.js](http://angularjs.org \"Angular.js MVW Framework\") team."
   },
   "amd": {
     "url": "http://requirejs.org/docs/whyamd.html"
