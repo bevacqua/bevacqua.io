@@ -3,7 +3,7 @@
   "teaser": "Promise visualization playground for the adventurous",
   "repo": "bevacqua/promisees",
   "branch": "gh-pages",
-  "screenshot": "http://i.imgur.com/Ou5Q0Nb.gif",
+  "screenshot": "https://i.imgur.com/Ou5Q0Nb.gif",
   "description": "Promises can be terribly hard to understand. Unsettled promises lead to hard-to-debug programming mistakes that can be very costly in terms of productivity. I made this visualization tool to assist novices and experts in understanding the inner workings of `Promise`.\n\nYou can play around with `Promise`, record animated gifs, and understand promises using the [demo page](http://bevacqua.github.io/promisees)."
 }, {
   "name": "Dragula",
@@ -51,7 +51,7 @@
   "name": "Hubby",
   "teaser": "A lowly attempt to describe public GitHub activity in natural language",
   "repo": "bevacqua/hubby",
-  "screenshot": "http://i.imgur.com/S2BQtRz.png",
+  "screenshot": "https://i.imgur.com/S2BQtRz.png",
   "description": "Hubby is an old project of mine that I keep [visiting](http://bevacqua.github.io/hubby/?bevacqua) whenever I want to find the most popular repos are for [somebody](http://bevacqua.github.io/hubby/?substack) who has _a ton of stars_. It also produces a list of random commits made by that user, as well as an attempt at describing their public activity using natural language.\n\nIt uses the public GitHub API to find data about their users, and it then caches the results in `localStorage`. It's **entirely implemented on the client-side**, and there's no server involved. Hubby is hosted on GitHub Pages. I hacked it together once upon a sunday, so it's not exactly the sharpest thing I ever released. It was a fun project, though."
 }, {
   "name": "Hit That",
