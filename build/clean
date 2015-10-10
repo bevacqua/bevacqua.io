@@ -2,3 +2,4 @@
 
 rm -rf .bin
 mkdir -p .bin/public/{js,css}
+echo $RANDOM > .bin/seed
