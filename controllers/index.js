@@ -16,7 +16,7 @@ function to (url, status) {
 
 export default function (app) {
   app.get('/consulting', to('mailto:consulting@bevacqua.io'))
-  app.get('/blog', to('http://ponyfoo.com'))
+  app.get('/blog', to('https://ponyfoo.com'))
   app.get('/career', to('http://careers.stackoverflow.com/bevacqua'))
   app.get('/code', to('https://github.com/bevacqua'))
   app.get('/github', to('https://github.com/bevacqua/bevacqua.io'))

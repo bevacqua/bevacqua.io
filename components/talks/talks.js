@@ -13,7 +13,9 @@ export default class Talks extends React.Component {
         { title: 'Web Page Test', url: 'http://www.webpagetest.org/' },
         { title: 'High Performance Browser Networking', url: 'http://chimera.labs.oreilly.com/books/1230000000545' },
         { title: 'Self-guided NodeSchool <code>perfschool</code> Workshop', url: 'https://github.com/bevacqua/perfschool' },
-        { title: 'JavaScript Application Design', url: '/buildfirst' }
+        { title: 'JavaScript Application Design', url: '/buildfirst' },
+        { title: 'Article: Let\'s talk about Web Performance', url: 'https://ponyfoo.com/articles/talk-about-web-performance' },
+        { title: 'Article: Fixing Performance in the Web Stack', url: 'https://ponyfoo.com/articles/fixing-web-performance' }
       ]
     }, {
       key: 'browserify-all-the-things',
@@ -33,8 +35,8 @@ export default class Talks extends React.Component {
       speakerdeck: { id: 'acbdab30c7f801316c2c42baa33a3298', ratio: 1.77777777777778 },
       youtube: 'https://www.youtube.com/embed/Y0DCZdAruvo',
       resources: [
-        { title: 'Gulp, Grunt, Whatever', url: 'http://ponyfoo.com/articles/gulp-grunt-whatever' },
-        { title: 'Grunt, Gulp, or <code>npm run</code>?', url: 'http://ponyfoo.com/articles/choose-grunt-gulp-or-npm' },
+        { title: 'Gulp, Grunt, Whatever', url: 'https://ponyfoo.com/articles/gulp-grunt-whatever' },
+        { title: 'Grunt, Gulp, or <code>npm run</code>?', url: 'https://ponyfoo.com/articles/choose-grunt-gulp-or-npm' },
         { title: 'JavaScript Application Design', url: '/buildfirst' }
       ]
     }]

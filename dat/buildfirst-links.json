@@ -33,7 +33,7 @@
     "type": "book",
     "url": "http://www.amazon.com/The-Lean-Startup-Entrepreneurs-Continuous/dp/0307887898",
     "title": "The Lean Startup",
-    "description": "**Eric Ries** presents us with an approach to application design based on _iterative, validated learning_. Rather than building an application and then _hoping_ for the best, Eric prompts us to collect feedback from our humans, using the [Build-Measure-Learn](http://ponyfoo.com/articles/lean-development-principles \"Lean Development Principles article on Pony Foo\") feedback loop, and then decide which features are best _for them_. In my book, we'll examine the **Build** part of this lean model."
+    "description": "**Eric Ries** presents us with an approach to application design based on _iterative, validated learning_. Rather than building an application and then _hoping_ for the best, Eric prompts us to collect feedback from our humans, using the [Build-Measure-Learn](https://ponyfoo.com/articles/lean-development-principles \"Lean Development Principles article on Pony Foo\") feedback loop, and then decide which features are best _for them_. In my book, we'll examine the **Build** part of this lean model."
   },
   "pragmatic": {
     "type": "book",
@@ -184,7 +184,7 @@
   },
   "regex": {
     "type": "link",
-    "url": "http://ponyfoo.com/articles/learn-regular-expressions",
+    "url": "https://ponyfoo.com/articles/learn-regular-expressions",
     "title": "Learn Regular Expressions",
     "description": "While not as fundamental, regular expressions are **widely misunderstood**, much like JavaScript is. In this article I introduce you to regular expressions in JavaScript. Once you've read this, you'll have a basic understanding with which you should be able to write simple expressions. Think of it as **Regular Expressions 101**."
   },
@@ -235,7 +235,7 @@
   },
   "es6-modules": {
     "type": "link",
-    "url": "http://ponyfoo.com/articles/architecture-of-ecmascript-6-modules",
+    "url": "https://ponyfoo.com/articles/architecture-of-ecmascript-6-modules",
     "title": "Architecture of ECMAScript 6 Modules",
     "description": "> This document reflects the state of the modules proposal as presented to TC39 in the March meeting. It is expected to change somewhat in the months ahead, most notably to add support for anonymous exports.\n\nIn this document, [wycats](https://github.com/wycats \"wycats on GitHub\") exposes the latest and greatest about the module system coming to ECMAScript 6, ES.next, or Harmony, however you prefer to call it. He provides detail on various use cases, and helps us fathom how the module ecosystem will start looking like once ES6 hits the ground running."
   },
@@ -246,7 +246,7 @@
     "description": "Here is a polyfill to enable ES6 [Promises](http://www.html5rocks.com/en/tutorials/es6/promises/ \"JavaScript Promises: There and back again\") in the browser or Node, today, before ES6 comes out. Promises are a new JavaScript technology, which deals with asynchronous code, turning it into contracts that can be fulfilled or end up being rejected.\n\nThe book explains promises in detail, and you'll be able to find quite a few examples in the [accompanying code samples for Chapter 6](https://github.com/buildfirst/buildfirst/tree/master/ch06)."
   },
   "tooling": {
-    "url": "http://ponyfoo.com/articles/gulp-grunt-whatever"
+    "url": "https://ponyfoo.com/articles/gulp-grunt-whatever"
   },
   "rest": {
     "type": "link",
@@ -306,7 +306,7 @@
     "url": "https://github.com/bevacqua/poser"
   },
   "arrays": {
-    "url": "http://ponyfoo.com/articles/fun-with-native-arrays"
+    "url": "https://ponyfoo.com/articles/fun-with-native-arrays"
   },
   "contra.emitter": {
     "url": "https://github.com/bevacqua/contra.emitter"
@@ -318,7 +318,7 @@
     "url": "http://remysharp.com/2010/10/08/what-is-a-polyfill/"
   },
   "hq-modules": {
-    "url": "http://ponyfoo.com/articles/building-high-quality-front-end-modules"
+    "url": "https://ponyfoo.com/articles/building-high-quality-front-end-modules"
   },
   "gzip": {
     "url": "https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer"
