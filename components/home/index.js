@@ -3,7 +3,7 @@ import React from 'react'
 export default class HomeIndex extends React.Component {
   render () {
     return <article className='ly-content ly-section'>
-      <h1 className='ly-header hm-name'>Nicolas Bevacqua</h1>
+      <h1 className='ly-header hm-name'>Nicolás Bevacqua</h1>
       <h2 className='hm-role'>JavaScript and Web Performance Consultant</h2>
       <section className='hm-section'>
         <p className='hm-about'>I <span className='c-pink'>❤</span>️ the web. I am a <a href='/consulting' target='_blank'>consultant</a>, a conference <a href='/talks'>speaker</a>, the author of <a href='/buildfirst'>JavaScript Application Design</a>, an <a href='/blog'>opinionated blogger</a>, and an <a href='/opensource'>open-source</a> evangelist. I participate actively in the online JavaScript <a href='/twitter'>community</a> &mdash; as well as <em>offline</em> in beautiful Buenos Aires.</p>

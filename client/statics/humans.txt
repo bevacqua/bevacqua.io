@@ -1,5 +1,5 @@
 /* TEAM */
-    Chef: Nicolas Bevacqua
+    Chef: Nicolás Bevacqua
     Contact: hello@bevacqua.io
     Twitter: @nzgb
     GitHub: @bevacqua
