@@ -4,6 +4,15 @@ import Presentation from './presentation'
 export default class Talks extends React.Component {
   render () {
     var presentations = [{
+      key: 'practical-es6',
+      title: 'Practical ES6 for the Modern JavaScript Tinkerer',
+      description: "ES6 is now a standard. We're seeing increasing adoption across the web and the fear of missing out is invading your senses. This talk will introduce you to the most practical aspects of ES6, how to use it today in production, what new features are the most useful, and how to migrate away from your ES5 lifestyle, gradually towards adoption of ES6 features. Eventually, you'll be using ES6 without even realizing you ever made \"the switch\".",
+      speakerdeck: { id: '816ace8105fc40529e5d3c136b76d744', ratio: 1.33333333333333 },
+      resources: [
+        { title: 'Article: ES6 Overview in 350 Bullet Points', url: 'https://ponyfoo.com/articles/es6' },
+        { title: 'Series: ES6 in Depth on ponyfoo.com', url: 'https://ponyfoo.com/articles/tagged/es6-in-depth' }
+      ]
+    }, {
       key: 'high-perf-critical-path',
       title: 'High Performance in the Critical Path',
       description: "This talk covers the past, present and future of web application performance when it comes to delivery optimization. I'll start by glancing over what you're already doing -- minifying your static assets, bundling them together, and using progressive enhancement techniques. Then I'll move on to what you should be doing -- optimizing TCP network delivery, inlining critical CSS, deferring font loading and CSS so that you don't block the rendering path, and of course deferring JavaScript. Afterwards we'll look at the future, and what HTTP 2.0 has in store for us, going full circle and letting us forego hacks of the past like bundling and minification.",
