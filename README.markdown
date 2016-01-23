@@ -1,5 +1,3 @@
-# [**bevacqua.io**](https://bevacqua.io)
+# DEPRECATED
 
-Technical concept-proofing Node module architecture
-
-_(oh, and my personal website)_
+> [bevacqua.io](https://bevacqua.io)

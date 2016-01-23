@@ -1,1 +1,1 @@
-web: npm run babel-node app
+web: node app

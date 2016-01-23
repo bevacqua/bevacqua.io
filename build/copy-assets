@@ -1,4 +1,0 @@
-#!/bin/bash
-
-cp -r client/img .bin/public
-cp client/statics/* .bin/public

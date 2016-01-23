@@ -1,18 +1,12 @@
-import './lib/uncaught'
+var express = require('express')
+var redirects = require('./redirects')
 
-import express from 'express'
-import controllers from './controllers'
-import router from './router'
+var winston = require('winston')
 
-import winston from 'winston'
-import compression from 'compression'
-import serveStatic from 'serve-static'
-import serveFavicon from 'serve-favicon'
-
-import env from './lib/env'
-import logging from './lib/logging'
-import errorHandler from './lib/errorHandler'
-import analytics from './services/analytics'
+var env = require('./lib/env')
+var logging = require('./lib/logging')
+var errorHandler = require('./lib/errorHandler')
+var analytics = require('./services/analytics')
 
 var port = env('PORT')
 var debug = env('BUILD_DISTRIBUTION') === 'debug'
@@ -28,14 +22,9 @@ if (debug) {
 }
 
 app.locals.settings['x-powered-by'] = false
-app.use(compression())
-app.use(serveStatic('.bin/public'))
-app.use(serveFavicon('.bin/public/favicon.ico'))
 app.use(track)
+redirects(app)
 
-controllers(app)
-
-app.use(router)
 app.use(errorHandler)
 app.listen(port, listening)
 

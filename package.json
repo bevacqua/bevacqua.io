@@ -1,74 +1,31 @@
 {
   "name": "bevacqua.io",
-  "description": "Personal website and technical concept-proofing Node module architecture",
+  "description": "Redirect-only server that points to ponyfoo.com because legacy reasons",
   "homepage": "https://github.com/bevacqua/bevacqua.io",
   "author": {
     "name": "Nicolás Bevacqua",
-    "email": "hello@bevacqua.io",
-    "url": "https://bevacqua.io"
+    "email": "hello@ponyfoo.com",
+    "url": "https://ponyfoo.com"
   },
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
-    "start": "build/build-development",
-    "build": "build/build-production",
     "deploy": "build/deploy",
-    "test": "build/test",
-    "clean": "build/clean",
-    "copy-assets": "build/copy-assets",
-    "babel-node": "babel-node --stage 0"
-  },
-  "browserify": {
-    "transform": [
-      [
-        "babelify",
-        {
-          "stage": [
-            0
-          ]
-        }
-      ]
-    ]
+    "test": "build/test"
   },
   "engines": {
     "node": "iojs-v3.0.0"
   },
   "dependencies": {
-    "babel": "5.8.21",
-    "body-parser": "1.13.3",
-    "compression": "1.5.2",
-    "contra": "1.9.1",
     "express": "4.13.3",
     "ga": "0.0.2",
-    "local-storage": "1.4.2",
-    "megamark": "3.1.0",
     "moment": "2.10.6",
     "morgan": "1.6.1",
     "nconf": "0.7.2",
-    "react": "0.13.3",
-    "react-doc-meta": "0.2.0",
-    "react-document-title": "1.0.3",
-    "react-router": "0.13.3",
-    "serve-favicon": "2.3.0",
-    "serve-static": "1.10.0",
-    "vague-time": "1.2.0",
-    "winston": "1.0.1",
-    "xhr": "2.0.4"
+    "winston": "1.0.1"
   },
   "devDependencies": {
-    "babelify": "6.1.3",
-    "browserify": "11.0.1",
-    "bundle-collapser": "1.2.1",
-    "clean-css": "3.3.9",
-    "errorify": "0.3.1",
     "jshint": "2.8.0",
-    "jshint-stylish": "2.0.1",
-    "nib": "1.1.0",
-    "nodemon": "1.4.1",
-    "normalize.css": "3.0.3",
-    "spritesmith-cli": "1.1.0",
-    "stylus": "0.52.0",
-    "uglify-js": "2.4.24",
-    "watchify": "3.3.1"
+    "jshint-stylish": "2.0.1"
   }
 }

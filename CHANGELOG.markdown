@@ -1,3 +1,8 @@
+# v0.2.0
+
+- Turned into a redirect-only server
+- Dropped everything in favor of [ponyfoo.com](https://ponyfoo.com)
+
 # v0.1.0
 
 - Switched to React
